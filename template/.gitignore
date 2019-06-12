@@ -1,0 +1,20 @@
+.DS_Store
+node_modules/
+
+## Sass files built on demand from Token files
+demo/sass/_*.scss
+tokens/
+
+## CSS built from Sass process
+demo/css
+demo/sass/tokenProperties.scss
+src/style.css
+
+## *-css built from sass-render process
+*-css.js
+
+## Build on demand from npm
+demo/fonts
+
+## dist files
+dist/
