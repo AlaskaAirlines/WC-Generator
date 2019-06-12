@@ -1,0 +1,160 @@
+{
+  "//": [
+    "================================================================================",
+    "The build process for Lit-Element components is currently a 2-part solution that uses Gulp and npm.",
+    "The primary use of Gulp is for the CSS processing that requires the generation of a CSS file and a series of PostCSS functions.",
+    "Aside from the Sass/PostCSS tasks, all other tasks are also avaialble directly from npm as well.",
+    "To keep things less confucing, all tasks share the same name between Gulp and npm.",
+    "",
+    "# To build resources to view the demo file, perform the following tasks",
+    "  1. $ gulp build",
+    "  2. $ npm run build",
+    "  3. $ polymer serve",
+    "  4. Go to http://127.0.0.1:8081",
+    "",
+    "# To work within the development environment, run the following tasks",
+    "  1. $ gulp dev",
+    "  2. $ npm run dev",
+    "  4. $ polymer serve",
+    "  3. Go to http://127.0.0.1:8081",
+    "================================================================================"
+  ],
+  "name": "@alaskaairux/ods-[name]",
+  "version": "0.0.0",
+  "description": "Orion Design System [name] element",
+  "author": "Product design and research",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-[name]"
+  },
+  "main": "src/",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "lit-element": "^2.1.0"
+  },
+  "peerDependencies": {
+    "@alaskaairux/orion-design-tokens": "^2.1.0",
+    "@webcomponents/webcomponentsjs": "^2.2.9",
+    "focus-visible": "^4.1.5"
+  },
+  "devDependencies": {
+    "@alaskaairux/orion-design-tokens": "^2.1.0",
+    "@alaskaairux/orion-web-core-style-sheets": "^2.0.0",
+    "@commitlint/cli": "^7.6.1",
+    "@commitlint/config-conventional": "^7.6.0",
+    "@polymer/iron-demo-helpers": "^3.1.0",
+    "@polymer/iron-icons": "^3.0.1",
+    "@polymer/polymer": "^3.2.0",
+    "@polymer/test-fixture": "^4.0.2",
+    "@semantic-release/changelog": "^3.0.2",
+    "@semantic-release/git": "^7.0.8",
+    "@semantic-release/npm": "^5.1.7",
+    "@webcomponents/webcomponentsjs": "^2.2.9",
+    "auto-changelog": "^1.13.0",
+    "autoprefixer": "^9.5.1",
+    "chai": "^4.2.0",
+    "concat": "^1.0.3",
+    "copyfiles": "^2.1.0",
+    "css-byebye": "^2.0.0",
+    "focus-visible": "^4.1.5",
+    "gulp": "^4.0.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "husky": "^2.3.0",
+    "jsonlint": "^1.6.3",
+    "lodash": "^4.17.11",
+    "mocha": "^6.1.4",
+    "npm-watch": "^0.6.0",
+    "postcss": "^7.0.14",
+    "postcss-custom-properties": "^8.0.10",
+    "postcss-remove-selectors": "^2.0.0",
+    "postcss-selector-replace": "^1.0.2",
+    "semantic-release": "^15.13.12",
+    "styleflux": "^1.2.0",
+    "stylelint": "^10.0.1",
+    "stylelint-config-standard": "^18.3.0",
+    "versiony-cli": "^1.3.0",
+    "wc-sass-render": "^1.2.1",
+    "wct-mocha": "^1.0.0",
+    "yaml-lint": "^1.2.4"
+  },
+  "watch": {
+    "buildTokens": "./src/*.json",
+    "sassRender-w": ".src/**/*.scss"
+  },
+  "scripts": {
+    "build": "npm run sassRender | npm run cssLint | npm run jsonLint",
+    "buildTokens": "node scripts/tokenScript.js",
+    "copyFonts": "copyfiles -f ./node_modules/@alaskaairux/orion-web-core-style-sheets/fonts/*.* ./demo/fonts/",
+    "copyResources": "copyfiles -f -V './docs/**/*' './package.json' './README.md' './NOTICE' './LICENSE' ./dist",
+    "copyDocs": "copyfiles -V './docs/**/*' ./dist",
+    "cssLint": "stylelint './src/*.css'",
+    "dev": "npm-watch buildTokens | npm-watch sassRender-w",
+    "dist": "npm run distTokens | npm run sassRender | npm run cssLint | npm run jsonLint",
+    "distJS": "copyfiles -u 1 -V './src/**/*.js' ./dist",
+    "distTokens": "node scripts/tokenScriptCustom.js",
+    "jsonLint": "jsonlint -q ./src/shape.json",
+    "sassRender": "sass-render src/*.css src/tokens/*.scss",
+    "sassRender-w": "sass-render -w src/**/*.{scss,css}",
+    "stylefluxCanonical": "styleflux -o ./temp/altImportsCanonical/*.css",
+    "stylefluxVariable": "styleflux -o ./temp/altImportsVariable/*.css",
+    "sweep": "rm -rf ./temp ./demo/css ./demo/fonts ./dist ./src/tokens | rm ./demo/sass/*token*.scss ./src/*.css ./src/*-css.js",
+    "test": "npm run cssLint | npm run jsonLint | yamllint .travis.yml"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "release": {
+    "branch": "master",
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      [
+        "@semantic-release/changelog",
+        {
+          "changelogFile": "./CHANGELOG.md",
+          "changelogTitle": "# Semantic Release Automated Changelog"
+        }
+      ],
+      "@semantic-release/npm",
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "./CHANGELOG.md",
+            "package.json"
+          ]
+        }
+      ],
+      "@semantic-release/github"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "contributors": [
+    {
+      "name": "Dale Sande",
+      "email": "dale.sande@alaskaair.com"
+    },
+    {
+      "name": "Kevin Sonnichsen",
+      "email": "Kevin.Sonnichsen@alaskaair.com"
+    }
+  ],
+  "keywords": [
+    "alaska airlines",
+    "orion design system",
+    "web components",
+    "button"
+  ]
+}

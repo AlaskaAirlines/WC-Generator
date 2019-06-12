@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes"
+    />
+
+    <title>ods-[name] test</title>
+
+    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../node_modules/@polymer/test-fixture/test-fixture.js"></script>
+    <script src="../node_modules/mocha/mocha.js"></script>
+    <script src="../node_modules/chai/chai.js"></script>
+    <script src="../node_modules/wct-mocha/wct-mocha.js"></script>
+
+    <script type="module" src="../src/ods-[name].js"></script>
+  </head>
+  <body>
+    <test-fixture id="BasicTestFixture">
+      <template>
+        <ods-[name]></ods-[name]>
+      </template>
+    </test-fixture>
+
+    <test-fixture id="ChangedPropertyTestFixture">
+      <template>
+        <ods-[name] string="foo"></ods-[name]>
+      </template>
+    </test-fixture>
+
+    <script type="module">
+      suite("ods-[name]", () => {
+        test("it's a test", () => {
+          assert.equal(1, 1);
+        });
+        test("instantiating the element with default properties works", () => {
+          const element = fixture("BasicTestFixture");
+          assert.equal(element.string, "");
+        });
+
+        test("setting a property on the element works", () => {
+          // Create a test fixture
+          const element = fixture("ChangedPropertyTestFixture");
+          assert.equal(element.string, "foo");
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+{
+  "name": "@alaskaairux/ods-wc-generator",
+  "version": "0.0.1",
+  "description": "Boilerplate generator for Orion Design Components",
+  "main": "index.js",
+  "files": [
+    "scripts",
+    "template",
+    "util"
+  ],
+  "bin": {
+    "ods-wc-generate": "./scripts/generate.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlaskaAirlines/ODS-WC-Generator.git"
+  },
+  "author": "AlaskaAirlines",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=11.11"
+  },
+  "bugs": {
+    "url": "https://github.com/AlaskaAirlines/ODS-WC-Generator/issues"
+  },
+  "homepage": "https://github.com/AlaskaAirlines/ODS-WC-Generator#readme",
+  "dependencies": {
+    "arg": "^4.1.0",
+    "chalk": "^2.4.2"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "prettier": "^1.18.2"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended"
+    ],
+    "plugins": [
+      "prettier"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2018
+    },
+    "env": {
+      "node": true,
+      "jest": true,
+      "es6": true
+    },
+    "rules": {
+      "global-require": "off",
+      "semi": "warn",
+      "no-undef": "error",
+      "no-unused-vars": "warn",
+      "no-console": "warn"
+    }
+  }
+}

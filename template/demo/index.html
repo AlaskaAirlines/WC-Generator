@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes"
+    />
+    <title>Orion Design System | ods-[name] element</title>
+    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script type="module">
+      import '@polymer/iron-demo-helpers/demo-pages-shared-styles';
+      import '@polymer/iron-demo-helpers/demo-snippet';
+    </script>
+    <script type="module" src="../src/ods-button.js"></script>
+    <script src="../demo/alert.js"></script>
+    <script type="module">
+      import '../node_modules/@polymer/iron-icons/hardware-icons.js';
+    </script>
+    <custom-style>
+      <style is="custom-style" include="demo-pages-shared-styles"></style>
+    </custom-style>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+  </head>
+  <body>
+    <div class="vertical-section-container">
+      <h1>ods-[name]</h1>
+
+      <p>Component description ...</p>
+
+      <p class="ironIcons">
+        <span class="util_floatLeft util_marginRight--med"
+          >Narrow
+          <iron-icon
+            class="util_marginAuto util_displayBlock"
+            icon="hardware:phone-iphone"
+          ></iron-icon>
+        </span>
+        <span class="util_is-narrowAppears util_floatLeft util_marginRight--med"
+          >Medium
+          <iron-icon
+            class="util_marginAuto util_displayBlock"
+            icon="hardware:tablet-android"
+          ></iron-icon>
+        </span>
+        <span class="util_is-tabletAppears util_floatLeft util_marginRight--med"
+          >Wide
+          <iron-icon
+            class="util_marginAuto util_displayBlock"
+            icon="hardware:tablet"
+          ></iron-icon>
+        </span>
+        <span class="util_is-desktopOnly util_floatLeft util_marginRight--med"
+          >Max
+          <iron-icon
+            class="util_marginAuto util_displayBlock"
+            icon="hardware:tv"
+          ></iron-icon>
+        </span>
+      </p>
+
+      <demo-snippet>
+        <template>
+          <ods-[name]>Hello World!</ods-[name]>
+        </template>
+      </demo-snippet>
+
+      <h2>Element &#60;ods-[name]&#62;</h2>
+
+      <pre><code>class Ods[Name] extends LitElement</code></pre>
+
+      <h3>Styling:</h3>
+      <p>Info ...</p>
+
+      <h3>Responsive state:</h3>
+      <p>Info ...</p>
+
+      <h3>Properties:</h3>
+      <code><strong>string:</strong> string</code>
+      <p>Info ...</p>
+    </div>
+  </body>
+</html>

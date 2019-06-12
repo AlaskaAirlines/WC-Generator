@@ -1,0 +1,45 @@
+{
+  "source": [ "./node_modules/@alaskaairux/orion-design-tokens/**/*.json"],
+  "platforms": {
+    "scssDemo": {
+      "transformGroup": "scss",
+      "buildPath": "./demo/sass/",
+      "files": [
+        {
+          "destination": "_tokenVariables.scss",
+          "format": "scss/variables"
+        }
+      ]
+    },
+    "scssSrc": {
+      "transformGroup": "scss",
+      "buildPath": "./src/tokens/",
+      "files": [
+        {
+          "destination": "_tokenVariables.scss",
+          "format": "scss/variables"
+        }
+      ]
+    },
+    "cssDemo": {
+      "transformGroup": "css",
+      "buildPath": "./demo/sass/",
+      "files": [
+        {
+          "destination": "tokenProperties.scss",
+          "format": "css/variables"
+        }
+      ]
+    },
+    "cssSrc": {
+      "transformGroup": "css",
+      "buildPath": "./src/tokens/",
+      "files": [
+        {
+          "destination": "tokenProperties.scss",
+          "format": "css/variables"
+        }
+      ]
+    }
+  }
+}

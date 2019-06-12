@@ -1,0 +1,31 @@
+// Copyright (c) Alaska Air. All right reserved. Licensed under the Apache-2.0 license
+// See LICENSE in the project root for license information.
+
+// ---------------------------------------------------------------------
+
+// Creates ods-[name] CSS UI definition of shape
+
+// Boilerplate Sass imports
+@import "./tokens/tokenVariables";
+@import "./tokens/componentShapeVariables";
+
+@import "./tokens/tokenProperties";
+@import "./tokens/componentShapeProperties";
+
+@import "./node_modules/@alaskaairux/orion-web-core-style-sheets/dist/breakpoints";
+@import "./node_modules/@alaskaairux/orion-web-core-style-sheets/dist/baselineLTE";
+// @import "./node_modules/@alaskaairux/orion-web-core-style-sheets/animation";
+
+// container styles - defines the look of the outer custom componet
+// :host {
+//   ...
+// }
+
+// layout styles - define any layout specifications for UI that is contained WITHIN the component
+// never define layout that would cause effect on element ouside the scope of this component
+
+
+// component shape styles
+// .[selector-name] {
+//   ...
+// }
