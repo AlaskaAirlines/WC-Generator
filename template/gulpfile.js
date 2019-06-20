@@ -12,7 +12,8 @@
   # To work within the development environment, run the following tasks
     1. $ gulp dev
     2. $ npm run dev
-    3. Go to http://127.0.0.1:8081
+    3. $ polymer serve
+    4. Go to http://127.0.0.1:8081
 */
 
 // =========================================================================
@@ -88,7 +89,7 @@ gulp.task('processSrc', function() {
       )
 
       // Post Sass to CSS process for addressing proprietary prefixes
-      .pipe(gulpautoprefixer({ browsers: ['last 4 versions'], cascade: false }))
+      .pipe(gulpautoprefixer({ overrideBrowserslist: ['last 4 versions'], cascade: false }))
 
       // PostCss polyfill pipeline for CSS Custom Properties (CSS variables)
       .pipe(
@@ -229,12 +230,6 @@ gulp.task(
 gulp.task(
   'dev',
   gulp.series(
-    gulp.parallel(
-      'copyFonts',
-      'buildTokens',
-      'processDemo',
-      'processDev',
-      'sassWatch'
-    )
+    gulp.parallel('copyFonts', 'buildTokens', 'processDemo', 'processDev','sassWatch')
   )
 );

@@ -42,7 +42,7 @@ class Ods[Name] extends LitElement {
   render() {
     return html`
       /* reference to inported process CSS module */
-      ${ods[name]Css}
+      ${styleCss}
 
       <div>
         ${this.string}
@@ -52,4 +52,4 @@ class Ods[Name] extends LitElement {
 }
 
 // define the name of the custom component
-customElements.define("ods-[name]", Ods[name]);
+customElements.define("ods-[name]", Ods[Name]);

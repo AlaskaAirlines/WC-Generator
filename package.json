@@ -4,12 +4,12 @@
   "description": "Boilerplate generator for Orion Design Components",
   "main": "index.js",
   "files": [
-    "scripts",
+    "bin",
     "template",
     "util"
   ],
   "bin": {
-    "ods-wc-generate": "./scripts/generate.js"
+    "ods-wc-generate": "./bin/generate.js"
   },
   "repository": {
     "type": "git",
@@ -29,9 +29,81 @@
     "chalk": "^2.4.2"
   },
   "devDependencies": {
+    "@commitlint/cli": "^8.0.0",
+    "@commitlint/config-conventional": "^8.0.0",
+    "@semantic-release/changelog": "^3.0.4",
+    "@semantic-release/git": "^7.0.12",
+    "@semantic-release/npm": "^5.1.9",
     "eslint": "^5.16.0",
     "eslint-plugin-prettier": "^3.1.0",
-    "prettier": "^1.18.2"
+    "husky": "^2.4.1",
+    "latest-version": "^5.1.0",
+    "prettier": "^1.18.2",
+    "semantic-release": "^15.13.16"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "scripts": {
+    "testbuild": "node bin/generate.js --test --name foo --dir ods-foo",
+    "destroybuild": "rm -rf ods-foo",
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "contributors": [
+    {
+      "name": "Dale Sande",
+      "email": "dale.sande@alaskaair.com"
+    },
+    {
+      "name": "Kevin Sonnichsen",
+      "email": "kevin.sonnichsen@alaskaair.com"
+    },
+    {
+      "name": "Zach Newton",
+      "email": "zach.newton@alaskaair.com"
+    }
+  ],
+  "keywords": [
+    "alaska airlines",
+    "orion design system",
+    "web components",
+    "generator"
+  ],
+  "release": {
+    "branch": "master",
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      [
+        "@semantic-release/changelog",
+        {
+          "changelogFile": "./CHANGELOG.md",
+          "changelogTitle": "# Semantic Release Automated Changelog"
+        }
+      ],
+      "@semantic-release/npm",
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "./CHANGELOG.md",
+            "package.json"
+          ]
+        }
+      ],
+      "@semantic-release/github"
+    ]
   },
   "prettier": {
     "singleQuote": true,
