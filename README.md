@@ -1,8 +1,8 @@
 <img src="https://resource.alaskaair.net/-/media/2C1969F8FB244C919205CD48429C13AC" alt="Orion Design System Logo" title="Be the change you want to see" width="125" align="right" />
 
-[![Build Status](https://travis-ci.org/AlaskaAirlines/OrionStatelessComponents__ods-[name].svg?branch=master)](https://travis-ci.org/AlaskaAirlines/OrionStatelessComponents__ods-[name])
-![npm (scoped)](https://img.shields.io/npm/v/@alaskaairux/ods-[name].svg?color=orange)
-![NPM](https://img.shields.io/npm/l/@alaskaairux/ods-[name].svg?color=blue)
+[![Build Status](https://travis-ci.org/AlaskaAirlines/ODS-WC-Generator.svg?branch=master)](https://travis-ci.org/AlaskaAirlines/ODS-WC-Generator)
+![npm (scoped)](https://img.shields.io/npm/v/@alaskaairux/ods-wc-generator.svg?color=orange)
+![NPM](https://img.shields.io/npm/l/@alaskaairux/ods-wc-generator.svg?color=blue)
 
 # ODS Web Component Generator
 

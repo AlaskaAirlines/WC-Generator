@@ -156,7 +156,7 @@ const loadingLoop = condition => {
 const generateFromTemplate = async () => {
   const pjson = require('../package.json');
   const latestVersion = require('latest-version');
-  const latestPublishedVersion = await latestVersion('@alaskaairux/ods-button');
+  const latestPublishedVersion = await latestVersion('@alaskaairux/ods-wc-generator');
   const params = parseArgs();
 
   if(latestPublishedVersion < pjson.version) {

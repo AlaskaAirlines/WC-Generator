@@ -55,7 +55,8 @@
   "scripts": {
     "testbuild": "node bin/generate.js --test --name foo --dir ods-foo",
     "destroybuild": "rm -rf ods-foo",
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "blanktest": "echo \"Error: no test specified\" && exit 0",
+    "test": "npm run testbuild || npm run destroybuild"
   },
   "publishConfig": {
     "access": "public"
