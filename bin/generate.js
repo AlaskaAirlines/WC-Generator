@@ -157,7 +157,9 @@ const generateFromTemplate = async () => {
   const pjson = require('../package.json');
   const latestVersion = require('latest-version');
   const latestPublishedVersion = await latestVersion('@alaskaairux/ods-wc-generator');
-  log(chalk.green(latestPublishedVersion))
+
+  log(chalk.green(`\nPublished: v${latestPublishedVersion} | Installed: v${pjson.version}\n`))
+
   const params = parseArgs();
 
   if(latestPublishedVersion > pjson.version) {
