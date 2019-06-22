@@ -26,7 +26,8 @@
   "homepage": "https://github.com/AlaskaAirlines/ODS-WC-Generator#readme",
   "dependencies": {
     "arg": "^4.1.0",
-    "chalk": "^2.4.2"
+    "chalk": "^2.4.2",
+    "latest-version": "^5.1.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.0.0",
@@ -37,7 +38,6 @@
     "eslint": "^5.16.0",
     "eslint-plugin-prettier": "^3.1.0",
     "husky": "^2.4.1",
-    "latest-version": "^5.1.0",
     "prettier": "^1.18.2",
     "semantic-release": "^15.13.16"
   },
