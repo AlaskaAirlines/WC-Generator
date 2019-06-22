@@ -157,6 +157,7 @@ const generateFromTemplate = async () => {
   const pjson = require('../package.json');
   const latestVersion = require('latest-version');
   const latestPublishedVersion = await latestVersion('@alaskaairux/ods-wc-generator');
+  log(chalk.green(latestPublishedVersion))
   const params = parseArgs();
 
   if(latestPublishedVersion > pjson.version) {
@@ -182,7 +183,7 @@ const generateFromTemplate = async () => {
     log(chalk.red(`                                         p:::::::p                                     `));
     log(chalk.red(`                                         p:::::::p                                     `));
     log(chalk.red(`                                         ppppppppp                                     \n\n`));
-    log(chalk.red(`\nSorry, we have to stop you here.\nIt's been detected you have v${pjson.version} installed,\nand the latest version is v${latestPublishedVersion}. Please run the following:\n\nnpm i @alaskaairux/ods-button@${latestPublishedVersion} -g\n\nfor the latest version.\n`))
+    log(chalk.red(`\nSorry, we have to stop you here.\nIt's been detected you have v${pjson.version} installed,\nand the latest version is v${latestPublishedVersion}. Please run the following:\n\nnpm i @alaskaairux/ods-wc-generator@${latestPublishedVersion} -g\n\nfor the latest version.\n`))
   }
 
   else {
