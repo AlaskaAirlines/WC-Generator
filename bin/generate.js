@@ -191,6 +191,7 @@ const generateFromTemplate = async () => {
       'ods-[name]_test.html': `ods-${lowerKebabCase(params.name)}_test.html`,
       'ods-[name].js': `ods-${lowerKebabCase(params.name)}.js`,
       'package.temp': 'package.json',
+      '.gitignore.temp': '.gitignore',
     });
     log(chalk.green('\nCopied all files!'));
 
