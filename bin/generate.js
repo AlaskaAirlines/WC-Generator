@@ -159,7 +159,7 @@ const generateFromTemplate = async () => {
   const latestPublishedVersion = await latestVersion('@alaskaairux/ods-wc-generator');
   const params = parseArgs();
 
-  if(latestPublishedVersion < pjson.version) {
+  if(latestPublishedVersion > pjson.version) {
     log(chalk.red(`\n\nNNNNNNNN        NNNNNNNN                                                          !!! `));
     log(chalk.red(`N:::::::N       N::::::N                                                         !!:!! `));
     log(chalk.red(`N::::::::N      N::::::N                                                         !:::! `));
