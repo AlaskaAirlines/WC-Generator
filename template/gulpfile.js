@@ -32,7 +32,7 @@ const gulp = require('gulp'),
 gulp.task('copyFonts', function(cb) {
   copyfiles(
     [
-      './node_modules/@alaskaairux/orion-web-core-style-sheets/fonts/*.*',
+      './node_modules/@alaskaairux/orion-web-core-style-sheets/dist/fonts/*.*',
       './demo/fonts/',
     ],
     true,

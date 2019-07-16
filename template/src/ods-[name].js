@@ -14,7 +14,7 @@ import styleCss from "./style-css.js";
 class Ods[Name] extends LitElement {
   constructor() {
     super();
-    this.string = "";
+    this.cssClass = "";
 
     /*
       If the component requires a touch detection,
@@ -32,7 +32,7 @@ class Ods[Name] extends LitElement {
   // function to define props used within the scope of thie component
   static get properties() {
     return {
-      string: {
+      cssClass: {
         type: String
       }
     };
@@ -41,11 +41,10 @@ class Ods[Name] extends LitElement {
   // function that renders the HTML and CSS into  the scope of the component
   render() {
     return html`
-      /* reference to inported process CSS module */
       ${styleCss}
 
-      <div>
-        ${this.string}
+      <div class=${this.cssClass}>
+        <slot></slot>
       </div>
     `;
   }
