@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [1.0.11](https://github.com/AlaskaAirlines/ODS-WC-Generator/compare/v1.0.10...v1.0.11) (2019-07-16)
+
+
+### Bug Fixes
+
+* address issue with fonts and index template ([c1da7e6](https://github.com/AlaskaAirlines/ODS-WC-Generator/commit/c1da7e6))
+
 ## [1.0.10](https://github.com/AlaskaAirlines/ODS-WC-Generator/compare/v1.0.9...v1.0.10) (2019-07-16)
 
 
