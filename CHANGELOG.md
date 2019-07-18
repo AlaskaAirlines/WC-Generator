@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [1.0.12](https://github.com/AlaskaAirlines/ODS-WC-Generator/compare/v1.0.11...v1.0.12) (2019-07-18)
+
+
+### Bug Fixes
+
+* update ods wc template for shape properties css inclusion ([d025b53](https://github.com/AlaskaAirlines/ODS-WC-Generator/commit/d025b53))
+
 ## [1.0.11](https://github.com/AlaskaAirlines/ODS-WC-Generator/compare/v1.0.10...v1.0.11) (2019-07-16)
 
 
