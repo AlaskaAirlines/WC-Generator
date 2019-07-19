@@ -83,6 +83,12 @@ The elements of the repo's `./template` directory are used to generate the new c
    └── ods-[name]_test.html
 ```
 
+## Trouble-shoot
+
+With the current configurations, when committing code to a new repo, Githooks should be working. To validate, when committing code a series of pre-commit tests should be running.
+
+If the hooks are not working, you may want to delete `package-lock.json`, delete the `node_modules` directory and re-install app packages.
+
 ##
 
 Alaska Airlines Orion Design System<br>
