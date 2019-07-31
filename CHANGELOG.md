@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [1.0.13](https://github.com/AlaskaAirlines/ODS-WC-Generator/compare/v1.0.12...v1.0.13) (2019-07-31)
+
+
+### Bug Fixes
+
+* [#4](https://github.com/AlaskaAirlines/ODS-WC-Generator/issues/4) address all tempate file issues ([b2c339d](https://github.com/AlaskaAirlines/ODS-WC-Generator/commit/b2c339d))
+
 ## [1.0.12](https://github.com/AlaskaAirlines/ODS-WC-Generator/compare/v1.0.11...v1.0.12) (2019-07-18)
 
 
