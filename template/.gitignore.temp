@@ -4,6 +4,7 @@ node_modules/
 ## Sass files built on demand from Token files
 demo/sass/_*.scss
 tokens/
+altImports/
 
 ## CSS built from Sass process
 demo/css
