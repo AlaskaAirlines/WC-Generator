@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [1.0.14](https://github.com/AlaskaAirlines/ODS-WC-Generator/compare/v1.0.13...v1.0.14) (2019-08-30)
+
+
+### Bug Fixes
+
+* update incorrect path reference for style flux script ([f4b9041](https://github.com/AlaskaAirlines/ODS-WC-Generator/commit/f4b9041))
+
 ## [1.0.13](https://github.com/AlaskaAirlines/ODS-WC-Generator/compare/v1.0.12...v1.0.13) (2019-07-31)
 
 
