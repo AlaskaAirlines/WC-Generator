@@ -94,8 +94,8 @@
     "jsonLint": "jsonlint -q ./src/shape.json",
     "sassRender": "sass-render src/*.css src/tokens/*.scss",
     "sassRender-w": "sass-render -w src/**/*.{scss,css}",
-    "stylefluxCanonical": "styleflux -o ./altImports/canonical/*.css",
-    "stylefluxVariable": "styleflux -o ./altImports/variable/*.css",
+    "stylefluxCanonical": "styleflux -o ./src/altImports/canonical/*.css",
+    "stylefluxVariable": "styleflux -o ./src/altImports/variable/*.css",
     "sweep": "rm -rf ./altImports ./temp ./demo/css ./demo/fonts ./dist ./src/tokens | rm ./demo/sass/*token*.scss ./src/*.css ./src/*-css.js",
     "test": "npm run cssLint | npm run jsonLint | yamllint .travis.yml"
   },
