@@ -1,5 +1,13 @@
 # Semantic Release Automated Changelog
 
+## [1.0.15](https://github.com/AlaskaAirlines/ODS-WC-Generator/compare/v1.0.14...v1.0.15) (2019-09-10)
+
+
+### Bug Fixes
+
+* update security vulnerability ([c61fd4d](https://github.com/AlaskaAirlines/ODS-WC-Generator/commit/c61fd4d))
+* update template resources per ods-toast dev feedback ([092f7a0](https://github.com/AlaskaAirlines/ODS-WC-Generator/commit/092f7a0))
+
 ## [1.0.14](https://github.com/AlaskaAirlines/ODS-WC-Generator/compare/v1.0.13...v1.0.14) (2019-08-30)
 
 
