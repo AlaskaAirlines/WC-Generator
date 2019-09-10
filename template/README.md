@@ -6,11 +6,15 @@
 
 # \<ods-[name]>
 
-\<ods-[name]> is a wrapper component for a HTML \<[name]> element containing styling and behavior.
+\<ods-[name]> is a [HTML custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) for the purpose of ...
 
 ## Docs
 
 All information regarding Project Setup, Technical Details, Tests and information regarding ODS Stateless Components can be found in the [./docs](https://github.com/AlaskaAirlines/OrionStatelessComponents__docs/tree/master/docs) repository.
+
+## UI development browser support
+
+For the most up to date information on UI development browser support, see [./docs/BROWSER_SUPPORT.md](https://github.com/AlaskaAirlines/OrionStatelessComponents__docs/blob/master/docs/BROWSER_SUPPORT.md)
 
 ## Install
 
@@ -20,13 +24,15 @@ $ npm i @alaskaairux/ods-[name]
 
 ### Design Token CSS Custom Property dependency
 
-The use of any ODS Component has a dependency on the [ODS Design Tokens (npm install)](https://www.npmjs.com/package/@alaskaairux/orion-design-tokens). See repository and API information [here](https://github.com/AlaskaAirlines/OrionDesignTokens).
+The use of any ODS custom element has a dependency on the [ODS Design Tokens (npm install)](https://www.npmjs.com/package/@alaskaairux/orion-design-tokens). See repository and API information [here](https://github.com/AlaskaAirlines/OrionDesignTokens).
 
 For additional details in regards to using Orion Design Tokens with components, please see [./docs/TECH_DETAILS.md](https://github.com/AlaskaAirlines/OrionStatelessComponents__docs/blob/master/docs/TECH_DETAILS.md)
 
 ### CSS Custom Property fallbacks
 
-CSS Custom Properties are not supported in older browsers. For this, fallback properties are pre-generated and included with the npm. Any update to the Orion Design Tokens will be immediately reflected with browsers that support CSS Custom Properties, legacy browsers will require updated components with pre-generated fallback properties.
+[CSS Custom Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) are not supported in older browsers. For this, fallback properties are pre-generated and included with the npm. 
+
+Any update to the Orion Design Tokens will be immediately reflected with browsers that support CSS Custom Properties, legacy browsers will require updated components with pre-generated fallback properties.
 
 ### Define dependency in project component
 
@@ -50,19 +56,23 @@ class Ods[name] extends LitElement
 
 ### Styling (experimental)
 
-Option(s) for component customization
+Option(s) for component customization. 
+
+[Place relative content here if ::part() is to be considered for support]
 
 | Selector | Type | State | Description |
 |----|----|----|---|
 | ::part() | pseudo-element | experimental | Update shadowDOM CSS from outside the component |
 
+See [caniuse.com](https://caniuse.com/#search=%3A%3Apart) for more information. 
+
 ### [name] use cases
 
 The \<ods-[name]> element should be used in situations where users may:
 
-* action
-* action
-* action
+* ...
+* ...
+* ...
 
 ### Properties:
 
@@ -78,7 +88,9 @@ Default [name]
 <ods-[name]>Hello World</ods-[name]>
 ```
 
-### React Custom callbacks
+### [React] Custom callbacks
+
+[The following is suggested content. If there is any special consideration for callback support with React or other development environments, please upate.]
 
 [name](React support) with `ref` for passing in an event, [see notes](https://github.com/AlaskaAirlines/OrionStatelessComponents__docs/blob/master/docs/CALLBACK.md)
 
@@ -88,7 +100,7 @@ Default [name]
 
 ## Alternate build solutions
 
-Included with the distributed npm are two additional directories, `./altImportsCanonical` and `./altImportsVariable`.
+Included with all Orion Custom Elements, the distributed npm contain two additional directories, `./altImportsCanonical` and `./altImportsVariable`.
 
 | directory | description |
 |---|---|

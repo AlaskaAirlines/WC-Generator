@@ -34,12 +34,15 @@
   },
   "peerDependencies": {
     "@alaskaairux/orion-design-tokens": "^2.4.2",
+    "@alaskaairux/orion-web-core-style-sheets": "^2.6.7",
+    "@alaskaairux/orion-icons": "^1.6.1",
     "@webcomponents/webcomponentsjs": "^2.2.9",
     "focus-visible": "^4.1.5"
   },
   "devDependencies": {
-    "@alaskaairux/orion-design-tokens": "^2.4.2",
-    "@alaskaairux/orion-web-core-style-sheets": "^2.6.2",
+    "@alaskaairux/orion-web-core-style-sheets": "^2.6.7",
+    "@alaskaairux/orion-design-tokens": "^2.7.0",
+    "@alaskaairux/orion-icons": "^1.6.2",
     "@commitlint/cli": "^7.6.1",
     "@commitlint/config-conventional": "^7.6.0",
     "@polymer/iron-demo-helpers": "^3.1.0",

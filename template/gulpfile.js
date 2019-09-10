@@ -145,7 +145,7 @@ gulp.task('processImportsCanonical', function() {
       )
 
       // Output final CSS in destination
-      .pipe(gulp.dest('./src/altImports/canonical/'))
+      .pipe(gulp.dest('./altImports/canonical/'))
   );
 });
 
@@ -177,7 +177,7 @@ gulp.task('processImportsVariable', function() {
       )
 
       // Output final CSS in destination
-      .pipe(gulp.dest('./src/altImports/variable/'))
+      .pipe(gulp.dest('./altImports/variable/'))
   );
 });
 
