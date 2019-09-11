@@ -1,4 +1,4 @@
-.<img src="https://resource.alaskaair.net/-/media/2C1969F8FB244C919205CD48429C13AC" alt="Orion Design System Logo" title="Be the change you want to see" width="125" align="right" />
+<img src="https://resource.alaskaair.net/-/media/2C1969F8FB244C919205CD48429C13AC" alt="Orion Design System Logo" title="Be the change you want to see" width="125" align="right" />
 
 [![Build Status](https://travis-ci.org/AlaskaAirlines/ODS-WC-Generator.svg?branch=master)](https://travis-ci.org/AlaskaAirlines/ODS-WC-Generator)
 ![npm (scoped)](https://img.shields.io/npm/v/@alaskaairux/ods-wc-generator.svg?color=orange)
@@ -16,7 +16,7 @@ It is suggested that this package be installed globally as to ensure quick and e
 $ npm i @alaskaairux/ods-wc-generator -g
 ```
 
-The ODS Web Component Generator is configured to ensure that you have the latest version of the generator prior to starting a new build project. You can also verify your installed version manually by running the following command. 
+The ODS Web Component Generator is configured to ensure that you have the latest version of the generator prior to starting a new build project. You can also verify your installed version manually by running the following command.
 
 ```shell
 $ npm list -g @alaskaairux/ods-wc-generator
@@ -92,13 +92,13 @@ The elements of the repo's `./template` directory will be used to generate the n
 
 ### What goes where?
 
-**./demo**: The purpose of this directory is to produce a demo page for development and review. Updates would include editing the `./demo/index.html` and `./demo/sass/style.scss` documents. 
+**./demo**: The purpose of this directory is to produce a demo page for development and review. Updates would include editing the `./demo/index.html` and `./demo/sass/style.scss` documents.
 
-**./docs**: If there are additional documents per your new custom element, please place all Markdown files in the `./docs` directory. 
+**./docs**: If there are additional documents per your new custom element, please place all Markdown files in the `./docs` directory.
 
-**./scripts**: This directory is not to be used for any component specific code. This directory is specifically for the Polymer Development environment only. 
+**./scripts**: This directory is not to be used for any component specific code. This directory is specifically for the Polymer Development environment only.
 
-**./src**: Your new Orion Custom Element will be developed inside a Polymer Development Environment, so all the code that pertains specifically to your new web component will live in the `./src` directory. Javascript, JSON and Sass will all need to be placed ONLY in the `./src` directory. If placed anywhere else, this will cause issues with the packing process. 
+**./src**: Your new Orion Custom Element will be developed inside a Polymer Development Environment, so all the code that pertains specifically to your new web component will live in the `./src` directory. Javascript, JSON and Sass will all need to be placed ONLY in the `./src` directory. If placed anywhere else, this will cause issues with the packing process.
 
 
 ### Your 1st commit
