@@ -6,9 +6,9 @@
 import { LitElement, html } from "lit-element";
 
 // Import touch detection lib
-import 'focus-visible/dist/focus-visible.min.js';
+import "focus-visible/dist/focus-visible.min.js";
 // impot the processed CSS file into the scope of the component
-import componentProperties from './tokens/componentShapeProperties-css.js';
+import componentProperties from "./tokens/componentShapeProperties-css.js";
 import styleCss from "./style-css.js";
 
 // build the component class
