@@ -54,69 +54,7 @@ For the most up to date information on UI development browser support, see [./do
 
 ## Building an Orion Custom element
 
-Once the new development environment has been created, there are some conventions to follow to ensure the success of your new Orion Custom Element
-
-### The npm structure
-
-The elements of the repo's `./template` directory will be used to generate the new custom element environment.
-
-```
-/ODS-WC-Generator/template
-├── LICENSE
-├── NOTICE
-├── README.md
-├── demo
-|  ├── alert.js
-|  ├── index.html
-|  └── sass
-|     └── style.scss
-├── docs
-├── gulpfile.js
-├── index.html
-├── package.temp
-├── polymer.json
-├── scripts
-|  ├── componentConfig.json
-|  ├── componentConfigDist.json
-|  ├── tokenConfig.json
-|  ├── tokenScript.js
-|  └── tokenScriptCustom.js
-├── src
-|  ├── ods-[name].js
-|  ├── shape.json
-|  └── style.scss
-└── test
-   ├── index.html
-   └── ods-[name]_test.html
-```
-
-### What goes where?
-
-**./demo**: The purpose of this directory is to produce a demo page for development and review. Updates would include editing the `./demo/index.html` and `./demo/sass/style.scss` documents.
-
-**./docs**: If there are additional documents per your new custom element, please place all Markdown files in the `./docs` directory.
-
-**./scripts**: This directory is not to be used for any component specific code. This directory is specifically for the Polymer Development environment only.
-
-**./src**: Your new Orion Custom Element will be developed inside a Polymer Development Environment, so all the code that pertains specifically to your new web component will live in the `./src` directory. Javascript, JSON and Sass will all need to be placed ONLY in the `./src` directory. If placed anywhere else, this will cause issues with the packing process.
-
-
-### Your 1st commit
-
-With the current configurations, when committing code to a new repo, Githooks should be working. To validate, when committing code a series of pre-commit tests should run. To validate, run the following commands:
-
-```bash
-$ git add .
-$ git commit -m "chore: initial commit from generator"
-```
-
-In your Git logs you should see the following line output:
-
-```bash
-husky > commit-msg (node v10.16.3)
-```
-
-If you do not, then the pre-commit hooks are **not working**. To fix, delete `package-lock.json`, and the `node_modules` directory, then re-install all packages.
+Once the new development environment has been created, there are some conventions to follow to ensure the success of your new Orion Custom Element. Please see the development documentation [ODS Stateless Component Development Details](https://github.com/AlaskaAirlines/OrionStatelessComponents__docs/blob/master/docs/TECH_DETAILS.md)
 
 ##
 
