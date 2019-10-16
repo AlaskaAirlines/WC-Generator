@@ -1,6 +1,6 @@
 {
   "name": "@alaskaairux/ods-wc-generator",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "description": "Boilerplate generator for Orion Design Components",
   "main": "index.js",
   "files": [
