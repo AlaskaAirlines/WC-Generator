@@ -210,6 +210,24 @@ gulp.task('processDev', function() {
   );
 });
 
+// task for Development Sass processing
+gulp.task('reprocessClean', function() {
+  // set path to where Sass files are located to be processed
+  return gulp.src('./altImports/**/*.scss')
+
+    // PostCss polyfill pipeline for CSS Custom Properties (CSS variables)
+    .pipe(postcss([
+
+      selectorReplace({
+        before: [":host", "&(:not(.is-touching))", "&(.focus-visible)"],
+        after: ["&", "&:not(.is-touching)", "&.focus-visible"],
+      })
+    ]))
+
+    // Output final CSS in destination
+    .pipe(gulp.dest('./altImports/'));
+});
+
 // Sass watcher
 gulp.task('sassWatch', function() {
   gulp.watch(
