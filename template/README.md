@@ -41,7 +41,7 @@ Any update to the Orion Design Tokens will be immediately reflected with browser
 Defining the component dependency within each component that is using the \<ods-[name]> component.
 
 ```javascript
-import "@alaskaairux/ods-[name]/dist/ods-[name]";
+import "@alaskaairux/ods-[name]";
 ```
 
 **Reference component in HTML**
@@ -111,7 +111,7 @@ Please be sure to review the [contribution guidelines](https://github.com/Alaska
 
 Once the project has been cloned to your local resource and you have installed all the dependencies you will need to open three different shell sessions. One is for the **Gulp tasks**, the second is for a series of **npm tasks** and the last is to run the **Polymer server**.
 
-**Peer depdency:** Please make sure Polymer is installed globally in order to run the Polymer server. See [ODS Stateless Component Development Details](https://github.com/AlaskaAirlines/OrionStatelessComponents__docs/blob/master/docs/TECH_DETAILS.md) for more information. 
+**Peer depdency:** Please make sure Polymer is installed globally in order to run the Polymer server. See [ODS Stateless Component Development Details](https://github.com/AlaskaAirlines/OrionStatelessComponents__docs/blob/master/docs/TECH_DETAILS.md) for more information.
 
 ```bash
 $ npm i polymer-cli

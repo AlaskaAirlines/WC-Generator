@@ -27,7 +27,7 @@
     "type": "git",
     "url": "https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-[name]"
   },
-  "main": "src/",
+  "main": "index.js",
   "license": "Apache-2.0",
   "dependencies": {
     "lit-element": "^2.1.0"
