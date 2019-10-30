@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [1.0.21](https://github.com/AlaskaAirlines/ODS-WC-Generator/compare/v1.0.20...v1.0.21) (2019-10-30)
+
+
+### Bug Fixes
+
+* address build bug ([ebe1b3a](https://github.com/AlaskaAirlines/ODS-WC-Generator/commit/ebe1b3a))
+
 ## [1.0.20](https://github.com/AlaskaAirlines/ODS-WC-Generator/compare/v1.0.19...v1.0.20) (2019-10-18)
 
 
