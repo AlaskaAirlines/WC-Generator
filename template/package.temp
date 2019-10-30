@@ -101,6 +101,7 @@
     "stylefluxCanonical": "styleflux -o ./altImports/canonical/*.css",
     "stylefluxVariable": "styleflux -o ./altImports/variable/*.css",
     "sweep": "rm -rf ./altImports ./temp ./demo/css ./demo/fonts ./dist ./src/tokens | rm ./demo/sass/*token*.scss ./src/*.css ./src/*-css.js",
+    "yamltest": "yamllint .travis.yml",
     "test": "npm-run-all cssLint jsonLint yamltest",
     "processSrc": "gulp processSrc",
     "processImportsCanonical": "gulp processImportsCanonical",

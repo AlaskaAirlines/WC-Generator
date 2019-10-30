@@ -25,7 +25,8 @@ const gulp = require('gulp'),
   postcss = require('gulp-postcss'),
   removeSelectors = require('postcss-remove-selectors'),
   StyleDictionary = require('style-dictionary'),
-  copyfiles = require('copyfiles');
+  copyfiles = require('copyfiles'),
+  selectorReplace = require('postcss-selector-replace');
 
 // task to copy font files from the OWCSS npm to the local project
 // resources are NOT to be committed to version control
