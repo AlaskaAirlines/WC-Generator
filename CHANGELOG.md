@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+# [1.1.0](https://github.com/AlaskaAirlines/ODS-WC-Generator/compare/v1.0.21...v1.1.0) (2019-11-05)
+
+
+### Features
+
+* use [@open-wc](https://github.com/open-wc) for testing ([918e990](https://github.com/AlaskaAirlines/ODS-WC-Generator/commit/918e990))
+
 ## [1.0.21](https://github.com/AlaskaAirlines/ODS-WC-Generator/compare/v1.0.20...v1.0.21) (2019-10-30)
 
 
