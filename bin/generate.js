@@ -191,7 +191,7 @@ const generateFromTemplate = async () => {
   else {
     await makeFolder(params.dir);
     await copyAllFiles(paths.self.template, params.dir, params, {
-      'ods-[name]_test.html': `ods-${lowerKebabCase(params.name)}_test.html`,
+      'ods-[name].test.js': `ods-${lowerKebabCase(params.name)}.test.js`,
       'ods-[name].js': `ods-${lowerKebabCase(params.name)}.js`,
       'package.temp': 'package.json',
       '.npmignore.temp': '.npmignore',
