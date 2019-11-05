@@ -4,7 +4,7 @@
     "The build process for Lit-Element components is currently a 2-part solution that uses Gulp and npm.",
     "The primary use of Gulp is for the CSS processing that requires the generation of a CSS file and a series of PostCSS functions.",
     "Aside from the Sass/PostCSS tasks, all other tasks are also avaialble directly from npm as well.",
-    "To keep things less confucing, all tasks share the same name between Gulp and npm.",
+    "To keep things less confusing, all tasks share the same name between Gulp and npm.",
     "",
     "# To build resources to view the demo file, perform the following tasks",
     "  1. $ gulp build",

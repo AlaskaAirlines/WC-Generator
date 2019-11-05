@@ -50,11 +50,11 @@ Please see [OrionStatelessComponents__docs](https://github.com/AlaskaAirlines/Or
 
 ## UI development browser support
 
-For the most up to date information on UI development browser support, see [./docs/BROWSER_SUPPORT.md](https://github.com/AlaskaAirlines/OrionStatelessComponents__docs/blob/master/docs/BROWSER_SUPPORT.md)
+For the most up to date information on UI development browser support, see [./docs/BROWSER_SUPPORT.md](https://github.com/AlaskaAirlines/OrionStatelessComponents__docs/blob/master/src/BROWSER_SUPPORT.md)
 
 ## Building an Orion Custom element
 
-Once the new development environment has been created, there are some conventions to follow to ensure the success of your new Orion Custom Element. Please see the development documentation [ODS Stateless Component Development Details](https://github.com/AlaskaAirlines/OrionStatelessComponents__docs/blob/master/docs/TECH_DETAILS.md)
+Once the new development environment has been created, there are some conventions to follow to ensure the success of your new Orion Custom Element. Please see the development documentation [ODS Stateless Component Development Details](https://github.com/AlaskaAirlines/OrionStatelessComponents__docs/blob/master/src/TECH_DETAILS.md)
 
 ##
 
