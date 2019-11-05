@@ -105,6 +105,7 @@
     "lint": "npm-run-all cssLint jsonLint yamltest",
     "test": "karma start --coverage",
     "test:watch": "karma start --auto-watch=true --single-run=false",
+    "test:ci": "npm-run-all test lint",
     "processSrc": "gulp processSrc",
     "processImportsCanonical": "gulp processImportsCanonical",
     "processImportsVariable": "gulp processImportsVariable",
@@ -114,7 +115,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm test",
+      "pre-commit": "npm-run-all test lint",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
