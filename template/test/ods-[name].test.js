@@ -3,7 +3,7 @@ import sinon from 'sinon';
 import '../src/ods-[name].js';
  
 describe('ods-[name]', () => {
-  it('renders the label', async () => {
+  it('sets the CSS class on the div', async () => {
     const el = await fixture(html`
       <ods-[name] cssclass="testClass"></ods-[name]>
     `);
