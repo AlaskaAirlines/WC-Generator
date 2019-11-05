@@ -2,6 +2,9 @@ language: node_js
 node_js:
  - "11"
 
+addons:
+  chrome: stable
+
 branches:
   only:
     - master
@@ -20,6 +23,9 @@ before_script:
   - npm run distTokens
   - npm run sassRender
   - npm run distJS
+
+script:
+  - npm run test:ci
 
 after_success:
   - npx semantic-release
