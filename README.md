@@ -1,12 +1,10 @@
-<img src="https://resource.alaskaair.net/-/media/2C1969F8FB244C919205CD48429C13AC" alt="Orion Design System Logo" title="Be the change you want to see" width="125" align="right" />
-
 [![Build Status](https://travis-ci.org/AlaskaAirlines/ODS-WC-Generator.svg?branch=master)](https://travis-ci.org/AlaskaAirlines/ODS-WC-Generator)
 ![npm (scoped)](https://img.shields.io/npm/v/@alaskaairux/ods-wc-generator.svg?color=orange)
 ![NPM](https://img.shields.io/npm/l/@alaskaairux/ods-wc-generator.svg?color=blue)
 
-# ODS Web Component Generator
+# Web Component Generator
 
-The Orion Design System Web Component Generator is a project tool intended to assist developers with an easy to configure and execute Web Component development environment for the purpose of building custom elements for the Orion Design System.
+The Design System Web Component Generator is a project tool intended to assist developers with an easy to configure and execute Web Component development environment for the purpose of building custom elements for the Design System.
 
 ## Install
 
@@ -46,19 +44,19 @@ $ ods-wc-generate --name button --dir ./ods-button
 
 ## General documentation
 
-Please see [OrionStatelessComponents__docs](https://github.com/AlaskaAirlines/OrionStatelessComponents__docs) for all information in regards to using and developing HTML custom elements with the Orion Design System.
+Please see [OrionStatelessComponents__docs](https://github.com/AlaskaAirlines/OrionStatelessComponents__docs) for all information in regards to using and developing HTML custom elements with the Design System.
 
 ## UI development browser support
 
 For the most up to date information on UI development browser support, see [./docs/BROWSER_SUPPORT.md](https://github.com/AlaskaAirlines/OrionStatelessComponents__docs/blob/master/src/BROWSER_SUPPORT.md)
 
-## Building an Orion Custom element
+## Building a Custom element
 
-Once the new development environment has been created, there are some conventions to follow to ensure the success of your new Orion Custom Element. Please see the development documentation [ODS Stateless Component Development Details](https://github.com/AlaskaAirlines/OrionStatelessComponents__docs/blob/master/src/TECH_DETAILS.md)
+Once the new development environment has been created, there are some conventions to follow to ensure the success of your new Custom Element. Please see the development documentation [ODS Stateless Component Development Details](https://github.com/AlaskaAirlines/OrionStatelessComponents__docs/blob/master/src/TECH_DETAILS.md)
 
 ##
 
 <footer>
-Alaska Airlines Orion Design System<br>
+Alaska Airlines Design System<br>
 Copyright 2019 Alaska Airlines, Inc. or its affiliates. All Rights Reserved.
 </footer>
