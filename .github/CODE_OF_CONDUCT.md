@@ -1,4 +1,4 @@
-# Orion Design System Code of Conduct
+# Code of Conduct
 
 ## Our Pledge
 
