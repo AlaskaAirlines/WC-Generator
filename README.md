@@ -1,7 +1,3 @@
-[![Build Status](https://travis-ci.org/AlaskaAirlines/ODS-WC-Generator.svg?branch=master)](https://travis-ci.org/AlaskaAirlines/ODS-WC-Generator)
-![npm (scoped)](https://img.shields.io/npm/v/@alaskaairux/ods-wc-generator.svg?color=orange)
-![NPM](https://img.shields.io/npm/l/@alaskaairux/ods-wc-generator.svg?color=blue)
-
 # Web Component Generator
 
 The Design System Web Component Generator is a project tool intended to assist developers with an easy to configure and execute Web Component development environment for the purpose of building custom elements for the Design System.
@@ -54,9 +50,11 @@ For the most up to date information on UI development browser support, see [./do
 
 Once the new development environment has been created, there are some conventions to follow to ensure the success of your new Custom Element. Please see the development documentation [ODS Stateless Component Development Details](https://github.com/AlaskaAirlines/OrionStatelessComponents__docs/blob/master/src/TECH_DETAILS.md)
 
-##
 
-<footer>
-Alaska Airlines Design System<br>
-Copyright 2019 Alaska Airlines, Inc. or its affiliates. All Rights Reserved.
-</footer>
+------
+
+#### Status badges
+
+[![Build Status](https://travis-ci.org/AlaskaAirlines/ODS-WC-Generator.svg?branch=master)](https://travis-ci.org/AlaskaAirlines/ODS-WC-Generator)
+![npm (scoped)](https://img.shields.io/npm/v/@alaskaairux/ods-wc-generator.svg?color=orange)
+![NPM](https://img.shields.io/npm/l/@alaskaairux/ods-wc-generator.svg?color=blue)
