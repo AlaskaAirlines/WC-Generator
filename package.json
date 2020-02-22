@@ -38,6 +38,7 @@
     "eslint": "^5.16.0",
     "eslint-plugin-prettier": "^3.1.0",
     "husky": "^2.4.1",
+    "npm-run-all": "^4.1.5",
     "prettier": "^1.18.2",
     "semantic-release": "^15.13.24"
   },
@@ -53,10 +54,10 @@
     ]
   },
   "scripts": {
-    "testbuild": "node bin/generate.js --test --name foo --dir ods-foo",
-    "destroybuild": "rm -rf ods-foo",
+    "testbuild": "node bin/generate.js --test --name foo --dir ./ods-foo",
+    "sweep": "rm -rf ods-foo",
     "blanktest": "echo \"Error: no test specified\" && exit 0",
-    "test": "npm run testbuild || npm run destroybuild"
+    "test": "npm-run-all testbuild"
   },
   "publishConfig": {
     "access": "public"
@@ -65,10 +66,6 @@
     {
       "name": "Dale Sande",
       "email": "dale.sande@alaskaair.com"
-    },
-    {
-      "name": "Kevin Sonnichsen",
-      "email": "kevin.sonnichsen@alaskaair.com"
     },
     {
       "name": "Zach Newton",
