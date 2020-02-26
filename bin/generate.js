@@ -81,12 +81,15 @@ const formatTemplateFileContents = (content, { name }) => {
   const lowerKebabCaseName = lowerKebabCase(name);
   // name to UpperCamelCase (e.g. text-input -> TextInput)
   const upperCamelCaseName = upperCamelCase(name);
+  // gets git username from ./gitconfig
+  const userName = require('git-user-name');
+  // gets git email from ./gitconfig
+  const userEmail = require('git-user-email');
   const replacements = [
     { regex: /\[name\]/g, value: lowerKebabCaseName },
-    {
-      regex: /\[Name\]/g,
-      value: upperCamelCaseName,
-    },
+    { regex: /\[Name\]/g, value: upperCamelCaseName },
+    { regex: /\[author\]/g, value: userName },
+    { regex: /\[author-email\]/g, value: userEmail }
   ];
 
   // replace all instances of [name] and [Name] accordingly
