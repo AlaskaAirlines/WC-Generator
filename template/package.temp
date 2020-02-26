@@ -19,13 +19,13 @@
     "  3. Go to http://127.0.0.1:8081",
     "================================================================================"
   ],
-  "name": "@alaskaairux/ods-[name]",
+  "name": "@alaskaairux/ods-foo",
   "version": "0.0.0",
-  "description": "Orion Design System [name] element",
+  "description": "Orion Design System foo element",
   "author": "Product design and research",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-[name]"
+    "url": "https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-foo"
   },
   "main": "index.js",
   "license": "Apache-2.0",
@@ -69,12 +69,11 @@
     "npm-watch": "^0.6.0",
     "postcss": "^7.0.17",
     "postcss-custom-properties": "^9.1.1",
-    "postcss-remove-selectors": "^2.0.0",
+    "postcss-remove-rules": "^1.0.0",
     "postcss-selector-replace": "^1.0.2",
     "semantic-release": "^15.13.16",
     "sinon": "^7.5.0",
     "style-dictionary": "^2.8.0",
-    "styleflux": "^1.2.0",
     "stylelint": "^13.2.0",
     "stylelint-config-standard": "^20.0.0",
     "wc-sass-render": "^1.2.1",
@@ -97,8 +96,6 @@
     "jsonLint": "jsonlint -q ./src/shape.json",
     "sassRender": "sass-render src/*.css src/tokens/*.scss",
     "sassRender-w": "sass-render -w src/**/*.{scss,css}",
-    "stylefluxCanonical": "styleflux -o ./altImports/canonical/*.css",
-    "stylefluxVariable": "styleflux -o ./altImports/variable/*.css",
     "sweep": "rm -rf ./altImports ./temp ./demo/css ./demo/fonts ./dist ./src/tokens | rm ./demo/sass/*token*.scss ./src/*.css ./src/*-css.js",
     "yamltest": "yamllint .travis.yml",
     "lint": "npm-run-all cssLint jsonLint yamltest",
@@ -149,14 +146,6 @@
   },
   "contributors": [
     {
-      "name": "Dale Sande",
-      "email": "dale.sande@alaskaair.com"
-    },
-    {
-      "name": "Kevin Sonnichsen",
-      "email": "Kevin.Sonnichsen@alaskaair.com"
-    },
-    {
       "name": "[author]",
       "email": "[author-email]"
     }
@@ -164,7 +153,6 @@
   "keywords": [
     "alaska airlines",
     "orion design system",
-    "web components",
-    "[name]"
+    "web components"
   ]
 }

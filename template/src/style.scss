@@ -3,11 +3,14 @@
 
 // ---------------------------------------------------------------------
 
-// Creates ods-[name] CSS UI definition of shape
+// Creates ods-foo CSS UI definition of shape
 
-// Boilerplate Sass imports
-@import "./tokens/tokenVariables";
-@import "./tokens/componentShapeVariables";
+// Import Auro tokens
+@import "./node_modules/@alaskaairux/orion-design-tokens/dist/tokens/SCSSVariables";
+@import "./node_modules/@alaskaairux/orion-design-tokens/dist/tokens/SassCustomProperties";
+
+// Import deprecated  Design Token variables to support Orion values
+@import "./node_modules/@alaskaairux/orion-design-tokens/dist/tokens/tokenVariables";
 
 @import "./tokens/tokenProperties";
 @import "./tokens/componentShapeProperties";
@@ -31,5 +34,5 @@
 // }
 
 .testClass {
-  color: $color-base-galapagos;
+  color: var(--auro-color-border-primary-on-light);
 }

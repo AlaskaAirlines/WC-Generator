@@ -23,7 +23,7 @@ const gulp = require('gulp'),
   gulpautoprefixer = require('gulp-autoprefixer'),
   postcssCustomProperties = require('postcss-custom-properties'),
   postcss = require('gulp-postcss'),
-  removeSelectors = require('postcss-remove-selectors'),
+  removeRules = require('postcss-remove-rules'),
   StyleDictionary = require('style-dictionary');
 
 // task to build CSS/Sass resources from Token JSON files
@@ -85,9 +85,11 @@ gulp.task('processSrc', function() {
             preserve: true,
           }),
 
-          removeSelectors({
-            selectors: [':root'],
-          }),
+          removeRules({
+            rulesToRemove: {
+              ':root': '*'
+            }
+          })
         ])
       )
 
@@ -114,9 +116,11 @@ gulp.task('processDev', function() {
       // PostCss polyfill pipeline for CSS Custom Properties (CSS variables)
       .pipe(
         postcss([
-          removeSelectors({
-            selectors: [':root'],
-          }),
+          removeRules({
+            rulesToRemove: {
+              ':root': '*'
+            }
+          })
         ])
       )
 
