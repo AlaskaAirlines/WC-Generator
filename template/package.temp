@@ -57,7 +57,6 @@
     "autoprefixer": "^9.6.0",
     "concat": "^1.0.3",
     "copyfiles": "^2.1.0",
-    "css-byebye": "^2.0.0",
     "focus-visible": "^4.1.5",
     "gulp": "^4.0.1",
     "gulp-autoprefixer": "^6.0.0",
@@ -107,11 +106,7 @@
     "test:watch": "karma start --auto-watch=true --single-run=false",
     "test:ci": "npm-run-all test lint",
     "processSrc": "gulp processSrc",
-    "processImportsCanonical": "gulp processImportsCanonical",
-    "processImportsVariable": "gulp processImportsVariable",
-    "reprocessClean": "gulp reprocessClean",
-    "ciBuild": "npm-run-all buildTokens processSrc processImportsCanonical processImportsVariable stylefluxCanonical stylefluxVariable reprocessClean distTokens sassRender distJS",
-    "devBuild": "npm-run-all buildTokens processSrc distTokens sassRender distJS"
+    "ciBuild": "npm-run-all buildTokens processSrc distTokens sassRender distJS"
   },
   "husky": {
     "hooks": {

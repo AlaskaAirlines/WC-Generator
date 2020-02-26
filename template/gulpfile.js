@@ -24,23 +24,7 @@ const gulp = require('gulp'),
   postcssCustomProperties = require('postcss-custom-properties'),
   postcss = require('gulp-postcss'),
   removeSelectors = require('postcss-remove-selectors'),
-  StyleDictionary = require('style-dictionary'),
-  copyfiles = require('copyfiles'),
-  selectorReplace = require('postcss-selector-replace');
-
-// task to copy font files from the OWCSS npm to the local project
-// resources are NOT to be committed to version control
-gulp.task('copyFonts', function(cb) {
-  copyfiles(
-    [
-      './node_modules/@alaskaairux/orion-web-core-style-sheets/dist/fonts/*.*',
-      './demo/fonts/',
-    ],
-    true,
-    cb
-  );
-  cb();
-});
+  StyleDictionary = require('style-dictionary');
 
 // task to build CSS/Sass resources from Token JSON files
 gulp.task('buildTokens', function(cb) {
@@ -112,76 +96,6 @@ gulp.task('processSrc', function() {
   );
 });
 
-// task for Production Sass processing and legacy support
-gulp.task('processImportsCanonical', function() {
-  // set path to where Sass files are located to be processed
-  return (
-    gulp
-      .src('./src/*.scss')
-
-      // Sass pipeline
-      .pipe(
-        gulpSass({
-          errLogToConsole: true,
-          outputStyle: 'compressed', //alt options: nested, compact, compressed, expanded
-        })
-      )
-
-      // Post Sass to CSS process for addressing proprietary prefixes
-      //.pipe(gulpautoprefixer({ browsers: ['last 4 versions'], cascade: false }))
-
-      // PostCss polyfill pipeline for CSS Custom Properties (CSS variables)
-      .pipe(
-        postcss([
-          // Boolean flag determines if CSS Custom Property code is in final output
-          // or only outputs legacy supported version CSS
-          postcssCustomProperties({
-            preserve: false,
-          }),
-
-          removeSelectors({
-            selectors: [':root'],
-          }),
-        ])
-      )
-
-      // Output final CSS in destination
-      .pipe(gulp.dest('./altImports/canonical/'))
-  );
-});
-
-// task for Production Sass processing and legacy support
-gulp.task('processImportsVariable', function() {
-  // set path to where Sass files are located to be processed
-  return (
-    gulp
-      .src('./src/*.scss')
-
-      // Sass pipeline
-      .pipe(
-        gulpSass({
-          errLogToConsole: true,
-          outputStyle: 'compressed', //alt options: nested, compact, compressed, expanded
-        })
-      )
-
-      // Post Sass to CSS process for addressing proprietary prefixes
-      //.pipe(gulpautoprefixer({ browsers: ['last 4 versions'], cascade: false }))
-
-      // PostCss polyfill pipeline for CSS Custom Properties (CSS variables)
-      .pipe(
-        postcss([
-          removeSelectors({
-            selectors: [':root'],
-          }),
-        ])
-      )
-
-      // Output final CSS in destination
-      .pipe(gulp.dest('./altImports/variable/'))
-  );
-});
-
 // task for Development Sass processing
 gulp.task('processDev', function() {
   // set path to where Sass files are located to be processed
@@ -211,24 +125,6 @@ gulp.task('processDev', function() {
   );
 });
 
-// task for Development Sass processing
-gulp.task('reprocessClean', function() {
-  // set path to where Sass files are located to be processed
-  return gulp.src('./altImports/**/*.scss')
-
-    // PostCss polyfill pipeline for CSS Custom Properties (CSS variables)
-    .pipe(postcss([
-
-      selectorReplace({
-        before: [":host", "&(:not(.is-touching))", "&(.focus-visible)"],
-        after: ["&", "&:not(.is-touching)", "&.focus-visible"],
-      })
-    ]))
-
-    // Output final CSS in destination
-    .pipe(gulp.dest('./altImports/'));
-});
-
 // Sass watcher
 gulp.task('sassWatch', function() {
   gulp.watch(
@@ -242,13 +138,13 @@ gulp.task('sassWatch', function() {
 gulp.task(
   'build',
   gulp.series(
-    gulp.parallel('copyFonts', 'buildTokens', 'processDemo', 'processSrc')
+    gulp.parallel('buildTokens', 'processDemo', 'processSrc')
   )
 );
 
 gulp.task(
   'dev',
   gulp.series(
-    gulp.parallel('copyFonts', 'buildTokens', 'processDemo', 'processDev','sassWatch')
+    gulp.parallel('buildTokens', 'processDemo', 'processDev','sassWatch')
   )
 );

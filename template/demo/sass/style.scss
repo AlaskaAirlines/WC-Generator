@@ -1,7 +1,9 @@
+// Import Auro tokens
+@import "./node_modules/@alaskaairux/orion-design-tokens/dist/tokens/SCSSVariables";
+@import "./node_modules/@alaskaairux/orion-design-tokens/dist/tokens/SassCustomProperties";
 
-// Import generated Design Token variables
-@import "./demo/sass/tokenVariables";
-@import "./demo/sass/tokenProperties";
+// Import deprecated  Design Token variables to support Orion values
+@import "./node_modules/@alaskaairux/orion-design-tokens/dist/tokens/tokenVariables";
 
 // Import baseline library dependencies
 // Mixins
