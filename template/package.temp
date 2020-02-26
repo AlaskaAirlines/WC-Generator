@@ -88,6 +88,7 @@
   },
   "scripts": {
     "build": "npm-run-all sassRender cssLint jsonLint",
+    "postinstall": "node packageScripts/postinstall.js",
     "buildTokens": "node scripts/tokenScript.js",
     "copyFonts": "copyfiles -f ./node_modules/@alaskaairux/orion-web-core-style-sheets/dist/fonts/*.* ./demo/fonts/",
     "cssLint": "stylelint './src/*.css'",
