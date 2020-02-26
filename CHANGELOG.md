@@ -1,5 +1,16 @@
 # Semantic Release Automated Changelog
 
+## [1.1.2](https://github.com/AlaskaAirlines/ODS-WC-Generator/compare/v1.1.1...v1.1.2) (2020-02-26)
+
+
+### Bug Fixes
+
+* add postinstall script ([2218bf9](https://github.com/AlaskaAirlines/ODS-WC-Generator/commit/2218bf9bcbd87183fd12a987568f7e82809c0971))
+* remove CSS post processing [#11](https://github.com/AlaskaAirlines/ODS-WC-Generator/issues/11) ([e7e1845](https://github.com/AlaskaAirlines/ODS-WC-Generator/commit/e7e1845f8bc986f352ca39fc88e3e52dfa314377))
+* review feedback adjustments ([fa8c655](https://github.com/AlaskaAirlines/ODS-WC-Generator/commit/fa8c6552d370481cbf712048619e848cc5096dd0))
+* support for automated username and email addition to package json ([4b44c68](https://github.com/AlaskaAirlines/ODS-WC-Generator/commit/4b44c685b8a3b0eff2dd18d842f3d70e6ac87e92))
+* update template package.json file ([c121a5f](https://github.com/AlaskaAirlines/ODS-WC-Generator/commit/c121a5f50ba411b18be7c2c441a74c202da6bb22))
+
 ## [1.1.1](https://github.com/AlaskaAirlines/ODS-WC-Generator/compare/v1.1.0...v1.1.1) (2019-12-14)
 
 
