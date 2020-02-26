@@ -19,13 +19,13 @@
     "  3. Go to http://127.0.0.1:8081",
     "================================================================================"
   ],
-  "name": "@alaskaairux/ods-foo",
+  "name": "@alaskaairux/ods-[name]",
   "version": "0.0.0",
-  "description": "Orion Design System foo element",
+  "description": "Orion Design System [name] element",
   "author": "Product design and research",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-foo"
+    "url": "https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-[name]"
   },
   "main": "index.js",
   "license": "Apache-2.0",
@@ -156,6 +156,7 @@
   "keywords": [
     "alaska airlines",
     "orion design system",
-    "web components"
+    "web components",
+    "[name]"
   ]
 }

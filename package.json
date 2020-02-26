@@ -56,7 +56,7 @@
     "testbuild": "node bin/generate.js --test --name foo --dir ./ods-foo",
     "sweep": "rm -rf ods-foo",
     "blanktest": "echo \"Error: no test specified\" && exit 0",
-    "test": "npm-run-all testbuild"
+    "test": "npm run testbuild"
   },
   "publishConfig": {
     "access": "public"
