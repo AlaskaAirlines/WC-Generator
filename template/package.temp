@@ -19,13 +19,13 @@
     "  3. Go to http://127.0.0.1:8081",
     "================================================================================"
   ],
-  "name": "@alaskaairux/ods-[name]",
+  "name": "@alaskaairux/auro-[name]",
   "version": "0.0.0",
-  "description": "Orion Design System [name] element",
+  "description": "Auro Design System auro-[name] element",
   "author": "Product design and research",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-[name]"
+    "url": "https://github.com/AlaskaAirlines/auro-[name]"
   },
   "main": "index.js",
   "license": "Apache-2.0",
@@ -50,9 +50,9 @@
     "@polymer/iron-demo-helpers": "^3.1.0",
     "@polymer/iron-icons": "^3.0.1",
     "@polymer/polymer": "^3.2.0",
-    "@semantic-release/changelog": "^3.0.6",
-    "@semantic-release/git": "^7.0.18",
-    "@semantic-release/npm": "^5.1.9",
+    "@semantic-release/changelog": "^5.0.0",
+    "@semantic-release/git": "^9.0.0",
+    "@semantic-release/npm": "^7.0.3",
     "@webcomponents/webcomponentsjs": "^2.2.9",
     "autoprefixer": "^9.6.0",
     "concat": "^1.0.3",
@@ -63,9 +63,8 @@
     "gulp-postcss": "^8.0.0",
     "gulp-sass": "^4.0.2",
     "husky": "^4.2.3",
-    "jsonlint": "^1.6.3",
     "lodash": "^4.17.11",
-    "marked": "^0.7.0",
+    "marked": "^0.8.0",
     "npm-run-all": "^4.1.5",
     "npm-watch": "^0.6.0",
     "postcss": "^7.0.17",
@@ -73,8 +72,8 @@
     "postcss-remove-rules": "^1.0.0",
     "postcss-selector-replace": "^1.0.2",
     "rollup": "^1.31.1",
-    "semantic-release": "^15.13.16",
-    "sinon": "^7.5.0",
+    "semantic-release": "^17.0.4",
+    "sinon": "^9.0.0",
     "style-dictionary": "^2.8.0",
     "stylelint": "^13.2.0",
     "stylelint-config-standard": "^20.0.0",
@@ -87,26 +86,26 @@
     "sassRender-w": ".src/**/*.scss"
   },
   "scripts": {
-    "build": "npm-run-all sassRender cssLint jsonLint",
+    "build": "npm-run-all sassRender cssLint",
     "postinstall": "node packageScripts/postinstall.js",
     "buildTokens": "node scripts/tokenScript.js",
     "copyFonts": "copyfiles -f ./node_modules/@alaskaairux/orion-web-core-style-sheets/dist/fonts/*.* ./demo/fonts/",
     "cssLint": "stylelint './src/*.css'",
     "dev": "npm-watch buildTokens | npm-watch sassRender-w",
-    "dist": "npm-run-all distTokens sassRender cssLint jsonLint",
+    "dist": "npm-run-all distTokens sassRender cssLint",
     "distJS": "copyfiles -u 1 -V './src/**/*.js' ./dist",
     "distTokens": "node scripts/tokenScriptCustom.js",
-    "jsonLint": "jsonlint -q ./src/shape.json",
     "sassRender": "sass-render src/*.css src/tokens/*.scss",
     "sassRender-w": "sass-render -w src/**/*.{scss,css}",
     "sweep": "rm -rf ./altImports ./temp ./demo/css ./demo/fonts ./dist ./src/tokens | rm ./demo/sass/*token*.scss ./src/*.css ./src/*-css.js",
     "yamltest": "yamllint .travis.yml",
-    "lint": "npm-run-all cssLint jsonLint yamltest",
+    "lint": "npm-run-all cssLint yamltest",
     "test": "karma start --coverage",
     "test:watch": "karma start --auto-watch=true --single-run=false",
     "test:ci": "npm-run-all test lint",
     "processSrc": "gulp processSrc",
-    "ciBuild": "npm-run-all buildTokens processSrc distTokens sassRender distJS"
+    "processBuild": "gulp build",
+    "ciBuild": "npm-run-all buildTokens processBuild processSrc distTokens sassRender distJS"
   },
   "husky": {
     "hooks": {
@@ -155,8 +154,8 @@
   ],
   "keywords": [
     "alaska airlines",
-    "orion design system",
-    "web components",
-    "[name]"
+    "auro",
+    "design system",
+    "web components"
   ]
 }

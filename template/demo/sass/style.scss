@@ -12,17 +12,22 @@
 // Creates baseline output in CSS
 @import "./node_modules/@alaskaairux/orion-web-core-style-sheets/dist/fonts";
 @import "./node_modules/@alaskaairux/orion-web-core-style-sheets/dist/normalize";
-@import "./node_modules/@alaskaairux/orion-web-core-style-sheets/dist/baseline";
+@import "./node_modules/@alaskaairux/orion-web-core-style-sheets/dist/essentials";
 
 // Import Utility classes (will produce CSS in output)
-@import "./node_modules/@alaskaairux/orion-web-core-style-sheets/dist/utilityClasses";
+$layout-properties: margin;
+$layout-extensions: Right;
+$layout-modifiers: (
+  "md": $auro-size-md
+);
+@import "./node_modules/@alaskaairux/orion-web-core-style-sheets/dist/utilityMixins/layoutPropertiesGenerator";
 
 // Custom styles per demo pages
 code {
-  color: var(--color-base-chili);
+  color: var(--auro-color-base-crimson-500);
 }
 
 .vertical-section-container {
   margin: 0 auto;
-  max-width: var(--size-width-max);
+  max-width: 	82.5rem;
 }

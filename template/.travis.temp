@@ -14,7 +14,7 @@ notifactions:
 
 before_script:
   - npm run buildTokens
-  - npm run  processSrc
+  - npm run processSrc
   - npm run distTokens
   - npm run sassRender
   - npm run distJS

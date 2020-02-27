@@ -1,16 +1,10 @@
-<img src="https://resource.alaskaair.net/-/media/2C1969F8FB244C919205CD48429C13AC" alt="Orion Design System Logo" title="Be the change you want to see" width="125" align="right" />
+## Element auro-[name]
 
-[![Build Status](https://travis-ci.org/AlaskaAirlines/OrionStatelessComponents__ods-[name].svg?branch=master)](https://travis-ci.org/AlaskaAirlines/OrionStatelessComponents__ods-[name])
-![npm (scoped)](https://img.shields.io/npm/v/@alaskaairux/ods-[name].svg?color=orange)
-![NPM](https://img.shields.io/npm/l/@alaskaairux/ods-[name].svg?color=blue)
-
-# \<ods-[name]>
-
-\<ods-[name]> is a [HTML custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) for the purpose of ...
+`<auro-[name]>` is a [HTML custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) for the purpose of ...
 
 ## Docs
 
-All information regarding Project Setup, Technical Details, Tests and information regarding ODS Stateless Components can be found in the [docs](https://github.com/AlaskaAirlines/OrionStatelessComponents__docs/tree/master/src) project repository.
+All information regarding Project Setup, Technical Details, Tests and information regarding Auro Stateless Components can be found in the [docs](https://github.com/AlaskaAirlines/OrionStatelessComponents__docs/tree/master/src) project repository.
 
 ## UI development browser support
 
@@ -19,52 +13,40 @@ For the most up to date information on UI development browser support, see [docs
 ## Install
 
 ```shell
-$ npm i @alaskaairux/ods-[name]
+$ npm i @alaskaairux/auro-[name]
 ```
 
 Installing as a direct, dev or peer dependency is up to the user installing the package. If you are unsure as to what type of dependency you should use, consider reading this [stack overflow](https://stackoverflow.com/questions/18875674/whats-the-difference-between-dependencies-devdependencies-and-peerdependencies) answer.
 
 ### Design Token CSS Custom Property dependency
 
-The use of any ODS custom element has a dependency on the [ODS Design Tokens](https://github.com/AlaskaAirlines/OrionDesignTokens).
+The use of any Auro custom element has a dependency on the [Auro Design Tokens](https://github.com/AlaskaAirlines/OrionDesignTokens).
 
-For additional details in regards to using Orion Design Tokens with components, please see [docs/TECH_DETAILS.md](https://github.com/AlaskaAirlines/OrionStatelessComponents__docs/blob/master/src/TECH_DETAILS.md)
+For additional details in regards to using Auro Design Tokens with components, please see [docs/TECH_DETAILS.md](https://github.com/AlaskaAirlines/OrionStatelessComponents__docs/blob/master/src/TECH_DETAILS.md)
 
 ### CSS Custom Property fallbacks
 
 [CSS custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) are [not supported](https://github.com/AlaskaAirlines/OrionStatelessComponents__docs/blob/master/src/CUSTOM_PROPERTIES.md) in older browsers. For this, fallback properties are pre-generated and included with the npm.
 
-Any update to the Orion Design Tokens will be immediately reflected with browsers that support CSS custom properties, legacy browsers will require updated components with pre-generated fallback properties.
+Any update to the Auro Design Tokens will be immediately reflected with browsers that support CSS custom properties, legacy browsers will require updated components with pre-generated fallback properties.
 
 ### Define dependency in project component
 
-Defining the component dependency within each component that is using the \<ods-[name]> component.
+Defining the component dependency within each component that is using the `<auro-[name]>` component.
 
 ```javascript
-import "@alaskaairux/ods-[name]";
+import "@alaskaairux/auro-[name]";
 ```
 
 **Reference component in HTML**
 
 ```html
-<ods-[name]>Hello World</ods-[name]>
+<auro-[name]>Hello World</auro-[name]>
 ```
 
-## Styling (experimental)
+## auro-[name] use cases
 
-Option(s) for component customization.
-
-[Place relative content here if ::part() is to be considered for support]
-
-| Selector | Type | State | Description |
-|----|----|----|---|
-| ::part() | pseudo-element | experimental | Update shadowDOM CSS from outside the component |
-
-See [caniuse.com](https://caniuse.com/#search=%3A%3Apart) for more information.
-
-## [name] use cases
-
-The \<ods-[name]> element should be used in situations where users may:
+The `<auro-[name]>` element should be used in situations where users may:
 
 * ...
 * ...
@@ -78,28 +60,11 @@ The \<ods-[name]> element should be used in situations where users may:
 
 ## API Code Examples
 
-Default [name]
+Default auro-[name]
 
 ```html
-<ods-[name]>Hello World</ods-[name]>
+<auro-[name]>Hello World</auro-[name]>
 ```
-
-### [React] Custom callbacks
-
-[The following is suggested content. If there is any special consideration for callback support with React or other development environments, please upate.]
-
-[name](React support) with `ref` for passing in an event, [see notes](https://github.com/AlaskaAirlines/OrionStatelessComponents__docs/blob/master/src/CALLBACK.md).
-
-```html
-<ods-[name] ref={this.event}>hello world</ods-[name]>
-```
-
-## Alternate build solutions
-
-Why would you need this? With all Orion custom elements the CSS for the element is embedded within the shadow DOM of the custom element. If your development environment is not allowing for the use of shadow DOM elements, the CSS for each element is distributed via additional resources within the npm package.
-
-[Read more about how to use alternate CSS build resources](https://github.com/AlaskaAirlines/OrionStatelessComponents__docs/blob/master/src/ALT_BUILD.md)
-
 
 ## Development
 
@@ -111,10 +76,10 @@ Please be sure to review the [contribution guidelines](https://github.com/Alaska
 
 Once the project has been cloned to your local resource and you have installed all the dependencies you will need to open three different shell sessions. One is for the **Gulp tasks**, the second is for a series of **npm tasks** and the last is to run the **Polymer server**.
 
-**Peer dependency:** Please make sure Polymer is installed globally in order to run the Polymer server. See [ODS Stateless Component Development Details](https://github.com/AlaskaAirlines/OrionStatelessComponents__docs/blob/master/src/TECH_DETAILS.md) for more information.
+**Peer dependency:** Please make sure Polymer is installed globally in order to run the Polymer server. See [Auro Stateless Component Development Details](https://github.com/AlaskaAirlines/OrionStatelessComponents__docs/blob/master/src/TECH_DETAILS.md) for more information.
 
 ```bash
-$ npm i polymer-cli
+$ npm i polymer-cli -g
 ```
 
 ```shell
@@ -129,11 +94,10 @@ polymer serve
 ```
 
 ### Testing
-Automated tests are required for every Orion component. See `.\test\ods-[name].test.js` for the tests for this component. Run `npm test` to run the tests and check code coverage. Tests must pass and meet a certain coverage threshold to commit. See [the testing documentation](https://github.com/AlaskaAirlines/OrionStatelessComponents__docs/blob/master/src/TESTS.md) for more details. 
+Automated tests are required for every Auro component. See `.\test\auro-[name].test.js` for the tests for this component. Run `npm test` to run the tests and check code coverage. Tests must pass and meet a certain coverage threshold to commit. See [the testing documentation](https://github.com/AlaskaAirlines/OrionStatelessComponents__docs/blob/master/src/TESTS.md) for more details.
 
+------
 
-##
-<footer>
-Alaska Airlines Orion Design System<br>
-Copyright 2019 Alaska Airlines, Inc. or its affiliates. All Rights Reserved.
-</footer>
+[![Build Status](https://travis-ci.org/AlaskaAirlines/auro-[name].svg?branch=master)](https://travis-ci.org/AlaskaAirlines/auro-[name])
+![npm (scoped)](https://img.shields.io/npm/v/@alaskaairux/auro-[name].svg?color=orange)
+![NPM](https://img.shields.io/npm/l/@alaskaairux/auro-[name].svg?color=blue)

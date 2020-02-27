@@ -1,7 +1,7 @@
 {
-  "name": "@alaskaairux/ods-wc-generator",
+  "name": "@alaskaairux/wc-generator",
   "version": "1.1.3",
-  "description": "Boilerplate generator for Orion Design Components",
+  "description": "Boilerplate generator for Auro Web Components",
   "main": "index.js",
   "files": [
     "bin",
@@ -9,11 +9,11 @@
     "util"
   ],
   "bin": {
-    "ods-wc-generate": "./bin/generate.js"
+    "wc-generate": "./bin/generate.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AlaskaAirlines/ODS-WC-Generator.git"
+    "url": "git+https://github.com/AlaskaAirlines/WC-Generator.git"
   },
   "author": "AlaskaAirlines",
   "license": "Apache-2.0",
@@ -21,9 +21,9 @@
     "node": ">=11.11"
   },
   "bugs": {
-    "url": "https://github.com/AlaskaAirlines/ODS-WC-Generator/issues"
+    "url": "https://github.com/AlaskaAirlines/WC-Generator/issues"
   },
-  "homepage": "https://github.com/AlaskaAirlines/ODS-WC-Generator#readme",
+  "homepage": "https://github.com/AlaskaAirlines/WC-Generator#readme",
   "dependencies": {
     "arg": "^4.1.3",
     "chalk": "^3.0.0",
@@ -53,9 +53,9 @@
     ]
   },
   "scripts": {
-    "testbuild": "node bin/generate.js --test --name foo --dir ./ods-foo",
-    "sweep": "rm -rf ods-foo",
-    "blanktest": "echo \"Error: no test specified\" && exit 0",
+    "testbuild": "node bin/generate.js -t -n solo -d ./auro-test",
+    "fullbuild": "node bin/generate.js -n solo -d ../auro-test",
+    "sweep": "rm -rf auro-test",
     "test": "npm run testbuild"
   },
   "publishConfig": {
@@ -73,7 +73,8 @@
   ],
   "keywords": [
     "alaska airlines",
-    "orion design system",
+    "auro",
+    "design system",
     "web components",
     "generator"
   ],

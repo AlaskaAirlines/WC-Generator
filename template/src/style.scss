@@ -1,9 +1,7 @@
-// Copyright (c) Alaska Air. All right reserved. Licensed under the Apache-2.0 license
+// Copyright (c) [year] Alaska Airlines. All right reserved. Licensed under the Apache-2.0 license
 // See LICENSE in the project root for license information.
 
 // ---------------------------------------------------------------------
-
-// Creates ods-foo CSS UI definition of shape
 
 // Import Auro tokens
 @import "./node_modules/@alaskaairux/orion-design-tokens/dist/tokens/SCSSVariables";
@@ -17,7 +15,6 @@
 
 @import "./node_modules/@alaskaairux/orion-web-core-style-sheets/dist/breakpoints";
 @import "./node_modules/@alaskaairux/orion-web-core-style-sheets/dist/baselineLTE";
-// @import "./node_modules/@alaskaairux/orion-web-core-style-sheets/animation";
 
 // container styles - defines the look of the outer custom componet
 // :host {
@@ -34,5 +31,5 @@
 // }
 
 .testClass {
-  color: var(--auro-color-border-primary-on-light);
+  color:  var(--auro-color-border-error-on-light);
 }

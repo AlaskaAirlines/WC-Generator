@@ -1,1 +1,1 @@
-export * from './dist/ods-[name]';
+export * from './dist/auro-[name]';

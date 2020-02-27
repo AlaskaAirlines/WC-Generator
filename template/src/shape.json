@@ -1,9 +1,9 @@
 {
   "//": [
-    "Copyright (c) Alaska Air. All right reserved. Licensed under the Apache-2.0 license",
+    "Copyright (c) [year] Alaska Airlines. All right reserved. Licensed under the Apache-2.0 license",
     "See LICENSE in the project root for license information."
   ],
-  
+
   "//": [
     "================================================================================",
     "This is the file that drives the shape of the component as defined in component specific Design Tokens.",
@@ -23,7 +23,7 @@
     "borderRadius": {"value": "var(--size-border-radius-default)"}
   },
 
-  "ods-[name]": {
+  "auro-[name]": {
     "display": {"value": "inline-block"},
     "background": {
       "color": {"value": "var(--color-brand-blue-atlas-base)"}
