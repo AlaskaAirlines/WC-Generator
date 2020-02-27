@@ -42,6 +42,7 @@ const parseArgs = () => {
     '--verbose': Boolean,
     // Aliases
     '-h': '--help',
+    '-t': '--test',
     '-v': '--version',
     '-n': '--name',
     '-d': '--dir',
@@ -59,7 +60,7 @@ const parseArgs = () => {
   const test = args['--test'];
   const name = args['--name'] || 'no-name-given';
   const dir = path.resolve(
-    args['--dir'] || `./OrionStatelessComponents__ods-${lowerKebabCase(name)}`
+    args['--dir'] || `./auro-${lowerKebabCase(name)}`
   );
 
   return {
@@ -85,11 +86,14 @@ const formatTemplateFileContents = (content, { name }) => {
   const userName = require('git-user-name');
   // gets git email from ./gitconfig
   const userEmail = require('git-user-email');
+  // generate new year for copyright stamp
+  const newYear = new Date().getFullYear();
   const replacements = [
     { regex: /\[name\]/g, value: lowerKebabCaseName },
     { regex: /\[Name\]/g, value: upperCamelCaseName },
     { regex: /\[author\]/g, value: userName },
-    { regex: /\[author-email\]/g, value: userEmail }
+    { regex: /\[author-email\]/g, value: userEmail },
+    { regex: /\[year\]/g, value: newYear }
   ];
 
   // replace all instances of [name] and [Name] accordingly
@@ -159,6 +163,8 @@ const loadingLoop = condition => {
 const generateFromTemplate = async () => {
   const pjson = require('../package.json');
   const latestVersion = require('latest-version');
+
+  // this test needs to be updates post first release of new '@alaskaairux/wc-generator'
   const latestPublishedVersion = await latestVersion('@alaskaairux/ods-wc-generator');
 
   log(chalk.green(`\nPublished: v${latestPublishedVersion} | Installed: v${pjson.version}\n`))
@@ -188,14 +194,31 @@ const generateFromTemplate = async () => {
     log(chalk.red(`                                         p:::::::p                                     `));
     log(chalk.red(`                                         p:::::::p                                     `));
     log(chalk.red(`                                         ppppppppp                                     \n\n`));
-    log(chalk.red(`\nSorry, we have to stop you here.\nIt's been detected you have v${pjson.version} installed,\nand the latest version is v${latestPublishedVersion}. Please run the following:\n\nnpm i @alaskaairux/ods-wc-generator@${latestPublishedVersion} -g\n\nfor the latest version.\n`))
+    log(chalk.red(`\nSorry, we have to stop you here.\nIt's been detected you have v${pjson.version} installed,\nand the latest version is v${latestPublishedVersion}. Please run the following:\n\nnpm i @alaskaairux/wc-generator@${latestPublishedVersion} -g\n\nfor the latest version.\n`))
   }
 
   else {
+    log(chalk.green(
+      `
+ _____ _         _          _____ _     _ _
+|  _  | |___ ___| |_ ___   |  _  |_|___| |_|___ ___ ___
+|     | | .'|_ -| '_| .'|  |     | |  _| | |   | -_|_ -|
+|__|__|_|__,|___|_,_|__,|  |__|__|_|_| |_|_|_|_|___|___|
+
+
+ _ _ _ _____    _____                     _
+| | | |     |  |   __|___ ___ ___ ___ ___| |_ ___ ___
+| | | |   --|  |  |  | -_|   | -_|  _| .'|  _| . |  _|
+|_____|_____|  |_____|___|_|_|___|_| |__,|_| |___|_|
+
+
+Creating a Design System People Love.
+    `))
+
     await makeFolder(params.dir);
     await copyAllFiles(paths.self.template, params.dir, params, {
-      'ods-[name].test.js': `ods-${lowerKebabCase(params.name)}.test.js`,
-      'ods-[name].js': `ods-${lowerKebabCase(params.name)}.js`,
+      'auro-[name].test.js': `auro-${lowerKebabCase(params.name)}.test.js`,
+      'auro-[name].js': `auro-${lowerKebabCase(params.name)}.js`,
       'package.temp': 'package.json',
       '.npmignore.temp': '.npmignore',
       '.gitignore.temp': '.gitignore',
@@ -205,9 +228,32 @@ const generateFromTemplate = async () => {
 
     let areDependenciesInstalled = false;
     let isNodeSassRebuilt = false;
+    let isGitRepo = false;
+    let isBuilt = false;
+    let isPolymerInstalled = false;
 
     if (!params.test) {
-      process.stdout.write(`\nInstalling Dependencies`);
+      process.stdout.write(`\nSetting up Git`);
+      loadingLoop(() => isGitRepo);
+      try {
+        await exec('git init && git add . && git commit -m "initial commit"', { cwd: params.dir });
+        log(chalk.green('\nGit repo successfully created'));
+      } catch ({ message }) {
+        log(chalk.red(message));
+      }
+      isGitRepo = true;
+
+      process.stdout.write(`\nSetting up Polymer`);
+      loadingLoop(() => isPolymerInstalled);
+      try {
+        await exec('npm i polymer -g', { cwd: params.dir });
+        log(chalk.green('\nPolymer successfully installed globably!'));
+      } catch ({ message }) {
+        log(chalk.red(message));
+      }
+      isPolymerInstalled = true;
+
+      process.stdout.write(`\nInstalling dependencies`);
       loadingLoop(() => areDependenciesInstalled);
       try {
         await exec('npm i', { cwd: params.dir });
@@ -217,7 +263,7 @@ const generateFromTemplate = async () => {
       }
       areDependenciesInstalled = true;
 
-      process.stdout.write(`\nRebuilding node-sass`);
+      process.stdout.write(`\nRebuilding node-sass, ugh`);
       loadingLoop(() => isNodeSassRebuilt);
       try {
         await exec('npm rebuild node-sass', { cwd: params.dir });
@@ -227,38 +273,19 @@ const generateFromTemplate = async () => {
       }
       isNodeSassRebuilt = true;
 
-      log('\n')
-      log('         .         . ')
-      log('               *       *')
-      log('')
-      log('                 * * *')
-      log('                    !')
-      log('               *       * ')
-      log('')
-      log(" ██████╗ ██████╗ ██╗ ██████╗ ███╗   ██╗")
-      log("██╔═══██╗██╔══██╗██║██╔═══██╗████╗  ██║")
-      log("██║   ██║██████╔╝██║██║   ██║██╔██╗ ██║")
-      log("██║   ██║██╔══██╗██║██║   ██║██║╚██╗██║")
-      log("╚██████╔╝██║  ██║██║╚██████╔╝██║ ╚████║")
-      log(" ╚═════╝ ╚═╝  ╚═╝╚═╝ ╚═════╝ ╚═╝  ╚═══╝")
-      log('')
-      log("██████╗ ███████╗███████╗██╗ ██████╗ ███╗   ██╗")
-      log("██╔══██╗██╔════╝██╔════╝██║██╔════╝ ████╗  ██║")
-      log("██║  ██║█████╗  ███████╗██║██║  ███╗██╔██╗ ██║")
-      log("██║  ██║██╔══╝  ╚════██║██║██║   ██║██║╚██╗██║")
-      log("██████╔╝███████╗███████║██║╚██████╔╝██║ ╚████║")
-      log("╚═════╝ ╚══════╝╚══════╝╚═╝ ╚═════╝ ╚═╝  ╚═══╝")
-      log('')
-      log("███████╗██╗   ██╗███████╗████████╗███████╗███╗   ███╗")
-      log("██╔════╝╚██╗ ██╔╝██╔════╝╚══██╔══╝██╔════╝████╗ ████║")
-      log("███████╗ ╚████╔╝ ███████╗   ██║   █████╗  ██╔████╔██║")
-      log("╚════██║  ╚██╔╝  ╚════██║   ██║   ██╔══╝  ██║╚██╔╝██║")
-      log("███████║   ██║   ███████║   ██║   ███████╗██║ ╚═╝ ██║")
-      log("╚══════╝   ╚═╝   ╚══════╝   ╚═╝   ╚══════╝╚═╝     ╚═╝")
-      log('\n')
-      log(chalk.green(`Well done! The new HTML Custom Element ods-${params.name} has been created!
+      process.stdout.write(`\nRunning initial component build`);
+      loadingLoop(() => isBuilt);
+      try {
+        await exec('npm run ciBuild', { cwd: params.dir });
+        log(chalk.green('\nInitial build success!'));
+      } catch ({ message }) {
+        log(chalk.red(message));
+      }
+      isBuilt = true;
+
+      log(chalk.green(`Well done! The new HTML Custom Element auro-${params.name} has been created!
         \nDir: ${params.dir}
-        \nODS-WC: v${pjson.version}
+        \nWC: v${pjson.version}
       \n`));
     }
   }

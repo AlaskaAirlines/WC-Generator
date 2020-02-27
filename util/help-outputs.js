@@ -3,15 +3,15 @@ const chalk = require('chalk');
 const generate = `
     ${chalk.gray('Usage:')}
 
-    ${chalk.bold('ods-wc-generator')} [options]
+    ${chalk.bold('wc-generator')} [options]
 
     ${chalk.gray('Description:')}
 
-    Generate an ODS Stateless Web Component from a boilerplate.
+    Generate an Auros Web Component from template.
 
     ${chalk.gray('Options:')}
 
-    -n, --name <name>           Set the component name (e.g. text-input)
+    -n, --name <name>           Set the component name (e.g. auro-input)
     -d, --dir <directory>       Set the directory to output generated files to
     -h, --help                  Output usage information
     -v, --version               Ouput the version number

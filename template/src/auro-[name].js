@@ -1,4 +1,4 @@
-// Copyright (c) Alaska Air. All right reserved. Licensed under the Apache-2.0 license
+// Copyright (c) [year] Alaska Airlines. All right reserved. Licensed under the Apache-2.0 license
 // See LICENSE in the project root for license information.
 
 // ---------------------------------------------------------------------
@@ -12,7 +12,7 @@ import componentProperties from "./tokens/componentShapeProperties-css.js";
 import styleCss from "./style-css.js";
 
 // build the component class
-class Ods[Name] extends LitElement {
+class Auro[Name] extends LitElement {
   // constructor() {
   //   super();
 
@@ -49,5 +49,8 @@ class Ods[Name] extends LitElement {
   }
 }
 
+/* istanbul ignore else */
 // define the name of the custom component
-customElements.define("ods-[name]", Ods[Name]);
+if (!customElements.get("auro-[name]")) {
+  customElements.define("auro-[name]", Auro[Name]);
+}
