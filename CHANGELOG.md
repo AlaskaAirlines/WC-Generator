@@ -1,5 +1,18 @@
 # Semantic Release Automated Changelog
 
+# [2.0.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v1.1.3...v2.0.0) (2020-02-28)
+
+
+### Performance Improvements
+
+* update WC Generator per Auro specifications ([b56596e](https://github.com/AlaskaAirlines/WC-Generator/commit/b56596e09bb92c9018065109a71bc03cd1ee2436)), closes [#19](https://github.com/AlaskaAirlines/WC-Generator/issues/19) [#18](https://github.com/AlaskaAirlines/WC-Generator/issues/18) [#15](https://github.com/AlaskaAirlines/WC-Generator/issues/15) [#11](https://github.com/AlaskaAirlines/WC-Generator/issues/11)
+
+
+### BREAKING CHANGES
+
+* All references to Orion and ODS have been removed from this generator.
+This version will only create new web components for the new Auro spec.
+
 ## [1.1.3](https://github.com/AlaskaAirlines/ODS-WC-Generator/compare/v1.1.2...v1.1.3) (2020-02-26)
 
 
