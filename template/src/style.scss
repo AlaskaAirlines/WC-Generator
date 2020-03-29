@@ -10,11 +10,8 @@
 // Import deprecated  Design Token variables to support Orion values
 @import "./node_modules/@alaskaairux/orion-design-tokens/dist/tokens/tokenVariables";
 
-@import "./tokens/tokenProperties";
-@import "./tokens/componentShapeProperties";
-
 @import "./node_modules/@alaskaairux/orion-web-core-style-sheets/dist/breakpoints";
-@import "./node_modules/@alaskaairux/orion-web-core-style-sheets/dist/baselineLTE";
+@import "./node_modules/@alaskaairux/orion-web-core-style-sheets/dist/core";
 
 // container styles - defines the look of the outer custom componet
 // :host {
