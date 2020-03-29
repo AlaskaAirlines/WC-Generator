@@ -74,7 +74,6 @@
     "rollup": "^1.31.1",
     "semantic-release": "^17.0.4",
     "sinon": "^9.0.0",
-    "style-dictionary": "^2.8.0",
     "stylelint": "^13.2.0",
     "stylelint-config-standard": "^20.0.0",
     "wc-sass-render": "^1.2.1",
@@ -82,22 +81,18 @@
     "yaml-lint": "^1.2.4"
   },
   "watch": {
-    "buildTokens": "./src/*.json",
     "sassRender-w": ".src/**/*.scss"
   },
   "scripts": {
     "build": "npm-run-all sassRender cssLint",
     "postinstall": "node packageScripts/postinstall.js",
-    "buildTokens": "node scripts/tokenScript.js",
-    "copyFonts": "copyfiles -f ./node_modules/@alaskaairux/orion-web-core-style-sheets/dist/fonts/*.* ./demo/fonts/",
     "cssLint": "stylelint './src/*.css'",
-    "dev": "npm-watch buildTokens | npm-watch sassRender-w",
+    "dev": "npm-watch sassRender-w",
     "dist": "npm-run-all distTokens sassRender cssLint",
     "distJS": "copyfiles -u 1 -V './src/**/*.js' ./dist",
-    "distTokens": "node scripts/tokenScriptCustom.js",
-    "sassRender": "sass-render src/*.css src/tokens/*.scss",
+    "sassRender": "sass-render src/*.css",
     "sassRender-w": "sass-render -w src/**/*.{scss,css}",
-    "sweep": "rm -rf ./altImports ./temp ./demo/css ./demo/fonts ./dist ./src/tokens | rm ./demo/sass/*token*.scss ./src/*.css ./src/*-css.js",
+    "sweep": "rm -rf ./altImports ./temp ./demo/css ./demo/fonts ./dist ./src/tokens | rm ./src/*.css ./src/*-css.js",
     "yamltest": "yamllint .travis.yml",
     "lint": "npm-run-all cssLint yamltest",
     "test": "karma start --coverage",
@@ -105,7 +100,7 @@
     "test:ci": "npm-run-all test lint",
     "processSrc": "gulp processSrc",
     "processBuild": "gulp build",
-    "ciBuild": "npm-run-all buildTokens processBuild processSrc distTokens sassRender distJS"
+    "ciBuild": "npm-run-all processBuild processSrc sassRender distJS"
   },
   "husky": {
     "hooks": {

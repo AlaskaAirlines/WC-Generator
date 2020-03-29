@@ -13,9 +13,7 @@ notifactions:
   email: false
 
 before_script:
-  - npm run buildTokens
   - npm run processSrc
-  - npm run distTokens
   - npm run sassRender
   - npm run distJS
 

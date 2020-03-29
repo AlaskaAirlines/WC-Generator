@@ -23,20 +23,7 @@ const gulp = require('gulp'),
   gulpautoprefixer = require('gulp-autoprefixer'),
   postcssCustomProperties = require('postcss-custom-properties'),
   postcss = require('gulp-postcss'),
-  removeRules = require('postcss-remove-rules'),
-  StyleDictionary = require('style-dictionary');
-
-// task to build CSS/Sass resources from Token JSON files
-gulp.task('buildTokens', function(cb) {
-  StyleDictionary.extend('./scripts/tokenScript.js');
-  cb();
-});
-
-// produce CSS Tokens using :host versus :root
-gulp.task('distTokens', function(cb) {
-  StyleDictionary.extend('./scripts/tokenScriptCustom.js');
-  cb();
-});
+  removeRules = require('postcss-remove-rules');
 
 // task to address Sass processing for the demo view
 gulp.task('processDemo', function() {
@@ -142,13 +129,13 @@ gulp.task('sassWatch', function() {
 gulp.task(
   'build',
   gulp.series(
-    gulp.parallel('buildTokens', 'processDemo', 'processSrc')
+    gulp.parallel('processDemo', 'processSrc')
   )
 );
 
 gulp.task(
   'dev',
   gulp.series(
-    gulp.parallel('buildTokens', 'processDemo', 'processDev','sassWatch')
+    gulp.parallel('processDemo', 'processDev','sassWatch')
   )
 );

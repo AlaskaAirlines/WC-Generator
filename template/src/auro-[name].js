@@ -7,8 +7,6 @@ import { LitElement, html } from "lit-element";
 
 // Import touch detection lib
 import "focus-visible/dist/focus-visible.min.js";
-// import the processed CSS file into the scope of the component
-import componentProperties from "./tokens/componentShapeProperties-css.js";
 import styleCss from "./style-css.js";
 
 // build the component class
@@ -39,7 +37,6 @@ class Auro[Name] extends LitElement {
   // function that renders the HTML and CSS into  the scope of the component
   render() {
     return html`
-      ${componentProperties}
       ${styleCss}
 
       <div class=${this.cssClass}>
