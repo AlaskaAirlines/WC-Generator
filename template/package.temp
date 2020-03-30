@@ -30,19 +30,19 @@
   "main": "index.js",
   "license": "Apache-2.0",
   "dependencies": {
-    "lit-element": "^2.1.0"
+    "lit-element": "^[litElement]"
   },
   "peerDependencies": {
-    "@alaskaairux/orion-design-tokens": "^2.7.0",
-    "@alaskaairux/orion-web-core-style-sheets": "^2.6.7",
-    "@alaskaairux/orion-icons": "^2.1.1",
-    "@webcomponents/webcomponentsjs": "^2.2.9",
-    "focus-visible": "^5.0.2"
+    "@alaskaairux/orion-design-tokens": "^[designTokens]",
+    "@alaskaairux/orion-web-core-style-sheets": "^[wcss]",
+    "@alaskaairux/orion-icons": "^[icons]",
+    "@webcomponents/webcomponentsjs": "^[webcomponentsjs]",
+    "focus-visible": "^[focusVisible]"
   },
   "devDependencies": {
-    "@alaskaairux/orion-design-tokens": "^2.7.0",
-    "@alaskaairux/orion-icons": "^2.1.1",
-    "@alaskaairux/orion-web-core-style-sheets": "^2.6.7",
+    "@alaskaairux/orion-design-tokens": "^[designTokens]",
+    "@alaskaairux/orion-icons": "^[icons]",
+    "@alaskaairux/orion-web-core-style-sheets": "^[wcss]",
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
     "@open-wc/testing": "^2.3.9",
@@ -57,7 +57,7 @@
     "autoprefixer": "^9.6.0",
     "concat": "^1.0.3",
     "copyfiles": "^2.1.0",
-    "focus-visible": "^5.0.2",
+    "focus-visible": "^[focusVisible]",
     "gulp": "^4.0.1",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-postcss": "^8.0.0",

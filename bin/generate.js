@@ -23,6 +23,14 @@ const chalk = require('chalk');
 const path = require('path');
 const paths = require('../util/paths');
 const log = require('../util/log');
+const versionData = {
+  'designTokens': `2.10.9`,
+  'wcss': '2.8.13',
+  'icons': '2.1.3',
+  'focusVisible': '5.0.2',
+  'webcomponentsjs': '2.4.3',
+  'litElement': '2.3.1'
+};
 
 const lowerKebabCase = str => str.toLowerCase().replace(' ', '-');
 const upperCamelCase = str =>
@@ -77,7 +85,7 @@ const makeFolder = async dir => {
   }
 };
 
-const formatTemplateFileContents = (content, { name }) => {
+const formatTemplateFileContents = (data, content, { name }) => {
   // name to lower-kebab-case (e.g. Text Input -> text-input)
   const lowerKebabCaseName = lowerKebabCase(name);
   // name to UpperCamelCase (e.g. text-input -> TextInput)
@@ -88,12 +96,19 @@ const formatTemplateFileContents = (content, { name }) => {
   const userEmail = require('git-user-email');
   // generate new year for copyright stamp
   const newYear = new Date().getFullYear();
+
   const replacements = [
     { regex: /\[name\]/g, value: lowerKebabCaseName },
     { regex: /\[Name\]/g, value: upperCamelCaseName },
     { regex: /\[author\]/g, value: userName },
     { regex: /\[author-email\]/g, value: userEmail },
-    { regex: /\[year\]/g, value: newYear }
+    { regex: /\[year\]/g, value: newYear },
+    { regex: /\[designTokens\]/g, value: data.designTokens },
+    { regex: /\[wcss\]/g, value: data.wcss },
+    { regex: /\[icons\]/g, value: data.icons },
+    { regex: /\[focusVisible\]/g, value: data.focusVisible },
+    { regex: /\[webcomponentsjs\]/g, value: data.webcomponentsjs },
+    { regex: /\[litElement\]/g, value: data.litElement }
   ];
 
   // replace all instances of [name] and [Name] accordingly
@@ -115,6 +130,7 @@ const copyFile = async (sourcePath, targetPath, params, fileRenames = {}) => {
       encoding: 'utf8',
     });
     const formattedTemplateFileContents = formatTemplateFileContents(
+      versionData,
       templateFileContents,
       params
     );
@@ -165,8 +181,7 @@ const generateFromTemplate = async () => {
   const latestVersion = require('latest-version');
 
   // this test needs to be updates post first release of new '@alaskaairux/wc-generator'
-  const latestPublishedVersion = await latestVersion('@alaskaairux/ods-wc-generator');
-
+  const latestPublishedVersion = await latestVersion('@alaskaairux/wc-generator');
   log(chalk.green(`\nPublished: v${latestPublishedVersion} | Installed: v${pjson.version}\n`))
 
   const params = parseArgs();
