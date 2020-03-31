@@ -29,4 +29,7 @@
 
 .testClass {
   color:  var(--auro-color-border-error-on-light);
+  border: 1px solid var(--auro-color-border-error-on-light);
+  display: inline-block;
+  padding: var(--auro-text-body-size-default);
 }

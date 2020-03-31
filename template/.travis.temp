@@ -13,7 +13,8 @@ notifactions:
   email: false
 
 before_script:
-  - npm run processSrc
+  - npm run sassBuild:component
+  - npm run postCss:component
   - npm run sassRender
   - npm run distJS
 
