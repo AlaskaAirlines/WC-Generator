@@ -1,1 +1,1 @@
-export * from './dist/auro-[name]';
+export * from './dist/[namespace]-[name]';

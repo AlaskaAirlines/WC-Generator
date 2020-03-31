@@ -10,21 +10,9 @@ import "focus-visible/dist/focus-visible.min.js";
 import styleCss from "./style-css.js";
 
 // build the component class
-class Auro[Name] extends LitElement {
+class [Namespace][Name] extends LitElement {
   // constructor() {
   //   super();
-
-  //   /*
-  //     If the component requires a touch detection,
-  //     please use this function to determine if a user is
-  //     activelly touching a device, versus detecting if
-  //     the device is touych enables or a handheld device.
-
-  //     Also uncomment the touch detection lib above
-  //   */
-  //   this.addEventListener('touchstart', function() {
-  //     this.classList.add('is-touching');
-  //   });
   // }
 
   // function to define props used within the scope of thie component
@@ -48,6 +36,6 @@ class Auro[Name] extends LitElement {
 
 /* istanbul ignore else */
 // define the name of the custom component
-if (!customElements.get("auro-[name]")) {
-  customElements.define("auro-[name]", Auro[Name]);
+if (!customElements.get("[namespace]-[name]")) {
+  customElements.define("[namespace]-[name]", [Namespace][Name]);
 }
