@@ -24,7 +24,7 @@ const path = require('path');
 const paths = require('../util/paths');
 const log = require('../util/log');
 const versionData = {
-  'designTokens': `2.10.9`,
+  'designTokens': '2.10.9',
   'wcss': '2.8.13',
   'icons': '2.1.3',
   'focusVisible': '5.0.2',
@@ -46,6 +46,8 @@ const parseArgs = () => {
     '--test': Boolean,
     '--version': Boolean,
     '--name': String,
+    '--namespace': String,
+    '--npm': String,
     '--dir': String,
     '--verbose': Boolean,
     // Aliases
@@ -53,6 +55,8 @@ const parseArgs = () => {
     '-t': '--test',
     '-v': '--version',
     '-n': '--name',
+    '-N': '--namespace',
+    '-P': '--npm',
     '-d': '--dir',
   });
 
@@ -66,13 +70,17 @@ const parseArgs = () => {
   }
 
   const test = args['--test'];
-  const name = args['--name'] || 'no-name-given';
+  const name = args['--name'] || 'component';
+  const npm = args['--npm'] || '@alaskaairux/';
+  const namespace = args['--namespace'] || 'auro';
   const dir = path.resolve(
-    args['--dir'] || `./auro-${lowerKebabCase(name)}`
+    args['--dir'] || `./${lowerKebabCase(namespace)}-${lowerKebabCase(name)}`
   );
 
   return {
     name,
+    namespace,
+    npm,
     test,
     dir,
     verbose: args['--verbose'],
@@ -85,11 +93,15 @@ const makeFolder = async dir => {
   }
 };
 
-const formatTemplateFileContents = (data, content, { name }) => {
+const formatTemplateFileContents = (data, content, { name, namespace, npm }) => {
   // name to lower-kebab-case (e.g. Text Input -> text-input)
   const lowerKebabCaseName = lowerKebabCase(name);
+  // namespace to lower-kebab-case (e.g. Text Input -> text-input)
+  const lowerKebabCaseNameSpace = lowerKebabCase(namespace);
   // name to UpperCamelCase (e.g. text-input -> TextInput)
   const upperCamelCaseName = upperCamelCase(name);
+  // name to UpperCamelCase (e.g. text-input -> TextInput)
+  const upperCamelCaseNameSpace = upperCamelCase(namespace);
   // gets git username from ./gitconfig
   const userName = require('git-user-name');
   // gets git email from ./gitconfig
@@ -98,20 +110,23 @@ const formatTemplateFileContents = (data, content, { name }) => {
   const newYear = new Date().getFullYear();
 
   const replacements = [
-    { regex: /\[name\]/g, value: lowerKebabCaseName },
-    { regex: /\[Name\]/g, value: upperCamelCaseName },
     { regex: /\[author\]/g, value: userName },
     { regex: /\[author-email\]/g, value: userEmail },
-    { regex: /\[year\]/g, value: newYear },
     { regex: /\[designTokens\]/g, value: data.designTokens },
-    { regex: /\[wcss\]/g, value: data.wcss },
-    { regex: /\[icons\]/g, value: data.icons },
     { regex: /\[focusVisible\]/g, value: data.focusVisible },
+    { regex: /\[icons\]/g, value: data.icons },
+    { regex: /\[litElement\]/g, value: data.litElement },
+    { regex: /\[name\]/g, value: lowerKebabCaseName },
+    { regex: /\[namespace\]/g, value: lowerKebabCaseNameSpace },
+    { regex: /\[Namespace\]/g, value: upperCamelCaseNameSpace },
+    { regex: /\[Name\]/g, value: upperCamelCaseName },
+    { regex: /\[npm\]/g, value: npm },
     { regex: /\[webcomponentsjs\]/g, value: data.webcomponentsjs },
-    { regex: /\[litElement\]/g, value: data.litElement }
+    { regex: /\[wcss\]/g, value: data.wcss },
+    { regex: /\[year\]/g, value: newYear },
   ];
 
-  // replace all instances of [name] and [Name] accordingly
+  // replace all instances of [name], [Name], [namespace] and [Namespace] accordingly
   let result = content;
   for (let i = 0; i < replacements.length; i++) {
     const { regex, value } = replacements[i];
@@ -232,8 +247,8 @@ Creating a Design System People Love.
 
     await makeFolder(params.dir);
     await copyAllFiles(paths.self.template, params.dir, params, {
-      'auro-[name].test.js': `auro-${lowerKebabCase(params.name)}.test.js`,
-      'auro-[name].js': `auro-${lowerKebabCase(params.name)}.js`,
+      '[namespace]-[name].test.js': `${lowerKebabCase(params.namespace)}-${lowerKebabCase(params.name)}.test.js`,
+      '[namespace]-[name].js': `${lowerKebabCase(params.namespace)}-${lowerKebabCase(params.name)}.js`,
       'package.temp': 'package.json',
       '.npmignore.temp': '.npmignore',
       '.gitignore.temp': '.gitignore',

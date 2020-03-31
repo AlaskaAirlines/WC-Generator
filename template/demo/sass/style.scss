@@ -2,9 +2,6 @@
 @import "./node_modules/@alaskaairux/orion-design-tokens/dist/tokens/SCSSVariables";
 @import "./node_modules/@alaskaairux/orion-design-tokens/dist/tokens/SassCustomProperties";
 
-// Import deprecated  Design Token variables to support Orion values
-@import "./node_modules/@alaskaairux/orion-design-tokens/dist/tokens/tokenVariables";
-
 // Import baseline library dependencies
 // Mixins
 @import "./node_modules/@alaskaairux/orion-web-core-style-sheets/dist/breakpoints";

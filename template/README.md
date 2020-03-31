@@ -1,19 +1,19 @@
-## Element auro-[name]
+## Element [namespace]-[name]
 
-`<auro-[name]>` is a [HTML custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) for the purpose of ...
+`<[namespace]-[name]>` is a [HTML custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) for the purpose of ...
 
 ## Docs
 
-All information regarding Project Setup, Technical Details, Tests and information regarding Auro Stateless Components can be found in the [docs](https://github.com/AlaskaAirlines/OrionStatelessComponents__docs/tree/master/src) project repository.
+All information regarding Project Setup, Technical Details, Tests and information regarding Auro Stateless Components can be found in the [docs](https://github.com/AlaskaAirlines/auro_docs/tree/master/src) project repository.
 
 ## UI development browser support
 
-For the most up to date information on UI development browser support, see [docs/BROWSER_SUPPORT.md](https://github.com/AlaskaAirlines/OrionStatelessComponents__docs/blob/master/src/BROWSER_SUPPORT.md)
+For the most up to date information on UI development browser support, see [docs/BROWSER_SUPPORT.md](https://github.com/AlaskaAirlines/auro_docs/blob/master/src/BROWSER_SUPPORT.md)
 
 ## Install
 
 ```shell
-$ npm i @alaskaairux/auro-[name]
+$ npm i @alaskaairux/[namespace]-[name]
 ```
 
 Installing as a direct, dev or peer dependency is up to the user installing the package. If you are unsure as to what type of dependency you should use, consider reading this [stack overflow](https://stackoverflow.com/questions/18875674/whats-the-difference-between-dependencies-devdependencies-and-peerdependencies) answer.
@@ -22,31 +22,31 @@ Installing as a direct, dev or peer dependency is up to the user installing the 
 
 The use of any Auro custom element has a dependency on the [Auro Design Tokens](https://github.com/AlaskaAirlines/OrionDesignTokens).
 
-For additional details in regards to using Auro Design Tokens with components, please see [docs/TECH_DETAILS.md](https://github.com/AlaskaAirlines/OrionStatelessComponents__docs/blob/master/src/TECH_DETAILS.md)
+For additional details in regards to using Auro Design Tokens with components, please see [docs/TECH_DETAILS.md](https://github.com/AlaskaAirlines/auro_docs/blob/master/src/TECH_DETAILS.md)
 
 ### CSS Custom Property fallbacks
 
-[CSS custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) are [not supported](https://github.com/AlaskaAirlines/OrionStatelessComponents__docs/blob/master/src/CUSTOM_PROPERTIES.md) in older browsers. For this, fallback properties are pre-generated and included with the npm.
+[CSS custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) are [not supported](https://github.com/AlaskaAirlines/auro_docs/blob/master/src/CUSTOM_PROPERTIES.md) in older browsers. For this, fallback properties are pre-generated and included with the npm.
 
 Any update to the Auro Design Tokens will be immediately reflected with browsers that support CSS custom properties, legacy browsers will require updated components with pre-generated fallback properties.
 
 ### Define dependency in project component
 
-Defining the component dependency within each component that is using the `<auro-[name]>` component.
+Defining the component dependency within each component that is using the `<[namespace]-[name]>` component.
 
 ```javascript
-import "@alaskaairux/auro-[name]";
+import "@alaskaairux/[namespace]-[name]";
 ```
 
 **Reference component in HTML**
 
 ```html
-<auro-[name]>Hello World</auro-[name]>
+<[namespace]-[name]>Hello World</[namespace]-[name]>
 ```
 
 ## auro-[name] use cases
 
-The `<auro-[name]>` element should be used in situations where users may:
+The `<[namespace]-[name]>` element should be used in situations where users may:
 
 * ...
 * ...
@@ -60,32 +60,29 @@ The `<auro-[name]>` element should be used in situations where users may:
 
 ## API Code Examples
 
-Default auro-[name]
+Default [namespace]-[name]
 
 ```html
-<auro-[name]>Hello World</auro-[name]>
+<[namespace]-[name]>Hello World</[namespace]-[name]>
 ```
 
 ## Development
 
 In order to develop against this project, if you are not part of the core team, you will be required to fork the project prior to submitting a pull request.
 
-Please be sure to review the [contribution guidelines](https://github.com/AlaskaAirlines/OrionStatelessComponents__docs/blob/master/src/CONTRIBUTING.md) for this project. Please make sure to **pay special attention** to the [conventional commits](https://github.com/AlaskaAirlines/OrionStatelessComponents__docs/blob/master/src/CONTRIBUTING.md#conventional-commits) section of the document.
+Please be sure to review the [contribution guidelines](https://github.com/AlaskaAirlines/auro_docs/blob/master/src/CONTRIBUTING.md) for this project. Please make sure to **pay special attention** to the [conventional commits](https://github.com/AlaskaAirlines/auro_docs/blob/master/src/CONTRIBUTING.md#conventional-commits) section of the document.
 
 ### Start development environment
 
 Once the project has been cloned to your local resource and you have installed all the dependencies you will need to open three different shell sessions. One is for the **Gulp tasks**, the second is for a series of **npm tasks** and the last is to run the **Polymer server**.
 
-**Peer dependency:** Please make sure Polymer is installed globally in order to run the Polymer server. See [Auro Stateless Component Development Details](https://github.com/AlaskaAirlines/OrionStatelessComponents__docs/blob/master/src/TECH_DETAILS.md) for more information.
+**Peer dependency:** Please make sure Polymer is installed globally in order to run the Polymer server. See [Auro Stateless Component Development Details](https://github.com/AlaskaAirlines/auro_docs/blob/master/src/TECH_DETAILS.md) for more information.
 
 ```bash
 $ npm i polymer-cli -g
 ```
 
 ```shell
-// shell terminal one
-$ gulp dev
-
 // shell terminal two
 $ npm run dev
 
@@ -94,10 +91,10 @@ polymer serve
 ```
 
 ### Testing
-Automated tests are required for every Auro component. See `.\test\auro-[name].test.js` for the tests for this component. Run `npm test` to run the tests and check code coverage. Tests must pass and meet a certain coverage threshold to commit. See [the testing documentation](https://github.com/AlaskaAirlines/OrionStatelessComponents__docs/blob/master/src/TESTS.md) for more details.
+Automated tests are required for every Auro component. See `.\test\[namespace]-[name].test.js` for the tests for this component. Run `npm test` to run the tests and check code coverage. Tests must pass and meet a certain coverage threshold to commit. See [the testing documentation](https://github.com/AlaskaAirlines/auro_docs/blob/master/src/TESTS.md) for more details.
 
 ------
 
-[![Build Status](https://travis-ci.org/AlaskaAirlines/auro-[name].svg?branch=master)](https://travis-ci.org/AlaskaAirlines/auro-[name])
-![npm (scoped)](https://img.shields.io/npm/v/@alaskaairux/auro-[name].svg?color=orange)
-![NPM](https://img.shields.io/npm/l/@alaskaairux/auro-[name].svg?color=blue)
+[![Build Status](https://travis-ci.org/AlaskaAirlines/[namespace]-[name].svg?branch=master)](https://travis-ci.org/AlaskaAirlines/auro-[name])
+![npm (scoped)](https://img.shields.io/npm/v/@alaskaairux/[namespace]-[name].svg?color=orange)
+![NPM](https://img.shields.io/npm/l/@alaskaairux/[namespace]-[name].svg?color=blue)

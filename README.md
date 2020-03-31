@@ -18,16 +18,16 @@ $ npm list -g @alaskaairux/wc-generator
 
 ## Execute
 
-The API of the npm generator is as follows:
+Simple API of the npm generator:
 
 ```
-wc-generate --name [wc name] --dir [your dir]
+wc-generate --name [wc name]
 ```
 
-#### Example
+###### Example
 
 ```shell
-$ wc-generate --name button --dir ./auro-button
+$ wc-generate --name button
 ```
 
 #### API
@@ -37,6 +37,8 @@ $ wc-generate --name button --dir ./auro-button
 | -h, --help | no | Get help info about WC generator |
 | -t, --test | no | Test repo generation without installing dependencies |
 | -n, --name [name] | yes | Name of the web component you wish to build. `auro` is assumed, so only the proper name, e.g. `button` or `checkbox` |
+| -N, --namespace [namespace] | no | choose custom namespace of the web component if other than Auro |
+| -P, --npm [npm] | no | choose npm namespace if other than `@alaskaairux`. Be sure add back-slash, e.g. `@mynpm/` |
 | -d, --dir [directory] | no | Directory where the new custom element files will be created. If a directory is not provided, one using the `--name` variable will be created |
 | -v, --version | no | Ouput the version number |
 | --verbose | no | Verbose command line feedback |
@@ -44,15 +46,23 @@ $ wc-generate --name button --dir ./auro-button
 
 ## General documentation
 
-Please see [Auro docs](https://github.com/AlaskaAirlines/OrionStatelessComponents__docs) for all information in regards to using and developing HTML custom elements with the Design System.
+Please see [Auro docs](https://github.com/AlaskaAirlines/OrionStatelessComponents__docs) for all information in regard to using and developing HTML custom elements with the Design System.
 
 ## UI development browser support
 
-For the most up to date information on UI development browser support, see [./docs/BROWSER_SUPPORT.md](https://github.com/AlaskaAirlines/OrionStatelessComponents__docs/blob/master/src/BROWSER_SUPPORT.md)
+For the most up to date information on UI development browser support, see [./docs/BROWSER_SUPPORT.md](https://github.com/AlaskaAirlines/auro_docs/blob/master/src/BROWSER_SUPPORT.md)
 
 ## Building a Custom element
 
-Once the new development environment has been created, there are some conventions to follow to ensure the success of your new Custom Element. Please see the development documentation [Auro Web Component Development Details](https://github.com/AlaskaAirlines/OrionStatelessComponents__docs/blob/master/src/TECH_DETAILS.md)
+Once the new development environment has been created, there are some conventions to follow to ensure the success of your new Custom Element. Please see the development documentation [Auro Web Component Development Details](https://github.com/AlaskaAirlines/auro_docs/blob/master/src/TECH_DETAILS.md)
+
+## Custom namespace support
+
+When generating a new WC using the Auro Web Component generator, you are not restricted to using the Auro namespace for the component.
+
+```shell
+$ wc-generate -t -N Han -n Solo
+```
 
 
 [![Build Status](https://travis-ci.org/AlaskaAirlines/WC-Generator.svg?branch=master)](https://travis-ci.org/AlaskaAirlines/WC-Generator)
