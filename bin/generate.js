@@ -196,12 +196,12 @@ const generateFromTemplate = async () => {
   const latestVersion = require('latest-version');
 
   // this test needs to be updates post first release of new '@alaskaairux/wc-generator'
-  const latestPublishedVersion = await latestVersion('@alaskaairux/wc-generator');
-  log(chalk.green(`\nPublished: v${latestPublishedVersion} | Installed: v${pjson.version}\n`))
+  const latestPublishedGenVersion = await latestVersion('@alaskaairux/wc-generator');
+  log(chalk.green(`\nPublished: v${latestPublishedGenVersion} | Installed: v${pjson.version}\n`))
 
   const params = parseArgs();
 
-  if(latestPublishedVersion > pjson.version) {
+  if(latestPublishedGenVersion > pjson.version) {
     log(chalk.red(`\n\nNNNNNNNN        NNNNNNNN                                                          !!! `));
     log(chalk.red(`N:::::::N       N::::::N                                                         !!:!! `));
     log(chalk.red(`N::::::::N      N::::::N                                                         !:::! `));
@@ -224,7 +224,7 @@ const generateFromTemplate = async () => {
     log(chalk.red(`                                         p:::::::p                                     `));
     log(chalk.red(`                                         p:::::::p                                     `));
     log(chalk.red(`                                         ppppppppp                                     \n\n`));
-    log(chalk.red(`\nSorry, we have to stop you here.\nIt's been detected you have v${pjson.version} installed,\nand the latest version is v${latestPublishedVersion}. Please run the following:\n\nnpm i @alaskaairux/wc-generator@${latestPublishedVersion} -g\n\nfor the latest version.\n`))
+    log(chalk.red(`\nSorry, we have to stop you here.\nIt's been detected you have v${pjson.version} installed,\nand the latest version is v${latestPublishedGenVersion}. Please run the following:\n\nnpm i @alaskaairux/wc-generator@${latestPublishedGenVersion} -g\n\nfor the latest version.\n`))
   }
 
   else {
