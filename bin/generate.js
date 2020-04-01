@@ -23,14 +23,20 @@ const chalk = require('chalk');
 const path = require('path');
 const paths = require('../util/paths');
 const log = require('../util/log');
-const versionData = {
-  'designTokens': '2.10.9',
-  'wcss': '2.8.13',
-  'icons': '2.1.3',
-  'focusVisible': '5.0.2',
-  'webcomponentsjs': '2.4.3',
-  'litElement': '2.3.1'
-};
+
+const getVersionData = async () => {
+  const latestVersion = require('latest-version');
+  let versions =  {};
+
+  versions['designTokens'] = await latestVersion('@alaskaairux/orion-design-tokens');
+  versions['wcss'] = await latestVersion('@alaskaairux/orion-web-core-style-sheets'); 
+  versions['icons'] = await latestVersion('@alaskaairux/orion-icons');
+  versions['focusVisible'] = await latestVersion('focus-visible');
+  versions['webcomponentsjs'] = await latestVersion('@webcomponents/webcomponentsjs');
+  versions['litElement'] = await latestVersion('lit-element');
+
+  return versions;
+}
 
 const lowerKebabCase = str => str.toLowerCase().replace(' ', '-');
 const upperCamelCase = str =>
@@ -136,6 +142,7 @@ const formatTemplateFileContents = (data, content, { name, namespace, npm }) => 
 };
 
 const copyFile = async (sourcePath, targetPath, params, fileRenames = {}) => {
+  const versionData = await getVersionData();
   const stats = await fsPromises.stat(sourcePath);
   if (stats.isDirectory()) {
     await makeFolder(targetPath);
