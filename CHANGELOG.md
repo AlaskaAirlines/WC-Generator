@@ -1,5 +1,15 @@
 # Semantic Release Automated Changelog
 
+# [2.1.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.0.0...v2.1.0) (2020-04-01)
+
+
+### Features
+
+* [#17](https://github.com/AlaskaAirlines/WC-Generator/issues/17) remove gulp dependency ([bbece56](https://github.com/AlaskaAirlines/WC-Generator/commit/bbece56a1e7dad90c37eeb84e12df07a20f6af14))
+* [#24](https://github.com/AlaskaAirlines/WC-Generator/issues/24) remove local token support ([598f6c2](https://github.com/AlaskaAirlines/WC-Generator/commit/598f6c2303c2efdae8f559ef3258ac0ae9dde236))
+* [#25](https://github.com/AlaskaAirlines/WC-Generator/issues/25) automate dependency package versions ([ee63b6a](https://github.com/AlaskaAirlines/WC-Generator/commit/ee63b6a9075f51f97a883c5d730ccd9aab3b20ee))
+* [#27](https://github.com/AlaskaAirlines/WC-Generator/issues/27) custom namespace support ([ba605fc](https://github.com/AlaskaAirlines/WC-Generator/commit/ba605fc6c4d0da735080a9c767b759e4ccf6f95e))
+
 # [2.0.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v1.1.3...v2.0.0) (2020-02-28)
 
 
