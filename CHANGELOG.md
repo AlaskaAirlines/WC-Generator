@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.1.4](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.1.3...v2.1.4) (2020-04-08)
+
+
+### Bug Fixes
+
+* demo template remove auro name ([cf3a016](https://github.com/AlaskaAirlines/WC-Generator/commit/cf3a016d2f02df0c840d26c439dffa28cc925766))
+
 ## [2.1.3](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.1.2...v2.1.3) (2020-04-08)
 
 
