@@ -29,7 +29,7 @@ const getVersionData = async () => {
   let versions =  {};
 
   versions['designTokens'] = await latestVersion('@alaskaairux/orion-design-tokens');
-  versions['wcss'] = await latestVersion('@alaskaairux/orion-web-core-style-sheets'); 
+  versions['wcss'] = await latestVersion('@alaskaairux/orion-web-core-style-sheets');
   versions['icons'] = await latestVersion('@alaskaairux/orion-icons');
   versions['focusVisible'] = await latestVersion('focus-visible');
   versions['webcomponentsjs'] = await latestVersion('@webcomponents/webcomponentsjs');
@@ -71,7 +71,6 @@ const parseArgs = () => {
     process.exit(0);
   }
   if (args['--version']) {
-    log(require(paths.packageJson).version);
     process.exit(0);
   }
 
