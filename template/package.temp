@@ -36,6 +36,10 @@
     "@alaskaairux/orion-design-tokens": "^[designTokens]",
     "@alaskaairux/orion-icons": "^[icons]",
     "@alaskaairux/orion-web-core-style-sheets": "^[wcss]",
+    "@babel/core": "^[bableCore]",
+    "@babel/plugin-transform-runtime": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/runtime": "^7.9.2",
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
     "@open-wc/testing": "^2.3.9",
@@ -50,12 +54,15 @@
     "autoprefixer": "^9.6.0",
     "concat": "^1.0.3",
     "copyfiles": "^2.1.0",
+    "core-js": "^3.6.5",
     "focus-visible": "^[focusVisible]",
     "husky": "^4.2.3",
     "lodash": "^4.17.11",
     "marked": "^0.8.0",
     "nodemon": "^2.0.2",
     "npm-run-all": "^4.1.5",
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-compress": "^1.1.0",
     "postcss": "^7.0.17",
     "postcss-custom-properties": "^9.1.1",
     "postcss-discard-comments": "^4.0.2",
@@ -77,6 +84,10 @@
   ],
   "scripts": {
     "postinstall": "node packageScripts/postinstall.js",
+    "bundled": "NODE_ENV=production parcel build ./src/[namespace]-[name].js -o ./dist/[namespace]-[name]__bundled.js",
+    "polyfillsBundled": "NODE_ENV=production parcel build ./scripts/polyfills.js",
+    "testBundle": "parcel ./test/testBundle/index.html --port 3000",
+    "bundler": "npm-run-all bundled polyfillsBundled",
     "cssLint": "stylelint './src/*.css'",
     "dev": "npm run sassBuild:watch",
     "distJS": "copyfiles -u 1 -V './src/**/*.js' ./dist",
@@ -87,7 +98,7 @@
     "test:watch": "karma start --auto-watch=true --single-run=false",
     "test:ci": "npm-run-all test lint",
     "test:yaml": "yamllint .travis.yml",
-    "ciBuild": "npm-run-all sassBuild sassRender cssLint distJS",
+    "ciBuild": "npm-run-all sassBuild sassRender cssLint distJS bundler postinstall",
     "sassBuild": "npm-run-all sassBuild:demo sassBuild:component postCss:component sassRender",
     "sassBuild:dev": "npm-run-all sassBuild:demo sassBuild:component postCss:component sassRender",
     "sassBuild:demo": "node-sass ./demo/sass/ --output ./demo/css/",
@@ -97,7 +108,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm-run-all test lint",
+      "pre-commit": "npm-run-all test lint bundler postinstall",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
@@ -133,6 +144,25 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "useBuiltIns": "entry",
+          "corejs": "3.0.0"
+        }
+      ]
+    ],
+    "plugins": [
+      [
+        "@babel/plugin-transform-runtime",
+        {
+          "regenerator": true
+        }
+      ]
+    ]
   },
   "contributors": [
     {

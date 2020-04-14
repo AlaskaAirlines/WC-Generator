@@ -1,5 +1,6 @@
 .DS_Store
 node_modules/
+.cache/
 
 ## Sass files built on demand from Token files
 demo/sass/_*.scss
