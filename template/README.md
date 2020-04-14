@@ -44,7 +44,26 @@ import "@alaskaairux/[namespace]-[name]";
 <[namespace]-[name]>Hello World</[namespace]-[name]>
 ```
 
-## auro-[name] use cases
+## Install bundled assets from CDN
+
+In cases where the project is not able to process JS assets, there are pre-processed assets available for use.
+
+**NOTE:** Be sure to replace `:version` in the URL with the version of the asset you want.
+
+```html
+<link rel="stylesheet" href="https://unpkg.com/@alaskaairux/orion-design-tokens@:version/dist/tokens/CSSTokenProperties.css" />
+<link rel="stylesheet" href="https://unpkg.com/@alaskaairux/orion-web-core-style-sheets@:version/dist/bundled/baseline.css" />
+
+<script src="https://unpkg.com/@alaskaairux/[namespace]-[name]@:version/dist/polyfills.js"></script>
+<script src="https://unpkg.com/@alaskaairux/[namespace]-[name]@:version/dist/[namespace]-[name]__bundled.js"></script>
+```
+
+### polyfills.js
+
+The `polyfills.js` is packaged with this component, but **IT IS NOT NEEDED** to load a polyfill per component. The `polyfills.js` will work for all additional components added to the project.
+
+
+## [namespace]-[name] use cases
 
 The `<[namespace]-[name]>` element should be used in situations where users may:
 

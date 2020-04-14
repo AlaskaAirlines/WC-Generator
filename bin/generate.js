@@ -34,6 +34,7 @@ const getVersionData = async () => {
   versions['focusVisible'] = await latestVersion('focus-visible');
   versions['webcomponentsjs'] = await latestVersion('@webcomponents/webcomponentsjs');
   versions['litElement'] = await latestVersion('lit-element');
+  versions['bableCore'] = await latestVersion('@babel/core');
 
   return versions;
 }
@@ -121,6 +122,7 @@ const formatTemplateFileContents = (data, content, { name, namespace, npm }) => 
     { regex: /\[focusVisible\]/g, value: data.focusVisible },
     { regex: /\[icons\]/g, value: data.icons },
     { regex: /\[litElement\]/g, value: data.litElement },
+    { regex: /\[bableCore\]/g, value: data.bableCore },
     { regex: /\[name\]/g, value: lowerKebabCaseName },
     { regex: /\[namespace\]/g, value: lowerKebabCaseNameSpace },
     { regex: /\[Namespace\]/g, value: upperCamelCaseNameSpace },

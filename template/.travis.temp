@@ -17,6 +17,7 @@ before_script:
   - npm run postCss:component
   - npm run sassRender
   - npm run distJS
+  - npm run bundler
 
 script:
   - npm run test:ci
