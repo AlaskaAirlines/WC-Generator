@@ -64,6 +64,18 @@ When generating a new WC using the Auro Web Component generator, you are not res
 $ wc-generate -t -N Han -n Solo
 ```
 
+## Pre-bundled components 
+
+The WC-Generator contains automated functionality with each build to generate a pre-bundled version of the new component so that users can consume these assets without needing to bundle the JavaScript assets themselves. 
+
+```html
+<link rel="stylesheet" href="https://unpkg.com/@alaskaairux/orion-design-tokens@:version/dist/tokens/CSSTokenProperties.css" />
+<link rel="stylesheet" href="https://unpkg.com/@alaskaairux/orion-web-core-style-sheets@:version/dist/bundled/baseline.css" />
+
+<script src="https://unpkg.com/@alaskaairux/[namespace]-[name]@:version/dist/polyfills.js"></script>
+<script src="https://unpkg.com/@alaskaairux/[namespace]-[name]@:version/dist/[namespace]-[name]__bundled.js"></script>
+```
+
 
 [![Build Status](https://travis-ci.org/AlaskaAirlines/WC-Generator.svg?branch=master)](https://travis-ci.org/AlaskaAirlines/WC-Generator)
 ![npm (scoped)](https://img.shields.io/npm/v/@alaskaairux/wc-generator.svg?color=orange)
