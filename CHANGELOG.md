@@ -1,5 +1,14 @@
 # Semantic Release Automated Changelog
 
+# [2.2.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.1.4...v2.2.0) (2020-04-15)
+
+
+### Features
+
+* package.json generates with current npm versions ([1915ef0](https://github.com/AlaskaAirlines/WC-Generator/commit/1915ef073dc7759104e9fb87571f5939e413cd85))
+* **bundled assets:** add support auro_docs/issues/40 ([31d4303](https://github.com/AlaskaAirlines/WC-Generator/commit/31d4303bb474d9c8362ff86bb665484e10ccf2bd))
+* **eslint:** add supoprt for esLint and litLint ([1b641f7](https://github.com/AlaskaAirlines/WC-Generator/commit/1b641f73bfa5946855c471fcb45c9e24fd1eb0bb))
+
 ## [2.1.4](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.1.3...v2.1.4) (2020-04-08)
 
 
