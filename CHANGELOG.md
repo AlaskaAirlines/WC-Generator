@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.2.2](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.2.1...v2.2.2) (2020-04-18)
+
+
+### Bug Fixes
+
+* add user-story issue template ([9e637ac](https://github.com/AlaskaAirlines/WC-Generator/commit/9e637acc8b6c5a764c0695a24a4ac4b1bcf5c26f))
+
 ## [2.2.1](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.2.0...v2.2.1) (2020-04-16)
 
 
