@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.2.4](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.2.3...v2.2.4) (2020-04-24)
+
+
+### Bug Fixes
+
+* pre-bundled components fail in IE ([dbe5b21](https://github.com/AlaskaAirlines/WC-Generator/commit/dbe5b21d30630761c51e03dfe34ff4e5b37a79fa))
+
 ## [2.2.3](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.2.2...v2.2.3) (2020-04-21)
 
 
