@@ -1,11 +1,6 @@
 {
   "//": [
     "================================================================================",
-    "The build process for Lit-Element components is currently a 2-part solution that uses Gulp and npm.",
-    "The primary use of Gulp is for the CSS processing that requires the generation of a CSS file and a series of PostCSS functions.",
-    "Aside from the Sass/PostCSS tasks, all other tasks are also avaialble directly from npm as well.",
-    "To keep things less confusing, all tasks share the same name between Gulp and npm.",
-    "",
     "# To work within the development environment, run the following tasks",
     "  1. $ npm run dev",
     "  2. $ polymer serve",
@@ -23,7 +18,8 @@
   "main": "index.js",
   "license": "Apache-2.0",
   "dependencies": {
-    "lit-element": "^[litElement]"
+    "lit-element": "^[litElement]",
+    "chalk": "^[chalk]"
   },
   "peerDependencies": {
     "@alaskaairux/orion-design-tokens": "^[designTokens]",
@@ -46,7 +42,7 @@
     "@open-wc/testing-karma": "^[openwcKarma]",
     "@polymer/iron-demo-helpers": "^3.1.0",
     "@polymer/iron-icons": "^3.0.1",
-    "@polymer/polymer": "^3.2.0",
+    "@polymer/polymer": "^3.3.1",
     "@semantic-release/changelog": "^[srChangelog]",
     "@semantic-release/git": "^[srGit]",
     "@semantic-release/npm": "^[srNpm]",
@@ -55,6 +51,7 @@
     "concat": "^[concat]",
     "copyfiles": "^[copyfiles]",
     "core-js": "^[coreJs]",
+    "cross-env": "^[crossEnv]",
     "eslint": "^[eslint]",
     "eslint-plugin-lit": "^[eslintLit]",
     "focus-visible": "^[focusVisible]",
@@ -70,14 +67,13 @@
     "postcss-discard-comments": "^[postcssDiscardComments]",
     "postcss-remove-rules": "^[postcssRemoveRules]",
     "postcss-selector-replace": "^[postcssSelectorReplace]",
-    "rollup": "^[rollup]",
     "semantic-release": "^[sr]",
     "sinon": "^[sinon]",
     "stylelint": "^[stylelint]",
     "stylelint-config-standard": "^[stylelintConfig]",
     "wc-sass-render": "^[wcSassRender]",
     "webpack-merge": "^[webpackMerge]",
-    "yaml-lint": "^1.2.4"
+    "yaml-lint": "^[yamlLint]"
   },
   "browserslist": [
     "last 4 version",
@@ -86,15 +82,16 @@
   ],
   "scripts": {
     "postinstall": "node packageScripts/postinstall.js",
-    "bundle": "NODE_ENV=production parcel build ./src/[namespace]-[name].js -o ./dist/[namespace]-[name]__bundled.js",
-    "bundle:polyfills": "NODE_ENV=production parcel build ./scripts/polyfills.js",
-    "bundle:test": "parcel ./test/testBundle/index.html --port 3000",
-    "bundler": "npm-run-all bundle bundle:polyfills",
+    "postinstall:lit": "node scripts/postinstall.js",
+    "bundle:[namespace][Name]": "cross-env NODE_ENV=production parcel build ./src/[namespace]-[name].js -o ./dist/[namespace]-[name]__bundled.js",
+    "bundle:polyfills": "cross-env NODE_ENV=production parcel build ./scripts/polyfills.js",
+    "bundle:test": "parcel ./docs/index.html --port 3000",
+    "bundler": "npm-run-all postinstall:lit bundle:[namespace][Name] bundle:polyfills",
     "cssLint": "stylelint './src/*.css'",
     "dev": "npm run sassBuild:watch",
     "distJS": "copyfiles -u 1 -V './src/**/*.js' ./dist",
     "sassRender": "sass-render src/*.css",
-    "sweep": "rm -rf ./altImports ./temp ./demo/css ./demo/fonts ./dist ./src/tokens | rm ./src/*.css ./src/*-css.js",
+    "sweep": "rm -rf ./temp ./demo/css ./demo/fonts ./dist ./src/tokens | rm ./src/*.css ./src/*-css.js",
     "esLint": "./node_modules/.bin/eslint src/[namespace]-*.js",
     "lint": "npm-run-all cssLint test:yaml esLint",
     "test": "karma start --coverage",
