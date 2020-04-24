@@ -106,9 +106,11 @@ const getVersionData = async () => {
   versions['srGit'] = await latestVersion('@semantic-release/git');
   versions['srNpm'] = await latestVersion('@semantic-release/npm');
   versions['autoprefixer'] = await latestVersion('autoprefixer');
+  versions['chalk'] = await latestVersion('chalk');
   versions['concat'] = await latestVersion('concat');
   versions['copyfiles'] = await latestVersion('copyfiles');
   versions['coreJs'] = await latestVersion('core-js');
+  versions['crossEnv'] = await latestVersion('cross-env');
   versions['eslint'] = await latestVersion('eslint');
   versions['eslintLit'] = await latestVersion('eslint-plugin-lit');
   versions['husky'] = await latestVersion('husky');
@@ -123,7 +125,6 @@ const getVersionData = async () => {
   versions['postcssDiscardComments'] = await latestVersion('postcss-discard-comments');
   versions['postcssRemoveRules'] = await latestVersion('postcss-remove-rules');
   versions['postcssSelectorReplace'] = await latestVersion('postcss-selector-replace');
-  versions['rollup'] = await latestVersion('rollup');
   versions['sr'] = await latestVersion('semantic-release');
   versions['sinon'] = await latestVersion('sinon');
   versions['stylelint'] = await latestVersion('stylelint');
@@ -147,6 +148,8 @@ const formatTemplateFileContents = (data, content, { name, namespace, npm }) => 
     { regex: /\[bableTransRuntime\]/g, value: data.bableTransRuntime },
     { regex: /\[bablePreset\]/g, value: data.bablePreset },
     { regex: /\[bableRuntime\]/g, value: data.bableRuntime },
+    { regex: /\[chalk\]/g, value: data.chalk },
+    { regex: /\[crossEnv\]/g, value: data.crossEnv },
     { regex: /\[commitlintCli\]/g, value: data.commitlintCli },
     { regex: /\[commitlintConfig\]/g, value: data.commitlintConfig },
     { regex: /\[openwcTesting\]/g, value: data.openwcTesting },
@@ -172,7 +175,6 @@ const formatTemplateFileContents = (data, content, { name, namespace, npm }) => 
     { regex: /\[postcssDiscardComments\]/g, value: data.postcssDiscardComments },
     { regex: /\[postcssRemoveRules\]/g, value: data.postcssRemoveRules },
     { regex: /\[postcssSelectorReplace\]/g, value: data.postcssSelectorReplace },
-    { regex: /\[rollup\]/g, value: data.rollup },
     { regex: /\[sr\]/g, value: data.sr },
     { regex: /\[sinon\]/g, value: data.sinon },
     { regex: /\[stylelint\]/g, value: data.stylelint },
