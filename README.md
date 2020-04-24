@@ -13,8 +13,10 @@ $ npm i @alaskaairux/wc-generator -g
 The Auro Web Component Generator is configured to ensure that you have the latest version of the generator prior to starting a new build project. You can also verify your installed version manually by running the following command.
 
 ```shell
-$ npm list -g @alaskaairux/wc-generator
+$ wc-generate --version
 ```
+
+This will return the currently available version and the version you have locally installed.
 
 ## Execute
 
@@ -46,7 +48,7 @@ $ wc-generate --name button
 
 ## General documentation
 
-Please see [Auro docs](https://github.com/AlaskaAirlines/OrionStatelessComponents__docs) for all information in regard to using and developing HTML custom elements with the Design System.
+Please see [Auro docs](https://github.com/AlaskaAirlines/auro_docs) for all information in regard to using and developing HTML custom elements with the Design System.
 
 ## UI development browser support
 
@@ -64,9 +66,9 @@ When generating a new WC using the Auro Web Component generator, you are not res
 $ wc-generate -t -N Han -n Solo
 ```
 
-## Pre-bundled components 
+## Pre-bundled components
 
-The WC-Generator contains automated functionality with each build to generate a pre-bundled version of the new component so that users can consume these assets without needing to bundle the JavaScript assets themselves. 
+The WC-Generator contains automated functionality with each build to generate a pre-bundled version of the new component so that users can consume these assets without needing to bundle the JavaScript assets themselves.
 
 ```html
 <link rel="stylesheet" href="https://unpkg.com/@alaskaairux/orion-design-tokens@:version/dist/tokens/CSSTokenProperties.css" />
