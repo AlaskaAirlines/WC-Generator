@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.2.5](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.2.4...v2.2.5) (2020-04-27)
+
+
+### Bug Fixes
+
+* missed [npm] replacement keyword ([726f24c](https://github.com/AlaskaAirlines/WC-Generator/commit/726f24c74d15aae0d0462dc604911c2d1b9b3542))
+
 ## [2.2.4](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.2.3...v2.2.4) (2020-04-24)
 
 
