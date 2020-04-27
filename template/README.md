@@ -13,7 +13,7 @@ For the most up to date information on UI development browser support, see [docs
 ## Install
 
 ```shell
-$ npm i @alaskaairux/[namespace]-[name]
+$ npm i [npm][namespace]-[name]
 ```
 
 Installing as a direct, dev or peer dependency is up to the user installing the package. If you are unsure as to what type of dependency you should use, consider reading this [stack overflow](https://stackoverflow.com/questions/18875674/whats-the-difference-between-dependencies-devdependencies-and-peerdependencies) answer.
@@ -35,7 +35,7 @@ Any update to the Auro Design Tokens will be immediately reflected with browsers
 Defining the component dependency within each component that is using the `<[namespace]-[name]>` component.
 
 ```javascript
-import "@alaskaairux/[namespace]-[name]";
+import "[npm][namespace]-[name]";
 ```
 
 **Reference component in HTML**
@@ -54,8 +54,8 @@ In cases where the project is not able to process JS assets, there are pre-proce
 <link rel="stylesheet" href="https://unpkg.com/@alaskaairux/orion-design-tokens@:version/dist/tokens/CSSTokenProperties.css" />
 <link rel="stylesheet" href="https://unpkg.com/@alaskaairux/orion-web-core-style-sheets@:version/dist/bundled/baseline.css" />
 
-<script src="https://unpkg.com/@alaskaairux/[namespace]-[name]@:version/dist/polyfills.js"></script>
-<script src="https://unpkg.com/@alaskaairux/[namespace]-[name]@:version/dist/[namespace]-[name]__bundled.js"></script>
+<script src="https://unpkg.com/[npm][namespace]-[name]@:version/dist/polyfills.js"></script>
+<script src="https://unpkg.com/[npm][namespace]-[name]@:version/dist/[namespace]-[name]__bundled.js"></script>
 ```
 
 ### polyfills.js
@@ -115,5 +115,5 @@ Automated tests are required for every Auro component. See `.\test\[namespace]-[
 ------
 
 [![Build Status](https://travis-ci.org/AlaskaAirlines/[namespace]-[name].svg?branch=master)](https://travis-ci.org/AlaskaAirlines/auro-[name])
-![npm (scoped)](https://img.shields.io/npm/v/@alaskaairux/[namespace]-[name].svg?color=orange)
-![NPM](https://img.shields.io/npm/l/@alaskaairux/[namespace]-[name].svg?color=blue)
+[![npm (scoped)](https://img.shields.io/npm/v/[npm][namespace]-[name].svg?color=orange)](https://www.npmjs.com/package/[npm][namespace]-[name])
+![NPM](https://img.shields.io/npm/l/[npm][namespace]-[name].svg?color=blue)
