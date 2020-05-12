@@ -102,11 +102,11 @@ $ npm i polymer-cli -g
 ```
 
 ```shell
-// shell terminal two
+// shell terminal one
 $ npm run dev
 
-// shell terminal three
-polymer serve
+// shell terminal two
+$ npm run serve
 ```
 
 ### Testing

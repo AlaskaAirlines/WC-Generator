@@ -3,7 +3,7 @@
     "================================================================================",
     "# To work within the development environment, run the following tasks",
     "  1. $ npm run dev",
-    "  2. $ polymer serve",
+    "  2. $ npm run serve",
     "  3. Go to http://127.0.0.1:8081",
     "================================================================================"
   ],
@@ -104,7 +104,8 @@
     "sassBuild:demo": "node-sass ./demo/sass/ --output ./demo/css/",
     "sassBuild:component": "node-sass ./src/ --output ./src/",
     "sassBuild:watch": "nodemon -e scss --watch src --exec npm run sassBuild:dev",
-    "postCss:component": "node ./scripts/postCss.js"
+    "postCss:component": "node ./scripts/postCss.js",
+    "serve": "polymer serve --port 3001 --hostname 0.0.0.0"
   },
   "husky": {
     "hooks": {
