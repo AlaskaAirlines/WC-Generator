@@ -12,6 +12,10 @@ For the most up to date information on UI development browser support, see [docs
 
 ## Install
 
+[![Build Status](https://img.shields.io/travis/AlaskaAirlines/[namespace]-[name].svg?branch=master&style=for-the-badge)](https://travis-ci.org/github/AlaskaAirlines/[namespace]-[name])
+[![See it on NPM!](https://img.shields.io/npm/v/[npm]/[namespace]-[name].svg?style=for-the-badge&color=orange)](https://www.npmjs.com/package/[npm]/[namespace]-[name])
+[![License](https://img.shields.io/npm/l/@alaskaairux/orion-design-tokens.svg?color=blue&style=for-the-badge)](https://www.apache.org/licenses/LICENSE-2.0)
+
 ```shell
 $ npm i [npm][namespace]-[name]
 ```
@@ -111,9 +115,3 @@ $ npm run serve
 
 ### Testing
 Automated tests are required for every Auro component. See `.\test\[namespace]-[name].test.js` for the tests for this component. Run `npm test` to run the tests and check code coverage. Tests must pass and meet a certain coverage threshold to commit. See [the testing documentation](https://github.com/AlaskaAirlines/auro_docs/blob/master/src/TESTS.md) for more details.
-
-------
-
-[![Build Status](https://travis-ci.org/AlaskaAirlines/[namespace]-[name].svg?branch=master)](https://travis-ci.org/AlaskaAirlines/auro-[name])
-[![npm (scoped)](https://img.shields.io/npm/v/[npm][namespace]-[name].svg?color=orange)](https://www.npmjs.com/package/[npm][namespace]-[name])
-![NPM](https://img.shields.io/npm/l/[npm][namespace]-[name].svg?color=blue)
