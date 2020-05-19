@@ -113,5 +113,7 @@ $ npm run dev
 $ npm run serve
 ```
 
+Open [localhost:3001](http://localhost:3001/)
+
 ### Testing
 Automated tests are required for every Auro component. See `.\test\[namespace]-[name].test.js` for the tests for this component. Run `npm test` to run the tests and check code coverage. Tests must pass and meet a certain coverage threshold to commit. See [the testing documentation](https://github.com/AlaskaAirlines/auro_docs/blob/master/src/TESTS.md) for more details.

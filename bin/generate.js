@@ -95,9 +95,12 @@ const getVersionData = async () => {
   versions['webcomponentsjs'] = await latestVersion('@webcomponents/webcomponentsjs');
   versions['litElement'] = await latestVersion('lit-element');
   versions['bableCore'] = await latestVersion('@babel/core');
+  versions['bableLoader'] = await latestVersion('babel-loader');
+  versions['bableSyntaxDynamicImport'] = await latestVersion('@babel/plugin-syntax-dynamic-import');
   versions['bableTransRuntime'] = await latestVersion('@babel/plugin-transform-runtime');
   versions['bablePreset'] = await latestVersion('@babel/preset-env');
   versions['bableRuntime'] = await latestVersion('@babel/runtime');
+  versions['compression'] = await latestVersion('compression');
   versions['commitlintCli'] = await latestVersion('@commitlint/cli');
   versions['commitlintConfig'] = await latestVersion('@commitlint/config-conventional');
   versions['openwcTesting'] = await latestVersion('@open-wc/testing');
@@ -109,8 +112,8 @@ const getVersionData = async () => {
   versions['chalk'] = await latestVersion('chalk');
   versions['concat'] = await latestVersion('concat');
   versions['copyfiles'] = await latestVersion('copyfiles');
+  versions['copyWebpackPlugin'] = await latestVersion('copy-webpack-plugin');
   versions['coreJs'] = await latestVersion('core-js');
-  versions['crossEnv'] = await latestVersion('cross-env');
   versions['eslint'] = await latestVersion('eslint');
   versions['eslintLit'] = await latestVersion('eslint-plugin-lit');
   versions['husky'] = await latestVersion('husky');
@@ -130,7 +133,11 @@ const getVersionData = async () => {
   versions['stylelint'] = await latestVersion('stylelint');
   versions['stylelintConfig'] = await latestVersion('stylelint-config-standard');
   versions['wcSassRender'] = await latestVersion('wc-sass-render');
+  versions['webpack'] = await latestVersion('webpack');
+  versions['webpackBundleAnalyzer'] = await latestVersion('webpack-bundle-analyzer');
   versions['webpackMerge'] = await latestVersion('webpack-merge');
+  versions['webpackCli'] = await latestVersion('webpack-cli');
+  versions['webpackDevServer'] = await latestVersion('webpack-dev-server');
   versions['yamlLint'] = await latestVersion('yaml-lint');
 
   return versions;
@@ -145,11 +152,13 @@ const formatTemplateFileContents = (data, content, { name, namespace, npm }) => 
     { regex: /\[webcomponentsjs\]/g, value: data.webcomponentsjs },
     { regex: /\[litElement\]/g, value: data.litElement },
     { regex: /\[bableCore\]/g, value: data.bableCore },
+    { regex: /\[bableLoader\]/g, value: data.bableLoader },
+    { regex: /\[bableSyntaxDynamicImport\]/g, value: data.bableSyntaxDynamicImport },
     { regex: /\[bableTransRuntime\]/g, value: data.bableTransRuntime },
     { regex: /\[bablePreset\]/g, value: data.bablePreset },
     { regex: /\[bableRuntime\]/g, value: data.bableRuntime },
+    { regex: /\[compression\]/g, value: data.compression },
     { regex: /\[chalk\]/g, value: data.chalk },
-    { regex: /\[crossEnv\]/g, value: data.crossEnv },
     { regex: /\[commitlintCli\]/g, value: data.commitlintCli },
     { regex: /\[commitlintConfig\]/g, value: data.commitlintConfig },
     { regex: /\[openwcTesting\]/g, value: data.openwcTesting },
@@ -160,6 +169,7 @@ const formatTemplateFileContents = (data, content, { name, namespace, npm }) => 
     { regex: /\[autoprefixer\]/g, value: data.autoprefixer },
     { regex: /\[concat\]/g, value: data.concat },
     { regex: /\[copyfiles\]/g, value: data.copyfiles },
+    { regex: /\[copyWebpackPlugin\]/g, value: data.copyWebpackPlugin },
     { regex: /\[coreJs\]/g, value: data.coreJs },
     { regex: /\[eslint\]/g, value: data.eslint },
     { regex: /\[eslintLit\]/g, value: data.eslintLit },
@@ -181,6 +191,10 @@ const formatTemplateFileContents = (data, content, { name, namespace, npm }) => 
     { regex: /\[stylelintConfig\]/g, value: data.stylelintConfig },
     { regex: /\[wcSassRender\]/g, value: data.wcSassRender },
     { regex: /\[webpackMerge\]/g, value: data.webpackMerge },
+    { regex: /\[webpack\]/g, value: data.webpack },
+    { regex: /\[webpackDevServer\]/g, value: data.webpackDevServer },
+    { regex: /\[webpackCli\]/g, value: data.webpackCli },
+    { regex: /\[webpackBundleAnalyzer\]/g, value: data.webpackBundleAnalyzer },
     { regex: /\[yamlLint\]/g, value: data.yamlLint }
   ];
 
@@ -199,6 +213,8 @@ const formatTemplateFileContents = (data, content, { name, namespace, npm }) => 
   // generate new year for copyright stamp
   const newYear = new Date().getFullYear();
 
+  const webPackName = '[name].js';
+
   const nameReplacements = [
     { regex: /\[author\]/g, value: userName },
     { regex: /\[author-email\]/g, value: userEmail },
@@ -208,6 +224,7 @@ const formatTemplateFileContents = (data, content, { name, namespace, npm }) => 
     { regex: /\[Name\]/g, value: upperCamelCaseName },
     { regex: /\[npm\]/g, value: npm },
     { regex: /\[year\]/g, value: newYear },
+    { regex: /\|webPackName\|/g, value: webPackName }
   ];
 
   const replacements = nameReplacements.concat(pkgReplacements);
