@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.2.7](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.2.6...v2.2.7) (2020-05-19)
+
+
+### Bug Fixes
+
+* move litelement to polyfill ([673bd2a](https://github.com/AlaskaAirlines/WC-Generator/commit/673bd2aa83fa572bd423b30cb2606ced4b9869ad))
+
 ## [2.2.6](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.2.5...v2.2.6) (2020-05-12)
 
 
