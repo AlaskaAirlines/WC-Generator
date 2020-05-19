@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.2.8](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.2.7...v2.2.8) (2020-05-19)
+
+
+### Bug Fixes
+
+* missing quote in package.json ([6a01a0b](https://github.com/AlaskaAirlines/WC-Generator/commit/6a01a0b5cc92081cf37575a2589d29389e8cc731))
+
 ## [2.2.7](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.2.6...v2.2.7) (2020-05-19)
 
 
