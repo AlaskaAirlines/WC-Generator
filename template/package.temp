@@ -33,6 +33,7 @@
     "@alaskaairux/orion-icons": "^[icons]",
     "@alaskaairux/orion-web-core-style-sheets": "^[wcss]",
     "@babel/core": "^[bableCore]",
+    "@babel/plugin-syntax-dynamic-import": "^[bableSyntaxDynamicImport]",
     "@babel/plugin-transform-runtime": "^[bableTransRuntime]",
     "@babel/preset-env": "^[bablePreset]",
     "@babel/runtime": "^[bableRuntime]",
@@ -48,10 +49,12 @@
     "@semantic-release/npm": "^[srNpm]",
     "@webcomponents/webcomponentsjs": "^[webcomponentsjs]",
     "autoprefixer": "^[autoprefixer]",
+    "babel-loader": "^[bableLoader]",
+    "compression": "^[compression]",
     "concat": "^[concat]",
+    "copy-webpack-plugin": "^[copyWebpackPlugin]",
     "copyfiles": "^[copyfiles]",
     "core-js": "^[coreJs]",
-    "cross-env": "^[crossEnv]",
     "eslint": "^[eslint]",
     "eslint-plugin-lit": "^[eslintLit]",
     "focus-visible": "^[focusVisible]",
@@ -60,8 +63,6 @@
     "marked": "^[marked]",
     "nodemon": "^[nodemon]",
     "npm-run-all": "^[npmRunAll]",
-    "parcel-bundler": "^[parcelBundler]",
-    "parcel-plugin-compress": "^[parcelCompress]",
     "postcss": "^[postcss]",
     "postcss-custom-properties": "^[postcssCustomProperties]",
     "postcss-discard-comments": "^[postcssDiscardComments]",
@@ -72,6 +73,10 @@
     "stylelint": "^[stylelint]",
     "stylelint-config-standard": "^[stylelintConfig]",
     "wc-sass-render": "^[wcSassRender]",
+    "webpack": "^[webpack],
+    "webpack-bundle-analyzer": "^[webpackBundleAnalyzer]",
+    "webpack-cli": "^[webpackCli]",
+    "webpack-dev-server": "^[webpackDevServer]",
     "webpack-merge": "^[webpackMerge]",
     "yaml-lint": "^[yamlLint]"
   },
@@ -81,12 +86,11 @@
     "IE 11"
   ],
   "scripts": {
+    "build": "npm run ciBuild",
+    "bundler": "webpack --mode=production",
+    "bundle:test": "webpack-dev-server",
     "postinstall": "node packageScripts/postinstall.js",
     "postinstall:lit": "node scripts/postinstall.js",
-    "bundle:[namespace][Name]": "cross-env NODE_ENV=production parcel build ./src/[namespace]-[name].js -o ./dist/[namespace]-[name]__bundled.js",
-    "bundle:polyfills": "cross-env NODE_ENV=production parcel build ./scripts/polyfills.js",
-    "bundle:test": "parcel ./docs/index.html --port 3000",
-    "bundler": "npm-run-all postinstall:lit bundle:[namespace][Name] bundle:polyfills",
     "cssLint": "stylelint './src/*.css'",
     "dev": "npm run sassBuild:watch",
     "distJS": "copyfiles -u 1 -V './src/**/*.js' ./dist",
@@ -158,6 +162,7 @@
     ],
     "plugins": [
       [
+        "@babel/plugin-syntax-dynamic-import",
         "@babel/plugin-transform-runtime",
         {
           "regenerator": true
