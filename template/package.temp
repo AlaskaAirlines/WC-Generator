@@ -73,7 +73,7 @@
     "stylelint": "^[stylelint]",
     "stylelint-config-standard": "^[stylelintConfig]",
     "wc-sass-render": "^[wcSassRender]",
-    "webpack": "^[webpack],
+    "webpack": "^[webpack]",
     "webpack-bundle-analyzer": "^[webpackBundleAnalyzer]",
     "webpack-cli": "^[webpackCli]",
     "webpack-dev-server": "^[webpackDevServer]",
