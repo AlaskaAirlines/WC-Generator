@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.2.9](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.2.8...v2.2.9) (2020-05-20)
+
+
+### Bug Fixes
+
+* babel support ([5daa802](https://github.com/AlaskaAirlines/WC-Generator/commit/5daa80284b71f7d97775f17a545baab744439712))
+
 ## [2.2.8](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.2.7...v2.2.8) (2020-05-19)
 
 
