@@ -9,13 +9,31 @@ const config = {
     path: path.resolve(__dirname, './dist'),
     filename: '|webPackName|',
   },
+  module: {
+    rules: [
+      {
+        /* Transpile JS from source and Web Component packages in ES6 */
+        test: /\.js$/,
+        include: [
+          path.resolve(__dirname, 'src'),
+          path.resolve(__dirname, 'node_modules/lit-element'),
+          path.resolve(__dirname, 'node_modules/lit-html'),
+          path.resolve(__dirname, 'node_modules/@alaskaairux'),
+          path.resolve(__dirname, 'node_modules/focus-visible'),
+        ],
+        use: {
+          loader: 'babel-loader',
+        },
+      },
+    ],
+  },
   optimization: {
     splitChunks: {
       cacheGroups: {
         vendor: {
+          test: /[\\/]node_modules[\\/]/,
           chunks: 'all',
-          test: /([\\/]node_modules[\\/])/,
-          name: 'polyfills',
+          name: 'polyfills'
         },
       },
     },
