@@ -4,6 +4,10 @@ The Design System Web Component Generator is a project tool intended to assist d
 
 ## Install
 
+[![Build Status](https://img.shields.io/travis/AlaskaAirlines/WC-Generator.svg?branch=master&style=for-the-badge)](https://travis-ci.org/github/AlaskaAirlines/WC-Generator)
+[![See it on NPM!](https://img.shields.io/npm/v/@alaskaairux/wc-generator.svg?style=for-the-badge&color=orange)](https://www.npmjs.com/package/@alaskaairux/wc-generator)
+[![License](https://img.shields.io/npm/l/@alaskaairux/wc-generator.svg?color=blue&style=for-the-badge)](https://www.apache.org/licenses/LICENSE-2.0)
+
 It is suggested that this package be installed globally as to ensure quick and easy access to initializing new web components at will.
 
 ```shell
@@ -77,8 +81,3 @@ The WC-Generator contains automated functionality with each build to generate a 
 <script src="https://unpkg.com/@alaskaairux/[namespace]-[name]@:version/dist/polyfills.js"></script>
 <script src="https://unpkg.com/@alaskaairux/[namespace]-[name]@:version/dist/[namespace]-[name]__bundled.js"></script>
 ```
-
-
-[![Build Status](https://travis-ci.org/AlaskaAirlines/WC-Generator.svg?branch=master)](https://travis-ci.org/AlaskaAirlines/WC-Generator)
-![npm (scoped)](https://img.shields.io/npm/v/@alaskaairux/wc-generator.svg?color=orange)
-![NPM](https://img.shields.io/npm/l/@alaskaairux/wc-generator.svg?color=blue)
