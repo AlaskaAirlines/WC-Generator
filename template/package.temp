@@ -88,7 +88,7 @@
   "scripts": {
     "build": "npm run ciBuild",
     "bundler": "webpack --mode=production",
-    "bundle:test": "webpack-dev-server",
+    "bundle:test": "webpack-dev-server --host 0.0.0.0",
     "postinstall": "node packageScripts/postinstall.js",
     "postinstall:lit": "node scripts/postinstall.js",
     "cssLint": "stylelint './src/*.css'",
@@ -149,26 +149,6 @@
   },
   "publishConfig": {
     "access": "public"
-  },
-  "babel": {
-    "presets": [
-      [
-        "@babel/preset-env",
-        {
-          "useBuiltIns": "entry",
-          "corejs": "3.0.0"
-        }
-      ]
-    ],
-    "plugins": [
-      [
-        "@babel/plugin-syntax-dynamic-import",
-        "@babel/plugin-transform-runtime",
-        {
-          "regenerator": true
-        }
-      ]
-    ]
   },
   "contributors": [
     {
