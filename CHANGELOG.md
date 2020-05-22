@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.2.11](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.2.10...v2.2.11) (2020-05-22)
+
+
+### Bug Fixes
+
+* update babel vs polymer config ([21475ab](https://github.com/AlaskaAirlines/WC-Generator/commit/21475abbcefb69280cb7b96c30e158aa65441489))
+
 ## [2.2.10](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.2.9...v2.2.10) (2020-05-21)
 
 
