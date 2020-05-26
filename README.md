@@ -54,13 +54,18 @@ $ wc-generate --name button
 
 Please see [Auro docs](https://github.com/AlaskaAirlines/auro_docs) for all information in regard to using and developing HTML custom elements with the Design System.
 
-## UI development browser support
+## UI development and browser support
 
-For the most up to date information on UI development browser support, see [./docs/BROWSER_SUPPORT.md](https://github.com/AlaskaAirlines/auro_docs/blob/master/src/BROWSER_SUPPORT.md)
+For the most up to date information on UI development browser support, see [Auro Web Component Browser Support](https://auro.alaskaair.com/support/browsersSupport)
 
 ## Building a Custom element
 
-Once the new development environment has been created, there are some conventions to follow to ensure the success of your new Custom Element. Please see the development documentation [Auro Web Component Development Details](https://github.com/AlaskaAirlines/auro_docs/blob/master/src/TECH_DETAILS.md)
+Once the new development environment has been created, there are some conventions to follow to ensure the success of your new Custom Element. Please see the development documentation:
+
+1. [CSS Development Conventions](http://auro.alaskaair.com/support/css-conventions)
+1. [Web Component Automated Testing](http://auro.alaskaair.com/support/tests)
+1. [The slot element, performance and SEO](http://auro.alaskaair.com/support/slots)
+1. [Web Component Polyfill Support](http://auro.alaskaair.com/support/polyfill)
 
 ## Custom namespace support
 
