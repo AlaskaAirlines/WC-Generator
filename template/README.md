@@ -14,7 +14,7 @@ For the most up to date information on UI development browser support, see [docs
 
 [![Build Status](https://img.shields.io/travis/AlaskaAirlines/[namespace]-[name].svg?branch=master&style=for-the-badge)](https://travis-ci.org/github/AlaskaAirlines/[namespace]-[name])
 [![See it on NPM!](https://img.shields.io/npm/v/[npm]/[namespace]-[name].svg?style=for-the-badge&color=orange)](https://www.npmjs.com/package/[npm]/[namespace]-[name])
-[![License](https://img.shields.io/npm/l/@alaskaairux/orion-design-tokens.svg?color=blue&style=for-the-badge)](https://www.apache.org/licenses/LICENSE-2.0)
+[![License](https://img.shields.io/npm/l/[npm]/[namespace]-[name].svg?color=blue&style=for-the-badge)](https://www.apache.org/licenses/LICENSE-2.0)
 
 ```shell
 $ npm i [npm][namespace]-[name]
