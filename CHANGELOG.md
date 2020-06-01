@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.2.12](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.2.11...v2.2.12) (2020-06-01)
+
+
+### Bug Fixes
+
+* address issue with incorrect badge urls ([5ea3082](https://github.com/AlaskaAirlines/WC-Generator/commit/5ea308279ef4b0194f24622731d4f1d85e681720))
+
 ## [2.2.11](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.2.10...v2.2.11) (2020-05-22)
 
 
