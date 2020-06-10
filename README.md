@@ -66,7 +66,7 @@ Once the new development environment has been created, there are some convention
 1. [CSS Development Conventions](http://auro.alaskaair.com/support/css-conventions)
 1. [Web Component Automated Testing](http://auro.alaskaair.com/support/tests)
 1. [The slot element, performance and SEO](http://auro.alaskaair.com/support/slots)
-1. [Web Component Polyfill Support](http://auro.alaskaair.com/support/polyfill)
+1. [Web Component Polyfill Support](https://auro.alaskaair.com/support/polyfills/focusvisible)
 
 ## Custom namespace support
 
