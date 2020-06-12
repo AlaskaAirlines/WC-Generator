@@ -3,7 +3,7 @@
 
 // ---------------------------------------------------------------------
 
-import { LitElement, html } from "lit-element";
+import { LitElement, html, css } from "lit-element";
 
 // Import touch detection lib
 import "focus-visible/dist/focus-visible.min.js";
@@ -22,11 +22,15 @@ class [Namespace][Name] extends LitElement {
     };
   }
 
+  static get styles() {
+    return css`
+      ${styleCss}
+    `;
+  }
+
   // function that renders the HTML and CSS into  the scope of the component
   render() {
     return html`
-      ${styleCss}
-
       <div class=${this.cssClass}>
         <slot></slot>
       </div>

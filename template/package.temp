@@ -94,7 +94,7 @@
     "cssLint": "stylelint './src/*.css'",
     "dev": "npm run sassBuild:watch",
     "distJS": "copyfiles -u 1 -V './src/**/*.js' ./dist",
-    "sassRender": "sass-render src/*.css",
+    "sassRender": "sass-render src/*.css -t ./scripts/staticStyles-template.js",
     "sweep": "rm -rf ./temp ./demo/css ./demo/fonts ./dist ./src/tokens | rm ./src/*.css ./src/*-css.js",
     "esLint": "./node_modules/.bin/eslint src/[namespace]-*.js",
     "lint": "npm-run-all cssLint test:yaml esLint",

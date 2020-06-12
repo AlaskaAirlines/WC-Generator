@@ -1,6 +1,6 @@
 # Web Component Generator
 
-The Design System Web Component Generator is a project tool intended to assist developers with an easy to configure and execute Web Component development environment for the purpose of building custom elements for the Design System.
+The Design System Web Component Generator is a project tool intended to assist developers with an easy to configure and execute Web Component development environment for the purpose of building custom elements.
 
 ## Install
 
@@ -9,7 +9,7 @@ The Design System Web Component Generator is a project tool intended to assist d
 [![License](https://img.shields.io/npm/l/@alaskaairux/wc-generator.svg?color=blue&style=for-the-badge)](https://www.apache.org/licenses/LICENSE-2.0)
 [![issues](https://img.shields.io/github/issues-raw/AlaskaAirlines/WC-Generator?style=for-the-badge)](https://github.com/AlaskaAirlines/WC-Generator/issues)
 
-It is suggested that this package be installed globally as to ensure quick and easy access to initializing new web components at will.
+It is suggested that this package be installed globally as to ensure quick and easy access to initializing new web components.
 
 ```shell
 $ npm i @alaskaairux/wc-generator -g
@@ -53,7 +53,7 @@ $ wc-generate --name button
 
 ## General documentation
 
-Please see [Auro docs](https://github.com/AlaskaAirlines/auro_docs) for all information in regard to using and developing HTML custom elements with the Design System.
+Please see [Auro docs](https://auro.alaskaair.com/getting-started/developers/overview) for all information in regard to using and developing HTML custom elements with the Design System.
 
 ## UI development and browser support
 
@@ -61,16 +61,16 @@ For the most up to date information on UI development browser support, see [Auro
 
 ## Building a Custom element
 
-Once the new development environment has been created, there are some conventions to follow to ensure the success of your new Custom Element. Please see the development documentation:
+Once the new development environment has been created, there are some conventions to follow to ensure the success of your new custom element. Please see the following documentation:
 
-1. [CSS Development Conventions](http://auro.alaskaair.com/support/css-conventions)
-1. [Web Component Automated Testing](http://auro.alaskaair.com/support/tests)
-1. [The slot element, performance and SEO](http://auro.alaskaair.com/support/slots)
+1. [CSS Development Conventions](https://auro.alaskaair.com/support/css-conventions)
+1. [Web Component Automated Testing](https://auro.alaskaair.com/support/tests)
+1. [The slot element, performance and SEO](https://auro.alaskaair.com/support/slots)
 1. [Web Component Polyfill Support](https://auro.alaskaair.com/support/polyfills/focusvisible)
 
 ## Custom namespace support
 
-When generating a new WC using the Auro Web Component generator, you are not restricted to using the Auro namespace for the component.
+When generating a new WC using the Auro Web Component Generator, you are not restricted to using the Auro namespace for the component.
 
 ```shell
 $ wc-generate -t -N Han -n Solo
@@ -87,3 +87,14 @@ The WC-Generator contains automated functionality with each build to generate a 
 <script src="https://unpkg.com/@alaskaairux/[namespace]-[name]@:version/dist/polyfills.js"></script>
 <script src="https://unpkg.com/@alaskaairux/[namespace]-[name]@:version/dist/[namespace]-[name]__bundled.js"></script>
 ```
+
+## Static Styles
+
+The generator takes the opinion of using [static styles](https://lit-element.polymer-project.org/guide/styles#expressions) as a matter of performance. 
+
+> Static styles apply to all instances of a component. Any expressions in CSS are evaluated once, then reused for all instances.
+
+If there is a requirement for the CSS to be reevaluated, this can either be done by moving the CSS to the `render()` method or addressed in a lifecycle method. 
+
+Moving the CSS to the `render()` method requires an update to the `sassRender` script and removing the reference to `staticStyles-template.js`.
+
