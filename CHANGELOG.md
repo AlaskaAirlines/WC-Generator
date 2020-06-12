@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+# [2.3.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.2.12...v2.3.0) (2020-06-12)
+
+
+### Features
+
+* move CSS support from render() to static styles ([242eb03](https://github.com/AlaskaAirlines/WC-Generator/commit/242eb03011b1b868970f69eb2c318ae9872fcfa8))
+
 ## [2.2.12](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.2.11...v2.2.12) (2020-06-01)
 
 
