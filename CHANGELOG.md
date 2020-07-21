@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.3.1](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.3.0...v2.3.1) (2020-07-21)
+
+
+### Bug Fixes
+
+* update to README template ([020b631](https://github.com/AlaskaAirlines/WC-Generator/commit/020b631261f03dc42c9a08272567af8e74887393))
+
 # [2.3.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.2.12...v2.3.0) (2020-06-12)
 
 
