@@ -107,13 +107,13 @@ It is highly recommended that you review the [lit-HTML](https://lit-html.polymer
 
 #### The slot
 
-Something special to web components is the `<slot>` element. This small, but powerful element is a key part of inserting content into the scope of the web component from exterior HTML without a special prop. In short, anything can be placed into the `<slot>` of a component. String text, additional HTML elements, additional custom elements. A powerful feature of the `<slot>` is also the ability to pass shadow DOM JavaScript functionality from one component to the next.
-x
+Something special to web components is the `<slot>` element. This small, but powerful element is a key part of inserting content into the scope of the web component from exterior HTML without a special prop. In short, anything can be placed into the `<slot>` of a component. String text, additional HTML elements, additional custom elements. A powerful feature of the `<slot>` is also the ability to pass shadow DOM JavaScript functionality from one component to the next. 
+
 It is also important to understand how the `<slot>` element provides [performance and SEO](https://auro.alaskaair.com/support/slots) support.
 
 ### this
 
-Remember that any references to variables or functions within the scope of the `render()` method be sure to reference `this` or you will get a runtime error with your component.
+Remember when referencing variables or functions within the scope of the `render()` method be sure to reference `this` or you will get a runtime error with your component.
 
 ### Custom element definition
 
@@ -160,7 +160,7 @@ Setting up your tests will be in `test/auro-*.test.js`. Please see [Web Componen
 
 ## Running the build pipeline
 
-When running your new component for development you will need to shells. One for running the Sass/CSS processing and one for running the server.
+When running your new component for development you will need to shells. One for running the Sass/CSS processing, and one for running the server.
 
 ```bash
 $ npm run dev
@@ -169,4 +169,4 @@ $ npm run serve
 
 If at any time you are in need of a full build, it is recommended to run `$ npm run ciBuild`. This will simulate a Travis config build.
 
-Remember, `ciBuild` and the `.travis.yml` config is separate. If you update the `package.json` with additional build steps, this will need to be added to both the `ciBuild` and the `.travis.yml` file.
+Remember, `ciBuild` and the `.travis.yml` config file is separate. If you update the `package.json` with additional build steps, this will need to be added to both the `ciBuild` and the `.travis.yml` file.
