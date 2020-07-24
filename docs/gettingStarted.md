@@ -8,12 +8,12 @@ When using the WC-Generator, you will get the following scaffolding:
 1. Lit-Element web component scaffolding js file
 1. Sass and PostCSS pre-configured support
 1. Sass template Auro Design Tokens, breakpoints and core CSS ready
-1. Pre configured Webpack for producing pre-bundled versions of the web component
+1. Pre-configured Webpack for producing pre-bundled versions of the web component
 1. Full code linting support
 1. Fully configured [Karma via Open-WC](https://auro.alaskaair.com/support/tests) testing support
 1. Support for conventional commits and automated semantic versioning
 1. Pre-commit hooks
-1. Pre configured Travis CI/CD support
+1. Pre-configured Travis CI/CD support
 1. npm publish ready
 
 ## Installing
@@ -30,7 +30,7 @@ Once the package is installed, run the following command to init a new local rep
 $ wc-generate --name [wc name]
 ```
 
-By default, the WC-Geenrator will assume `auro` as the namespace for the WC, `@alaskaairux` as the npm group and your current directory where to install. Be sure to reference the [api]() for all information regarding customization.
+By default, the WC-Generator will assume `auro` as the namespace for the WC, `@alaskaairux` as the npm group, and your current directory where to install. Be sure to reference the [api]() for all information regarding customization.
 
 ## Servers
 
@@ -42,7 +42,7 @@ Running `npm run bundle:test` will start a webpack server of bundled assets that
 
 ## Editing your Polymer demo
 
-While building a web component, being able to see the component in the browser is essential. Located in `/demo/index.html` is a Polymer pre-configured demo file. Use the following pattern to setup your web component in the demo HTML.
+While building a web component, being able to see the component in the browser is essential. Located in `/demo/index.html` is a Polymer pre-configured demo file. Use the following pattern to set up your web component in the demo HTML.
 
 ```html
 <demo-snippet>
@@ -64,13 +64,13 @@ The purpose of the bundled demo is simply to ensure that your new component can 
 
 Located in `/docs/index.html` is a simple scaffolding where examples can be viewed. Editing the `auro*` array will show the component and output a simple code example.
 
-If there are more than one component in your project, be sure to update the `config` object in the `./webpack.config.js` file.
+If there is more than one component in your project, be sure to update the `config` object in the `./webpack.config.js` file.
 
 ## Editing your web component
 
-Located in the `./src` directory will be your new `.js` component file and a `style.scss` file. These two files are setup to work together from the start.
+Located in the `./src` directory will be your new `.js` component file and a `style.scss` file. These two files are set up to work together from the start.
 
-The web component scaffolding is made up a few parts that I will mention here.
+The web component scaffolding is made up of a few parts that I will mention here.
 
 1. Import dependencies
 1. Class definition
@@ -89,7 +89,7 @@ Everything related to the construct of the web component will happen here.
 
 ### Properties
 
-Using the `properties()` method, add the component properties and their type here. Declaring properties here with their types is what creates the difference between a HTML attribute and a component prop.
+Using the `properties()` method, add the component properties and their type here. Declaring properties here with their types is what creates the difference between an HTML attribute and a component prop.
 
 ### Static styles
 
@@ -99,7 +99,7 @@ It is highly recommended that this is not edited. The component is already pre-c
 
 All your HTML will go into the `html` [tagged template literal](https://lit-html.polymer-project.org/guide/concepts#tagged-template-literals). This is not JSX, this is real HTML. It is important to remember that your component will be in the shadow DOM of its parent custom element. There is no need for a wrapping `div` like you find in other frameworks.
 
-It is highly recommended that you review the [lit-HTML](https://lit-html.polymer-project.org/guide/writing-templates) docs to get familiar with this library. Specifically it is recommended to get yourself familiar with the [built in directives](https://lit-html.polymer-project.org/guide/template-reference#built-in-directives) to support many common use cases. A few directives that we make good use of include
+It is highly recommended that you review the [lit-HTML](https://lit-html.polymer-project.org/guide/writing-templates) docs to get familiar with this library. Specifically, it is recommended to get yourself familiar with the [built in directives](https://lit-html.polymer-project.org/guide/template-reference#built-in-directives) to support many common use cases. A few directives that we make good use of include
 
 1. [classMap](https://lit-html.polymer-project.org/guide/template-reference#classmap)
 1. [ifDefined](https://lit-html.polymer-project.org/guide/template-reference#ifdefined)
@@ -107,7 +107,7 @@ It is highly recommended that you review the [lit-HTML](https://lit-html.polymer
 
 #### The slot
 
-Something special to web components is the `<slot>` element. This small, but powerful element is a key part to inserting content into the scope of the web component from exterior HTML without a special prop. In short, anything can be place into the `<slot>` of a component. String text, additional HTML elements, additional custom elements. A powerful feature of the `<slot>` is also the ability to pass shadow DOM JavaScript functionality from one component to the next.
+Something special to web components is the `<slot>` element. This small, but powerful element is a key part of inserting content into the scope of the web component from exterior HTML without a special prop. In short, anything can be placed into the `<slot>` of a component. String text, additional HTML elements, additional custom elements. A powerful feature of the `<slot>` is also the ability to pass shadow DOM JavaScript functionality from one component to the next.
 x
 It is also important to understand how the `<slot>` element provides [performance and SEO](https://auro.alaskaair.com/support/slots) support.
 
@@ -147,7 +147,7 @@ When writing styles for your component, be sure to use the CSS variables from th
 }
 ```
 
-When writing styles using CSS variables, please be sure to follow the recomendations for [shady CSS](https://auro.alaskaair.com/support/shadycss) in order to avoid any issues with IE11.
+When writing styles using CSS variables, please be sure to follow the recommendations for [shady CSS](https://auro.alaskaair.com/support/shadycss) in order to avoid any issues with IE11.
 
 ### PostCSS support
 
@@ -167,6 +167,6 @@ $ npm run dev
 $ npm run serve
 ```
 
-If at any time you are in need a full build, it is recomended to run `$ npm run ciBuild`. This will simulate a Travis config build.
+If at any time you are in need of a full build, it is recommended to run `$ npm run ciBuild`. This will simulate a Travis config build.
 
-Remember, `ciBuild` and the `.travis.yml` config are separate. If you update the `package.json` with additional build steps, this will need to be added to both the `ciBuild` and the `.travis.yml` file.
+Remember, `ciBuild` and the `.travis.yml` config is separate. If you update the `package.json` with additional build steps, this will need to be added to both the `ciBuild` and the `.travis.yml` file.
