@@ -4,7 +4,6 @@ about: Crate a new user story for a unit of work
 title: ''
 labels: 'Status: Proposal'
 assignees: blackfalcon
-
 ---
 
 # User story
@@ -49,5 +48,14 @@ As a [persona], I want to be able to [intent, not feature(s)], so I can [describ
 #### Performance
 
 - [ ] Chrome Lighthhouse report
+-->
 
+<!-- Use the following template for doc site-related exit criteria
+#### Auro component features
+
+- [ ] README doc completed with all relative information
+- [ ] API documentation created
+- [ ] Bundled version tested and documented
+- [ ] Examples and use case info created
+- [ ] Pages added to the Auro Doc Site
 -->
