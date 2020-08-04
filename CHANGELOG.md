@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.3.4](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.3.3...v2.3.4) (2020-08-04)
+
+
+### Bug Fixes
+
+* merge import destructure ([61b545b](https://github.com/AlaskaAirlines/WC-Generator/commit/61b545b41ed8b54f3bfbba5061ed65f6e1b39658))
+
 ## [2.3.3](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.3.2...v2.3.3) (2020-07-31)
 
 
