@@ -9,6 +9,13 @@ import { LitElement, html, css } from "lit-element";
 import "focus-visible/dist/focus-visible.min.js";
 import styleCss from "./style-css.js";
 
+// See https://git.io/JJ6SJ for "How to document your components using JSDoc"
+/**
+ * [namespace]-[name] provides users a way to ...
+ *
+ * @attr {String} cssClass - Applies designated CSS class to DOM element.
+ */
+
 // build the component class
 class [Namespace][Name] extends LitElement {
   // constructor() {

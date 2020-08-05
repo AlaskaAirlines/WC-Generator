@@ -133,6 +133,7 @@ const getVersionData = async () => {
   versions['stylelint'] = await latestVersion('stylelint');
   versions['stylelintConfig'] = await latestVersion('stylelint-config-standard');
   versions['wcSassRender'] = await latestVersion('wc-sass-render');
+  versions['wca'] = await latestVersion('web-component-analyzer');
   versions['webpack'] = await latestVersion('webpack');
   versions['webpackBundleAnalyzer'] = await latestVersion('webpack-bundle-analyzer');
   versions['webpackMerge'] = await latestVersion('webpack-merge');
@@ -190,6 +191,7 @@ const formatTemplateFileContents = (data, content, { name, namespace, npm }) => 
     { regex: /\[stylelint\]/g, value: data.stylelint },
     { regex: /\[stylelintConfig\]/g, value: data.stylelintConfig },
     { regex: /\[wcSassRender\]/g, value: data.wcSassRender },
+    { regex: /\[wca\]/g, value: data.wca },
     { regex: /\[webpackMerge\]/g, value: data.webpackMerge },
     { regex: /\[webpack\]/g, value: data.webpack },
     { regex: /\[webpackDevServer\]/g, value: data.webpackDevServer },
