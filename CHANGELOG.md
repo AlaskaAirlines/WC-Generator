@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+# [2.4.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.3.4...v2.4.0) (2020-08-06)
+
+
+### Features
+
+* add auto API generation support ([6a74e63](https://github.com/AlaskaAirlines/WC-Generator/commit/6a74e63fd0400fed272c151599f765d5e64b8d34))
+
 ## [2.3.4](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.3.3...v2.3.4) (2020-08-04)
 
 
