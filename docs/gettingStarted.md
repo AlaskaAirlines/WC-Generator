@@ -8,6 +8,7 @@ When using the WC-Generator, you will get the following scaffolding:
 1. Lit-Element web component scaffolding js file
 1. Sass and PostCSS pre-configured support
 1. Sass template Auro Design Tokens, breakpoints and core CSS ready
+1. JSDoc support
 1. Pre-configured Webpack for producing pre-bundled versions of the web component
 1. Full code linting support
 1. Fully configured [Karma via Open-WC](https://auro.alaskaair.com/support/tests) testing support
@@ -107,7 +108,7 @@ It is highly recommended that you review the [lit-HTML](https://lit-html.polymer
 
 #### The slot
 
-Something special to web components is the `<slot>` element. This small, but powerful element is a key part of inserting content into the scope of the web component from exterior HTML without a special prop. In short, anything can be placed into the `<slot>` of a component. String text, additional HTML elements, additional custom elements. A powerful feature of the `<slot>` is also the ability to pass shadow DOM JavaScript functionality from one component to the next. 
+Something special to web components is the `<slot>` element. This small, but powerful element is a key part of inserting content into the scope of the web component from exterior HTML without a special prop. In short, anything can be placed into the `<slot>` of a component. String text, additional HTML elements, additional custom elements. A powerful feature of the `<slot>` is also the ability to pass shadow DOM JavaScript functionality from one component to the next.
 
 It is also important to understand how the `<slot>` element provides [performance and SEO](https://auro.alaskaair.com/support/slots) support.
 
@@ -152,6 +153,48 @@ When writing styles using CSS variables, please be sure to follow the recommenda
 ### PostCSS support
 
 Configured into the component build system is a PostCSS step that will address any vendor prefixing and create the fallback properties for the CSS variables. If there are any additional Sass files needed or the files are renamed from anything other than `style.scss`, be sure to update the `scripts/postCss.js` file or the PostCSS support will fail.
+
+## Documenting your component's API
+
+Auro WC-Generator fully supports JSDoc and Web Component Analyzer, all you need todo is write code. WCA will automatically go through your code and produce a markdown document containing your API. It is preferred that you provide descriptions, this is where JSDoc comes in. Using a very familiar syntax, it is easy to document your code.
+
+#### Add a general description of your component
+
+```js
+/**
+ * This component will do amazing things and make life worth living.
+ */
+```
+
+#### Describe attributes of your component
+
+```js
+/**
+ * This component will do amazing things and make life worth living.
+ *
+ * @attr {String} validationMessage - Validation message appears post user input
+ * @attr {Boolean} disabled - If set, disables input
+ */
+```
+
+#### Describe properties and functions
+
+```js
+/**
+  * Value is SVG for use
+  */
+this.closeSvg = this.getIconAsHtml(closelg);
+
+/**
+ * Ensures that focus can be done programmatically
+ */
+focus() {
+  this.input.focus();
+}
+```
+
+Running either `npm run apiBuild` or `npm run ciBuild` will generate the API document to be added to the repo's version control.
+
 
 ## Testing your component
 
