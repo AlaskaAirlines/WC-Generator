@@ -181,8 +181,8 @@ Auro WC-Generator fully supports JSDoc and Web Component Analyzer, all you need 
 
 ```js
 /**
-  * Value is SVG for use
-  */
+ * Value is SVG for use
+ */
 this.closeSvg = this.getIconAsHtml(closelg);
 
 /**
