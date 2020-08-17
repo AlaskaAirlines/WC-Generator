@@ -62,7 +62,7 @@ const parseArgs = () => {
 
   const test = args['--test'];
   const name = args['--name'] || 'component';
-  const npm = args['--npm'] || '@alaskaairux/';
+  const npm = args['--npm'] || '@alaskaairux';
   const namespace = args['--namespace'] || 'auro';
   const dir = path.resolve(
     args['--dir'] || `./${lowerKebabCase(namespace)}-${lowerKebabCase(name)}`
