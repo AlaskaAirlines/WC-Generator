@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.4.3](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.4.2...v2.4.3) (2020-08-18)
+
+
+### Bug Fixes
+
+* add / into name: of package.json ([04fb4c5](https://github.com/AlaskaAirlines/WC-Generator/commit/04fb4c57e78ab6aa7d66c25f56b1f40b115be726))
+
 ## [2.4.2](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.4.1...v2.4.2) (2020-08-18)
 
 
