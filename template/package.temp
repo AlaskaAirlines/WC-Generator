@@ -7,7 +7,7 @@
     "  3. Go to http://localhost:3001",
     "================================================================================"
   ],
-  "name": "[npm][namespace]-[name]",
+  "name": "[npm]/[namespace]-[name]",
   "version": "0.0.0",
   "description": "[Namespace] custom [namespace]-[name] element",
   "author": "Product design and research",
