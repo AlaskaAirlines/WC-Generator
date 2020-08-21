@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.4.4](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.4.3...v2.4.4) (2020-08-21)
+
+
+### Bug Fixes
+
+* update gitignore and remove unsued portions of demo index ([3ad5cba](https://github.com/AlaskaAirlines/WC-Generator/commit/3ad5cbae54dd9ba77ec1c5387eb323f08dbe2fe9))
+
 ## [2.4.3](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.4.2...v2.4.3) (2020-08-18)
 
 
