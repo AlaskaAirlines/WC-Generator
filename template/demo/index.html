@@ -13,10 +13,6 @@
       import '@polymer/iron-demo-helpers/demo-snippet';
     </script>
     <script type="module" src="../src/[namespace]-[name].js"></script>
-    <script src="../demo/alert.js"></script>
-    <script type="module">
-      import '../node_modules/@polymer/iron-icons/hardware-icons.js';
-    </script>
     <custom-style>
       <style is="custom-style" include="demo-pages-shared-styles"></style>
     </custom-style>
@@ -27,58 +23,11 @@
     <div class="vertical-section-container">
       <h1>[namespace]-[name]</h1>
 
-      <p>Component description ...</p>
-
-      <p class="ironIcons">
-        <span class="util_floatLeft util_marginRight--med"
-          >Narrow
-          <iron-icon
-            class="util_marginAuto util_displayBlock"
-            icon="hardware:phone-iphone"
-          ></iron-icon>
-        </span>
-        <span class="util_is-narrowAppears util_floatLeft util_marginRight--med"
-          >Medium
-          <iron-icon
-            class="util_marginAuto util_displayBlock"
-            icon="hardware:tablet-android"
-          ></iron-icon>
-        </span>
-        <span class="util_is-tabletAppears util_floatLeft util_marginRight--med"
-          >Wide
-          <iron-icon
-            class="util_marginAuto util_displayBlock"
-            icon="hardware:tablet"
-          ></iron-icon>
-        </span>
-        <span class="util_is-desktopOnly util_floatLeft util_marginRight--med"
-          >Max
-          <iron-icon
-            class="util_marginAuto util_displayBlock"
-            icon="hardware:tv"
-          ></iron-icon>
-        </span>
-      </p>
-
       <demo-snippet>
         <template>
           <[namespace]-[name] cssClass="testClass">Hello World!</[namespace]-[name]>
         </template>
       </demo-snippet>
-
-      <h2>Element &#60;[namespace]-[name]&#62;</h2>
-
-      <pre><code>class [Namespace][Name] extends LitElement</code></pre>
-
-      <h3>Styling:</h3>
-      <p>Info ...</p>
-
-      <h3>Responsive state:</h3>
-      <p>Info ...</p>
-
-      <h3>Properties:</h3>
-      <code><strong>string:</strong> string</code>
-      <p>Info ...</p>
     </div>
   </body>
 </html>

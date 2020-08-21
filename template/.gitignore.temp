@@ -10,7 +10,7 @@ altImports/
 ## CSS built from Sass process
 demo/css
 demo/sass/tokenProperties.scss
-src/style.css
+src/*.css
 
 ## *-css built from sass-render process
 *-css.js
