@@ -2,7 +2,7 @@
 name: Symbolize Design Story
 about: Crate a new user story to address the symbol creation process
 title: 'auro-[name]; design [feature] symbolize'
-labels: 'Status: Backlogged'
+labels: 'Status: Backlogged, Type: Design, Project: Version Zero'
 ---
 
 # User story
@@ -12,6 +12,9 @@ As a designer, I want to be able to have access to a symbolized version, so I ca
 ## Outline subtasks or tasks
 
 > List specific steps required to deliver this work.
+
+- [ ] Update status labels: remove `backlogged` and add `work in progress
+- [ ] Update kanban status: move from `Backlog` to `Current WIP Release`
 
 - [ ] Add completed work to UI Kit as Sketch Symbol
 
