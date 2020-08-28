@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+# [2.5.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.4.6...v2.5.0) (2020-08-28)
+
+
+### Features
+
+* add supoprt for auroElement at init ([4679d1b](https://github.com/AlaskaAirlines/WC-Generator/commit/4679d1b76fa8207787f36cc2c195729902a641be))
+
 ## [2.4.6](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.4.5...v2.4.6) (2020-08-26)
 
 
