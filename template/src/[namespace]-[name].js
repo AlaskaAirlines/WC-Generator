@@ -3,7 +3,13 @@
 
 // ---------------------------------------------------------------------
 
+// If use litElement base class
 import { LitElement, html, css } from "lit-element";
+
+// If using auroElement base class
+// See instructions for importing auroElement base class https://git.io/JULq4
+// import { html, css } from "lit-element";
+// import AuroElement from '@alaskaairux/orion-web-core-style-sheets/dist/auroElement/auroElement';
 
 // Import touch detection lib
 import "focus-visible/dist/focus-visible.min.js";
@@ -22,9 +28,10 @@ class [Namespace][Name] extends LitElement {
   //   super();
   // }
 
-  // function to define props used within the scope of thie component
+  // function to define props used within the scope of this component
   static get properties() {
     return {
+      // ...super.properties,
       cssClass:   { type: String }
     };
   }
