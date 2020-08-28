@@ -24,13 +24,13 @@
   "peerDependencies": {
     "@alaskaairux/orion-design-tokens": "^[designTokens]",
     "@alaskaairux/orion-web-core-style-sheets": "^[wcss]",
-    "@alaskaairux/orion-icons": "^[icons]",
+    "@alaskaairux/icons": "^[icons]",
     "@webcomponents/webcomponentsjs": "^[webcomponentsjs]",
     "focus-visible": "^[focusVisible]"
   },
   "devDependencies": {
     "@alaskaairux/orion-design-tokens": "^[designTokens]",
-    "@alaskaairux/orion-icons": "^[icons]",
+    "@alaskaairux/icons": "^[icons]",
     "@alaskaairux/orion-web-core-style-sheets": "^[wcss]",
     "@babel/core": "^[bableCore]",
     "@babel/plugin-syntax-dynamic-import": "^[bableSyntaxDynamicImport]",
@@ -42,7 +42,6 @@
     "@open-wc/testing": "^[openwcTesting]",
     "@open-wc/testing-karma": "^[openwcKarma]",
     "@polymer/iron-demo-helpers": "^3.1.0",
-    "@polymer/iron-icons": "^3.0.1",
     "@polymer/polymer": "^3.3.1",
     "@semantic-release/changelog": "^[srChangelog]",
     "@semantic-release/git": "^[srGit]",

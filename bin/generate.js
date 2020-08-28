@@ -90,7 +90,7 @@ const getVersionData = async () => {
 
   versions['designTokens'] = await latestVersion('@alaskaairux/orion-design-tokens');
   versions['wcss'] = await latestVersion('@alaskaairux/orion-web-core-style-sheets');
-  versions['icons'] = await latestVersion('@alaskaairux/orion-icons');
+  versions['icons'] = await latestVersion('@alaskaairux/icons');
   versions['focusVisible'] = await latestVersion('focus-visible');
   versions['webcomponentsjs'] = await latestVersion('@webcomponents/webcomponentsjs');
   versions['litElement'] = await latestVersion('lit-element');
