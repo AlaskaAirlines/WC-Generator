@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.5.1](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.5.0...v2.5.1) (2020-08-28)
+
+
+### Bug Fixes
+
+* remove orion-icons from dependencies ([305ce66](https://github.com/AlaskaAirlines/WC-Generator/commit/305ce6683f8a2883dcf1bb1e482c7d1764aefa9a))
+
 # [2.5.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.4.6...v2.5.0) (2020-08-28)
 
 
