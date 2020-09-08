@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.5.2](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.5.1...v2.5.2) (2020-09-08)
+
+
+### Bug Fixes
+
+* add missing comment per html template and auroElement ([fb838c1](https://github.com/AlaskaAirlines/WC-Generator/commit/fb838c1687ee74eb5964c606fb61fc274bd713fa))
+
 ## [2.5.1](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.5.0...v2.5.1) (2020-08-28)
 
 
