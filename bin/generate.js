@@ -23,6 +23,7 @@ const chalk = require('chalk');
 const path = require('path');
 const paths = require('../util/paths');
 const log = require('../util/log');
+const inquirer = require('inquirer');
 
 const lowerKebabCase = str => str.toLowerCase().replace(' ', '-');
 const upperCamelCase = str =>
@@ -297,6 +298,52 @@ const loadingLoop = condition => {
   }, 1000);
 };
 
+const question = async () => {
+  var questions = [
+    {
+      type: 'confirm',
+      name: 'governance',
+      message: 'Did you review the Auro Governance Working Agreement?',
+    },
+    {
+      type: 'confirm',
+      name: 'status',
+      message: 'Have you reviewed the Auro Components status board?',
+      when: function (answers) {
+        return answers.governance;
+      },
+    },
+    {
+      type: 'confirm',
+      name: 'status',
+      message: 'Have you reviewed the Auro Components status board?',
+      when: function (answers) {
+        return !readDocs('governance')(answers);
+      },
+    }
+  ];
+
+  function readDocs(arg) {
+    return function (answers) {
+      return answers[arg];
+    };
+  }
+
+  inquirer.prompt(questions).then((answers) => {
+    if (answers.status === false) {
+      console.log('Be sure to review https://auro.alaskaair.com/component-status before starting')
+    }
+
+    if (answers.governance === false) {
+      console.log('Be sure to review https://auro.alaskaair.com/getting-started/developers/governance before starting')
+    }
+
+    if (answers.governance === true && answers.status === true) {
+      generateFromTemplate();
+    }
+  });
+}
+
 const generateFromTemplate = async () => {
   const pjson = require('../package.json');
   const latestVersion = require('latest-version');
@@ -427,5 +474,5 @@ Creating a Design System People Love.
   }
 };
 
-
-generateFromTemplate();
+question();
+// generateFromTemplate();
