@@ -299,49 +299,55 @@ const loadingLoop = condition => {
 };
 
 const question = async () => {
-  var questions = [
-    {
-      type: 'confirm',
-      name: 'governance',
-      message: 'Did you review the Auro Governance Working Agreement?',
-    },
-    {
-      type: 'confirm',
-      name: 'status',
-      message: 'Have you reviewed the Auro Components status board?',
-      when: function (answers) {
-        return answers.governance;
-      },
-    },
-    {
-      type: 'confirm',
-      name: 'status',
-      message: 'Have you reviewed the Auro Components status board?',
-      when: function (answers) {
-        return !readDocs('governance')(answers);
-      },
-    }
-  ];
+  const params = parseArgs();
 
-  function readDocs(arg) {
-    return function (answers) {
-      return answers[arg];
-    };
+  if (!params.test) {
+    const questions = [
+      {
+        type: 'confirm',
+        name: 'governance',
+        message: 'Did you review the Auro Governance Working Agreement?',
+      },
+      {
+        type: 'confirm',
+        name: 'status',
+        message: 'Have you reviewed the Auro Components status board?',
+        when: function (answers) {
+          return answers.governance;
+        },
+      },
+      {
+        type: 'confirm',
+        name: 'status',
+        message: 'Have you reviewed the Auro Components status board?',
+        when: function (answers) {
+          return !readDocs('governance')(answers);
+        },
+      }
+    ];
+
+    function readDocs(arg) {
+      return function (answers) {
+        return answers[arg];
+      };
+    }
+
+    inquirer.prompt(questions).then((answers) => {
+      if (answers.status === false) {
+        console.log('Be sure to review https://auro.alaskaair.com/component-status before starting')
+      }
+
+      if (answers.governance === false) {
+        console.log('Be sure to review https://auro.alaskaair.com/getting-started/developers/governance before starting')
+      }
+
+      if (answers.governance === true && answers.status === true) {
+        generateFromTemplate();
+      }
+    });
+  } else {
+    generateFromTemplate();
   }
-
-  inquirer.prompt(questions).then((answers) => {
-    if (answers.status === false) {
-      console.log('Be sure to review https://auro.alaskaair.com/component-status before starting')
-    }
-
-    if (answers.governance === false) {
-      console.log('Be sure to review https://auro.alaskaair.com/getting-started/developers/governance before starting')
-    }
-
-    if (answers.governance === true && answers.status === true) {
-      generateFromTemplate();
-    }
-  });
 }
 
 const generateFromTemplate = async () => {
@@ -475,4 +481,3 @@ Creating a Design System People Love.
 };
 
 question();
-// generateFromTemplate();
