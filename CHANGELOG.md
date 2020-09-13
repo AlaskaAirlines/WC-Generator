@@ -1,5 +1,13 @@
 # Semantic Release Automated Changelog
 
+# [2.6.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.5.2...v2.6.0) (2020-09-13)
+
+
+### Features
+
+* add CLI question support ([a5f4ee6](https://github.com/AlaskaAirlines/WC-Generator/commit/a5f4ee6813a1b4ebef8a9e8bd40ac0d112d90ca4))
+* add CLI question support ([777c30f](https://github.com/AlaskaAirlines/WC-Generator/commit/777c30fbee0a0c6951c807525b6676e151423db1))
+
 ## [2.5.2](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.5.1...v2.5.2) (2020-09-08)
 
 
