@@ -33,7 +33,7 @@ Any update to the Auro Design Tokens will be immediately reflected with browsers
 Defining the component dependency within each component that is using the `<[namespace]-[name]>` component.
 
 ```javascript
-import "[npm][namespace]-[name]";
+import "[npm]/[namespace]-[name]";
 ```
 
 **Reference component in HTML**
@@ -52,8 +52,8 @@ In cases where the project is not able to process JS assets, there are pre-proce
 <link rel="stylesheet" href="https://unpkg.com/@alaskaairux/orion-design-tokens@:version/dist/tokens/CSSTokenProperties.css" />
 <link rel="stylesheet" href="https://unpkg.com/@alaskaairux/orion-web-core-style-sheets@:version/dist/bundled/baseline.css" />
 
-<script src="https://unpkg.com/[npm][namespace]-[name]@:version/dist/polyfills.js"></script>
-<script src="https://unpkg.com/[npm][namespace]-[name]@:version/dist/[namespace]-[name]__bundled.js"></script>
+<script src="https://unpkg.com/[npm]/[namespace]-[name]@:version/dist/polyfills.js"></script>
+<script src="https://unpkg.com/[npm]/[namespace]-[name]@:version/dist/[namespace]-[name]__bundled.js"></script>
 ```
 
 ### polyfills.js
