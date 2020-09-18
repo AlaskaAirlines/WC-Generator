@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.6.1](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.6.0...v2.6.1) (2020-09-18)
+
+
+### Bug Fixes
+
+* add missing / between [npm] and [namespace]-[name] ([b7ce201](https://github.com/AlaskaAirlines/WC-Generator/commit/b7ce2012475eb30cbe80b0d534842b138956ce80))
+
 # [2.6.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.5.2...v2.6.0) (2020-09-13)
 
 
