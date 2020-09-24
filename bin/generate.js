@@ -37,7 +37,6 @@ const parseArgs = () => {
     // Types
     '--help': Boolean,
     '--test': Boolean,
-    '--version': Boolean,
     '--name': String,
     '--namespace': String,
     '--npm': String,
@@ -46,7 +45,6 @@ const parseArgs = () => {
     // Aliases
     '-h': '--help',
     '-t': '--test',
-    '-v': '--version',
     '-n': '--name',
     '-N': '--namespace',
     '-P': '--npm',
@@ -354,7 +352,7 @@ const generateFromTemplate = async () => {
   const pjson = require('../package.json');
   const latestVersion = require('latest-version');
 
-  // this test needs to be updates post first release of new '@alaskaairux/wc-generator'
+  // this test needs to be updated post first release of new '@alaskaairux/wc-generator'
   const latestPublishedGenVersion = await latestVersion('@alaskaairux/wc-generator');
   log(chalk.green(`\nPublished: v${latestPublishedGenVersion} | Installed: v${pjson.version}\n`))
 

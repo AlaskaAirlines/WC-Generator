@@ -15,13 +15,7 @@ It is suggested that this package be installed globally as to ensure quick and e
 $ npm i @alaskaairux/wc-generator -g
 ```
 
-The Auro Web Component Generator is configured to ensure that you have the latest version of the generator prior to starting a new build project. You can also verify your installed version manually by running the following command.
-
-```shell
-$ wc-generate --version
-```
-
-This will return the currently available version and the version you have locally installed.
+The Auro Web Component Generator is configured to ensure that you have the latest version of the generator prior to starting a new build project.
 
 ## Execute
 

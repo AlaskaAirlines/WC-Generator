@@ -2,12 +2,17 @@ const chalk = require('chalk');
 
 const generate = `
     ${chalk.gray('Usage:')}
+    ${chalk.bold('wc-generator [options]')}
 
-    ${chalk.bold('wc-generator')} [options]
+    ${chalk.gray('Example:')}
+    ${chalk.bold('wc-generator --name dialog')}
 
     ${chalk.gray('Description:')}
+    Generate a new Auro Web Component from template.
 
-    Generate an Auros Web Component from template.
+    ${chalk.gray('More help:')}
+    For more help with building an Auro Web Component,
+    be sure to see ${chalk.blue('https://bit.ly/3cqTsp5')}
 
     ${chalk.gray('Options:')}
 
@@ -17,7 +22,6 @@ const generate = `
     -N, --namespace [namespace]     Choose custom namespace of the web component if other than Auro
     -P, --npm [npm]                 Choose npm namespace
     -d, --dir [directory]           Directory where the new custom element files will be created
-    -v, --version                   Ouput the version number
     --verbose                       Verbose command line feedback
 `;
 
