@@ -81,9 +81,11 @@
     "yaml-lint": "^[yamlLint]"
   },
   "browserslist": [
-    "last 4 version",
-    "> 1%",
-    "IE 11"
+    "last 2 version",
+    "> 15% in US",
+    "not IE 10",
+    "not IE_Mob 10",
+    "not IE_Mob 11"
   ],
   "scripts": {
     "build": "npm run ciBuild",
