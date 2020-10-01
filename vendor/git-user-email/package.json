@@ -1,0 +1,97 @@
+{
+  "_from": "git://github.com/codejamninja/git-user-email.git#npm",
+  "_id": "git-user-email@0.2.2",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/git-user-email",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "git://github.com/codejamninja/git-user-email.git#npm",
+    "rawSpec": "git://github.com/codejamninja/git-user-email.git#npm",
+    "saveSpec": "git://github.com/codejamninja/git-user-email.git#npm",
+    "fetchSpec": "git://github.com/codejamninja/git-user-email.git",
+    "gitCommittish": "npm"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git://github.com/codejamninja/git-user-email.git#5997c83689085f47c8bdaf0eb1da5b2192fb997d",
+  "_spec": "git://github.com/codejamninja/git-user-email.git#npm",
+  "_where": "/Users/dale.sande@alaskaair.com/src/auro/wc-generator",
+  "author": {
+    "name": "Jon Schlinkert",
+    "url": "http://github.com/https://github.com/jonschlinkert/"
+  },
+  "bugs": {
+    "url": "https://github.com/jonschlinkert/git-user-email/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "extend-shallow": "^2.0.1",
+    "git-config-path": "^1.0.1",
+    "parse-git-config": "^1.0.2"
+  },
+  "deprecated": false,
+  "description": "Get the email address of the current user from git config.",
+  "devDependencies": {
+    "gulp-format-md": "^0.1.11",
+    "mocha": "*",
+    "should": "*"
+  },
+  "engines": {
+    "node": ">=0.8"
+  },
+  "files": [
+    "index.js"
+  ],
+  "homepage": "https://github.com/jonschlinkert/git-user-email",
+  "keywords": [
+    "config",
+    "email",
+    "git",
+    "github",
+    "user"
+  ],
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/jonschlinkert/git-user-email/blob/master/LICENSE"
+  },
+  "main": "index.js",
+  "name": "git-user-email",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jonschlinkert/git-user-email.git"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "verb": {
+    "toc": false,
+    "layout": "default",
+    "related": {
+      "list": [
+        "git-config-path",
+        "parse-git-config",
+        "git-username",
+        "git-repo-name",
+        "git-branch"
+      ]
+    },
+    "tasks": [
+      "readme"
+    ],
+    "plugins": [
+      "gulp-format-md"
+    ],
+    "lint": {
+      "reflinks": true
+    },
+    "reflinks": [
+      "verb",
+      "verb-generate-readme"
+    ]
+  },
+  "version": "0.2.2"
+}
