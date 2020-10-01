@@ -210,7 +210,7 @@ const formatTemplateFileContents = (data, content, { name, namespace, npm }) => 
   // gets git username from ./gitconfig
   const userName = require('git-user-name');
   // gets git email from ./gitconfig
-  const userEmail = require('git-user-email');
+  const userEmail = require('../vendor/git-user-email');
   // generate new year for copyright stamp
   const newYear = new Date().getFullYear();
 
