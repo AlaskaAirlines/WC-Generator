@@ -209,8 +209,6 @@ const formatTemplateFileContents = (data, content, { name, namespace, npm }) => 
   const upperCamelCaseNameSpace = upperCamelCase(namespace);
   // gets git username from ./gitconfig
   const userName = require('git-user-name');
-  // gets git email from ./gitconfig
-  const userEmail = require('../vendor/git-user-email');
   // generate new year for copyright stamp
   const newYear = new Date().getFullYear();
 
@@ -218,7 +216,6 @@ const formatTemplateFileContents = (data, content, { name, namespace, npm }) => 
 
   const nameReplacements = [
     { regex: /\[author\]/g, value: userName },
-    { regex: /\[author-email\]/g, value: userEmail },
     { regex: /\[name\]/g, value: lowerKebabCaseName },
     { regex: /\[namespace\]/g, value: lowerKebabCaseNameSpace },
     { regex: /\[Namespace\]/g, value: upperCamelCaseNameSpace },
