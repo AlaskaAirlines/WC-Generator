@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.6.5](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.6.4...v2.6.5) (2020-10-02)
+
+
+### Bug Fixes
+
+* remove auto email package config feature ([f814939](https://github.com/AlaskaAirlines/WC-Generator/commit/f8149395f8fb3f4c2fc58aa7fe20ce7ec5bec3bb))
+
 ## [2.6.4](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.6.3...v2.6.4) (2020-10-01)
 
 
