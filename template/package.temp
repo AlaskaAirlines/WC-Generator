@@ -93,7 +93,7 @@
     "bundler": "webpack --mode=production",
     "bundle:test": "webpack-dev-server --host 0.0.0.0",
     "postinstall": "node packageScripts/postinstall.js",
-    "cssLint": "stylelint './src/*.css'",
+    "cssLint": "stylelint \"./src/*.css\"",
     "dev": "npm run sassBuild:watch",
     "distJS": "copyfiles -u 1 -V './src/**/*.js' ./dist",
     "sassRender": "sass-render src/*.css -t ./scripts/staticStyles-template.js",
