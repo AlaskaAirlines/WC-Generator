@@ -99,11 +99,10 @@
     "sassRender": "sass-render src/*.css -t ./scripts/staticStyles-template.js",
     "sweep": "rm -rf ./temp ./demo/css ./demo/fonts ./dist ./src/tokens | rm ./src/*.css ./src/*-css.js",
     "esLint": "./node_modules/.bin/eslint src/[namespace]-*.js",
-    "lint": "npm-run-all cssLint test:yaml esLint",
+    "lint": "npm-run-all cssLint esLint",
     "test": "karma start --coverage",
     "test:watch": "karma start --auto-watch=true --single-run=false",
     "test:ci": "npm-run-all test lint",
-    "test:yaml": "yamllint .travis.yml",
     "ciBuild": "npm-run-all sassBuild sassRender cssLint distJS bundler postinstall apiBuild",
     "sassBuild": "npm-run-all sassBuild:demo sassBuild:component postCss:component sassRender",
     "sassBuild:dev": "npm-run-all sassBuild:demo sassBuild:component postCss:component sassRender",
@@ -140,7 +139,9 @@
     ]
   },
   "release": {
-    "branch": "master",
+    "branches": [
+      "main"
+    ],
     "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",

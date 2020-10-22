@@ -413,8 +413,10 @@ Creating a Design System People Love.
     let areDependenciesInstalled = false;
     let isNodeSassRebuilt = false;
     let isGitRepo = false;
+    let isMainBranch = false;
     let isBuilt = false;
     let isPolymerInstalled = false;
+    let assetsAreCommitted = false;
 
     if (!params.test) {
       process.stdout.write(`\nSetting up Git`);
@@ -427,11 +429,21 @@ Creating a Design System People Love.
       }
       isGitRepo = true;
 
+      process.stdout.write(`\nRenaming master to main`);
+      loadingLoop(() => isMainBranch);
+      try {
+        await exec('git branch -m main', { cwd: params.dir });
+        log(chalk.green('\nGit branch successfully renamed'));
+      } catch ({ message }) {
+        log(chalk.red(message));
+      }
+      isMainBranch = true;
+
       process.stdout.write(`\nSetting up Polymer`);
       loadingLoop(() => isPolymerInstalled);
       try {
-        await exec('npm i polymer -g', { cwd: params.dir });
-        log(chalk.green('\nPolymer successfully installed globably!'));
+        await exec('npm i polymer polymer-cli -g', { cwd: params.dir });
+        log(chalk.green('\nPolymer successfully installed globally!'));
       } catch ({ message }) {
         log(chalk.red(message));
       }
@@ -441,17 +453,17 @@ Creating a Design System People Love.
       loadingLoop(() => areDependenciesInstalled);
       try {
         await exec('npm i', { cwd: params.dir });
-        log(chalk.green('\nSuccesfully installed dependencies!'));
+        log(chalk.green('\nSuccessfully installed dependencies!'));
       } catch ({ message }) {
         log(chalk.red(message));
       }
       areDependenciesInstalled = true;
 
-      process.stdout.write(`\nRebuilding node-sass, ugh`);
+      process.stdout.write(`\nRebuilding node-sass`);
       loadingLoop(() => isNodeSassRebuilt);
       try {
         await exec('npm rebuild node-sass', { cwd: params.dir });
-        log(chalk.green('\nSuccesfully rebuilt node-sass!'));
+        log(chalk.green('\nSuccessfully rebuilt node-sass!'));
       } catch ({ message }) {
         log(chalk.red(message));
       }
@@ -466,6 +478,16 @@ Creating a Design System People Love.
         log(chalk.red(message));
       }
       isBuilt = true;
+
+      process.stdout.write(`\nCommitting generated resources`);
+      loadingLoop(() => assetsAreCommitted);
+      try {
+        await exec('git add . && git commit -m "chore: add auto generated assets"', { cwd: params.dir });
+        log(chalk.green('\nGenerated assets are committed!'));
+      } catch ({ message }) {
+        log(chalk.red(message));
+      }
+      assetsAreCommitted = true;
 
       log(chalk.green(`Well done! The new HTML Custom Element auro-${params.name} has been created!
         \nDir: ${params.dir}
