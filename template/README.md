@@ -8,7 +8,7 @@ For the most up to date information on [UI development browser support](https://
 
 ## Install
 
-[![Build Status](https://img.shields.io/travis/AlaskaAirlines/[namespace]-[name]?branch=master&style=for-the-badge)](https://travis-ci.org/github/AlaskaAirlines/[namespace]-[name])
+[![Build Status](https://img.shields.io/github/workflow/status/AlaskaAirlines/[namespace]-[name]/Test%20and%20publish?branch=master&style=for-the-badge)](https://github.com/AlaskaAirlines/[namespace]-[name]/actions?query=workflow%3A%22test+and+publish%22)
 [![See it on NPM!](https://img.shields.io/npm/v/[npm]/[namespace]-[name]?style=for-the-badge&color=orange)](https://www.npmjs.com/package/[npm]/[namespace]-[name])
 [![License](https://img.shields.io/npm/l/[npm]/[namespace]-[name]?color=blue&style=for-the-badge)](https://www.apache.org/licenses/LICENSE-2.0)
 
