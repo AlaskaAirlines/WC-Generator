@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+# [2.7.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.6.6...v2.7.0) (2020-10-23)
+
+
+### Features
+
+* remove Travis support for Github actions ([217c247](https://github.com/AlaskaAirlines/WC-Generator/commit/217c2477d74d1344391d17d985c294e68a674113))
+
 ## [2.6.6](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.6.5...v2.6.6) (2020-10-20)
 
 
