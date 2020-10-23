@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.7.1](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.7.0...v2.7.1) (2020-10-23)
+
+
+### Bug Fixes
+
+* update README in template to address build badge ([88fc8b7](https://github.com/AlaskaAirlines/WC-Generator/commit/88fc8b79001fa11fa579de43c3232bbcabbfd340))
+
 # [2.7.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.6.6...v2.7.0) (2020-10-23)
 
 
