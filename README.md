@@ -60,14 +60,16 @@ $ wc-generate -t -N Han -n Solo
 
 ## Pre-bundled components
 
-The WC-Generator contains automated functionality with each build to generate a pre-bundled version of the new component so that users can consume these assets without needing to bundle the JavaScript assets themselves.
+The WC-Generator contains automated functionality with each build to generate pre-bundled versions of the new component so that users can consume these assets without needing to bundle the JavaScript assets themselves. Both a modern and legacy bundle are produced.
+
+Since the legacy bundle includes many polyfills that are not needed by modern browsers, we recommend you load these bundles using [differential serving](https://philipwalton.com/articles/deploying-es2015-code-in-production-today/) so that the browser only loads the bundle it needs. To accomplish this, the script tag for the modern bundle should have `type="module"` and the script tag for the legacy bundle should have the `nomodule` attribute. See the example below.
 
 ```html
 <link rel="stylesheet" href="https://unpkg.com/@alaskaairux/orion-design-tokens@:version/dist/tokens/CSSTokenProperties.css" />
 <link rel="stylesheet" href="https://unpkg.com/@alaskaairux/orion-web-core-style-sheets@:version/dist/bundled/baseline.css" />
 
-<script src="https://unpkg.com/@alaskaairux/[namespace]-[name]@:version/dist/polyfills.js"></script>
-<script src="https://unpkg.com/@alaskaairux/[namespace]-[name]@:version/dist/[namespace]-[name]__bundled.js"></script>
+<script src="https://unpkg.com/@alaskaairux/[namespace]-[name]@:version/dist/[namespace]-[name]__bundled.js" type="module"></script>
+<script src="https://unpkg.com/@alaskaairux/[namespace]-[name]@:version/dist/[namespace]-[name]__bundled.es5.js" nomodule></script>
 ```
 
 ## Static Styles
@@ -80,3 +82,5 @@ If there is a requirement for the CSS to be reevaluated, this can either be done
 
 Moving the CSS to the `render()` method requires an update to the `sassRender` script and removing the reference to `staticStyles-template.js`.
 
+## Developing locally
+To test changes to the generator, run `npm test` to generate an `auro-test` component.

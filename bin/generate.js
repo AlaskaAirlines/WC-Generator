@@ -93,12 +93,12 @@ const getVersionData = async () => {
   versions['focusVisible'] = await latestVersion('focus-visible');
   versions['webcomponentsjs'] = await latestVersion('@webcomponents/webcomponentsjs');
   versions['litElement'] = await latestVersion('lit-element');
-  versions['bableCore'] = await latestVersion('@babel/core');
-  versions['bableLoader'] = await latestVersion('babel-loader');
-  versions['bableSyntaxDynamicImport'] = await latestVersion('@babel/plugin-syntax-dynamic-import');
-  versions['bableTransRuntime'] = await latestVersion('@babel/plugin-transform-runtime');
-  versions['bablePreset'] = await latestVersion('@babel/preset-env');
-  versions['bableRuntime'] = await latestVersion('@babel/runtime');
+  versions['babelCore'] = await latestVersion('@babel/core');
+  versions['babelLoader'] = await latestVersion('babel-loader');
+  versions['babelSyntaxDynamicImport'] = await latestVersion('@babel/plugin-syntax-dynamic-import');
+  versions['babelTransRuntime'] = await latestVersion('@babel/plugin-transform-runtime');
+  versions['babelPreset'] = await latestVersion('@babel/preset-env');
+  versions['babelRuntime'] = await latestVersion('@babel/runtime');
   versions['compression'] = await latestVersion('compression');
   versions['commitlintCli'] = await latestVersion('@commitlint/cli');
   versions['commitlintConfig'] = await latestVersion('@commitlint/config-conventional');
@@ -111,7 +111,6 @@ const getVersionData = async () => {
   versions['chalk'] = await latestVersion('chalk');
   versions['concat'] = await latestVersion('concat');
   versions['copyfiles'] = await latestVersion('copyfiles');
-  versions['copyWebpackPlugin'] = await latestVersion('copy-webpack-plugin');
   versions['coreJs'] = await latestVersion('core-js');
   versions['eslint'] = await latestVersion('eslint');
   versions['eslintLit'] = await latestVersion('eslint-plugin-lit');
@@ -127,77 +126,30 @@ const getVersionData = async () => {
   versions['postcssDiscardComments'] = await latestVersion('postcss-discard-comments');
   versions['postcssRemoveRules'] = await latestVersion('postcss-remove-rules');
   versions['postcssSelectorReplace'] = await latestVersion('postcss-selector-replace');
+  versions['rollupPluginAlias'] = await latestVersion('@rollup/plugin-alias');
+  versions['rollupPluginBabel'] = await latestVersion('@rollup/plugin-babel');
+  versions['rollupPluginCommonJs'] = await latestVersion('@rollup/plugin-commonjs');
+  versions['rollupPluginNode'] = await latestVersion('@rollup/plugin-node-resolve');
+  versions['rollup'] = await latestVersion('rollup');
+  versions['rollupPluginHtml'] = await latestVersion('rollup-plugin-minify-html-literals');
+  versions['rollupPluginServe'] = await latestVersion('rollup-plugin-serve');
+  versions['rollupPluginTerser'] = await latestVersion('rollup-plugin-terser');
   versions['sr'] = await latestVersion('semantic-release');
   versions['sinon'] = await latestVersion('sinon');
   versions['stylelint'] = await latestVersion('stylelint');
   versions['stylelintConfig'] = await latestVersion('stylelint-config-standard');
   versions['wcSassRender'] = await latestVersion('wc-sass-render');
   versions['wca'] = await latestVersion('web-component-analyzer');
-  versions['webpack'] = await latestVersion('webpack');
-  versions['webpackBundleAnalyzer'] = await latestVersion('webpack-bundle-analyzer');
   versions['webpackMerge'] = await latestVersion('webpack-merge');
-  versions['webpackCli'] = await latestVersion('webpack-cli');
-  versions['webpackDevServer'] = await latestVersion('webpack-dev-server');
   versions['yamlLint'] = await latestVersion('yaml-lint');
-
   return versions;
 }
 
 const formatTemplateFileContents = (data, content, { name, namespace, npm }) => {
-  const pkgReplacements = [
-    { regex: /\[designTokens\]/g, value: data.designTokens },
-    { regex: /\[wcss\]/g, value: data.wcss },
-    { regex: /\[icons\]/g, value: data.icons },
-    { regex: /\[focusVisible\]/g, value: data.focusVisible },
-    { regex: /\[webcomponentsjs\]/g, value: data.webcomponentsjs },
-    { regex: /\[litElement\]/g, value: data.litElement },
-    { regex: /\[bableCore\]/g, value: data.bableCore },
-    { regex: /\[bableLoader\]/g, value: data.bableLoader },
-    { regex: /\[bableSyntaxDynamicImport\]/g, value: data.bableSyntaxDynamicImport },
-    { regex: /\[bableTransRuntime\]/g, value: data.bableTransRuntime },
-    { regex: /\[bablePreset\]/g, value: data.bablePreset },
-    { regex: /\[bableRuntime\]/g, value: data.bableRuntime },
-    { regex: /\[compression\]/g, value: data.compression },
-    { regex: /\[chalk\]/g, value: data.chalk },
-    { regex: /\[commitlintCli\]/g, value: data.commitlintCli },
-    { regex: /\[commitlintConfig\]/g, value: data.commitlintConfig },
-    { regex: /\[openwcTesting\]/g, value: data.openwcTesting },
-    { regex: /\[openwcKarma\]/g, value: data.openwcKarma },
-    { regex: /\[srChangelog\]/g, value: data.srChangelog },
-    { regex: /\[srGit\]/g, value: data.srGit },
-    { regex: /\[srNpm\]/g, value: data.srNpm },
-    { regex: /\[autoprefixer\]/g, value: data.autoprefixer },
-    { regex: /\[concat\]/g, value: data.concat },
-    { regex: /\[copyfiles\]/g, value: data.copyfiles },
-    { regex: /\[copyWebpackPlugin\]/g, value: data.copyWebpackPlugin },
-    { regex: /\[coreJs\]/g, value: data.coreJs },
-    { regex: /\[eslint\]/g, value: data.eslint },
-    { regex: /\[eslintLit\]/g, value: data.eslintLit },
-    { regex: /\[husky\]/g, value: data.husky },
-    { regex: /\[lodash\]/g, value: data.lodash },
-    { regex: /\[marked\]/g, value: data.marked },
-    { regex: /\[nodemon\]/g, value: data.nodemon },
-    { regex: /\[npmRunAll\]/g, value: data.npmRunAll },
-    { regex: /\[parcelBundler\]/g, value: data.parcelBundler },
-    { regex: /\[parcelCompress\]/g, value: data.parcelCompress },
-    { regex: /\[postcss\]/g, value: data.postcss },
-    { regex: /\[postcssCustomProperties\]/g, value: data.postcssCustomProperties },
-    { regex: /\[postcssDiscardComments\]/g, value: data.postcssDiscardComments },
-    { regex: /\[postcssRemoveRules\]/g, value: data.postcssRemoveRules },
-    { regex: /\[postcssSelectorReplace\]/g, value: data.postcssSelectorReplace },
-    { regex: /\[sr\]/g, value: data.sr },
-    { regex: /\[sinon\]/g, value: data.sinon },
-    { regex: /\[stylelint\]/g, value: data.stylelint },
-    { regex: /\[stylelintConfig\]/g, value: data.stylelintConfig },
-    { regex: /\[wcSassRender\]/g, value: data.wcSassRender },
-    { regex: /\[wca\]/g, value: data.wca },
-    { regex: /\[webpackMerge\]/g, value: data.webpackMerge },
-    { regex: /\[webpack\]/g, value: data.webpack },
-    { regex: /\[webpackDevServer\]/g, value: data.webpackDevServer },
-    { regex: /\[webpackCli\]/g, value: data.webpackCli },
-    { regex: /\[webpackBundleAnalyzer\]/g, value: data.webpackBundleAnalyzer },
-    { regex: /\[yamlLint\]/g, value: data.yamlLint }
-  ];
+  const pkgReplacements = Object.keys(data).map(key => ({
+    regex: new RegExp(`\\[${key}\\]`, 'g'),
+    value: data[key]
+  }));
 
   // name to lower-kebab-case (e.g. Text Input -> text-input)
   const lowerKebabCaseName = lowerKebabCase(name);
@@ -212,8 +164,6 @@ const formatTemplateFileContents = (data, content, { name, namespace, npm }) => 
   // generate new year for copyright stamp
   const newYear = new Date().getFullYear();
 
-  const webPackName = '[name].js';
-
   const nameReplacements = [
     { regex: /\[author\]/g, value: userName },
     { regex: /\[name\]/g, value: lowerKebabCaseName },
@@ -221,8 +171,7 @@ const formatTemplateFileContents = (data, content, { name, namespace, npm }) => 
     { regex: /\[Namespace\]/g, value: upperCamelCaseNameSpace },
     { regex: /\[Name\]/g, value: upperCamelCaseName },
     { regex: /\[npm\]/g, value: npm },
-    { regex: /\[year\]/g, value: newYear },
-    { regex: /\|webPackName\|/g, value: webPackName }
+    { regex: /\[year\]/g, value: newYear }
   ];
 
   const replacements = nameReplacements.concat(pkgReplacements);

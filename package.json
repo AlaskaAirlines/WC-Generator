@@ -53,7 +53,7 @@
     ]
   },
   "scripts": {
-    "testbuild": "node bin/generate.js -t -N Han -n Solo -P @mypackage/ -d ./auro-test",
+    "testbuild": "node bin/generate.js -t -N Han -n Solo -P @mypackage -d ./auro-test",
     "fullbuild": "node bin/generate.js -n solo -d ../auro-test",
     "sweep": "rm -rf auro-test",
     "test": "npm-run-all sweep testbuild"
