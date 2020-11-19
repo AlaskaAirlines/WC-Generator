@@ -29,29 +29,32 @@
     "focus-visible": "^[focusVisible]"
   },
   "devDependencies": {
-    "@alaskaairux/orion-design-tokens": "^[designTokens]",
     "@alaskaairux/icons": "^[icons]",
+    "@alaskaairux/orion-design-tokens": "^[designTokens]",
     "@alaskaairux/orion-web-core-style-sheets": "^[wcss]",
-    "@babel/core": "^[bableCore]",
-    "@babel/plugin-syntax-dynamic-import": "^[bableSyntaxDynamicImport]",
-    "@babel/plugin-transform-runtime": "^[bableTransRuntime]",
-    "@babel/preset-env": "^[bablePreset]",
-    "@babel/runtime": "^[bableRuntime]",
+    "@babel/core": "^[babelCore]",
+    "@babel/plugin-syntax-dynamic-import": "^[babelSyntaxDynamicImport]",
+    "@babel/plugin-transform-runtime": "^[babelTransRuntime]",
+    "@babel/preset-env": "^[babelPreset]",
+    "@babel/runtime": "^[babelRuntime]",
     "@commitlint/cli": "^[commitlintCli]",
     "@commitlint/config-conventional": "^[commitlintConfig]",
     "@open-wc/testing": "^[openwcTesting]",
     "@open-wc/testing-karma": "^[openwcKarma]",
     "@polymer/iron-demo-helpers": "^3.1.0",
     "@polymer/polymer": "^3.3.1",
+    "@rollup/plugin-alias": "^[rollupPluginAlias]",
+    "@rollup/plugin-babel": "^[rollupPluginBabel]",
+    "@rollup/plugin-commonjs": "^[rollupPluginCommonJs]",
+    "@rollup/plugin-node-resolve": "^[rollupPluginNode]",
     "@semantic-release/changelog": "^[srChangelog]",
     "@semantic-release/git": "^[srGit]",
     "@semantic-release/npm": "^[srNpm]",
     "@webcomponents/webcomponentsjs": "^[webcomponentsjs]",
     "autoprefixer": "^[autoprefixer]",
-    "babel-loader": "^[bableLoader]",
+    "babel-loader": "^[babelLoader]",
     "compression": "^[compression]",
     "concat": "^[concat]",
-    "copy-webpack-plugin": "^[copyWebpackPlugin]",
     "copyfiles": "^[copyfiles]",
     "core-js": "^[coreJs]",
     "eslint": "^[eslint]",
@@ -67,31 +70,33 @@
     "postcss-discard-comments": "^[postcssDiscardComments]",
     "postcss-remove-rules": "^[postcssRemoveRules]",
     "postcss-selector-replace": "^[postcssSelectorReplace]",
+    "rollup": "^[rollup]",
+    "rollup-plugin-minify-html-literals": "^[rollupPluginHtml]",
+    "rollup-plugin-serve": "^[rollupPluginServe]",
+    "rollup-plugin-terser": "^[rollupPluginTerser]",
     "semantic-release": "^[sr]",
     "sinon": "^[sinon]",
     "stylelint": "^[stylelint]",
     "stylelint-config-standard": "^[stylelintConfig]",
     "wc-sass-render": "^[wcSassRender]",
     "web-component-analyzer": "^[wca]",
-    "webpack": "^[webpack]",
-    "webpack-bundle-analyzer": "^[webpackBundleAnalyzer]",
-    "webpack-cli": "^[webpackCli]",
-    "webpack-dev-server": "^[webpackDevServer]",
     "webpack-merge": "^[webpackMerge]",
+    "whatwg-fetch": "^3.5.0",
     "yaml-lint": "^[yamlLint]"
   },
   "browserslist": [
-    "last 2 version",
-    "> 15% in US",
-    "not IE 10",
-    "not IE_Mob 10",
-    "not IE_Mob 11"
+    "last 2 Chrome versions",
+    "last 2 iOS major versions",
+    "ie 11",
+    "last 2 Firefox versions",
+    "last 2 Edge versions",
+    "last 2 Safari major versions"
   ],
   "scripts": {
     "build": "npm run ciBuild",
     "apiBuild": "wca analyze 'src/[namespace]-[name].js' --outFiles docs/api.md",
-    "bundler": "webpack --mode=production",
-    "bundle:test": "webpack-dev-server --host 0.0.0.0",
+    "bundler": "rollup -c",
+    "bundle:test": "rollup -c -w",
     "postinstall": "node packageScripts/postinstall.js",
     "cssLint": "stylelint \"./src/*.css\"",
     "dev": "npm run sassBuild:watch",
@@ -117,26 +122,6 @@
       "pre-commit": "npm-run-all test lint bundler postinstall",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
-  },
-  "babel": {
-    "presets": [
-      [
-        "@babel/preset-env",
-        {
-          "useBuiltIns": "entry",
-          "corejs": "3.0.0"
-        }
-      ]
-    ],
-    "plugins": [
-      "@babel/plugin-syntax-dynamic-import",
-      [
-        "@babel/plugin-transform-runtime",
-        {
-          "regenerator": true
-        }
-      ]
-    ]
   },
   "release": {
     "branches": [

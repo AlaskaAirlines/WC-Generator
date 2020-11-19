@@ -9,7 +9,7 @@ When using the WC-Generator, you will get the following scaffolding:
 1. Sass and PostCSS pre-configured support
 1. Sass template Auro Design Tokens, breakpoints and core CSS ready
 1. JSDoc support
-1. Pre-configured Webpack for producing pre-bundled versions of the web component
+1. Pre-configured Rollup for producing pre-bundled modern and legacy versions of the web component
 1. Full code linting support
 1. Fully configured [Karma via Open-WC](https://auro.alaskaair.com/support/tests) testing support
 1. Support for conventional commits and automated semantic versioning
@@ -37,9 +37,9 @@ By default, the WC-Generator will assume `auro` as the namespace for the WC, `@a
 
 When building the new web component, there are two servers you can use to test your component.
 
-Running `npm run serve` will start the polymer server where you can view your web component demo at [http://localhost:3001/demo/](http://localhost:3001/demo/).
+Running `npm run serve` will start the polymer server where you can view your web component demo at http://localhost:3001/demo/.
 
-Running `npm run bundle:test` will start a webpack server of bundled assets that you can view at [http://localhost:8080/](http://localhost:8080/).
+Running `npm run bundle:test` will start a Rollup server of bundled assets that you can view at http://localhost:10001/docs/. You can use the server to test the bundled output in modern and legacy browsers.
 
 ## Editing your Polymer demo
 
@@ -65,7 +65,7 @@ The purpose of the bundled demo is simply to ensure that your new component can 
 
 Located in `/docs/index.html` is a simple scaffolding where examples can be viewed. Editing the `auro*` array will show the component and output a simple code example.
 
-If there is more than one component in your project, be sure to update the `config` object in the `./webpack.config.js` file.
+If there is more than one component in your project, be sure to update the Rollup config in the `rollup.config.js` file.
 
 ## Editing your web component
 
