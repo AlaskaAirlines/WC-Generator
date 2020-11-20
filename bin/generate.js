@@ -83,70 +83,6 @@ const makeFolder = async dir => {
   }
 };
 
-const getVersionData = async () => {
-  const latestVersion = require('latest-version');
-  let versions =  {};
-
-  versions['designTokens'] = await latestVersion('@alaskaairux/design-tokens');
-  versions['wcss'] = await latestVersion('@alaskaairux/webcorestylesheets');
-  versions['icons'] = await latestVersion('@alaskaairux/icons');
-  versions['focusVisible'] = await latestVersion('focus-visible');
-  versions['webcomponentsjs'] = await latestVersion('@webcomponents/webcomponentsjs');
-  versions['litElement'] = await latestVersion('lit-element');
-  versions['babelCore'] = await latestVersion('@babel/core');
-  versions['babelLoader'] = await latestVersion('babel-loader');
-  versions['babelSyntaxDynamicImport'] = await latestVersion('@babel/plugin-syntax-dynamic-import');
-  versions['babelTransRuntime'] = await latestVersion('@babel/plugin-transform-runtime');
-  versions['babelPreset'] = await latestVersion('@babel/preset-env');
-  versions['babelRuntime'] = await latestVersion('@babel/runtime');
-  versions['compression'] = await latestVersion('compression');
-  versions['commitlintCli'] = await latestVersion('@commitlint/cli');
-  versions['commitlintConfig'] = await latestVersion('@commitlint/config-conventional');
-  versions['openwcTesting'] = await latestVersion('@open-wc/testing');
-  versions['openwcKarma'] = await latestVersion('@open-wc/testing-karma');
-  versions['srChangelog'] = await latestVersion('@semantic-release/changelog');
-  versions['srGit'] = await latestVersion('@semantic-release/git');
-  versions['srNpm'] = await latestVersion('@semantic-release/npm');
-  versions['webDevServer'] = await latestVersion('@web/dev-server');
-  versions['autoprefixer'] = await latestVersion('autoprefixer');
-  versions['chalk'] = await latestVersion('chalk');
-  versions['concat'] = await latestVersion('concat');
-  versions['copyfiles'] = await latestVersion('copyfiles');
-  versions['coreJs'] = await latestVersion('core-js');
-  versions['eslint'] = await latestVersion('eslint');
-  versions['eslintLit'] = await latestVersion('eslint-plugin-lit');
-  versions['husky'] = await latestVersion('husky');
-  versions['lodash'] = await latestVersion('lodash');
-  versions['marked'] = await latestVersion('marked');
-  versions['nodemon'] = await latestVersion('nodemon');
-  versions['npmRunAll'] = await latestVersion('npm-run-all');
-  versions['parcelBundler'] = await latestVersion('parcel-bundler');
-  versions['parcelCompress'] = await latestVersion('parcel-plugin-compress');
-  versions['postcss'] = await latestVersion('postcss');
-  versions['postcssCustomProperties'] = await latestVersion('postcss-custom-properties');
-  versions['postcssDiscardComments'] = await latestVersion('postcss-discard-comments');
-  versions['postcssRemoveRules'] = await latestVersion('postcss-remove-rules');
-  versions['postcssSelectorReplace'] = await latestVersion('postcss-selector-replace');
-  versions['prism'] = await latestVersion('prismjs');
-  versions['rollupPluginAlias'] = await latestVersion('@rollup/plugin-alias');
-  versions['rollupPluginBabel'] = await latestVersion('@rollup/plugin-babel');
-  versions['rollupPluginCommonJs'] = await latestVersion('@rollup/plugin-commonjs');
-  versions['rollupPluginNode'] = await latestVersion('@rollup/plugin-node-resolve');
-  versions['rollup'] = await latestVersion('rollup');
-  versions['rollupPluginHtml'] = await latestVersion('rollup-plugin-minify-html-literals');
-  versions['rollupPluginServe'] = await latestVersion('rollup-plugin-serve');
-  versions['rollupPluginTerser'] = await latestVersion('rollup-plugin-terser');
-  versions['sr'] = await latestVersion('semantic-release');
-  versions['sinon'] = await latestVersion('sinon');
-  versions['stylelint'] = await latestVersion('stylelint');
-  versions['stylelintConfig'] = await latestVersion('stylelint-config-standard');
-  versions['wcSassRender'] = await latestVersion('wc-sass-render');
-  versions['wca'] = await latestVersion('web-component-analyzer');
-  versions['webpackMerge'] = await latestVersion('webpack-merge');
-  versions['yamlLint'] = await latestVersion('yaml-lint');
-  return versions;
-}
-
 const formatTemplateFileContents = (replacements, content) => {
   // replace all instances of [name], [Name], [namespace] and [Namespace] accordingly
   let result = content;
@@ -180,11 +116,27 @@ const copyFile = async (sourcePath, targetPath, params, replacements, fileRename
   }
 };
 
+const getVersionData = async () => {
+  const { devDependencies, dependencies, peerDependencies } = require('../template/package.json');
+
+  const packageNames = new Set([...Object.keys(devDependencies), ...Object.keys(dependencies), ...Object.keys(peerDependencies)]);
+
+  const versions = { };
+  const latestVersion = require('latest-version');
+  for (const name of packageNames) {
+    versions[name] = await latestVersion(name);
+  }
+
+  return versions;
+}
+
+const escapeRegExp = (string) => string.replace(/[.*+\-?^${}()|[\]\\]/g, '\\$&');
 const getReplacements = async ({ name, namespace, npm }) => {
   const versionData = await getVersionData();
-  const pkgReplacements = Object.keys(versionData).map(key => ({
-    regex: new RegExp(`\\[${key}\\]`, 'g'),
-    value: versionData[key]
+
+  const pkgReplacements = Object.keys(versionData).map(packageName => ({
+    regex: new RegExp(`("${escapeRegExp(packageName)}": )""`, 'g'),
+    value: `$1"^${versionData[packageName]}"`
   }));
 
   // name to lower-kebab-case (e.g. Text Input -> text-input)
@@ -207,7 +159,9 @@ const getReplacements = async ({ name, namespace, npm }) => {
     { regex: /\[Namespace\]/g, value: upperCamelCaseNameSpace },
     { regex: /\[Name\]/g, value: upperCamelCaseName },
     { regex: /\[npm\]/g, value: npm },
-    { regex: /\[year\]/g, value: newYear }
+    { regex: /\[year\]/g, value: newYear },
+    { regex: /\[designTokens\]/g, value: versionData['@alaskaairux/design-tokens'] },
+    { regex: /\[wcss\]/g, value: versionData['@alaskaairux/webcorestylesheets'] }    
   ];
 
   return nameReplacements.concat(pkgReplacements);
@@ -221,7 +175,7 @@ const copyAllFiles = async (
 ) => {
   const fileNames = await fsPromises.readdir(sourcePath);
   const fileCopyPromises = [];
-  const replacements = getReplacements(params);
+  const replacements = await getReplacements(params);
   fileNames.forEach(fileName => {
     log(
       `${chalk.bold('Creating')}: ${targetPath}/${fileRenames[fileName] || fileName}`
@@ -357,7 +311,6 @@ Creating a Design System People Love.
     await copyAllFiles(paths.self.template, params.dir, params, {
       '[namespace]-[name].test.js': `${lowerKebabCase(params.namespace)}-${lowerKebabCase(params.name)}.test.js`,
       '[namespace]-[name].js': `${lowerKebabCase(params.namespace)}-${lowerKebabCase(params.name)}.js`,
-      'package.temp': 'package.json',
       '.npmignore.temp': '.npmignore',
       '.gitignore.temp': '.gitignore',
       '.travis.temp': '.travis.yml'
