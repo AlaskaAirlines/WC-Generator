@@ -1,5 +1,19 @@
 # Semantic Release Automated Changelog
 
+# [2.8.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.7.1...v2.8.0) (2020-11-20)
+
+
+### Bug Fixes
+
+* respect namespace in test file ([08788a8](https://github.com/AlaskaAirlines/WC-Generator/commit/08788a874f4c3152db7cc36d2730e68a2e0adb17))
+
+
+### Features
+
+* replace orion packages ([cb6921a](https://github.com/AlaskaAirlines/WC-Generator/commit/cb6921a53417343bd708c912f90bc1db8c541a2b))
+* replace polymer CLI with web-dev-server ([6e4774f](https://github.com/AlaskaAirlines/WC-Generator/commit/6e4774f94e034af4dd8bc6b6ba7d6479377fec4c))
+* use Rollup for bundling ([0a9fcd4](https://github.com/AlaskaAirlines/WC-Generator/commit/0a9fcd4e2a3851538b9c2e197f0049be0ccf3c1d))
+
 ## [2.7.1](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.7.0...v2.7.1) (2020-10-23)
 
 
