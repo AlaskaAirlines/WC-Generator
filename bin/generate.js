@@ -147,10 +147,44 @@ const getVersionData = async () => {
   return versions;
 }
 
-const formatTemplateFileContents = (data, content, { name, namespace, npm }) => {
-  const pkgReplacements = Object.keys(data).map(key => ({
+const formatTemplateFileContents = (replacements, content) => {
+  // replace all instances of [name], [Name], [namespace] and [Namespace] accordingly
+  let result = content;
+  for (let i = 0; i < replacements.length; i++) {
+    const { regex, value } = replacements[i];
+    result = result.replace(regex, value);
+  }
+  return result;
+};
+
+const copyFile = async (sourcePath, targetPath, params, replacements, fileRenames = {}) => {
+  const stats = await fsPromises.stat(sourcePath);
+  if (stats.isDirectory()) {
+    await makeFolder(targetPath);
+    await copyAllFiles(sourcePath, targetPath, params, fileRenames);
+  } else if (stats.isFile()) {
+    const templateFileContents = await fsPromises.readFile(sourcePath, {
+      encoding: 'utf8',
+    });
+    const formattedTemplateFileContents = formatTemplateFileContents(
+      replacements,
+      templateFileContents
+    );
+    await fsPromises.writeFile(targetPath, formattedTemplateFileContents, {
+      encoding: 'utf8',
+    });
+
+    if (params.verbose) {
+      log(`${chalk.green('Copied')}: ${sourcePath} -> ${targetPath}`);
+    }
+  }
+};
+
+const getReplacements = async ({ name, namespace, npm }) => {
+  const versionData = await getVersionData();
+  const pkgReplacements = Object.keys(versionData).map(key => ({
     regex: new RegExp(`\\[${key}\\]`, 'g'),
-    value: data[key]
+    value: versionData[key]
   }));
 
   // name to lower-kebab-case (e.g. Text Input -> text-input)
@@ -176,41 +210,8 @@ const formatTemplateFileContents = (data, content, { name, namespace, npm }) => 
     { regex: /\[year\]/g, value: newYear }
   ];
 
-  const replacements = nameReplacements.concat(pkgReplacements);
-
-  // replace all instances of [name], [Name], [namespace] and [Namespace] accordingly
-  let result = content;
-  for (let i = 0; i < replacements.length; i++) {
-    const { regex, value } = replacements[i];
-    result = result.replace(regex, value);
-  }
-  return result;
-};
-
-const copyFile = async (sourcePath, targetPath, params, fileRenames = {}) => {
-  const versionData = await getVersionData();
-  const stats = await fsPromises.stat(sourcePath);
-  if (stats.isDirectory()) {
-    await makeFolder(targetPath);
-    await copyAllFiles(sourcePath, targetPath, params, fileRenames);
-  } else if (stats.isFile()) {
-    const templateFileContents = await fsPromises.readFile(sourcePath, {
-      encoding: 'utf8',
-    });
-    const formattedTemplateFileContents = formatTemplateFileContents(
-      versionData,
-      templateFileContents,
-      params
-    );
-    await fsPromises.writeFile(targetPath, formattedTemplateFileContents, {
-      encoding: 'utf8',
-    });
-
-    if (params.verbose) {
-      log(`${chalk.green('Copied')}: ${sourcePath} -> ${targetPath}`);
-    }
-  }
-};
+  return nameReplacements.concat(pkgReplacements);
+}
 
 const copyAllFiles = async (
   sourcePath,
@@ -220,6 +221,7 @@ const copyAllFiles = async (
 ) => {
   const fileNames = await fsPromises.readdir(sourcePath);
   const fileCopyPromises = [];
+  const replacements = getReplacements(params);
   fileNames.forEach(fileName => {
     log(
       `${chalk.bold('Creating')}: ${targetPath}/${fileRenames[fileName] || fileName}`
@@ -229,6 +231,7 @@ const copyAllFiles = async (
         `${sourcePath}/${fileName}`,
         `${targetPath}/${fileRenames[fileName] || fileName}`,
         params,
+        replacements,
         fileRenames
       )
     );
