@@ -5,7 +5,6 @@
 demo/
 gulpfile.js
 index.html
-polymer.json
 scripts/
 test/
 

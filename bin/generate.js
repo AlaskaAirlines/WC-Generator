@@ -107,6 +107,7 @@ const getVersionData = async () => {
   versions['srChangelog'] = await latestVersion('@semantic-release/changelog');
   versions['srGit'] = await latestVersion('@semantic-release/git');
   versions['srNpm'] = await latestVersion('@semantic-release/npm');
+  versions['webDevServer'] = await latestVersion('@web/dev-server');
   versions['autoprefixer'] = await latestVersion('autoprefixer');
   versions['chalk'] = await latestVersion('chalk');
   versions['concat'] = await latestVersion('concat');
@@ -364,7 +365,6 @@ Creating a Design System People Love.
     let isGitRepo = false;
     let isMainBranch = false;
     let isBuilt = false;
-    let isPolymerInstalled = false;
     let assetsAreCommitted = false;
 
     if (!params.test) {
@@ -387,16 +387,6 @@ Creating a Design System People Love.
         log(chalk.red(message));
       }
       isMainBranch = true;
-
-      process.stdout.write(`\nSetting up Polymer`);
-      loadingLoop(() => isPolymerInstalled);
-      try {
-        await exec('npm i polymer polymer-cli -g', { cwd: params.dir });
-        log(chalk.green('\nPolymer successfully installed globally!'));
-      } catch ({ message }) {
-        log(chalk.red(message));
-      }
-      isPolymerInstalled = true;
 
       process.stdout.write(`\nInstalling dependencies`);
       loadingLoop(() => areDependenciesInstalled);

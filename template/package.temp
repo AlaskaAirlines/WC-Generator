@@ -42,7 +42,6 @@
     "@open-wc/testing": "^[openwcTesting]",
     "@open-wc/testing-karma": "^[openwcKarma]",
     "@polymer/iron-demo-helpers": "^3.1.0",
-    "@polymer/polymer": "^3.3.1",
     "@rollup/plugin-alias": "^[rollupPluginAlias]",
     "@rollup/plugin-babel": "^[rollupPluginBabel]",
     "@rollup/plugin-commonjs": "^[rollupPluginCommonJs]",
@@ -50,6 +49,7 @@
     "@semantic-release/changelog": "^[srChangelog]",
     "@semantic-release/git": "^[srGit]",
     "@semantic-release/npm": "^[srNpm]",
+    "@web/dev-server": "^[webDevServer]",
     "@webcomponents/webcomponentsjs": "^[webcomponentsjs]",
     "autoprefixer": "^[autoprefixer]",
     "babel-loader": "^[babelLoader]",
@@ -115,7 +115,7 @@
     "sassBuild:component": "node-sass ./src/ --output ./src/",
     "sassBuild:watch": "nodemon -e scss --watch src --exec npm run sassBuild:dev",
     "postCss:component": "node ./scripts/postCss.js",
-    "serve": "polymer serve --port 3001 --hostname 0.0.0.0"
+    "serve": "web-dev-server --open demo/ --node-resolve --watch"
   },
   "husky": {
     "hooks": {
