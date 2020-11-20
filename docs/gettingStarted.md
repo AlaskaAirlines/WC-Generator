@@ -4,7 +4,7 @@ The Auro WC-Generator makes it really easy to get started building HTML Custom E
 
 When using the WC-Generator, you will get the following scaffolding:
 
-1. Polymer server and demo page support
+1. Dev server and demo page support
 1. Lit-Element web component scaffolding js file
 1. Sass and PostCSS pre-configured support
 1. Sass template Auro Design Tokens, breakpoints and core CSS ready
@@ -37,13 +37,13 @@ By default, the WC-Generator will assume `auro` as the namespace for the WC, `@a
 
 When building the new web component, there are two servers you can use to test your component.
 
-Running `npm run serve` will start the polymer server where you can view your web component demo at http://localhost:3001/demo/.
+Running `npm run serve` will start the dev server where you can view your web component demo at http://localhost:3001/demo/.
 
 Running `npm run bundle:test` will start a Rollup server of bundled assets that you can view at http://localhost:10001/docs/. You can use the server to test the bundled output in modern and legacy browsers.
 
-## Editing your Polymer demo
+## Editing your demo
 
-While building a web component, being able to see the component in the browser is essential. Located in `/demo/index.html` is a Polymer pre-configured demo file. Use the following pattern to set up your web component in the demo HTML.
+While building a web component, being able to see the component in the browser is essential. Located in `/demo/index.html` is a pre-configured demo file. Use the following pattern to set up your web component in the demo HTML.
 
 ```html
 <demo-snippet>
