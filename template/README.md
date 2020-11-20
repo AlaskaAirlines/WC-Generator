@@ -51,8 +51,8 @@ Since the legacy bundle includes many polyfills that are not needed by modern br
 **NOTE:** Be sure to replace `:version` in the URL with the version of the asset you want.
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/@alaskaairux/orion-design-tokens@:version/dist/tokens/CSSTokenProperties.css" />
-<link rel="stylesheet" href="https://unpkg.com/@alaskaairux/orion-web-core-style-sheets@:version/dist/bundled/baseline.css" />
+<link rel="stylesheet" href="https://unpkg.com/@alaskaairux/design-tokens@:version/dist/tokens/CSSTokenProperties.css" />
+<link rel="stylesheet" href="https://unpkg.com/@alaskaairux/webcorestylesheets@:version/dist/bundled/baseline.css" />
 
 <script src="https://unpkg.com/@alaskaairux/[namespace]-[name]@:version/dist/[namespace]-[name]__bundled.js" type="module"></script>
 <script src="https://unpkg.com/@alaskaairux/[namespace]-[name]@:version/dist/[namespace]-[name]__bundled.es5.js" nomodule></script>

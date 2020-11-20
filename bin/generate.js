@@ -87,8 +87,8 @@ const getVersionData = async () => {
   const latestVersion = require('latest-version');
   let versions =  {};
 
-  versions['designTokens'] = await latestVersion('@alaskaairux/orion-design-tokens');
-  versions['wcss'] = await latestVersion('@alaskaairux/orion-web-core-style-sheets');
+  versions['designTokens'] = await latestVersion('@alaskaairux/design-tokens');
+  versions['wcss'] = await latestVersion('@alaskaairux/webcorestylesheets');
   versions['icons'] = await latestVersion('@alaskaairux/icons');
   versions['focusVisible'] = await latestVersion('focus-visible');
   versions['webcomponentsjs'] = await latestVersion('@webcomponents/webcomponentsjs');

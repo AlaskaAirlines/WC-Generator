@@ -22,16 +22,16 @@
     "chalk": "^[chalk]"
   },
   "peerDependencies": {
-    "@alaskaairux/orion-design-tokens": "^[designTokens]",
-    "@alaskaairux/orion-web-core-style-sheets": "^[wcss]",
+    "@alaskaairux/design-tokens": "^[designTokens]",
+    "@alaskaairux/webcorestylesheets": "^[wcss]",
     "@alaskaairux/icons": "^[icons]",
     "@webcomponents/webcomponentsjs": "^[webcomponentsjs]",
     "focus-visible": "^[focusVisible]"
   },
   "devDependencies": {
     "@alaskaairux/icons": "^[icons]",
-    "@alaskaairux/orion-design-tokens": "^[designTokens]",
-    "@alaskaairux/orion-web-core-style-sheets": "^[wcss]",
+    "@alaskaairux/design-tokens": "^[designTokens]",
+    "@alaskaairux/webcorestylesheets": "^[wcss]",
     "@babel/core": "^[babelCore]",
     "@babel/plugin-syntax-dynamic-import": "^[babelSyntaxDynamicImport]",
     "@babel/plugin-transform-runtime": "^[babelTransRuntime]",
