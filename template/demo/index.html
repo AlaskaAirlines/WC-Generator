@@ -1,33 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes"
-    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Auro Web Component Generator | [namespace]-[name] custom element</title>
-    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
-    <script type="module">
-      import '@polymer/iron-demo-helpers/demo-pages-shared-styles';
-      import '@polymer/iron-demo-helpers/demo-snippet';
-    </script>
-    <script type="module" src="../src/[namespace]-[name].js"></script>
-    <custom-style>
-      <style is="custom-style" include="demo-pages-shared-styles"></style>
-    </custom-style>
-
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../node_modules/prismjs/themes/prism.css"
+    />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
   </head>
   <body>
-    <div class="vertical-section-container">
-      <h1>[namespace]-[name]</h1>
+    <main></main>
 
-      <demo-snippet>
-        <template>
-          <[namespace]-[name] cssClass="testClass">Hello World!</[namespace]-[name]>
-        </template>
-      </demo-snippet>
-    </div>
+    <script type="module">
+      import 'marked/marked.min.js';
+      import 'prismjs';
+      fetch('/demo/demo.md')
+        .then((response) => response.text())
+        .then((text) => {
+          const rawHtml = marked(text);
+          document.querySelector('main').innerHTML = rawHtml;
+          Prism.highlightAll();
+        });
+    </script>
+    <script type="module" src="../src/[namespace]-[name].js"></script>
   </body>
 </html>

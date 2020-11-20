@@ -1,30 +1,56 @@
 // Import Auro tokens
-@import "./node_modules/@alaskaairux/design-tokens/dist/tokens/SCSSVariables";
-@import "./node_modules/@alaskaairux/design-tokens/dist/tokens/SassCustomProperties";
+@import './node_modules/@alaskaairux/design-tokens/dist/tokens/SCSSVariables';
+@import './node_modules/@alaskaairux/design-tokens/dist/tokens/SassCustomProperties';
 
 // Import baseline library dependencies
 // Mixins
-@import "./node_modules/@alaskaairux/webcorestylesheets/dist/breakpoints";
+@import './node_modules/@alaskaairux/webcorestylesheets/dist/breakpoints';
 
 // Creates baseline output in CSS
-@import "./node_modules/@alaskaairux/webcorestylesheets/dist/fonts";
-@import "./node_modules/@alaskaairux/webcorestylesheets/dist/normalize";
-@import "./node_modules/@alaskaairux/webcorestylesheets/dist/essentials";
+@import './node_modules/@alaskaairux/webcorestylesheets/dist/fonts';
+@import './node_modules/@alaskaairux/webcorestylesheets/dist/normalize';
+@import './node_modules/@alaskaairux/webcorestylesheets/dist/essentials';
+@import './node_modules/@alaskaairux/webcorestylesheets/dist/headings';
 
 // Import Utility classes (will produce CSS in output)
 $layout-properties: margin;
 $layout-extensions: Right;
 $layout-modifiers: (
-  "md": $auro-size-md
+  'md': $auro-size-md
 );
-@import "./node_modules/@alaskaairux/webcorestylesheets/dist/utilityMixins/layoutPropertiesGenerator";
+@import './node_modules/@alaskaairux/webcorestylesheets/dist/utilityMixins/layoutPropertiesGenerator';
 
 // Custom styles per demo pages
-code {
-  color: var(--auro-color-base-crimson-500);
+body {
+  padding: 24px;
+  background-color: #fafafa;
 }
 
-.vertical-section-container {
+pre[class*='language-'] {
+  margin-top: 0;
+}
+
+main {
   margin: 0 auto;
-  max-width: 	82.5rem;
+  max-width: 60rem;
+}
+
+.exampleWrapper {
+  background: repeating-linear-gradient(
+    45deg,
+    #f3f3f3,
+    #f3f3f3 10px,
+    var(--auro-color-base-white) 0,
+    var(--auro-color-base-white) 20px
+  );
+  overflow: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @extend .heading;
 }
