@@ -127,6 +127,7 @@ const getVersionData = async () => {
   versions['postcssDiscardComments'] = await latestVersion('postcss-discard-comments');
   versions['postcssRemoveRules'] = await latestVersion('postcss-remove-rules');
   versions['postcssSelectorReplace'] = await latestVersion('postcss-selector-replace');
+  versions['prism'] = await latestVersion('prismjs');
   versions['rollupPluginAlias'] = await latestVersion('@rollup/plugin-alias');
   versions['rollupPluginBabel'] = await latestVersion('@rollup/plugin-babel');
   versions['rollupPluginCommonJs'] = await latestVersion('@rollup/plugin-commonjs');
