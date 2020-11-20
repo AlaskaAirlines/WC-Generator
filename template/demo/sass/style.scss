@@ -1,15 +1,15 @@
 // Import Auro tokens
-@import "./node_modules/@alaskaairux/orion-design-tokens/dist/tokens/SCSSVariables";
-@import "./node_modules/@alaskaairux/orion-design-tokens/dist/tokens/SassCustomProperties";
+@import "./node_modules/@alaskaairux/design-tokens/dist/tokens/SCSSVariables";
+@import "./node_modules/@alaskaairux/design-tokens/dist/tokens/SassCustomProperties";
 
 // Import baseline library dependencies
 // Mixins
-@import "./node_modules/@alaskaairux/orion-web-core-style-sheets/dist/breakpoints";
+@import "./node_modules/@alaskaairux/webcorestylesheets/dist/breakpoints";
 
 // Creates baseline output in CSS
-@import "./node_modules/@alaskaairux/orion-web-core-style-sheets/dist/fonts";
-@import "./node_modules/@alaskaairux/orion-web-core-style-sheets/dist/normalize";
-@import "./node_modules/@alaskaairux/orion-web-core-style-sheets/dist/essentials";
+@import "./node_modules/@alaskaairux/webcorestylesheets/dist/fonts";
+@import "./node_modules/@alaskaairux/webcorestylesheets/dist/normalize";
+@import "./node_modules/@alaskaairux/webcorestylesheets/dist/essentials";
 
 // Import Utility classes (will produce CSS in output)
 $layout-properties: margin;
@@ -17,7 +17,7 @@ $layout-extensions: Right;
 $layout-modifiers: (
   "md": $auro-size-md
 );
-@import "./node_modules/@alaskaairux/orion-web-core-style-sheets/dist/utilityMixins/layoutPropertiesGenerator";
+@import "./node_modules/@alaskaairux/webcorestylesheets/dist/utilityMixins/layoutPropertiesGenerator";
 
 // Custom styles per demo pages
 code {

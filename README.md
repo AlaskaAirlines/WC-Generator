@@ -65,8 +65,8 @@ The WC-Generator contains automated functionality with each build to generate pr
 Since the legacy bundle includes many polyfills that are not needed by modern browsers, we recommend you load these bundles using [differential serving](https://philipwalton.com/articles/deploying-es2015-code-in-production-today/) so that the browser only loads the bundle it needs. To accomplish this, the script tag for the modern bundle should have `type="module"` and the script tag for the legacy bundle should have the `nomodule` attribute. See the example below.
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/@alaskaairux/orion-design-tokens@:version/dist/tokens/CSSTokenProperties.css" />
-<link rel="stylesheet" href="https://unpkg.com/@alaskaairux/orion-web-core-style-sheets@:version/dist/bundled/baseline.css" />
+<link rel="stylesheet" href="https://unpkg.com/@alaskaairux/design-tokens@:version/dist/tokens/CSSTokenProperties.css" />
+<link rel="stylesheet" href="https://unpkg.com/@alaskaairux/webcorestylesheets@:version/dist/bundled/baseline.css" />
 
 <script src="https://unpkg.com/@alaskaairux/[namespace]-[name]@:version/dist/[namespace]-[name]__bundled.js" type="module"></script>
 <script src="https://unpkg.com/@alaskaairux/[namespace]-[name]@:version/dist/[namespace]-[name]__bundled.es5.js" nomodule></script>
