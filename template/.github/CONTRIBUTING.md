@@ -1,4 +1,4 @@
-# Contributing Guidelines
+# Auro Design System Contributing Guidelines
 
 Please take a moment to review this document in order to make the contribution process easy and effective for everyone involved.
 
@@ -32,7 +32,7 @@ The name of the feature branch should be descriptive as to the nature of the wor
 
 ### Conventional Commits
 
-This project utilizes [Conventional Commits](https://www.conventionalcommits.org/) to auto-generate release verions, based on the [Angular Commit Message Guidelines](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines).
+This project utilizes [Conventional Commits](https://www.conventionalcommits.org/) to auto-generate release versions, based on the [Angular Commit Message Guidelines](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines).
 
 
 ```
@@ -43,7 +43,7 @@ All commit messages must be prefixed with a specific type so that the semver rel
 
 #### MAJOR
 
-For a MAJOR release, you MUST follow this template. The use of `perf:` and `BREAKING CHANGE:` are needed in order to push a major release.
+For a MAJOR release, you MUST follow this template. The use `BREAKING CHANGE:` in conjunction with any other commit type is required in order to push a major release.
 
 ```
 perf(pencil): remove graphiteWidth option
@@ -71,8 +71,8 @@ fix(pencil): stop graphite breaking when too much pressure applied
 | docs | Documentation only changes |
 | feat | A new feature (this correlates with `MINOR` in semantic versioning) |
 | fix | A bug fix (this correlates with `PATCH` in semantic versioning) |
-| perf | A code change that improves performance (correlating with `MAJOR` in semantic versioning) |
-| BREAKING CHANGE | A code change that is not backwards compatable (correlating with `MAJOR` in semantic versioning) |
+| perf | A code change that improves performance |
+| BREAKING CHANGE | A code change that is not backwards compatible (correlating with `MAJOR` in semantic versioning) |
 | refactor | A code change that neither fixes a bug nor adds a feature |
 | style | Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc) |
 | test | Adding missing tests or correcting existing tests  |
@@ -89,7 +89,7 @@ Imperative mood simply means _“spoken or written as if giving a command or ins
 
 A properly formed Git commit subject line should always be able to complete the following sentence:
 
-_"If applied, this commit will [your subject line here]."_
+_"If applied, this commit will (your subject line here)."_
 
 For example:
 
@@ -99,7 +99,7 @@ For example:
 Example messages when using Conventional Commits:
 
 ```
-$ build: update to Gulp 4.x
+$ build: update to build step to include postCSS
 
 $ docs: address issue #14, typo in install instructions
 
@@ -113,8 +113,6 @@ $ fix: address issue #57 in regards to color output
 ### Push branch and submit pull request
 
 One you have committed new work to your feature branch, be sure to push your updates to the Github repository. Depending on your IDE or CLI configuration this may be a manual or automatic step.
-
-To submit a new pull request, please go to [https://github.com/AlaskaAirlines](https://github.com/AlaskaAirlines) to find your project and submit the Pull Request.
 
 On the pull request page, the new pull request should be `[your-new-branch] into [master]`
 
