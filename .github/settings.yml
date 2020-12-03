@@ -7,6 +7,9 @@ repository:
   # A URL with more information about the repository
   homepage: https://auro.alaskaair.com/getting-started/developers/generator/install
 
+  # A comma-separated list of topics to set on the repository
+  topics: auro, design-system, custom-element, generator
+
   # Either `true` to enable issues for this repository, `false` to disable them.
   has_issues: true
 
