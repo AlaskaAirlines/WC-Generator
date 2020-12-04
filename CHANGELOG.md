@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.8.2](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.8.1...v2.8.2) (2020-12-04)
+
+
+### Bug Fixes
+
+* update settings yml config ([069f134](https://github.com/AlaskaAirlines/WC-Generator/commit/069f1347ca331fac22dceb8c35da1772ad6056e5))
+
 ## [2.8.1](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.8.0...v2.8.1) (2020-12-03)
 
 
