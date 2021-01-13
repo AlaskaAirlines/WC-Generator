@@ -24,7 +24,7 @@ The `[namespace]-[name]` element should be used in situations where users may:
 </div>
 
 <auro-accordion lowProfile justifyRight>
-  <span slot="trigger">Siew code</span>
+  <span slot="trigger">See code</span>
 
   ```html
   <[namespace]-[name] cssClass="testClass">Hello World!</[namespace]-[name]>
