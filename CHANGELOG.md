@@ -1,5 +1,17 @@
 # Semantic Release Automated Changelog
 
+# [2.9.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.8.4...v2.9.0) (2021-01-13)
+
+
+### Features
+
+* generate demo page from markdown ([0a359e6](https://github.com/AlaskaAirlines/WC-Generator/commit/0a359e6f863b86c47a654434a39c80fdfff36960))
+
+
+### Performance Improvements
+
+* only get package versions once ([0f22b4a](https://github.com/AlaskaAirlines/WC-Generator/commit/0f22b4ad32f3fb09af0425f9f0030076f03d575e))
+
 ## [2.8.4](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.8.3...v2.8.4) (2020-12-23)
 
 
