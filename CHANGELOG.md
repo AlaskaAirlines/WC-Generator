@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.9.1](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.9.0...v2.9.1) (2021-01-13)
+
+
+### Bug Fixes
+
+* address typo in demo page ([76e4c7a](https://github.com/AlaskaAirlines/WC-Generator/commit/76e4c7ad9da92679b1115d16b9d42e2aa1f3b83e))
+
 # [2.9.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.8.4...v2.9.0) (2021-01-13)
 
 
