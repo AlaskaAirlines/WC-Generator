@@ -1,14 +1,16 @@
 # standard ignore
 .gitignore
 .stylelintrc
-.travis.yml
-demo/
-gulpfile.js
+karma.conf.js
+rollup.config.js
+babel.config.js
+.github/
 index.html
 scripts/
 test/
+demo/css
+demo/sass
+coverage/
 
 # ignore src
 src/**/*
-
-# overrides
