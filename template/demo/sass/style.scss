@@ -35,14 +35,18 @@ main {
 }
 
 .exampleWrapper {
-  background: repeating-linear-gradient(
-    45deg,
-    #f3f3f3,
-    #f3f3f3 10px,
-    var(--auro-color-base-white) 0,
-    var(--auro-color-base-white) 20px
-  );
+  $stripe: #f3f3f3;
+  $background: var(--auro-color-base-white);
+
+  background: repeating-linear-gradient( 45deg, $stripe, $stripe 10px, $background 10px, $background 20px);
   overflow: auto;
+}
+
+.exampleWrapper--ondark {
+  $stripe: var(--auro-color-background-darkest);
+  $background: var(--auro-color-background-darker);
+
+  background: repeating-linear-gradient( 45deg, $stripe, $stripe 10px, $background 10px, $background 20px);
 }
 
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
