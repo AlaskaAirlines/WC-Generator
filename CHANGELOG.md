@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.9.2](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.9.1...v2.9.2) (2021-01-15)
+
+
+### Bug Fixes
+
+* address issues with npmignore ([bf47404](https://github.com/AlaskaAirlines/WC-Generator/commit/bf474048b02c7cc75d42988043d817b7da66a8b3))
+
 ## [2.9.1](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.9.0...v2.9.1) (2021-01-13)
 
 
