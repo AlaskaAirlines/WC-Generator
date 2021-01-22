@@ -4,7 +4,7 @@ The Auro WC-Generator makes it really easy to get started building HTML Custom E
 
 When using the WC-Generator, you will get the following scaffolding:
 
-1. Dev server and demo page support
+1. Dev server and demo page support using markdown
 1. Lit-Element web component scaffolding js file
 1. Sass and PostCSS pre-configured support
 1. Sass template Auro Design Tokens, breakpoints and core CSS ready
@@ -14,7 +14,7 @@ When using the WC-Generator, you will get the following scaffolding:
 1. Fully configured [Karma via Open-WC](https://auro.alaskaair.com/support/tests) testing support
 1. Support for conventional commits and automated semantic versioning
 1. Pre-commit hooks
-1. Pre-configured Travis CI/CD support
+1. Pre-configured GitHub actions support
 1. npm publish ready
 
 ## Installing
@@ -31,41 +31,25 @@ Once the package is installed, run the following command to init a new local rep
 $ wc-generate --name [wc name]
 ```
 
-By default, the WC-Generator will assume `auro` as the namespace for the WC, `@alaskaairux` as the npm group, and your current directory where to install. Be sure to reference the [api]() for all information regarding customization.
+By default, the WC-Generator will assume `auro` as the namespace for the WC, `@alaskaairux` as the npm group, and your current directory where to install. Be sure to reference the [api](https://auro.alaskaair.com/getting-started/developers/generator/generator/api) for all information regarding customization.
 
 ## Servers
 
 When building the new web component, there are two servers you can use to test your component.
 
-Running `npm run serve` will start the dev server where you can view your web component demo at http://localhost:3001/demo/.
-
-Running `npm run bundle:test` will start a Rollup server of bundled assets that you can view at http://localhost:10001/docs/. You can use the server to test the bundled output in modern and legacy browsers.
+Running `npm run serve` will start the dev server where you can view your web component demo at [http://localhost:8000](http://localhost:8000).
 
 ## Editing your demo
 
-While building a web component, being able to see the component in the browser is essential. Located in `/demo/index.html` is a pre-configured demo file. Use the following pattern to set up your web component in the demo HTML.
+While building a web component, being able to see the component in the browser is essential. Located in `/demo/demo.md` is a pre-configured markdown demo file.
+
+This is a static document. If there is a need to use any of Auro's pre-developed custom elements in the demo, this will need to be added to the `./demo/index.html` file.
 
 ```html
-<demo-snippet>
-  <template>
-    <[namespace]-[name]>Hello World!</[namespace]-[name]>
-  </template>
-</demo-snippet>
+<script src="https://unpkg.com/@alaskaairux/auro-button@latest/dist/auro-button__bundled.js" type="module"></script>
 ```
 
-If you are building and testing more than one component in this project, be sure to update the HTML `<head>` with an additional reference.
-
-```html
-<script type="module" src="../src/[namespace]-[name].js"></script>
-```
-
-## Editing the bundled demo
-
-The purpose of the bundled demo is simply to ensure that your new component can be delivered via CDN.
-
-Located in `/docs/index.html` is a simple scaffolding where examples can be viewed. Editing the `auro*` array will show the component and output a simple code example.
-
-If there is more than one component in your project, be sure to update the Rollup config in the `rollup.config.js` file.
+See the auro-popover [demo](https://github.com/AlaskaAirlines/auro-popover/blob/master/demo/index.html) as example.
 
 ## Editing your web component
 
@@ -82,7 +66,7 @@ The web component scaffolding is made up of a few parts that I will mention here
 
 ### Dependencies
 
-This will be preconfigured for default support. Additional component dependencies will be added here.
+The new element will be pre-configured for default support. Additional component dependencies will be added here.
 
 ### Class definition
 
@@ -90,11 +74,13 @@ Everything related to the construct of the web component will happen here.
 
 ### Properties
 
-Using the `properties()` method, add the component properties and their type here. Declaring properties here with their types is what creates the difference between an HTML attribute and a component prop.
+Using the `properties()` method, add the component [properties](https://lit-element.polymer-project.org/guide/properties) and their type here. Declaring properties here with their types is what creates the difference between an HTML attribute and a component prop.
 
 ### Static styles
 
 It is highly recommended that this is not edited. The component is already pre-configured to import `${styleCss}` which is imported from `"./style-css.js";`. It is recommended to update the `style.scss` file for all your styles.
+
+To learn more about styling custom elements, see the [litElement docs](https://lit-element.polymer-project.org/guide/styles) on the subject.
 
 ### Render method
 
@@ -116,6 +102,10 @@ It is also important to understand how the `<slot>` element provides [performanc
 
 Remember when referencing variables or functions within the scope of the `render()` method be sure to reference `this` or you will get a runtime error with your component.
 
+### Nesting other custom elements
+
+In the case where your new component has a dependency on another component, see the [litElement docs](https://lit-element.polymer-project.org/guide/use#use) for referencing another component in your code.
+
 ### Custom element definition
 
 There should never be a reason to edit this.
@@ -123,6 +113,8 @@ There should never be a reason to edit this.
 ## Styling your component
 
 When writing styles for your component, be sure to use the CSS variables from the [Auro Design Tokens](https://auro.alaskaair.com/getting-started/developers/design-tokens). The build pipeline is configured to create fallback properties for the final CSS output.
+
+Again, Auro Design Tokens are already installed in this custom element, you simply need to use them.
 
 #### Non-compliant
 
