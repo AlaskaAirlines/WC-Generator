@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.9.3](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.9.2...v2.9.3) (2021-01-23)
+
+
+### Bug Fixes
+
+* update missed style on accordion pre tag ([5ccb14e](https://github.com/AlaskaAirlines/WC-Generator/commit/5ccb14e5f36fb448e2800959ca6f2eb12e8ca525))
+
 ## [2.9.2](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.9.1...v2.9.2) (2021-01-15)
 
 
