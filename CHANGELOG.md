@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.9.4](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.9.3...v2.9.4) (2021-01-23)
+
+
+### Bug Fixes
+
+* remove markdown style for demo ([0b9d296](https://github.com/AlaskaAirlines/WC-Generator/commit/0b9d2966f0f2a1896c9954c251ee2a2430a79b11))
+
 ## [2.9.3](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.9.2...v2.9.3) (2021-01-23)
 
 
