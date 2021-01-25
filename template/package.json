@@ -4,7 +4,7 @@
     "# To work within the development environment, run the following tasks",
     "  1. $ npm run dev",
     "  2. $ npm run serve",
-    "  3. Go to http://localhost:3001",
+    "  3. Go to http://localhost:8000",
     "================================================================================"
   ],
   "name": "[npm]/[namespace]-[name]",
