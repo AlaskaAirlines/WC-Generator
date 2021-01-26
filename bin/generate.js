@@ -161,7 +161,7 @@ const getReplacements = async ({ name, namespace, npm }) => {
     { regex: /\[npm\]/g, value: npm },
     { regex: /\[year\]/g, value: newYear },
     { regex: /\[designTokens\]/g, value: versionData['@alaskaairux/design-tokens'] },
-    { regex: /\[wcss\]/g, value: versionData['@alaskaairux/webcorestylesheets'] }    
+    { regex: /\[wcss\]/g, value: versionData['@alaskaairux/webcorestylesheets'] }
   ];
 
   return nameReplacements.concat(pkgReplacements);
@@ -259,7 +259,7 @@ const generateFromTemplate = async () => {
 
   // this test needs to be updated post first release of new '@alaskaairux/wc-generator'
   const latestPublishedGenVersion = await latestVersion('@alaskaairux/wc-generator');
-  log(chalk.green(`\nPublished: v${latestPublishedGenVersion} | Installed: v${pjson.version}\n`))
+  log(chalk.green(`\nCurrently published WC-Generator: v${latestPublishedGenVersion} | Installed WC-Generator: v${pjson.version}\n`))
 
   const params = parseArgs();
 
