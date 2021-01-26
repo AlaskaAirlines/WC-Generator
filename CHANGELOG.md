@@ -1,5 +1,13 @@
 # Semantic Release Automated Changelog
 
+## [2.9.5](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.9.4...v2.9.5) (2021-01-26)
+
+
+### Bug Fixes
+
+* [#58](https://github.com/AlaskaAirlines/WC-Generator/issues/58) specify correct port in package json ([f55589e](https://github.com/AlaskaAirlines/WC-Generator/commit/f55589ed183d1a04ca6b96d993094f14d242aaef))
+* update node version check ([856fff5](https://github.com/AlaskaAirlines/WC-Generator/commit/856fff59b62467fbfa137956f7d72905bdbdcd93))
+
 ## [2.9.4](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.9.3...v2.9.4) (2021-01-23)
 
 
