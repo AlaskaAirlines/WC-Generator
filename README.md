@@ -25,13 +25,17 @@ Simple API of the npm generator:
 wc-generate --name [wc name]
 ```
 
+### Minimum Node version
+
+The WC-Generator requires a minimum install of Node.js `11.0.0`. Recommended install version of `14.0.0`.
+
 ###### Example
 
 ```shell
 $ wc-generate --name button
 ```
 
-See the [Auro doc site](http://auro.alaskaair.com/getting-started/developers/generator/generator/api) for a full API description and info for [getting started](auro.alaskaair.com/getting-started/developers/generator/getting-started). 
+See the [Auro doc site](http://auro.alaskaair.com/getting-started/developers/generator/generator/api) for a full API description and info for [getting started](auro.alaskaair.com/getting-started/developers/generator/getting-started).
 
 ## General documentation
 
@@ -74,11 +78,11 @@ Since the legacy bundle includes many polyfills that are not needed by modern br
 
 ## Static Styles
 
-The generator takes the opinion of using [static styles](https://lit-element.polymer-project.org/guide/styles#expressions) as a matter of performance. 
+The generator takes the opinion of using [static styles](https://lit-element.polymer-project.org/guide/styles#expressions) as a matter of performance.
 
 > Static styles apply to all instances of a component. Any expressions in CSS are evaluated once, then reused for all instances.
 
-If there is a requirement for the CSS to be reevaluated, this can either be done by moving the CSS to the `render()` method or addressed in a lifecycle method. 
+If there is a requirement for the CSS to be reevaluated, this can either be done by moving the CSS to the `render()` method or addressed in a lifecycle method.
 
 Moving the CSS to the `render()` method requires an update to the `sassRender` script and removing the reference to `staticStyles-template.js`.
 

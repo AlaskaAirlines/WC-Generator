@@ -29,22 +29,22 @@ function verifySemver(minimum, current) {
   return majorValid && minorValid && patchValid;
 }
 
-// Check Node Version (min: 10.16.0)
+// Check Node Version (min: 11.0.0)
 const currentNodeVersion = process.versions.node;
-const minNodeVersion = [10, 16, 0];
+const minNodeVersion = [11, 0, 0];
 const nodeVersionIsValid = verifySemver(
   minNodeVersion,
   currentNodeVersion.split('.')
 );
+const chalk = require('chalk');
+const log = require('./log');
 
 if (!nodeVersionIsValid) {
-  const chalk = require('chalk');
-  const log = require('../scripts/utils/log');
-
-  log(
-    chalk.red('Outdated Node version detected (' + currentNodeVersion + ').')
-  );
-  log(chalk.white('  Upgrade Node to at least ' + minNodeVersion.join('.')));
+  log (chalk.red(`Outdated Node version detected: ${currentNodeVersion}.`));
+  log (chalk.white(`Upgrade Node to at least ${minNodeVersion.join('.')}\n`));
 
   process.exit(1);
+} else {
+  log (chalk.green(`Node version detected: ${currentNodeVersion}.`));
+  log (chalk.green(`Minimum version required: ${minNodeVersion.join('.')}\n`));
 }
