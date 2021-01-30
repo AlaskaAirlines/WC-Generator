@@ -7,7 +7,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="../node_modules/prismjs/themes/prism.css"
+      href="https://unpkg.com/prismjs@latest/themes/prism.css"
     />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
   </head>
@@ -15,8 +15,8 @@
     <main></main>
 
     <script type="module">
-      import 'marked/marked.min.js';
-      import 'prismjs';
+      import 'https://unpkg.com/marked@latest/marked.min.js';
+      import 'https://unpkg.com/prismjs@latest/prism.js';
       fetch('/demo/demo.md')
         .then((response) => response.text())
         .then((text) => {
