@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+# [2.10.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.9.5...v2.10.0) (2021-02-01)
+
+
+### Features
+
+* add support for deployable demo build ([559b393](https://github.com/AlaskaAirlines/WC-Generator/commit/559b3936fe280235fcd9fe0f217324f39a9733b7))
+
 ## [2.9.5](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.9.4...v2.9.5) (2021-01-26)
 
 
