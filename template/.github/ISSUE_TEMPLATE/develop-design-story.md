@@ -29,17 +29,12 @@ As a [persona], I want to be able to [intent, not feature(s)], so I can [describ
 - [ ] Edge (79 +)
 - [ ] Safari
 - [ ] Mobile Safari
-- [ ] IE11
 
 #### Has been tested for accessibility
 
-- [ ] Screenreader
-- [ ] Axe
-- [ ] Keyboard use
-
-#### Performance
-
-- [ ] Chrome Lighthhouse report
+- [ ] Axe / Google Lighthouse (baseline standard)
+- [ ] Screenreader (determine usability of experience via screenreader)
+- [ ] Keyboard use (a user must be able to navigate to key parts via a keyboard)
 
 #### Auro component features
 
@@ -47,7 +42,7 @@ As a [persona], I want to be able to [intent, not feature(s)], so I can [describ
 - [ ] API documentation created
 - [ ] Bundled version tested and documented
 - [ ] Examples and use case info created
-- [ ] Pages added to the Auro Doc Site
+- [ ] Demo page created for the Auro Doc Site
 
 
 ## Audit
