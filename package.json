@@ -1,6 +1,6 @@
 {
   "name": "@alaskaairux/wc-generator",
-  "version": "2.10.0",
+  "version": "2.10.1",
   "description": "Boilerplate generator for Auro Web Components",
   "main": "index.js",
   "files": [
