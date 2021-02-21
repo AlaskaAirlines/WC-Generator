@@ -30,6 +30,21 @@ All new work that is to be considered for merging with the `MASTER` branch must 
 
 The name of the feature branch should be descriptive as to the nature of the work and please include any references to the story or bug work item ID.
 
+### Rebase on main
+
+It is the preference of Auro to [rebase branches off of an updated main versus merging down](https://www.atlassian.com/git/tutorials/merging-vs-rebasing) to maintain a flat history.
+
+If you have access to the repo
+
+```
+$ git checkout main
+$ git pull
+$ git checkout [feature branch]
+$ git rebase main
+```
+
+If you are working off a forked branch, please see [Maintaining your fork's upstream relationship](https://auro.alaskaair.com/contributing/upstream) to sync your main branch and then follow the outlined steps.
+
 ### Conventional Commits
 
 This project utilizes [Conventional Commits](https://www.conventionalcommits.org/) to auto-generate release versions, based on the [Angular Commit Message Guidelines](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines).
