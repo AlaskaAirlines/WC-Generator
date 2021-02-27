@@ -18,15 +18,6 @@
 //   ...
 // }
 
-// layout styles - define any layout specifications for UI that is contained WITHIN the component
-// never define layout that would cause effect on element outside the scope of this component
-
-
-// component shape styles
-// .[namespace]-[name] {
-//   ...
-// }
-
 .testClass {
   color:  var(--auro-color-border-error-on-light);
   border: 1px solid var(--auro-color-border-error-on-light);

@@ -9,8 +9,9 @@
 // Creates baseline output in CSS
 @import './node_modules/@alaskaairux/webcorestylesheets/dist/fonts';
 @import './node_modules/@alaskaairux/webcorestylesheets/dist/normalize';
-@import './node_modules/@alaskaairux/webcorestylesheets/dist/essentials';
 @import './node_modules/@alaskaairux/webcorestylesheets/dist/headings';
+$paragraph: true;
+@import './node_modules/@alaskaairux/webcorestylesheets/dist/essentials';
 
 // Import Utility classes (will produce CSS in output)
 $layout-properties: margin;
@@ -122,6 +123,14 @@ a {
 
   &.focus-visible {
     @include auro_focus-hyperlink(sass);
+  }
+}
+
+p {
+  @extend p;
+
+  &:last-child {
+    margin-bottom: 0;
   }
 }
 
