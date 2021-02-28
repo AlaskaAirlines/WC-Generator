@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.10.4](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.10.3...v2.10.4) (2021-02-28)
+
+
+### Bug Fixes
+
+* update rollup to have default multi-element pattern ([1af8473](https://github.com/AlaskaAirlines/WC-Generator/commit/1af84733d671c419cca7f79da9c86c7540ebb2cf))
+
 ## [2.10.3](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.10.2...v2.10.3) (2021-02-27)
 
 
