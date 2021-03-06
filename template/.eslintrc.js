@@ -63,7 +63,7 @@ module.exports = {
       "id-length": "error",
       "id-match": "error",
       "implicit-arrow-linebreak": "error",
-      "indent": "off",
+      "indent": ["error", 2],
       "indent-legacy": "off",
       "init-declarations": "error",
       "jsx-quotes": "error",
