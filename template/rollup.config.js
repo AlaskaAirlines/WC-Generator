@@ -62,4 +62,4 @@ const [namespace][Name]Config = {
   plugins: getSharedPlugins(true)
 };
 
-export default [modernConfig, [namespace][Name]];
+export default [modernConfig, [namespace][Name]Config];
