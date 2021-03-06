@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.10.5](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.10.4...v2.10.5) (2021-03-06)
+
+
+### Bug Fixes
+
+* update eslint to enforce 2 space indent ([58da5ce](https://github.com/AlaskaAirlines/WC-Generator/commit/58da5cee145388cce4d025531edcb5269d144e9f))
+
 ## [2.10.4](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.10.3...v2.10.4) (2021-02-28)
 
 
