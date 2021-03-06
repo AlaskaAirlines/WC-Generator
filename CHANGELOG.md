@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.10.6](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.10.5...v2.10.6) (2021-03-06)
+
+
+### Bug Fixes
+
+* address bug with rollup config ([7e5d319](https://github.com/AlaskaAirlines/WC-Generator/commit/7e5d31923a684facd863be21c585f27dc797a705))
+
 ## [2.10.5](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.10.4...v2.10.5) (2021-03-06)
 
 
