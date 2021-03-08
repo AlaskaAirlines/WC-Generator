@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.10.7](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.10.6...v2.10.7) (2021-03-08)
+
+
+### Bug Fixes
+
+* update eslint eol-last setting ([c9cbe63](https://github.com/AlaskaAirlines/WC-Generator/commit/c9cbe6359c2c5d966a37df6177c45beafef95d5c))
+
 ## [2.10.6](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.10.5...v2.10.6) (2021-03-06)
 
 
