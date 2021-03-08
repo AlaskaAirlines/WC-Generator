@@ -47,7 +47,7 @@ module.exports = {
       "default-param-last": "error",
       "dot-location": "error",
       "dot-notation": "error",
-      "eol-last": "off",
+      "eol-last": ["error", "always"],
       "eqeqeq": "error",
       "func-call-spacing": "error",
       "func-name-matching": "error",
