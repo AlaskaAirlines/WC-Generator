@@ -1,7 +1,7 @@
 
 ## Generate a new baseline install of an auro component
 # Argument expected: name of new repo
-function newgenerate {
+function generaterepo {
   command cd ~/src/auro/ && wc-generate --test --name "$1"
 }
 
