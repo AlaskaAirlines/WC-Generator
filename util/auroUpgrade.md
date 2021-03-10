@@ -37,7 +37,7 @@ $ auroupgrade flight auro-flight no-demo
 To install the script, run the following command
 
 ```
-curl https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/master/util/auroupgrade.sh -o ~/.auroUpgrade.sh
+curl https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/master/util/auroUpgrade.sh -o ~/.auroUpgrade.sh
 ```
 
 Then add the following line to your `.bash_profile` or `.bashrc` file.
