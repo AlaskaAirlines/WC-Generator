@@ -22,7 +22,7 @@ Guidelines for bug reports:
 
 A good bug report shouldn't leave others needing to follow up for more information. Please try to be as detailed as possible in your report. What is your environment? What steps will reproduce the issue? What browser(s) and OS experience the problem? What would you expect to be the outcome? All these details will help people to fix any potential bugs.
 
-Poor bug reports will be reassigned back to the creator for revision prior to any additional investigation.
+Poor bug reports will be closed as the team is unable to reproduce the issue.
 
 For more information about the issue submission process, please see the [Issues: work status label maintenance](https://auro.alaskaair.com/contributing/issues-prs-labels) section of the Auro contributing guidelines
 
