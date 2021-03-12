@@ -61,7 +61,7 @@ const parseArgs = () => {
 
   const test = args['--test'];
   const name = args['--name'] || 'component';
-  const npm = args['--npm'] || '@alaskaairux';
+  const npm = args['--npm'] || '@aurodesignsystem';
   const namespace = args['--namespace'] || 'auro';
   const dir = path.resolve(
     args['--dir'] || `./${lowerKebabCase(namespace)}-${lowerKebabCase(name)}`
@@ -160,8 +160,8 @@ const getReplacements = async ({ name, namespace, npm }) => {
     { regex: /\[Name\]/g, value: upperCamelCaseName },
     { regex: /\[npm\]/g, value: npm },
     { regex: /\[year\]/g, value: newYear },
-    { regex: /\[designTokens\]/g, value: versionData['@alaskaairux/design-tokens'] },
-    { regex: /\[wcss\]/g, value: versionData['@alaskaairux/webcorestylesheets'] }
+    { regex: /\[designTokens\]/g, value: versionData['@aurodesignsystem/design-tokens'] },
+    { regex: /\[wcss\]/g, value: versionData['@aurodesignsystem/webcorestylesheets'] }
   ];
 
   return nameReplacements.concat(pkgReplacements);
@@ -257,7 +257,7 @@ const generateFromTemplate = async () => {
   const pjson = require('../package.json');
   const latestVersion = require('latest-version');
 
-  // this test needs to be updated post first release of new '@alaskaairux/wc-generator'
+  // this test needs to be updated post first release of new '@aurodesignsystem/wc-generator'
   const latestPublishedGenVersion = await latestVersion('@alaskaairux/wc-generator');
   log(chalk.green(`\nCurrently published WC-Generator: v${latestPublishedGenVersion} | Installed WC-Generator: v${pjson.version}\n`))
 
@@ -286,7 +286,7 @@ const generateFromTemplate = async () => {
     log(chalk.red(`                                         p:::::::p                                     `));
     log(chalk.red(`                                         p:::::::p                                     `));
     log(chalk.red(`                                         ppppppppp                                     \n\n`));
-    log(chalk.red(`\nSorry, we have to stop you here.\nIt's been detected you have v${pjson.version} installed,\nand the latest version is v${latestPublishedGenVersion}. Please run the following:\n\nnpm i @alaskaairux/wc-generator@${latestPublishedGenVersion} -g\n\nfor the latest version.\n`))
+    log(chalk.red(`\nSorry, we have to stop you here.\nIt's been detected you have v${pjson.version} installed,\nand the latest version is v${latestPublishedGenVersion}. Please run the following:\n\nnpm i @aurodesignsystem/wc-generator@${latestPublishedGenVersion} -g\n\nfor the latest version.\n`))
   }
 
   else {
