@@ -209,7 +209,7 @@ const question = async () => {
       {
         type: 'confirm',
         name: 'governance',
-        message: 'Did you review the Auro Governance Working Agreement?',
+        message: 'Did you review the Auro Design System Contributing Guidelines?',
       },
       {
         type: 'confirm',
@@ -241,7 +241,7 @@ const question = async () => {
       }
 
       if (answers.governance === false) {
-        console.log('Be sure to review https://auro.alaskaair.com/getting-started/developers/governance before starting')
+        console.log('Be sure to review https://auro.alaskaair.com/contributing before starting')
       }
 
       if (answers.governance === true && answers.status === true) {
