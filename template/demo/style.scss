@@ -52,19 +52,19 @@ main {
 
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-:not(pre) > code[class*="language-"], pre[class*="language-"] {
+:not(pre) > code[class*='language-'], pre[class*='language-'] {
   background: #f8f8f8;
 }
 
 auro-accordion {
-  pre[class*="language-"] {
+  pre[class*='language-'] {
     background: none;
     margin-bottom: 0;
     padding: 0;
   }
 }
 
-code[class*="language-"], pre[class*="language-"] {
+code[class*='language-'], pre[class*='language-'] {
   font-family: monospace;
 }
 

@@ -53,10 +53,10 @@
     ]
   },
   "scripts": {
-    "testbuild": "node bin/generate.js -t -N Han -n Solo -P @mypackage -d ./auro-test",
-    "fullbuild": "node bin/generate.js -n solo -d ../auro-test",
+    "build:test": "node bin/generate.js -t -N Han -n Solo -P @mypackage -d ./auro-test",
+    "build:complete": "node bin/generate.js -n solo -d ../auro-test",
     "sweep": "rm -rf auro-test",
-    "test": "npm-run-all sweep testbuild"
+    "test": "npm-run-all build:test"
   },
   "publishConfig": {
     "access": "public"
@@ -65,10 +65,6 @@
     {
       "name": "Dale Sande",
       "email": "dale.sande@alaskaair.com"
-    },
-    {
-      "name": "Zach Newton",
-      "email": "zach.newton@alaskaair.com"
     }
   ],
   "keywords": [

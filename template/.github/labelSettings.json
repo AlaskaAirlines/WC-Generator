@@ -20,6 +20,12 @@
     ]
   },
   {
+    "name": "AuroLabs",
+    "cat": "default",
+    "color": "000000",
+    "description": "Project work is associated with AuroLabs release"
+  },
+  {
     "name": "help wanted",
     "color": "2492eb",
     "description": "Extra attention is needed, this user requires assistance to complete the work"
@@ -66,6 +72,14 @@
     "color": "df0b37",
     "description": "Immediate attention is required",
     "process": "Apply label to issues or pull requests that blocked from progress",
+    "aliases": [
+      "blocked"
+    ]
+  },
+  {
+    "name": "Status: Waiting on design sponsor",
+    "color": "df0b37",
+    "description": "This work is waiting for a design sponsor to help define spec",
     "aliases": [
       "blocked"
     ]
