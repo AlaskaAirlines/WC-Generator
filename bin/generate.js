@@ -370,7 +370,7 @@ Creating a Design System People Love.
       process.stdout.write(`\nRunning initial component build`);
       loadingLoop(() => isBuilt);
       try {
-        await exec('npm run ciBuild', { cwd: params.dir });
+        await exec('npm run build', { cwd: params.dir });
         log(chalk.green('\nInitial build success!'));
       } catch ({ message }) {
         log(chalk.red(message));
