@@ -133,6 +133,7 @@ const getVersionData = async () => {
 const escapeRegExp = (string) => string.replace(/[.*+\-?^${}()|[\]\\]/g, '\\$&');
 const getReplacements = async ({ name, namespace, npm }) => {
   const versionData = await getVersionData();
+  const pjson = require('../package.json');
 
   const pkgReplacements = Object.keys(versionData).map(packageName => ({
     regex: new RegExp(`("${escapeRegExp(packageName)}": )""`, 'g'),
@@ -153,6 +154,7 @@ const getReplacements = async ({ name, namespace, npm }) => {
   const newYear = new Date().getFullYear();
 
   const nameReplacements = [
+    { regex: /\[genVersion\]/g, value: pjson.version },
     { regex: /\[author\]/g, value: userName },
     { regex: /\[name\]/g, value: lowerKebabCaseName },
     { regex: /\[namespace\]/g, value: lowerKebabCaseNameSpace },

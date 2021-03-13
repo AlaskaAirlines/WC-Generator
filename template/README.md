@@ -48,6 +48,8 @@ In cases where the project is not able to process JS assets, there are pre-proce
 
 Since the legacy bundle includes many polyfills that are not needed by modern browsers, we recommend you load these bundles using [differential serving](https://philipwalton.com/articles/deploying-es2015-code-in-production-today/) so that the browser only loads the bundle it needs. To accomplish this, the script tag for the modern bundle should have `type="module"` and the script tag for the legacy bundle should have the `nomodule` attribute. See the example below.
 
+### Bundle example code
+
 **NOTE:** Be sure to replace `@latest` in the URL with the version of the asset you want. @latest is NOT aware of any MAJOR releases, use at your own risk.
 
 ```html
@@ -100,3 +102,5 @@ Automated tests are required for every Auro component. See `.\test\[namespace]-[
 ### Demo deployment
 
 To deploy a demo version of the component for review, run `npm run demo:build` to create a `./build` directory that can be pushed to any static server.
+
+<small>Built from WC-Generator v[genVersion]</small>
