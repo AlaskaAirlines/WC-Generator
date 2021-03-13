@@ -9,6 +9,7 @@ title: 'Component Name Here ...'
 The scope of this issue is to track the full progress of the (name) component.
 
 <!-- template content, do not remove -->
+
 ## Process
 
 This issue is to remain open until all areas of the specification and all assets have been delivered to stakeholders and user groups.
