@@ -116,6 +116,11 @@ labels:
   process: Apply label to issues or pull requests that blocked from progress
   aliases:
   - blocked
+- name: 'Status: Waiting on design sponsor'
+  - color: df0b37
+  - description: This work is waiting for a design sponsor to help define spec
+  - aliases:
+    - blocked
 - name: 'Status: Complete and Ready to Merge'
   color: 5e8741
   description: Owner has completed work and considers it ready to be merged
@@ -128,7 +133,6 @@ labels:
 - name: 'Status: Review Needed'
   color: 91be62
   description: Work is completed, user is requesting feedback
-  process: Applied by author to request code review
 - name: 'Status: Work In Progress'
   description: Issue or Pull Request work is in Progress
   color: c0e585
