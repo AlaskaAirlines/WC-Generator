@@ -202,4 +202,4 @@ $ npm run dev
 $ npm run serve
 ```
 
-If at any time you are in need of a full build, it is recommended to run `$ npm run ciBuild`.
+If at any time you are in need of a clean build, it is recommended to run `$ npm run build:ci`.
