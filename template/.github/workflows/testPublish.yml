@@ -24,12 +24,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
-      - run: npm run sassBuild:component
-      - run: npm run postCss:component
-      - run: npm run sassRender
-      - run: npm run distJS
-      - run: npm run bundler
-      - run: npm test
+      - run: npm run build
 
   release:
     # Only release on push to main
@@ -44,11 +39,7 @@ jobs:
         with:
           node-version: 14
       - run: npm ci
-      - run: npm run sassBuild:component
-      - run: npm run postCss:component
-      - run: npm run sassRender
-      - run: npm run distJS
-      - run: npm run bundler
+      - run: npm run build
       - uses: cycjimmy/semantic-release-action@v2
         env:
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
