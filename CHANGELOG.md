@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.10.9](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.10.8...v2.10.9) (2021-03-19)
+
+
+### Bug Fixes
+
+* update label settings ([eff12ce](https://github.com/AlaskaAirlines/WC-Generator/commit/eff12ce637a1b9e719ec6395add384dfac7f6516))
+
 ## [2.10.8](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.10.7...v2.10.8) (2021-03-09)
 
 
