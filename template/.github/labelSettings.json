@@ -2,7 +2,8 @@
   {
     "name": "duplicate",
     "color": "cde6ff",
-    "description": "This Issue or Pull Request already exists"
+    "description": "This Issue or Pull Request already exists",
+    "process": "When duplicate issue or pull request is discovered, please apply this label and add a comment so that the repo admin can address."
   },
   {
     "name": "good first issue",
@@ -36,12 +37,14 @@
   {
     "name": "released",
     "color": "A9A9A9",
-    "description": "Completed work has been released"
+    "description": "Completed work has been released",
+    "process": "Automated: applied once a pull request has been merged and released"
   },
   {
     "name": "Status: Abandoned",
     "color": "156fad",
     "description": "The issue or Pull Request is wontfix",
+    "process": "Apply label prior to contacting author one last time before closing issue or pull request",
     "aliases": [
       "wontfix",
       "invalid"
@@ -51,18 +54,24 @@
     "name": "Status: Backlogged",
     "color": "e2ffcd",
     "description": "Backlogged item is a proposed question or solution, the user is requesting feedback",
+    "process": "Assign label when adding new issue to the backlog"
+  },
+  {
+    "name": "Status: Proposal",
+    "color": "fe58bc",
+    "description": "Propose new custom element or feature to existing release",
+    "process": "Apply label to issues that are proposed ideas or require discussion",
     "aliases": [
       "idea",
-      "Idea",
       "proposal",
-      "Proposal",
       "discussion"
     ]
   },
   {
     "name": "Status: Blocked",
     "color": "df0b37",
-    "description": "Progress on the issue is Blocked, immediate attention is required",
+    "description": "Immediate attention is required",
+    "process": "Apply label to issues or pull requests that blocked from progress",
     "aliases": [
       "blocked"
     ]
@@ -70,41 +79,32 @@
   {
     "name": "Status: Complete and Ready to Merge",
     "color": "5e8741",
-    "description": "Owner has completed work and considers it ready to be merged"
+    "description": "Owner has completed work and considers it ready to be merged",
+    "process": "Author applies label to alert reviewers that work is completed and can be merged post review"
   },
   {
     "name": "Status: Prioritized for work",
     "color": "d0fba6",
-    "description": "Proposal has been prioritized for development (issues only)"
+    "description": "Proposal has been prioritized for development (issues only)",
+    "process": "Applied by project manager to alert developers of work priority"
   },
   {
     "name": "Status: Review Needed",
     "color": "91be62",
-    "description": "Work is completed, user is requesting feedback"
-  },
-  {
-    "name": "Status: Selected for work",
-    "color": "d0fba6",
-    "description": "Proposal has been selected for development (issues only)"
+    "description": "Work is completed, user is requesting feedback",
+    "process": "Applied by author to request code review"
   },
   {
     "name": "Status: Work In Progress",
     "description": "Issue or Pull Request work is in Progress",
-    "color": "c0e585"
-  },
-  {
-    "name": "Type: Breaking Change",
-    "color": "b88624",
-    "description": "Includes breaking changes, will require MAJOR version release",
-    "aliases": [
-      "breaking",
-      "breaking-change"
-    ]
+    "color": "c0e585",
+    "process": "Applied by author to alert managers and developers that work is in progress"
   },
   {
     "name": "Type: Bug",
     "color": "df0b37",
     "description": "Bug or Bug fixes",
+    "process": "Author applies label type when reporting issue",
     "aliases": [
       "bug"
     ]
@@ -113,6 +113,7 @@
     "name": "Type: CI",
     "color": "b83302",
     "description": "Changes to CI configuration files and scripts",
+    "process": "Author applies label type when reporting issue",
     "aliases": [
       "travis",
       "ci",
@@ -123,6 +124,7 @@
     "name": "Type: Content or data",
     "color": "ffd200",
     "description": "Adding or editing new content or data to the repo",
+    "process": "Author applies label type when reporting issue",
     "aliases": [
       "enhancement"
     ]
@@ -131,6 +133,7 @@
     "name": "Type: Dependencies",
     "color": "b83302",
     "description": "Pull requests that update a dependency file",
+    "process": "Author applies label type when reporting issue",
     "aliases": [
       "dependencies"
     ]
@@ -139,6 +142,7 @@
     "name": "Type: Design",
     "color": "e5ad07",
     "description": "New Design",
+    "process": "Author applies label type when reporting issue",
     "aliases": [
       "enhancement"
     ]
@@ -147,6 +151,7 @@
     "name": "Type: Documentation",
     "color": "f26135",
     "description": "Documentation only changes",
+    "process": "Author applies label type when reporting issue",
     "aliases": [
       "documents",
       "document"
@@ -156,6 +161,7 @@
     "name": "Type: Feature",
     "color": "e5ad07",
     "description": "New Feature",
+    "process": "Author applies label type when reporting issue",
     "aliases": [
       "enhancement"
     ]
@@ -164,6 +170,7 @@
     "name": "Type: Maintenance",
     "color": "b83302",
     "description": "Repository Maintenance",
+    "process": "Author applies label type when reporting issue",
     "aliases": [
       "greenkeeper",
       "maintenance"
@@ -173,6 +180,7 @@
     "name": "Type: Question",
     "color": "b83302",
     "description": "Further information is requested",
+    "process": "Author applies label type when reporting issue",
     "aliases": [
       "question"
     ]
@@ -181,6 +189,7 @@
     "name": "Type: Refactoring",
     "color": "ffdb67",
     "description": "A code change that neither fixes a bug nor adds a feature",
+    "process": "Author applies label type when reporting issue",
     "aliases": [
       "refactor"
     ]
@@ -189,6 +198,7 @@
     "name": "Type: Testing",
     "color": "fff0cd",
     "description": "Adding missing tests or correcting existing tests",
+    "process": "Author applies label type when reporting issue",
     "aliases": [
       "test",
       "testing"
