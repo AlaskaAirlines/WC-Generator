@@ -51,12 +51,6 @@
     ]
   },
   {
-    "name": "Status: Backlogged",
-    "color": "e2ffcd",
-    "description": "Backlogged item is a proposed question or solution, the user is requesting feedback",
-    "process": "Assign label when adding new issue to the backlog"
-  },
-  {
     "name": "Status: Proposal",
     "color": "fe58bc",
     "description": "Propose new custom element or feature to existing release",
