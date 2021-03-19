@@ -42,15 +42,20 @@ upstream        https://github.com/AlaskaAirlines/[namespace]-[name].git (push)
 
 #### Sync upstream
 
-To sync your master brach with your upstream master branch, there are two ways you can do this.
-
-One way is to fetch and merge. This will work if your `main` branch shares the same history as the upstream brach sans merged updates since fork or last sync.
+To sync your `main` brach with the upstream `main` branch, there are two ways you can do this. The preferred method is to fetch and rebase. Please do not merge down.
 
 ```bash
-$ git checkout master
+$ git checkout main
 
 $ git fetch upstream
-$ git merge upstream/main
+$ git rebase upstream/main
+```
+
+Then to sync your feature brach,
+
+```bash
+$ git checkout feature-branch
+$ git rebase main
 ```
 
 #### Brute force
