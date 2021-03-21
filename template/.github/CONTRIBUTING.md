@@ -4,11 +4,13 @@ Please take a moment to review this document in order to make the contribution p
 
 ## Feature Requests
 
-Feature requests stem from a business need. Also be sure to find out whether your idea fits with the scope and aims of the project of if this serves to address a personal/local scenario. It is up to you to make a strong case to convince the project's managers of the merits of this feature. Please provide as much detail and context as possible.
+Feature requests stem from a business need. It is important to understand whether your idea fits with the scope and aims of the project of if this serves to address a personal/local scenario. It is up to you to make a strong case about the merits of this feature. Please provide as much detail and context as possible.
 
 ## Reporting Bugs
 
-A bug is defined by: "A demonstrable problem that is caused by a file in the repository." Good bug reports are extremely helpful - thank you! To submit an issue, please go to [Auro's project status board](https://auro.alaskaair.com/component-status) and click on the ISSUES badge associated to project you wish to submit an issue for.
+A bug is defined by: "A demonstrable problem that is caused by a file in the repository." Good bug reports are extremely helpful - thank you!
+
+To submit an issue, please go to [Auro's project status board](https://auro.alaskaair.com/component-status) and click on the ISSUES badge associated to project you wish to submit an issue for.
 
 Guidelines for bug reports:
 
@@ -133,7 +135,7 @@ For example:
 Example messages when using Conventional Commits:
 
 ```
-$ build: update to build step to include postCSS
+$ build: update the build step to include postCSS
 
 $ docs: address issue #14, typo in install instructions
 
