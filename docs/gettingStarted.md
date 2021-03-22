@@ -202,6 +202,4 @@ $ npm run dev
 $ npm run serve
 ```
 
-If at any time you are in need of a full build, it is recommended to run `$ npm run ciBuild`. This will simulate a Travis config build.
-
-Remember, `ciBuild` and the `.travis.yml` config file is separate. If you update the `package.json` with additional build steps, this will need to be added to both the `ciBuild` and the `.travis.yml` file.
+If at any time you are in need of a full build, it is recommended to run `$ npm run ciBuild`.
