@@ -16,7 +16,7 @@ Then add the following line to your `.bash_profile` or `.bashrc` file.
 source ~/.auroUpgrade.sh
 ```
 
-Once installed, open a new shell and run the commands.
+Once instillation is complete, move onto the following steps to generate a new repo and migrate the essential codes from one repo to the next.
 
 ## Generate a new repo
 
