@@ -2,19 +2,16 @@
 name: Development Story
 about: Crate a new user story to address the development process
 title: 'auro-[name]; develop [feature]'
-labels: 'Status: Backlogged, Type: Feature, Project: Version Zero'
+labels: 'Status: Proposal'
 ---
 
 # User story
 
-As a Developer, I want to be able to use a web component, so I can quickly develop my team's feature.
+As a [persona], I want to be able to [intent, not feature(s)], so I can [describe benefit].
 
-## Outline tasks
+## Outline subtasks or tasks
 
 > List specific steps required to deliver this work.
-
-- [ ] Update status labels: remove `backlogged` and add `work in progress
-- [ ] Update kanban status: move from `Backlog` to `Current WIP Release`
 
 - [ ] Address all design and UX as proposed in the design comp in relation to using Auro specifications
 - [ ] A11y in regards to role and live notifications need to be coded into the final WC
@@ -32,17 +29,12 @@ As a Developer, I want to be able to use a web component, so I can quickly devel
 - [ ] Edge (79 +)
 - [ ] Safari
 - [ ] Mobile Safari
-- [ ] IE11
 
 #### Has been tested for accessibility
 
-- [ ] Screenreader
-- [ ] Axe
-- [ ] Keyboard use
-
-#### Performance
-
-- [ ] Chrome Lighthhouse report
+- [ ] Axe / Google Lighthouse (baseline standard)
+- [ ] Screenreader (determine usability of experience via screenreader)
+- [ ] Keyboard use (a user must be able to navigate to key parts via a keyboard)
 
 #### Auro component features
 
@@ -50,7 +42,7 @@ As a Developer, I want to be able to use a web component, so I can quickly devel
 - [ ] API documentation created
 - [ ] Bundled version tested and documented
 - [ ] Examples and use case info created
-- [ ] Pages added to the Auro Doc Site
+- [ ] Demo page created for the Auro Doc Site
 
 
 ## Audit

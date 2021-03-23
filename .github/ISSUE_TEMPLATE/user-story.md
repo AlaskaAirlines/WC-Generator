@@ -1,7 +1,7 @@
 ---
 name: User Story
 about: Crate a new user story for a unit of work
-title: ''
+title: 'Generator: '
 labels: 'Status: Proposal'
 assignees: blackfalcon
 ---
@@ -12,10 +12,7 @@ As a [persona], I want to be able to [intent, not feature(s)], so I can [describ
 
 ## Outline tasks
 
-> List specific steps required to deliver this work.
-
-- [ ] Update status labels: remove `backlogged` and add `work in progress
-- [ ] Update kanban status: move from `Backlog` to `Current WIP Release`
+> List specific steps required to deliver this work
 
 - [ ] ...
 - [ ] ...
