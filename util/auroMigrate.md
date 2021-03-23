@@ -4,77 +4,100 @@ Install this BASH shell script to easily migrate an existing Auro custom element
 
 ## Install
 
-To install the script, run the following command
+To install the script, run the following command:
 
 ```
 curl https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/master/util/auroMigrate.sh -o ~/.auroMigrate.sh
 ```
 
-Then add the following line to your `.bash_profile` or `.bashrc` file.
+The next step is to add a reference to this file in either your `~/.bash_profile` or `~/.bashrc` file.
 
 ```
-source ~/.auroMigrate.sh
-```
+echo -e "\n\n# Auro repo migration tool\nsource ~/.auroMigrate.sh" >> ~/.bash_profile
 
-Once instillation is complete, the following steps are to generate a new repo and migrate the essential codes from one repo to the next.
+or
+
+echo -e "\n\n# Auro repo migration tool\nsource ~/.auroMigrate.sh" >> ~/.bashrc
+```
 
 ## Install generator dependency
 
-**Dependency**: This process has a dependency on the [WC-Generator](http://auro.alaskaair.com/generator).
+**Dependency**: This process has a dependency on the [WC-Generator](http://auro.alaskaair.com/generator). Installed or not, running this command will at least ensure that you have the latest version of the generator.
 
 ```
 $ npm i @alaskaairux/wc-generator@latest -g
 ```
 
-<auro-alerts noIcon information>Having gone through the install steps, it's important to either open a new terminal window or re-source the one you are using. Depending on your configuration, BASH may or may not be aware of the new commands from the WC-Generator or the upgrade script.</auro-alerts>
+Having gone through the install steps, it's **important** to either **open a new terminal window** or **re-source the one you are using**. Depending on your configuration, BASH may or may not be aware of the new commands from the WC-Generator or the migration script.
 
+```
+$ source ~/.bash_profile
+
+or
+
+$ source ~/.bashrc
+```
 
 ## Generate a new repo
 
-First step to performing the migration is to create a new repository from the Auro WC-Generator. The following command will generate a new repo, ignoring the install and build steps. This will simply create a new repository with all the file assets needed.
+First step to performing the migration is to create a new repository from the Auro WC-Generator. The following command will generate a new repo, ignoring the npm install and build steps.
 
-<auro-alerts noIcon information>Do NOT use <code>auro</code> in the name. Simply enter the name of the custom element, e.g. <code>card</code> or <code>toggle</code>. The generator assumes the <code>auro</code> namespace. See the <auro-hyperlink relative href="/getting-started/developers/generator/generator/api">WC-Generator API</auro-hyperlink> for more information on how to alter the namespace if needed.</auro-alerts>
+**Do NOT** use `auro` for the element name. Only enter the name of the custom element you are building a repo for, e.g. `card` or `toggle`. The generator assumes the `auro` namespace. See the [WC-Generator API](/getting-started/developers/generator/generator/api) for more information on how to alter the namespace if needed.
+
+If you are creating a new element repo in the same directory as the legacy repo, it is recommended that you **rename the legacy repo** BEFORE you runt he generator as not to cause a collision.
 
 ```
-$ generaterepo [element-name]
+$ generateRepo [element-name]
 ```
 
-Example, if you are creating the new element repo in the same directory as the legacy repo, it is recommended that you rename the legacy repo as not to cause a collision. **The newly generated repo will assume the `auro-` namespace.**
+## What to expect
+
+When running the migration, the tool will address the following steps:
+
+1. Migrate the ./.git, ./src, ./test, and ./demo directories from the legacy repo to the new repo
+1. The ./CHANGELOG.md will be copied over as well
+1. The tool will change directories into the newly created repo and...
+  * if the legacy repo used a `master` branch, this will be renamed to `main`
+  * a new `upgradeRepo` branch will be created for all the changes
+  * the changes will be committed to the new `upgradeRepo` branch
+
+Once this is complete there will be an instruction about amending the previous commit if there are any subsequent changes from the migration.
 
 ## Migrate the files
 
-Once the newly generated repo is ready, run the `auroMigrate [legacy repo] [new repo]` function. This function takes up to three arguments in this order.
+To start the migration, run the `auroMigrate` function.
+
+```
+auroMigrate [legacy repo] [new repo] [--no-demo]
+```
+
+This function takes up to three arguments in this order:
 
 1. Path to the legacy directory `{ String }`
 1. Path to the newly created directory `{ String }`
-1. `no-demo` flag `{ Boolean }`
+1. `--no-demo` flag `{ Boolean }`
 
-For example. If you were planning to migrate from a legacy version of the `auro-flight`, aAssuming that both repos are in the same root directory and the legacy repo is named `flight` and the new repo is named `auro-flight`, the command would be the following:
+For example. Migrating from a legacy repo, `auro-flight`, assuming that both repos are in the same root directory, and the new repo is named `auro-flight`, the command would be the following:
 
 ```
 $ auroMigrate flight auro-flight
 ```
 
-If you **do not** intend to migrate the `./demo` directory, add the `no-demo` flag.
+If you **do not** intend to migrate the `./demo` directory, add the `--no-demo` flag.
 
 ```
-$ auroMigrate flight auro-flight no-demo
+$ auroMigrate flight auro-flight --no-demo
 ```
 
 ## Review and test the migration
 
-Once the migration is complete, `$ cd` into the **newly created repository** and run `$ npm i`. The install was not addressed with the initial repo creation step. Also, be sure to review the following:
+Once the migration is complete, you will be in the **newly created repository**. Run `$ npm i`. The install was not addressed with the initial repo creation step. Be sure to review the following:
 
-1. `$ git status` be sure to evaluate all the changed files, especially the `./package.json`. This file will be the one created with the new repo, not the legacy one. If there were customizations made in the legacy repo, this will need to be manually migrated.
-1. Multiple CDN deliverables. If the legacy repo had multiple CDN deliverables, this will appear as an edit to the `./rollup.config.js` file. Again, if there are alterations, these will need to be manually migrated.
+1. Be sure to evaluate all the changed files, especially the `./package.json`. This file will be the one created with the new repo, not the legacy one. If there were customizations made in the legacy repo, this will need to be manually migrated.
+1. No need to update the `"version": "0.0.0",` line. This will be addressed with the first publish of the new repo.
+1. If the legacy repo had multiple CDN deliverables, if there were alterations, these will need to be manually migrated.
 1. Run `$ git log --date=local --abbrev-commit --graph`. This should contain the full history from the legacy repo.
 
-At this point, it is assumed that you will have a bunch of changes to the `main` branch. Creating a new branch will move all these changes to a new feature branch where you can commit and push and create a new PR against the `main` branch in the remote repo. **Do not merge this migration into your local `main` branch**.
-
-```bash
-$ git status // see all changes
-$ git checkout -b repo-migration // move all changes to new feature branch
-$ git push origin repo-migration // push to remote
-```
+If the remote repo is still using a `master` branch, you will need to push the `main` and the `upgradeRepo` branches before you make the PR. The legacy `master` branch is to be deleted.
 
 At this point you should be able to create a pull request to the element's Github repo for review.
