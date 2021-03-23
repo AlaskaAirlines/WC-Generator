@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+# [2.11.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.10.12...v2.11.0) (2021-03-23)
+
+
+### Features
+
+* rename upgrade to migrate and address doc changes ([f305aa7](https://github.com/AlaskaAirlines/WC-Generator/commit/f305aa7e02e5f5f51f384407851c429038060219))
+
 ## [2.10.12](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.10.11...v2.10.12) (2021-03-23)
 
 
