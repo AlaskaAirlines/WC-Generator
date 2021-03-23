@@ -7,14 +7,14 @@ function generaterepo {
 
 ## Migrade files from legacy repo to new build
 # Arguments expected: name of old repo, name of new repo
-function auroupgrade {
+function auromigrate {
   GREEN='\033[0;32m'
   RED='\033[0;31m'
   NC='\033[0m' # No Color
 
   command clear
   echo -e "The following steps have been address to migrade necessary code from '$1' to '$2'.\n"
-  echo -e "Please be sure to review a diff within the new repo as this upgrade does not account\nfor legacy repositoy customizations such as additional dependencies or multiple CDN packaged bundles."
+  echo -e "Please be sure to review a diff within the new repo as this migration does not account\nfor legacy repositoy customizations such as additional dependencies or multiple CDN packaged bundles."
   # command cp -r "$1"/.git/ "$2"/.git
   echo -e "\n${GREEN}./.git directory copied from '$1' to '$2'\n"
 
