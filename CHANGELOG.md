@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.10.12](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.10.11...v2.10.12) (2021-03-23)
+
+
+### Bug Fixes
+
+* static set husky package version ([78526c6](https://github.com/AlaskaAirlines/WC-Generator/commit/78526c65dcce76ed100ca986cbada9dc2501a6b3))
+
 ## [2.10.11](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.10.10...v2.10.11) (2021-03-21)
 
 
