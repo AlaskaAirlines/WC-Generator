@@ -26,14 +26,14 @@ Once instillation is complete, the following steps are to generate a new repo an
 $ npm i @alaskaairux/wc-generator@latest -g
 ```
 
-<auro-alerts noIcon information>Having gone through the install steps, it's important to either open a new terminal window or re-source the one you are using. Depending on your configuration, BASH may or may not be aware of the new commands from the WC-Generator or the upgrade script.</auro-alerts>
+Having gone through the install steps, it's **important** to either **open a new terminal window** or **re-source the one you are using**. Depending on your configuration, BASH may or may not be aware of the new commands from the WC-Generator or the migration script.
 
 
 ## Generate a new repo
 
 First step to performing the migration is to create a new repository from the Auro WC-Generator. The following command will generate a new repo, ignoring the install and build steps. This will simply create a new repository with all the file assets needed.
 
-<auro-alerts noIcon information>Do NOT use <code>auro</code> in the name. Simply enter the name of the custom element, e.g. <code>card</code> or <code>toggle</code>. The generator assumes the <code>auro</code> namespace. See the <auro-hyperlink relative href="/getting-started/developers/generator/generator/api">WC-Generator API</auro-hyperlink> for more information on how to alter the namespace if needed.</auro-alerts>
+**Do NOT** use `auro` in the name. Simply enter the name of the custom element, e.g. `card` or `toggle`. The generator assumes the `auro` namespace. See the [WC-Generator API](/getting-started/developers/generator/generator/api) for more information on how to alter the namespace if needed.
 
 ```
 $ generaterepo [element-name]
