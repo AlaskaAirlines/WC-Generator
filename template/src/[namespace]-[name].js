@@ -55,7 +55,6 @@ class [Namespace][Name] extends LitElement {
   }
 }
 
-/* istanbul ignore else */
 // define the name of the custom component
 if (!customElements.get("[namespace]-[name]")) {
   customElements.define("[namespace]-[name]", [Namespace][Name]);
