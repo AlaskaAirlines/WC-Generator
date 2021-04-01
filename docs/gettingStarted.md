@@ -11,7 +11,7 @@ When using the WC-Generator, you will get the following scaffolding:
 1. JSDoc support
 1. Pre-configured Rollup for producing pre-bundled modern and legacy versions of the web component
 1. Full code linting support
-1. Fully configured [Karma via Open-WC](https://auro.alaskaair.com/support/tests) testing support
+1. Fully configured [Open-WC](https://auro.alaskaair.com/support/tests) testing support
 1. Support for conventional commits and automated semantic versioning
 1. Pre-commit hooks
 1. Pre-configured GitHub actions support
