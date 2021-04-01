@@ -1,5 +1,4 @@
 import { fixture, html, expect } from '@open-wc/testing';
-import sinon from 'sinon';
 import '../src/[namespace]-[name].js';
 
 describe('[namespace]-[name]', () => {
