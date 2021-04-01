@@ -40,7 +40,6 @@
     "@commitlint/cli": "",
     "@commitlint/config-conventional": "",
     "@open-wc/testing": "",
-    "@open-wc/testing-karma": "",
     "@rollup/plugin-alias": "",
     "@rollup/plugin-babel": "",
     "@rollup/plugin-commonjs": "",
@@ -49,6 +48,7 @@
     "@semantic-release/git": "",
     "@semantic-release/npm": "",
     "@web/dev-server": "",
+    "@web/test-runner": "",
     "@webcomponents/webcomponentsjs": "",
     "autoprefixer": "",
     "babel-loader": "",
@@ -75,12 +75,10 @@
     "rollup-plugin-serve": "",
     "rollup-plugin-terser": "",
     "semantic-release": "",
-    "sinon": "",
     "stylelint": "",
     "stylelint-config-standard": "",
     "wc-sass-render": "",
     "web-component-analyzer": "",
-    "webpack-merge": "",
     "whatwg-fetch": "",
     "yaml-lint": ""
   },
@@ -119,8 +117,8 @@
     "sass:render": "sass-render src/*.css -t ./scripts/staticStyles-template.js",
     "serve": "web-dev-server --open demo/ --node-resolve --watch",
     "sweep": "rm -rf ./demo/css ./dist | rm ./src/*.css ./src/*-css.js",
-    "test": "karma start --coverage",
-    "test:watch": "karma start --auto-watch=true --single-run=false"
+    "test": "wtr --coverage",
+    "test:watch": "wtr --watch"
   },
   "nodemonConfig": {
     "ignore": ["*-css.js", "*.css"]

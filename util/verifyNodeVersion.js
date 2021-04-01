@@ -29,9 +29,9 @@ function verifySemver(minimum, current) {
   return majorValid && minorValid && patchValid;
 }
 
-// Check Node Version (min: 11.0.0)
+// Check Node Version (min: 12.0.0)
 const currentNodeVersion = process.versions.node;
-const minNodeVersion = [11, 0, 0];
+const minNodeVersion = [12, 0, 0];
 const nodeVersionIsValid = verifySemver(
   minNodeVersion,
   currentNodeVersion.split('.')
