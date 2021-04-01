@@ -38,7 +38,7 @@ Moving the CSS to the `render()` method requires an update to the `sassRender` s
 
 ### Unit testing
 
-Unit testing made easy using [@open-wc testing](https://open-wc.org/docs/testing/helpers/) in combination with [@open-wc/testing-karma](https://www.npmjs.com/package/@open-wc/testing-karma).
+Unit testing made easy using [@open-wc/testing](https://open-wc.org/docs/testing/helpers/) and [@web/test-runner](https://modern-web.dev/docs/test-runner/overview/).
 
 > An opinionated package that combines and configures testing libraries to minimize the amount of ceremony required when writing tests.
 
