@@ -2,7 +2,7 @@
 name: Bug report
 about: Create a report to help us improve
 title: 'Generator: [issue summary]'
-labels: 'Type: Bug'
+labels: 'Type: Bug, not-reviewed'
 assignees: blackfalcon
 ---
 

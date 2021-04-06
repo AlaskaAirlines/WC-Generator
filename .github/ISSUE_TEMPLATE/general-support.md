@@ -2,7 +2,7 @@
 name: General support
 about: Suggestions that are not related to bugs or new features
 title: 'As a [user] I need help with [issue]'
-labels: 'Type: Question'
+labels: 'Type: Question, not-reviewed'
 assignees: blackfalcon
 
 ---

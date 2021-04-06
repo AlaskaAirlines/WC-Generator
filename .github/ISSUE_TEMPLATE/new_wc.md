@@ -2,7 +2,7 @@
 name: Component Request
 about: Request new Web Component work
 title: 'auro-[prposed name]: requested new component'
-labels: 'Status: Proposal'
+labels: 'Status: Proposal, not-reviewed'
 assignees: blackfalcon
 
 ---

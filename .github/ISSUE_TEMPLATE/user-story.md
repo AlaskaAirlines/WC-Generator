@@ -2,7 +2,7 @@
 name: User Story
 about: Crate a new user story for a unit of work
 title: 'Generator: '
-labels: 'Status: Proposal'
+labels: 'Status: Proposal, not-reviewed'
 assignees: blackfalcon
 ---
 
