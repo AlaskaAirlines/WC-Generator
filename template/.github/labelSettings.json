@@ -47,6 +47,12 @@
     "process": "Automated: applied once a pull request has been merged and released"
   },
   {
+    "name": "not-reviewed",
+    "color": "222222",
+    "description": "Issue has not been reviewed by Auro team member",
+    "process": "Automated: auto-applied with new issue, manually removed by reviewer"
+  },
+  {
     "name": "Status: Abandoned",
     "color": "156fad",
     "description": "The issue or Pull Request is wontfix",
