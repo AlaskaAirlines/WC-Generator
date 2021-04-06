@@ -2,7 +2,7 @@
 name: Development Story
 about: Crate a new user story to address the development process
 title: 'auro-[name]; develop [feature]'
-labels: 'Status: Proposal'
+labels: 'Status: Proposal, not-reviewed'
 ---
 
 # User story
