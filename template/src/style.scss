@@ -18,6 +18,9 @@
 //   ...
 // }
 
+
+// Selector is for initial setup only
+// delete when building new custom element
 .testClass {
   color:  var(--auro-color-border-error-on-light);
   border: 1px solid var(--auro-color-border-error-on-light);
