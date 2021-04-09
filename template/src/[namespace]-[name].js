@@ -3,7 +3,7 @@
 
 // ---------------------------------------------------------------------
 
-// If use litElement base class
+// If using litElement base class
 import { LitElement, html, css } from "lit-element";
 
 // If using auroElement base class
