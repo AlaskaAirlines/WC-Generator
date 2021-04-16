@@ -1,7 +1,7 @@
 ---
 name: General support
 about: Suggestions that are not related to bugs or new features
-title: 'auro=[name]: As a [user] I need help with [issue]'
+title: 'auro-[name]: As a [user] I need help with [issue]'
 labels: 'Status: Proposal, not-reviewed'
 assignees: blackfalcon
 ---
