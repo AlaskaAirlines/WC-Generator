@@ -24,12 +24,10 @@
   "peerDependencies": {
     "@alaskaairux/design-tokens": "",
     "@alaskaairux/webcorestylesheets": "",
-    "@alaskaairux/icons": "",
     "@webcomponents/webcomponentsjs": "",
     "focus-visible": ""
   },
   "devDependencies": {
-    "@alaskaairux/icons": "",
     "@alaskaairux/design-tokens": "",
     "@alaskaairux/webcorestylesheets": "",
     "@babel/core": "",
