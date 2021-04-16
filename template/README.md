@@ -96,6 +96,15 @@ $ npm run serve
 
 Open [localhost:8000](http://localhost:8000/)
 
+### Writing SCSS
+Auro has implemented [CSScomb](https://www.npmjs.com/package/csscomb) for style formatting enforcement in addition to the [linting requirements](https://auro.alaskaair.com/webcorestylesheets/linter).
+
+The build process will auto-execute the CSScomb formatter as part of the pre-commit workflow prior to executing the automated test scripts. If your component includes more than a trivial amount of custom CSS you may find it helpful to run the CSSComb formatter during your regular development. You can run `npm run cssComb` to execute the process manually.
+
+Additionally, you may choose to install a CSScomb extension for your IDE of choice. These extensions allow for simple format-on-save and keybind trigger of CSScomb execution. These extensions will automatically use the config file located at the root of the project template and format your styles in compliance with Auro guidelines. Refer to your chosen IDE's documentation for how to search for and install extensions.
+
+See [the styleguide documentation](https://auro.alaskaair.com/webcorestylesheets/guidelines) for more details about how to properly format your styles.
+
 ### Testing
 Automated tests are required for every Auro component. See `.\test\[namespace]-[name].test.js` for the tests for this component. Run `npm test` to run the tests and check code coverage. Tests must pass and meet a certain coverage threshold to commit. See [the testing documentation](https://auro.alaskaair.com/support/tests) for more details.
 

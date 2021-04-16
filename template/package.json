@@ -56,6 +56,7 @@
     "concat": "",
     "copyfiles": "",
     "core-js": "",
+    "csscomb": "^4.3.0",
     "eslint": "",
     "eslint-plugin-lit": "",
     "focus-visible": "",
@@ -102,6 +103,7 @@
     "build:watch": "nodemon -e scss,js --watch src --exec npm run build:dev:assets",
     "bundler": "rollup -c",
     "bundler:test": "rollup -c -w",
+    "cssComb": "cssComb src/",
     "cssLint": "stylelint \"./src/*.css\"",
     "demo:copy:demo": "copyfiles -u 1 -V './demo/demo.md' ./build/demo",
     "demo:copy:index": "copyfiles -u 1 -V './demo/index.html' ./build",
@@ -125,7 +127,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm-run-all test lint bundler postinstall",
+      "pre-commit": "npm-run-all cssComb test lint bundler postinstall",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
