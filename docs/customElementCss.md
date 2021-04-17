@@ -69,6 +69,19 @@ The CSS for this attribute support could be something like this.
 
 For a great example of how this can be used, check out the [auro-accordion](https://auro.alaskaair.com/components/auro/accordion) [CSS styles](https://github.com/AlaskaAirlines/auro-accordion/blob/master/src/style.scss).
 
+### Reflection
+
+In most cases when using this technique there is no need to set any properties within the scope of the element's JavaScript. But there are times when the attribute UI is bound to a property within the scope of the element and frameworks may not apply the change.
+
+To address this, and this is considered a best practice regardless of framework quirks, is to add [reflect: true](https://lit-element.polymer-project.org/guide/properties#reflected-attributes) to the property defined in the element.
+
+```js
+myProp: {
+  type: Boolean;
+  reflect: true
+}
+```
+
 ## Constructable stylesheets
 
 One of the core complaints around using HTML custom elements is the fact that the CSS per that element is repeatedly loaded into the DOM. While in most cases this is not an issue, but in some, it may be. It is not uncommon to have more than one button on a page.
