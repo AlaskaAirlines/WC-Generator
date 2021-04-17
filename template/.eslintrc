@@ -1,0 +1,5 @@
+{
+  "extends": [
+    "@aurodesignsystem/eslint-config"
+  ]
+}
