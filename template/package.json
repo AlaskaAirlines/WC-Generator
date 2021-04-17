@@ -29,6 +29,7 @@
   "devDependencies": {
     "@alaskaairux/design-tokens": "",
     "@alaskaairux/webcorestylesheets": "",
+    "@aurodesignsystem/eslint-config": "",
     "@babel/core": "",
     "@babel/plugin-syntax-dynamic-import": "",
     "@babel/plugin-transform-runtime": "",
