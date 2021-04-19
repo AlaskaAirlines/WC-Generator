@@ -10,7 +10,6 @@
   "name": "[npm]/[namespace]-[name]",
   "version": "0.0.0",
   "description": "[namespace]-[name] HTML custom element",
-  "author": "Product design and research",
   "repository": {
     "type": "git",
     "url": "https://github.com/AlaskaAirlines/[namespace]-[name]"
