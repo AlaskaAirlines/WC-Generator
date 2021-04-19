@@ -71,13 +71,13 @@ For a great example of how this can be used, check out the [auro-accordion](http
 
 ### Reflection
 
-In most cases when using this technique there is no need to set any properties within the scope of the element's JavaScript. But there are times when the attribute UI is bound to a property within the scope of the element and frameworks may not apply the change.
+When a corresponding property for the attribute is not needed, no additional support is required. However, if you bind the attribute to a property, you need to make sure to set the reflected value. Some frameworks, e.g. Svelte and Preact, have the opinion to set properties instead of attributes.
 
-To address this, and this is considered a best practice regardless of framework quirks, is to add [reflect: true](https://lit-element.polymer-project.org/guide/properties#reflected-attributes) to the property defined in the element.
+To set the reflected value in the custom element, add [reflect: true](https://lit-element.polymer-project.org/guide/properties#reflected-attributes) to the `properties()` method. This will ensure that setting the property will also set the attribute.
 
 ```js
 myProp: {
-  type: Boolean;
+  type: Boolean,
   reflect: true
 }
 ```
