@@ -1,9 +1,117 @@
 {
-  "extends": "stylelint-config-recommended",
+  "extends": ["stylelint-config-recommended", "stylelint-config-idiomatic-order"],
+  "plugins": [
+    "stylelint-scss"
+  ],
   "rules": {
-    "no-duplicate-selectors": null,
-    "font-family-no-duplicate-names": null,
-    "no-descending-specificity": null,
-    "selector-type-no-unknown": null
+    "alpha-value-notation": "number",
+    "at-rule-empty-line-before": [ "always", {
+      "except": [
+        "after-same-name",
+        "blockless-after-same-name-blockless",
+        "first-nested",
+      ],
+      "ignore": [
+        "after-comment",
+        "blockless-after-blockless"
+      ]
+    } ],
+    "at-rule-name-newline-after": "always-multi-line",
+    "at-rule-semicolon-space-before": "never",
+    "block-closing-brace-space-after": "always-single-line",
+    "block-opening-brace-newline-before": "never-single-line",
+    "color-function-notation": "modern",
+    "color-named": "never",
+    "declaration-block-no-duplicate-custom-properties": true,
+    "declaration-block-no-duplicate-properties": true,
+    "declaration-block-no-redundant-longhand-properties": true,
+    "declaration-block-semicolon-newline-before": "never-multi-line",
+    "declaration-no-important": true,
+    "font-family-name-quotes": "always-where-recommended",
+    "font-weight-notation": "numeric",
+    "function-url-no-scheme-relative": true,
+    "function-url-quotes": "always",
+    "hue-degree-notation": "angle",
+    "linebreaks": "unix",
+    "max-nesting-depth": 2,
+    "media-query-list-comma-newline-before": "never-multi-line",
+    "named-grid-areas-no-invalid": true,
+    "no-empty-first-line": true,
+    "no-unknown-animations": true,
+    "number-leading-zero": "never",
+    "scss/at-else-closing-brace-newline-after": "always-last-in-chain",
+    "scss/at-else-closing-brace-space-after": "always-intermediate",
+    "scss/at-else-empty-line-before": "never",
+    "scss/at-else-if-parentheses-space-before": "always",
+    "scss/at-function-parentheses-space-before": "never",
+    "scss/at-if-closing-brace-newline-after": "always-last-in-chain",
+    "scss/at-if-closing-brace-space-after": "always-intermediate",
+    "scss/at-if-no-null": true,
+    "scss/at-import-partial-extension": "never",
+    "scss/at-mixin-parentheses-space-before": "never",
+    "scss/at-rule-conditional-no-parentheses": true,
+    "scss/at-rule-no-unknown": true,
+    "scss/comment-no-empty": true,
+    "scss/declaration-nested-properties-no-divided-groups": true,
+    "scss/dollar-variable-colon-newline-after": "always-multi-line",
+    "scss/dollar-variable-colon-space-after": "always-single-line",
+    "scss/dollar-variable-colon-space-before": "never",
+    "scss/dollar-variable-empty-line-before": [
+      "always",
+      {
+        "except": [
+          "first-nested",
+          "after-dollar-variable"
+        ],
+        "ignore": [
+          "after-comment",
+          "inside-single-line-block"
+        ]
+      }
+    ],
+    "scss/dollar-variable-first-in-block": [
+      true,
+      {
+        "ignore": [
+          "comments",
+          "imports"
+        ]
+      }
+    ],
+    "scss/dollar-variable-no-missing-interpolation": true,
+    "scss/double-slash-comment-whitespace-inside": "always",
+    "scss/map-keys-quotes": "always",
+    "scss/no-duplicate-dollar-variables": true,
+    "scss/no-duplicate-mixins": true,
+    "scss/no-global-function-names": true,
+    "scss/operator-no-newline-after": true,
+    "scss/operator-no-newline-before": true,
+    "scss/operator-no-unspaced": true,
+    "scss/selector-nest-combinators": "always",
+    "scss/selector-no-redundant-nesting-selector": true,
+    "selector-attribute-quotes": "always",
+    "selector-list-comma-newline-before": "never-multi-line",
+    "selector-list-comma-space-after": "always-single-line",
+    "selector-max-attribute": 1,
+    "selector-max-class": 1,
+    "selector-max-combinators": 1,
+    "selector-max-compound-selectors": 2,
+    "selector-max-id": 1,
+    "selector-max-pseudo-class": 1,
+    "selector-max-type": 1,
+    "selector-max-universal": 1,
+    "selector-no-qualifying-type": true,
+    "selector-pseudo-element-colon-notation": "single",
+    "selector-type-no-unknown": [
+      true,
+      {
+        "ignore": [
+          "custom-elements"
+        ]
+      }
+    ],
+    "shorthand-property-no-redundant-values": true,
+    "string-quotes": "single",
+    "value-list-comma-newline-before": "never-multi-line"
   }
 }
