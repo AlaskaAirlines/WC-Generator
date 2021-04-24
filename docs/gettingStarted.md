@@ -1,11 +1,11 @@
 # Getting started
 
-The Auro WC-Generator makes it really easy to get started building HTML Custom Elements using Auro's foundational support.
+The Auro WC-Generator makes it really easy to get started building HTML custom elements using Auro's foundational support.
 
 When using the WC-Generator, you will get the following scaffolding:
 
 1. Dev server and demo page support using markdown
-1. Lit-Element web component scaffolding js file
+1. LitElement web component scaffolding js file
 1. Sass and PostCSS pre-configured support
 1. Sass template Auro Design Tokens, breakpoints and core CSS ready
 1. JSDoc support
@@ -31,11 +31,13 @@ Once the package is installed, run the following command to init a new local rep
 $ wc-generate --name [wc name]
 ```
 
-By default, the WC-Generator will assume `auro` as the namespace for the WC, `@alaskaairux` as the npm group, and your current directory where to install. Be sure to reference the [api](https://auro.alaskaair.com/getting-started/developers/generator/generator/api) for all information regarding customization.
+**Note** By default, the WC-Generator will assume `auro` as the namespace for the WC, `@alaskaairux` as the npm group, and your current directory where to install. Be sure to reference the [api](https://auro.alaskaair.com/getting-started/developers/generator/generator/api) for all information regarding customization.
 
 ## Servers
 
 When building the new web component, there are two servers you can use to test your component.
+
+First is a resource build server. Running `npm run dev` will run a watcher that will process all the Sass/CSS resources for your new custom element.
 
 Running `npm run serve` will start the dev server where you can view your web component demo at [http://localhost:8000](http://localhost:8000).
 
@@ -45,17 +47,21 @@ While building a web component, being able to see the component in the browser i
 
 This is a static document. If there is a need to use any of Auro's pre-developed custom elements in the demo, this will need to be added to the `./demo/index.html` file.
 
+DO NOT add features to the demo `index.html` file. This file is simply a markdown wrapper to process all the demo content from the `demo.md` file. If there is a peer dependency for other components or other JavaScript outside the scope of the new element, this will be added to the `index.html` file.
+
 ```html
 <script src="https://unpkg.com/@alaskaairux/auro-button@latest/dist/auro-button__bundled.js" type="module"></script>
 ```
 
 See the auro-popover [demo](https://github.com/AlaskaAirlines/auro-popover/blob/master/demo/index.html) as example.
 
-## Editing your web component
+Additionally, do not edit the demo's Sass file. Again this is a resource for all the UI outside the scope of the custom element. Any CSS added to the demo Sass fill will NOT follow the component when it is installed in other applications.
+
+## Editing your custom element
 
 Located in the `./src` directory will be your new `.js` component file and a `style.scss` file. These two files are set up to work together from the start.
 
-The web component scaffolding is made up of a few parts that I will mention here.
+The custom element's scaffolding is made up of a few parts mentioned here.
 
 1. Import dependencies
 1. Class definition
