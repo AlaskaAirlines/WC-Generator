@@ -66,6 +66,8 @@ From installing the generator all the way to setting up a Github repo. Follow th
     <div class="lightText">
       <p>Start the server to make sure that all dependencies are set up correctly.</p>
       <pre class="pre">  $ npm run serve</pre>
+      <p>To run the build watch, be sure to run the following command in a separate shell.</p>
+      <pre class="pre">  $ npm run dev</pre>
     </div>
   </auro-accordion>
   <auro-accordion id="newWork" chromeless noProfile>
@@ -74,6 +76,7 @@ From installing the generator all the way to setting up a Github repo. Follow th
       <p>For Alaska employees only. Create a new <code>internal</code> repository with <auro-hyperlink target="_blank" href="https://github.com/AlaskaAirlines">github.com/AlaskaAirlines</auro-hyperlink>. Once completed, push your <code>main</code> branch to the remote repository.</p>
       <p>Please be sure to name the repo with <strong>auro</strong> to properly follow our open source repository guidelines. E.g. auro-[your component name].
       <p><strong>Randos will be deleted!</strong></p>
+      <p>For not Alaska employees, if you want to create a personal repo in your own Github account, that's cool too. </p>
     </div>
   </auro-accordion>
 </auro-accordion-group>
@@ -93,10 +96,18 @@ Now that your install is setup and your repo is ready to go, let's get to work!
     <span slot="trigger" class="trigger">2. Edit the custom element file</span>
     <div class="lightText">
       <p>60% of your work will happen in the generated custom element file, found at <code>./src/auro-[name].js</code>. We can't recommend enough that you review the <auro-hyperlink href="https://lit-element.polymer-project.org/guide/templates" target="_blank">LitElement docs</auro-hyperlink>. Many of the recommended best practices listed there will be seen in the generated file.</p>
+      <p>It is also recommended to get yourself familiar with the <auro-hyperlink href="https://lit-html.polymer-project.org/guide/template-reference#built-in-directives" target="_blank">built in directives</auro-hyperlink> to support many common use cases.</p>
     </div>
   </auro-accordion>
   <auro-accordion id="newWork" chromeless noProfile>
-    <span slot="trigger" class="trigger">3. Injecting CSS into the shadow DOM</span>
+    <span slot="trigger" class="trigger">3. Slots</span>
+    <div class="lightText">
+      <p>Something special to web components is the <auro-hyperlink href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/slot" target="_blank">&lt;slot&gt;</auro-hyperlink> element. This small, but powerful element is a key part of inserting content into the scope of the web component from exterior HTML without a special prop. In short, anything can be placed into the <code>&lt;slot&gt;</code> of a component. String text, additional HTML elements, additional custom elements.<p>
+      <p>It is also important to understand how the <code>&lt;slot&gt;</code> element provides <auro-hyperlink href="https://auro.alaskaair.com/support/slots">performance and SEO</auro-hyperlink> support.</p>
+    </div>
+  </auro-accordion>
+  <auro-accordion id="newWork" chromeless noProfile>
+    <span slot="trigger" class="trigger">4. Injecting CSS into the shadow DOM</span>
     <div class="lightText">
       <p>While 60% of the work will be in the <code>./src/auro-[name].js</code> file, at least 30% of the work will be CSS. Working with CSS is really easy with the pre-configured setup. Adjacent to the Javascript file will be <code>./src/styles.scss</code>.</p>
       <p>When writing CSS, there are some <auro-hyperlink href="https://auro.alaskaair.com/webcorestylesheets/conventions" relative>conventions to follow</auro-hyperlink> and <auro-hyperlink relative href="https://auro.alaskaair.com/webcorestylesheets/custom-element-css">new ideas to learn</auro-hyperlink>. But no worries, the Auro team is there for you 100% along the way!<p>
@@ -106,7 +117,32 @@ Now that your install is setup and your repo is ready to go, let's get to work!
     </div>
   </auro-accordion>
   <auro-accordion id="newWork" chromeless noProfile>
-    <span slot="trigger" class="trigger">4. Conventional commits</span>
+    <span slot="trigger" class="trigger">5. Documenting your component's API</span>
+    <div class="lightText">
+      <p>Auro WC-Generator fully supports <auro-hyperlink href="https://github.com/runem/web-component-analyzer/blob/master/README.md#-how-to-document-your-components-using-jsdoc" target="_blank">JSDoc and Web Component Analyzer</auro-hyperlink>, all you need todo is write code. WCA will automatically go through your code and produce a markdown document containing your API. It is preferred that you provide descriptions, this is where JSDoc comes in. Using a very familiar syntax, it is easy to document your code.</p>
+      <p>Add a general description of your component</p>
+      <pre class="pre">
+/**
+ * This component will do amazing things and make life worth living.
+ */</pre>
+      <p>Describe attributes of your component</p>
+      <pre class="pre">
+/**
+ * This component will do amazing things and make life worth living.
+ *
+ * @attr {String} validationMessage - Validation message appears post user input
+ * @attr {Boolean} disabled - If set, disables input
+ */</pre>
+    </div>
+  </auro-accordion>
+  <auro-accordion id="newWork" chromeless noProfile>
+    <span slot="trigger" class="trigger">6. Tests</span>
+    <div class="lightText">
+      <p>Setting up your tests will be in <code>test/auro-*.test.js</code>. Please see <auro-hyperlink href="https://auro.alaskaair.com/support/tests">Web Component Automated Testing</auro-hyperlink> for all related testing info.</p>
+    </div>
+  </auro-accordion>
+  <auro-accordion id="newWork" chromeless noProfile>
+    <span slot="trigger" class="trigger">7. Conventional commits</span>
     <div class="lightText">
       <p>Prior to making your first commit, please review <auro-hyperlink relative href="/contributing">Auro Design System Contributing Guidelines</auro-hyperlink>, specifically the section on <strong>Conventional Commits</strong>.</p>
       <p>Conventional Commits play a critical role in determining the next version release. The following template will help you construct the proper commit message.</p>
@@ -119,13 +155,13 @@ Now that your install is setup and your repo is ready to go, let's get to work!
     </div>
   </auro-accordion>
   <auro-accordion id="newWork" chromeless noProfile>
-    <span slot="trigger" class="trigger">5. Pre-commit hooks</span>
+    <span slot="trigger" class="trigger">8. Pre-commit hooks</span>
     <div class="lightText">
       <p>When committing code, you should see a series of pre-commit hooks confirming the stability of the code you are creating. If you do not see these hooks, then there is an issue with your install and you should consult with an Auro team member.</p>
     </div>
   </auro-accordion>
   <auro-accordion id="newWork" chromeless noProfile>
-    <span slot="trigger" class="trigger">6. Amend commits to maintain a readable history</span>
+    <span slot="trigger" class="trigger">9. Amend commits to maintain a readable history</span>
     <div class="lightText">
       <p>While Git history is helpful, in the early stages of a project not all history is helpful. It is considered best practice to <code>amend</code> previous commits if the work is closely related, especially if it is a refactor of the previous commit. The following will add the updates recently completed and amend them to the previous commit without asking for a change in the commit message. Lastly, this is a change in history, so a force push to the remote is required.</p>
       <pre class="pre">
@@ -135,10 +171,10 @@ Now that your install is setup and your repo is ready to go, let's get to work!
     </div>
   </auro-accordion>
   <auro-accordion id="newWork" chromeless noProfile>
-    <span slot="trigger" class="trigger">7. Is there a getting started guide? </span>
+    <span slot="trigger" class="trigger">10. Is there more to this getting started guide? </span>
     <div class="lightText">
-      <p>This is just the tip of the iceberg. There are a lot of nooks and crannies when working with Auro's web component generator. It is highly recommended that you review our <auro-hyperlink href="https://auro.alaskaair.com/getting-started/developers/generator/getting-started" relative>Getting Started</auro-hyperlink> guide.</p>
-      <p>Along with the guide to getting started, we would also recommend the following:</p>
+      <p>This is just the tip of the iceberg. There are a lot of nooks and crannies when working with Auro's web component generator.</p>
+      <p>Along with this guide to getting started, we would also recommend the following:</p>
       <ul>
         <li><auro-hyperlink href="https://lit-element.polymer-project.org/guide/templates" target="_blank">LitElement docs</auro-hyperlink></li>
         <li><auro-hyperlink href="https://auro.alaskaair.com/contributing">Auro's contributing Guidelines</auro-hyperlink></li>
