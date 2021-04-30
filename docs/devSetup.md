@@ -37,7 +37,7 @@ cd ~
 code .
 ```
 
-This will open VSCode in the folder you're currently in. Add the following line to the bottom of the .bashrc file. This will instruct our test runner where to find Chrome.
+This will open VSCode in the folder you're currently in. Add the following line to the bottom of the `.bashrc` file. This will instruct our test runner where to find Chrome.
 
 ```
 CHROME_PATH=/usr/bin/google-chrome
@@ -45,7 +45,7 @@ CHROME_PATH=/usr/bin/google-chrome
 
 ### Clone a repo
 
-Let's clone an Auro repo so that we know everything works. I like to put all my repos in a `/git` directory, but it's up to you how to organize your code. The following commands will make a git directory, clone the auro-button repo into it, and open it in VS Code.
+Let's clone an Auro repo to test out the new setup. I like to put all my repos in a `/git` directory, but it's up to you how to organize your code. The following commands will create a Git directory, clone the `auro-button` repo into it, and open it in VS Code.
 
 ```sh
 cd ~
@@ -63,13 +63,13 @@ npm i
 npm run dev
 ```
 
-In a separate terminal, run `npm run serve` to serve the component's demo page. CTRL+click on the displayed URL to open the demo page in your web browser. You should see the auro-button demo page.
+In a separate terminal/shell, run `npm run serve` to serve the component's demo page. `CTRL+click` on the displayed URL to open the demo page in your web browser. You should see the `auro-button` demo page.
 
 Finally, run the component tests with `npm run test` and make sure everything passes.
 
 ### Set up git
 
-You need to configure your git name and email in WSL. Run the following in the terminal:
+You need to configure your Git name and email in WSL. Run the following in the terminal:
 
 ```sh
 git config --global user.email "you@example.com"
