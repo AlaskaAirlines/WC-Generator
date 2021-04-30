@@ -2,7 +2,7 @@
 
 ## Windows
 
-If you are contributing to Auro on Windows, [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/about) is a must. Otherwise, you will encounter issues with the Auro repos. Here are the steps for setting up your development environment to work on Auro.
+Auro's development environment uses Node.js tools. If you are contributing to Auro on Windows, [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/about) is highly recommended. Otherwise, you will encounter issues with the repo's tooling. Here are the steps for setting up your development environment to work on Auro and WSL.
 
 ### Installing WSL
 
@@ -56,7 +56,7 @@ cd auro-button
 code .
 ```
 
-Inside VS Code, open the integrated terminal with CTRL+SHIFT+`. Run the following commands to install dependencies and build the component.
+With VS Code, open the integrated terminal with `` CTRL+SHIFT+` ``. Run the following commands to install dependencies and build the component.
 
 ```sh
 npm i
