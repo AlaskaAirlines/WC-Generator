@@ -8,13 +8,13 @@ Auro's development environment uses Node.js tools. If you are contributing to Au
 
 Install WSL using [Microsoft's guide](https://docs.microsoft.com/en-us/windows/wsl/install-win10). Note the [version requirements](https://docs.microsoft.com/en-us/windows/wsl/install-win10#step-2---check-requirements-for-running-wsl-2) before starting. You may have to update Windows first. If you run into issues, check their [troubleshooting docs](https://docs.microsoft.com/en-us/windows/wsl/install-win10#troubleshooting-installation). If you don't know which Linux distro to pick, choose Ubuntu.
 
-After WSL is installed, you can open the WSL terminal by running the `wsl` command or opening Ubuntu from the start menu. WSL does not have a GUI you can interact with -- everything is done from the command line. You may want to find a cheat sheet if you are unfamiliar with Bash.
+After WSL is installed, you can open the WSL terminal by running the `wsl` command or opening Ubuntu from the start menu. WSL does not have a GUI you can interact with -- everything is done from the command line. Check out this [cheat sheet](https://www.git-tower.com/blog/command-line-cheat-sheet/) if you are unfamiliar with Bash.
 
 ### Installing dependencies
 
-You need to install several dependencies on WSL so that you can develop Auro. Even if you have these installed on your main Windows machine, you still need to install them in WSL.
+You will need to install several dependencies on WSL in order to develop with Auro. Even if you have these installed on your main Windows machine, you will still need to install them in WSL.
 
-Install Node 14.x and npm by running the following commmands in your WSL terminal ([ref](https://github.com/nodesource/distributions/blob/master/README.md#debinstall))
+Install Node 14.x and npm by running the following commands in your WSL terminal ([ref](https://github.com/nodesource/distributions/blob/master/README.md#debinstall))
 
 ```sh
 curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
