@@ -21,6 +21,7 @@ The `[namespace]-[name]` element should be used in situations where users may:
 
 <div class="exampleWrapper">
   <[namespace]-[name] cssClass="testClass">Hello World!</[namespace]-[name]>
+  <[namespace]-[name] cssClass="testClass" fixed>Hello World!</[namespace]-[name]>
 </div>
 
 <auro-accordion lowProfile justifyRight>
@@ -28,6 +29,7 @@ The `[namespace]-[name]` element should be used in situations where users may:
 
   ```html
   <[namespace]-[name] cssClass="testClass">Hello World!</[namespace]-[name]>
+  <[namespace]-[name] cssClass="testClass" fixed>Hello World!</[namespace]-[name]>
   ```
 
 </auro-accordion>

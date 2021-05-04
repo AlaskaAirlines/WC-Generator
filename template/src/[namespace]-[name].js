@@ -4,7 +4,7 @@
 // ---------------------------------------------------------------------
 
 // If using litElement base class
-import { LitElement, html, css } from "lit-element";
+import { LitElement, html } from "lit-element";
 
 // If using auroElement base class
 // See instructions for importing auroElement base class https://git.io/JULq4
@@ -14,12 +14,14 @@ import { LitElement, html, css } from "lit-element";
 // Import touch detection lib
 import "focus-visible/dist/focus-visible.min.js";
 import styleCss from "./style-css.js";
+import styleCssFixed from './style-fixed-css.js';
 
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
- * [namespace]-[name] provides users a way to ...
+* [namespace]-[name] provides users a way to ... (it would be great if you fill this out)
  *
- * @attr {String} cssClass - Applies designated CSS class to DOM element.
+ * @attr {Boolean} fixed - Uses fixed pixel values for element shape
+ * @attr {String} cssClass - Applies designated CSS class to demo element - you want to delete me!
  */
 
 // build the component class
@@ -37,9 +39,10 @@ class [Namespace][Name] extends LitElement {
   }
 
   static get styles() {
-    return css`
-      ${styleCss}
-    `;
+    return [
+      styleCss,
+      styleCssFixed
+    ];
   }
 
   // When using auroElement, use the following attribute and function when hiding content from screen readers.
