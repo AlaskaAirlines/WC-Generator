@@ -65,6 +65,7 @@
     "postcss": "",
     "postcss-custom-properties": "",
     "postcss-discard-comments": "",
+    "postcss-rem-to-pixel": "",
     "postcss-remove-rules": "",
     "postcss-selector-replace": "",
     "prismjs": "",
