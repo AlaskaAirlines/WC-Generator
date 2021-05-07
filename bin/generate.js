@@ -38,7 +38,6 @@ const parseArgs = () => {
     '--help': Boolean,
     '--test': Boolean,
     '--name': String,
-    '--namespace': String,
     '--npm': String,
     '--dir': String,
     '--verbose': Boolean,
@@ -46,7 +45,6 @@ const parseArgs = () => {
     '-h': '--help',
     '-t': '--test',
     '-n': '--name',
-    '-N': '--namespace',
     '-P': '--npm',
     '-d': '--dir',
   });
@@ -55,14 +53,23 @@ const parseArgs = () => {
     log(require('../util/help-outputs').generate);
     process.exit(0);
   }
+
   if (args['--version']) {
     process.exit(0);
   }
 
+  // check to see if there is a hyphen in the name
+  const correctNameFormat = (args[`--name`].match(new RegExp("-", "g"))).length === 1;
+
+  if (!correctNameFormat) {
+    console.log(`'${args[`--name`]}' does not follow the correct name format.\nPlease include a single '-'; [namespace]-[element name]\n`)
+    process.exit(0);
+  }
+
   const test = args['--test'];
-  const name = args['--name'] || 'component';
+  const name = args['--name'].split('-')[1];
   const npm = args['--npm'] || '@aurodesignsystem';
-  const namespace = args['--namespace'] || 'auro';
+  const namespace = args['--name'].split('-')[0];
   const dir = path.resolve(
     args['--dir'] || `./${lowerKebabCase(namespace)}-${lowerKebabCase(name)}`
   );

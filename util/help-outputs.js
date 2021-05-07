@@ -18,8 +18,7 @@ const generate = `
 
     -h, --help                      Get help info about WC generator
     -t, --test                      Test repo generation without installing dependencies
-    -n, --name [name]               Name of the web component you wish to build
-    -N, --namespace [namespace]     Choose custom namespace of the web component if other than Auro
+    -n, --name [name]               Name of the web component you wish to build, must follow format [namespace]-[name]
     -P, --npm [npm]                 Choose npm namespace
     -d, --dir [directory]           Directory where the new custom element files will be created
     --verbose                       Verbose command line feedback
