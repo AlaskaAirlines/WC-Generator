@@ -22,7 +22,7 @@ The Auro custom element generator is configured to ensure that you have the late
 WC-Generator example use:
 
 ```
-wc-generate --name [wc name]
+wc-generate --name [wc-name]
 ```
 
 ### Minimum Node version
@@ -40,7 +40,7 @@ For the most up to date information on UI development browser support, see [Auro
 When generating a new WC using the Auro WC-Generator, you are not restricted to using the Auro namespace for your new element. The following example will crate the project, `@aurodesignsystem/han-solo`
 
 ```shell
-$ wc-generate --namespace Han --name Solo
+$ wc-generate --name Han-Solo
 ```
 
 ## Custom npm namespace support
@@ -48,41 +48,21 @@ $ wc-generate --namespace Han --name Solo
 By default, the WC-Generator will output a project that the custom element is for the `@aurodesignsystem` npm namespace. The following example illustrates how you can customize this to `@aurolabs/han-solo"` for example.
 
 ```shell
-$ wc-generate --namespace Han --name Solo --npm @aurolabs
+$ wc-generate --name Han-Solo --npm @aurolabs
 ```
 
 ## WC-Generator development API
 
 | Command | Description |
 | --- | --- |
-| `$ npm run build` | Will run full build cycle including linters and tests |
-| `$ npm run build:ci` | Removes all generated files prior to running `build` |
-| `$ npm run build:sass:dev` | The demo Sass is not watched, run if changes are made |
-| `$ npm run dev` | Command for running development watchers (test not included) |
-| `$ npm run linters` | Command for running esLint and styleLint |
-| `$ npm run serve` | Command to launch local server |
-| `$ npm run test` | Command to run Karma test coverage |
-| `$ npm run test:watch` | Command to run test watcher |
+| `$ npm run build:test` | Will test the generate pipeline w/o the install process at `./auro-test`
+| `$ npm run build:complete` | Will build a new custom element with complete install process at `../auro-test`
+| `$ npm run sweep` | Will delete auro-test directory
+| `$ npm run test` | Runs `build:test`
 
 ## Pre-bundled components
 
 The WC-Generator contains automated functionality for each build to generate pre-bundled versions of the new component so that users can consume without needing to bundle the JavaScript assets themselves. Both a modern and legacy bundle are produced.
-
-### Legacy browser support
-
-Since the legacy bundle includes many polyfills that are not needed by modern browsers, we recommend you load these bundles using [differential serving](https://philipwalton.com/articles/deploying-es2015-code-in-production-today/) so that the browser only loads the bundle it needs. To accomplish this, the script tag for the modern bundle should have `type="module"` and the script tag for the legacy bundle should have the `nomodule` attribute. See the example below.
-
-### Bundle example code
-
-**NOTE:** Be sure to replace `@latest` in the URL with the version of the asset you want. @latest is NOT aware of any MAJOR releases, use at your own risk.
-
-```html
-<link rel="stylesheet" href="https://unpkg.com/@alaskaairux/design-tokens@latest/dist/tokens/CSSCustomProperties.css" />
-<link rel="stylesheet" href="https://unpkg.com/@alaskaairux/webcorestylesheets@latest/dist/bundled/essentials.css" />
-
-<script src="https://unpkg.com/@alaskaairux/[namespace]-[name]@latest/dist/[namespace]-[name]__bundled.js" type="module"></script>
-<script src="https://unpkg.com/@alaskaairux/[namespace]-[name]@latest/dist/[namespace]-[name]__bundled.es5.js" nomodule></script>
-```
 
 ## Developing locally
 To test changes to the generator, run `npm test` to generate an `auro-test` component.
