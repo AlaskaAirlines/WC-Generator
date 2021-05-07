@@ -53,10 +53,10 @@
     ]
   },
   "scripts": {
-    "build:test": "node bin/generate.js -t -N Han -n Solo -P @mypackage -d ./auro-test",
-    "build:complete": "node bin/generate.js -n solo -d ../auro-test",
+    "build:test": "node bin/generate.js -t -n Han-Solo -P @mypackage -d ./auro-test",
+    "build:complete": "node bin/generate.js -n auro-solo -d ../auro-test",
     "sweep": "rm -rf auro-test",
-    "test": "npm-run-all build:test"
+    "test": "npm run build:test"
   },
   "publishConfig": {
     "access": "public"
