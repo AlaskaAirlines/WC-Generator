@@ -27,3 +27,18 @@
   border: 1px solid var(--auro-color-border-error-on-light);
   color:  var(--auro-color-border-error-on-light);
 }
+
+// Selector for native :focus-visible support
+:focus-visible {
+  background-color: var(--auro-color-border-error-on-light);
+  color: var(--auro-color-base-white);
+}
+
+// Selector for focus-visible polyfill
+:host(.focus-visible) {
+  // requires reference to custom element selector in this example
+  .testClass {
+    background-color: var(--auro-color-border-error-on-light);
+    color: var(--auro-color-base-white);
+  }
+}
