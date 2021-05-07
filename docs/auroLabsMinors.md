@@ -26,7 +26,7 @@ When building a new custom element  in Auro Labs it is highly recommended that y
 Once the generator is [installed](https://auro.alaskaair.com/getting-started/developers/generator/install), be sure to use the `--npm` flag to set the npm namespace to `@aurolabs`.
 
 ```
-$ wc-generate --npm @aurolabs --name myelement
+$ wc-generate --npm @aurolabs --name auro-[element name]
 ```
 
 ## Getting started
@@ -45,7 +45,7 @@ From installing the generator all the way to setting up a Github repo. Follow th
     <span slot="trigger" class="trigger">2. Create your new custom element repository locally</span>
     <div class="lightText">
       <p>Once the generator is installed, run the generator command to create a new custom element repository.</p>
-      <pre class="pre">  $ wc-generate --npm @aurolabs --name [element name]</pre>
+      <pre class="pre">  $ wc-generate --npm @aurolabs --name auro-[element name]</pre>
     </div>
   </auro-accordion>
   <auro-accordion id="newWork" chromeless noProfile>
