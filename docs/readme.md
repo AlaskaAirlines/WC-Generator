@@ -1,29 +1,29 @@
 # Auro Web Component Generator
 
-Auro's wc-generator helps you to quickly kickstart new custom element projects, loaded with best practices and tools to help you become instantly productive.
+Auro's WC-Generator helps you to quickly kickstart new custom element projects, loaded with best practices and tools to help you become instantly productive.
 
 Making it this easy is done by supporting the Auro ecosystem. Quickly generate a new repo with the `wc-generate` command. Please review the generator's [api page](https://auro.alaskaair.com/getting-started/developers/generator/generator/api) for all information.
 
-Packed inside this generator is all the tools and libraries needed to quickly and easily build a HTML custom element that can be published with the Auro Design System. Auro takes care of providing everything you need to get started without the headaches associated with all the manual setup.
+Packed inside this generator are all the tools and libraries needed to quickly and easily build an HTML custom element that can be published with the Auro Design System. Auro takes care of providing everything you need to get started without the headaches associated with all the manual setup.
 
 ## What's in the box?
 
-The Auro WC-Generator is chock full of the best-practices the Auro team has built over the years. From libraries all the way to code style guides, the Auro team continues to promote these best practices and lessons learned by endlessly updating the generator. We do this so that you don't have to worry.
+The Auro WC-Generator is chock full of the best practices the Auro team has built over the years. From libraries to code style guides, the Auro team continues to promote these best practices and lessons learned by endlessly updating the generator. We do this so that you don't have to worry.
 
 ### Build pipeline
 
 WC-Generator provides a complete build pipeline for combining all your development resources into a single package for distribution.
 
 * Process Sass to a CSS file that can be injected into the scope of the custom element
-* Compile all CSS, JavaScript and dependency resources into a single bundle
+* Compile all CSS, JavaScript, and dependency resources into a single bundle
 * Run all automated linters and tests
 * Github workflow and issue templates all customized for your new project
 
 ### Github settings
 
-Auro's WC-Generator comes with an opinionated `settings.yml` for the repository. These settings are reviewed and approved by the Auro team on a regular basis. It is asked that you do not change these settings. These settings pre-config the repository itself, setting up `main` as a protected branch and updates all the issue labels.
+Auro's WC-Generator comes with an opinionated `settings.yml` for the repository. These settings are regularly reviewed and approved by the Auro team. It is asked that you do not change these settings. These settings pre-config the repository itself, setting up `main` as a protected branch, and updates all the issue labels.
 
-For more information on the use of labels, please be sure to take a look at [Issues, pull requests and labels](https://auro.alaskaair.com/contributing/issues-prs-labels) in the Auro doc site.
+For more information on the use of labels, please be sure to take a look at [Issues, pull requests, and labels](https://auro.alaskaair.com/contributing/issues-prs-labels) in the Auro doc site.
 
 ### Integration with Github Actions and npm
 
@@ -59,7 +59,7 @@ it('[namespace]-[name] is accessible', async () => {
 });
 ```
 
-From there we only go up! Each Auro element comes pre-configured to use Auro's design tokens. Atomic elements of the UI that are vetted regularly for accessibility issues.
+From there we only go up! Each Auro element comes pre-configured to use Auro's design tokens. Atomic elements of the UI are vetted regularly for accessibility issues.
 
 ## Building a Custom element
 
@@ -74,12 +74,12 @@ Once the new development environment has been created, there are some convention
 
 ## Upgrade your repo with the latest generator
 
-Time marches on and the generator marches forward. We are always looking for ways to make our custom elements and our developer experience better. And because of that, it's easy to get behind. The Auro team makes this easy to keep up with. First, you can always tell what version of the generator your project was built from as a version is listed at the bottom fo the `./README.md` file.
+Time marches on and the generator marches forward. We are always looking for ways to make our custom elements and our developer experience better. And because of that, it's easy to get behind. The Auro team makes this easy to keep up with. First, you can always tell what version of the generator your project was built from as a version is listed at the bottom of the `./README.md` file.
 
 ```html
 <small>Built from WC-Generator v2.10.8</small>
 ```
 
-To upgrade your project to the latest generator build, simply follow the steps as outlines in the Generator section of the Auro site, specifically, [Auro migrate shell script](https://auro.alaskaair.com/getting-started/developers/generator/upgrade).
+To upgrade your project to the latest generator build, simply follow the steps as outlined in the Generator section of the Auro site, specifically, [Auro migrate shell script](https://auro.alaskaair.com/getting-started/developers/generator/upgrade).
 
-> Install this BASH shell script to easily migrate an existing Auro custom element to a new repository based on a current build. This process does not upgrade an existing repository, but migrates the necessary files from a legacy repo to a newly created repo.
+> Install this BASH shell script to easily migrate an existing Auro custom element to a new repository based on a current build. This process does not upgrade an existing repository but migrates the necessary files from a legacy repo to a newly created repo.
