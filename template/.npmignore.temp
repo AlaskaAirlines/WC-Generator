@@ -11,9 +11,9 @@ coverage/
 docs/
 scripts/
 test/
-demo/*.css
-demo/*.scss
-demo/*.html
+demo/**/*.css
+demo/**/*.scss
+demo/**/*.html
 
 dist/es5.js
 
