@@ -58,11 +58,22 @@ const parseArgs = () => {
     process.exit(0);
   }
 
-  // check to see if there is a hyphen in the name
-  const correctNameFormat = (args[`--name`].match(new RegExp("-", "g"))).length === 1;
+  const nameErrorMessage = `'${args[`--name`]}' does not follow the correct name format.\nPlease include a single '-'; [namespace]-[element name]\n`
+
+  // if ends with "-" or has too many, stop process.
+  if (args[`--name`].endsWith("-")) {
+    console.log(nameErrorMessage)
+    process.exit(0);
+  } else if ((args[`--name`].match(new RegExp("-", "g")) || []).length > 1) {
+    console.log(nameErrorMessage)
+    process.exit(0);
+  }
+
+  // check to see if there is one hyphen in the name
+  const correctNameFormat = (args[`--name`].match(new RegExp("-", "g")) || []).length === 1;
 
   if (!correctNameFormat) {
-    console.log(`'${args[`--name`]}' does not follow the correct name format.\nPlease include a single '-'; [namespace]-[element name]\n`)
+    console.log(nameErrorMessage)
     process.exit(0);
   }
 
