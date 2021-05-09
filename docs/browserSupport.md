@@ -16,11 +16,13 @@ Alaska Airlines currently supports the following browsers for the delivery of st
 | Safari | Current release | macOS, iOS |
 | Firefox | Current release | Windows, macOS, Android |
 | Edge*† | Stable release | Windows 7, Windows 8, Windows 10 |
-| Internet Explorer | 11 | Windows 7, Windows 8, Windows 10 |
+| Internet Explorer†† | 11 | Windows 7, Windows 8, Windows 10 |
 
 \* The new Microsoft Edge is based on Chromium and was released on January 15, 2020. It is compatible with all supported versions of Windows, and macOS. Downloading the browser will replace the legacy version of Microsoft Edge  on Windows 10 PCs.
 
 † Edge 18 is the final version to support [EdgeHTML](https://en.wikipedia.org/wiki/EdgeHTML) on Windows 10 machines only. There is no directive to individually support this version of Edge.
+
+†† Internet Explorer has been fully deprecated by Microsoft and testing in this browser requires special agreement from Product for the additional effort required to support this browser. It is planned to drop all support for Internet Explorer by Q3 2021.
 
 #### Browser support for HTML Web Components
 
