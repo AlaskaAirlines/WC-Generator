@@ -12,9 +12,7 @@ For a11y reasons, according to the [MDN docs](https://developer.mozilla.org/en-U
 
 ## Design concerns
 
-In contrast to the a11y issue, there is typically a design concern with the `:focus` state as an element within a web app has focus regardless of tab, click or tap. As a result of that, unless there is a requirement to maintain a11y the `:focus` state is typically disabled.
-
-For projects that have an a11y requirement, this is not an option. This in itself is a large design challenge and one with many opportunities.
+The `:focus` state is applied to an element when it is clicked or tapped creating a halo effect. Many designs will often want to remove the outline on focus, however this is not an option if your project is required to be accessible. This presents an interesting design challenge with many opportunities.
 
 ## Selectors Level 4 specification
 
@@ -24,7 +22,7 @@ In the next selector level specification draft is [9.4. The Focus-Indicated Pseu
 
 -- [:focus-visible](https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible)
 
-The purpose of this new CSS spec is to allow for developers to build interfaces that speaks specifically to their special needs audience while not having to adjust the experience for those who do not require additional interaction feedback. This also allows for designers to design very specific interactions for those who require additional interaction feedback.
+The role of this new selector is to allow for developers to build interfaces that allow for differences based on the user’s input modality, e.g. a mouse vs. the keyboard.
 
 ## Focus visible browser support
 
@@ -37,11 +35,11 @@ With [increased browser support](https://caniuse.com/?search=focus-visible) the 
 }
 ```
 
-Something to remember, browser defaults have a similar outline style with `:focus-visible` as with a standard `:focus` selector.
+Note: browser defaults have a similar outline _halo_ with `:focus-visible` as with the `:focus` selector.
 
 ## Focus visible polyfill
 
-The Auro WC-Generator supports the focus-visible [polyfill](https://www.npmjs.com/package/focus-visible), based on the proposed CSS pseudo selector, and allows for this functionality for remaining non-supporting browsers.
+The Auro WC-Generator supports the `focus-visible` [polyfill](https://www.npmjs.com/package/focus-visible), based on the proposed CSS pseudo-class, and allows for this functionality for remaining non-supporting browsers.
 
 > Based on the proposed CSS :focus-visible pseudo-selector, this prototype adds a focus-visible class to the focused element, in situations in which the :focus-visible pseudo-selector should match.
 
