@@ -61,7 +61,7 @@ const parseArgs = () => {
   const nameErrorMessage = `'${args[`--name`]}' does not follow the correct name format.\nPlease include a single '-'; [namespace]-[element name]\n`
 
   // if ends with "-" or has too many, stop process.
-  if (args[`--name`].endsWith("-")) {
+  if (args[`--name`].endsWith("-") || args[`--name`].includes(" ")) {
     console.log(nameErrorMessage)
     process.exit(0);
   } else if ((args[`--name`].match(new RegExp("-", "g")) || []).length > 1) {
