@@ -367,6 +367,7 @@ Creating Web Components People Love.
     let areDependenciesInstalled = false;
     let isGitRepo = false;
     let isMainBranch = false;
+    let isHuskyConfigured = false;
     let isBuilt = false;
     let assetsAreCommitted = false;
 
@@ -390,6 +391,18 @@ Creating Web Components People Love.
         log(chalk.red(message));
       }
       isMainBranch = true;
+
+      process.stdout.write(`\nConfiguring Husky scripts`);
+      loadingLoop(() => isHuskyConfigured);
+      try {
+        await exec('npx husky-init', { cwd: params.dir });
+        await exec('chmod ug+x .husky/*', { cwd: params.dir });
+        await exec('chmod ug+x .git/hooks/*', { cwd: params.dir });
+        log(chalk.green('\nHusky successfully configured!'));
+      } catch ({ message }) {
+        log(chalk.red(message));
+      }
+      isHuskyConfigured = true;
 
       process.stdout.write(`\nInstalling dependencies`);
       loadingLoop(() => areDependenciesInstalled);
