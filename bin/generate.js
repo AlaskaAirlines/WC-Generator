@@ -375,11 +375,11 @@ Creating a Design System People Love.
       }
       areDependenciesInstalled = true;
 
-      process.stdout.write(`\nRebuilding node-sass`);
+      process.stdout.write(`\nRebuilding sass`);
       loadingLoop(() => isNodeSassRebuilt);
       try {
-        await exec('npm rebuild node-sass', { cwd: params.dir });
-        log(chalk.green('\nSuccessfully rebuilt node-sass!'));
+        await exec('npm rebuild sass', { cwd: params.dir });
+        log(chalk.green('\nSuccessfully rebuilt sass!'));
       } catch ({ message }) {
         log(chalk.red(message));
       }
