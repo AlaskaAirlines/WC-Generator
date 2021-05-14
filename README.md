@@ -55,10 +55,10 @@ $ wc-generate --name Han-Solo --npm @aurolabs
 
 | Command | Description |
 | --- | --- |
-| `$ npm run build:test` | Will test the generate pipeline w/o the install process at `./auro-test`
-| `$ npm run build:complete` | Will build a new custom element with complete install process at `../auro-test`
-| `$ npm run sweep` | Will delete auro-test directory
-| `$ npm run test` | Runs `build:test`
+| `build:test` | Will test the generate pipeline w/o the install process at `./auro-test`
+| `build:complete` | Will build a new custom element with complete install process at `../auro-test`
+| `sweep` | Will delete auro-test directory
+| `test` | Runs `build:test`
 
 ## Pre-bundled components
 
