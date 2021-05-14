@@ -24,6 +24,8 @@ const path = require('path');
 const paths = require('../util/paths');
 const log = require('../util/log');
 const inquirer = require('inquirer');
+let npm = '';
+let labs = false;
 
 const lowerKebabCase = str => str.toLowerCase().replace(' ', '-');
 const upperCamelCase = str =>
@@ -77,9 +79,9 @@ const parseArgs = () => {
     process.exit(0);
   }
 
+  npm = args['--npm'] || '@aurodesignsystem';
   const test = args['--test'];
   const name = args['--name'].split('-')[1];
-  const npm = args['--npm'] || '@aurodesignsystem';
   const namespace = args['--name'].split('-')[0];
   const dir = path.resolve(
     args['--dir'] || `./${lowerKebabCase(namespace)}-${lowerKebabCase(name)}`
@@ -148,6 +150,82 @@ const getVersionData = async () => {
   return versions;
 }
 
+const question = async () => {
+  const params = parseArgs();
+
+  if (!params.test) {
+    const questions = [
+      {
+        type: 'confirm',
+        name: 'auroLabs',
+        message: 'Is this an AuroLabs project?',
+        when: function (answers) {
+          return !readDocs('auroLabs')(answers);
+        },
+      },
+      {
+        type: 'confirm',
+        name: 'governance',
+        message: 'Have you reviewed Auro\'s Contributing Guidelines?',
+        when: function (answers) {
+          return !readDocs('governance')(answers);
+        },
+      },
+      {
+        type: 'confirm',
+        name: 'status',
+        message: 'Have you reviewed the list of available components to ensure this is not a duplicate custom element?',
+        when: function (answers) {
+          return !readDocs('status')(answers);
+        },
+      },
+      {
+        type: 'confirm',
+        name: 'cssConventions',
+        message: 'Have you reviewed Auro\'s CSS conventions and how to apply CSS to custom elements?',
+        when: function (answers) {
+          return !readDocs('cssConventions')(answers);
+        },
+      },
+    ];
+
+    function readDocs(arg) {
+      return function (answers) {
+        return answers[arg];
+      };
+    }
+
+    console.log(chalk.yellow(`Please review the following questions to ensure \nyou are fully aware of Auro\'s development support.\n`));
+
+    inquirer.prompt(questions).then((answers) => {
+
+      if (answers.auroLabs === true) {
+        labs = true;
+      }
+
+      if (answers.governance === false) {
+        console.log(`\nNot reviewed the Contributing Guidelines?\nPlease review ${chalk.underline.yellow(`https://auro.alaskaair.com/contributing`)} before submitting any new work\nto ensure that you will be in compliance with our expectations.\n`);
+      }
+
+      if (answers.status === false) {
+        console.log(`\nPlease review ${chalk.underline.yellow(`https://auro.alaskaair.com/component-status`)} before starting a new project.\n`);
+      }
+
+      if (answers.cssConventions === false) {
+        console.log(`\nNot familiar with Auro\'s CSS conventions?\nPlease review ${chalk.underline.yellow(`https://auro.alaskaair.com/webcorestylesheets/custom-element-css`)} before starting a new project.\n`);
+      }
+
+      if (answers.governance === true
+          && answers.status === true
+          && answers.cssConventions === true) {
+        generateFromTemplate();
+      }
+    });
+  } else {
+    generateFromTemplate();
+  }
+}
+
 const escapeRegExp = (string) => string.replace(/[.*+\-?^${}()|[\]\\]/g, '\\$&');
 const getReplacements = async ({ name, namespace, npm }) => {
   const versionData = await getVersionData();
@@ -170,6 +248,10 @@ const getReplacements = async ({ name, namespace, npm }) => {
   const userName = require('git-user-name');
   // generate new year for copyright stamp
   const newYear = new Date().getFullYear();
+
+  if (labs) {
+    npm = `@aurolabs`
+  }
 
   const nameReplacements = [
     { regex: /\[genVersion\]/g, value: pjson.version },
@@ -220,58 +302,6 @@ const loadingLoop = condition => {
     loadingLoop(condition);
   }, 1000);
 };
-
-const question = async () => {
-  const params = parseArgs();
-
-  if (!params.test) {
-    const questions = [
-      {
-        type: 'confirm',
-        name: 'governance',
-        message: 'Did you review the Auro Design System Contributing Guidelines?',
-      },
-      {
-        type: 'confirm',
-        name: 'status',
-        message: 'Have you reviewed the Auro Components status board?',
-        when: function (answers) {
-          return answers.governance;
-        },
-      },
-      {
-        type: 'confirm',
-        name: 'status',
-        message: 'Have you reviewed the Auro Components status board?',
-        when: function (answers) {
-          return !readDocs('governance')(answers);
-        },
-      }
-    ];
-
-    function readDocs(arg) {
-      return function (answers) {
-        return answers[arg];
-      };
-    }
-
-    inquirer.prompt(questions).then((answers) => {
-      if (answers.status === false) {
-        console.log('Be sure to review https://auro.alaskaair.com/component-status before starting')
-      }
-
-      if (answers.governance === false) {
-        console.log('Be sure to review https://auro.alaskaair.com/contributing before starting')
-      }
-
-      if (answers.governance === true && answers.status === true) {
-        generateFromTemplate();
-      }
-    });
-  } else {
-    generateFromTemplate();
-  }
-}
 
 const generateFromTemplate = async () => {
   const pjson = require('../package.json');
@@ -324,7 +354,7 @@ const generateFromTemplate = async () => {
 |_____|_____|  |_____|___|_|_|___|_| |__,|_| |___|_|
 
 
-Creating a Design System People Love.
+Creating Web Components People Love.
     `))
 
     await makeFolder(params.dir);
@@ -332,13 +362,11 @@ Creating a Design System People Love.
       '[namespace]-[name].test.js': `${lowerKebabCase(params.namespace)}-${lowerKebabCase(params.name)}.test.js`,
       '[namespace]-[name].js': `${lowerKebabCase(params.namespace)}-${lowerKebabCase(params.name)}.js`,
       '.npmignore.temp': '.npmignore',
-      '.gitignore.temp': '.gitignore',
-      '.travis.temp': '.travis.yml'
+      '.gitignore.temp': '.gitignore'
     });
     log(chalk.green('\nCopied all files!'));
 
     let areDependenciesInstalled = false;
-    let isNodeSassRebuilt = false;
     let isGitRepo = false;
     let isMainBranch = false;
     let isBuilt = false;
@@ -396,6 +424,12 @@ Creating a Design System People Love.
       assetsAreCommitted = true;
 
       log(chalk.green(`Well done! The new HTML Custom Element auro-${params.name} has been created!\n\nDir: ${params.dir}\nBuilt using WC-Generator: v${pjson.version}\n`));
+
+      log(chalk.yellow(`\nMore questions about Auro? Be sure to check out\n${chalk.underline.yellow(`https://auro.alaskaair.com/auro-support`)}\nfor more information and answers to frequently asked questions.\n`));
+
+      if (labs) {
+        log(chalk.yellow(`\nYou are building an element for AuroLabs! Awesome!\n\nBe sure to check out all the information we have to go\nfrom the minors to the majors with your new custom element!\n${chalk.underline.yellow(`https://auro.alaskaair.com/aurolabs`)}\n\n`));
+      }
     }
   }
 };
