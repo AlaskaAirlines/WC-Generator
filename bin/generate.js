@@ -375,16 +375,6 @@ Creating a Design System People Love.
       }
       areDependenciesInstalled = true;
 
-      process.stdout.write(`\nRebuilding sass`);
-      loadingLoop(() => isNodeSassRebuilt);
-      try {
-        await exec('npm rebuild sass', { cwd: params.dir });
-        log(chalk.green('\nSuccessfully rebuilt sass!'));
-      } catch ({ message }) {
-        log(chalk.red(message));
-      }
-      isNodeSassRebuilt = true;
-
       process.stdout.write(`\nRunning initial component build`);
       loadingLoop(() => isBuilt);
       try {
@@ -399,16 +389,13 @@ Creating a Design System People Love.
       loadingLoop(() => assetsAreCommitted);
       try {
         await exec('git add . && git commit -m "chore: add auto generated assets"', { cwd: params.dir });
-        log(chalk.green('\nGenerated assets are committed!'));
+        log(chalk.green('\nGenerated assets are committed!\n'));
       } catch ({ message }) {
         log(chalk.red(message));
       }
       assetsAreCommitted = true;
 
-      log(chalk.green(`Well done! The new HTML Custom Element auro-${params.name} has been created!
-        \nDir: ${params.dir}
-        \nWC: v${pjson.version}
-      \n`));
+      log(chalk.green(`Well done! The new HTML Custom Element auro-${params.name} has been created!\n\nDir: ${params.dir}\nBuilt using WC-Generator: v${pjson.version}\n`));
     }
   }
 };
