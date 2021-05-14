@@ -57,7 +57,7 @@
     "eslint": "",
     "eslint-plugin-lit": "",
     "focus-visible": "",
-    "husky": "",
+    "husky": "^4.3.8",
     "lodash": "",
     "marked": "",
     "nodemon": "",
