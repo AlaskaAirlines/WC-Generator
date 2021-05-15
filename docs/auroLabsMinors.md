@@ -23,10 +23,10 @@ Welcome to Auro Labs! If you have come this far, you must be interested in learn
 
 When building a new custom element  in Auro Labs it is highly recommended that you start with the [WC-Generator](https://auro.alaskaair.com/getting-started/developers/generator/install) as this comes packed with all of Auro's vetted best practices and baked in dependencies that will make your transition to the majors a breeze.
 
-Once the generator is [installed](https://auro.alaskaair.com/getting-started/developers/generator/install), be sure to use the `--npm` flag to set the npm namespace to `@aurolabs`.
+Once the generator is [installed](https://auro.alaskaair.com/getting-started/developers/generator/install), please use the following execution template fo your new project.
 
 ```
-$ wc-generate --npm @aurolabs --name auro-[element name]
+$ wc-generate --name auro-[element name]
 ```
 
 ## Getting started
@@ -45,7 +45,7 @@ From installing the generator all the way to setting up a Github repo. Follow th
     <span slot="trigger" class="trigger">2. Create your new custom element repository locally</span>
     <div class="lightText">
       <p>Once the generator is installed, run the generator command to create a new custom element repository.</p>
-      <pre class="pre">  $ wc-generate --npm @aurolabs --name auro-[element name]</pre>
+      <pre class="pre">  $ wc-generate --name auro-[element name]</pre>
     </div>
   </auro-accordion>
   <auro-accordion id="newWork" chromeless noProfile>
@@ -146,10 +146,10 @@ Now that your install is setup and your repo is ready to go, let's get to work!
     <div class="lightText">
       <p>Prior to making your first commit, please review <auro-hyperlink relative href="/contributing">Auro Design System Contributing Guidelines</auro-hyperlink>, specifically the section on <strong>Conventional Commits</strong>.</p>
       <p>Conventional Commits play a critical role in determining the next version release. The following template will help you construct the proper commit message.</p>
-      <pre class="pre">  [type]([optional scope]): [description]</pre>
-      <p>For example, let's say that you are working on a new feature supporting accessibility. Commit messages could be like the following. It is important to note that the <code>fix</code> commit is the only commit that will trigger a PATCH version release. The <code>docs</code> and <code>test</code> commits will not.</p>
+      <pre class="pre">  [type]([optional scope]): [description][issue ID]</pre>
+      <p>For example, let's say that you are working on a new feature supporting accessibility. Commit messages could be like the following. It is important to note that the <code>fix</code> commit is the only commit that will trigger a PATCH version release. The <code>docs</code> and <code>test</code> commits will not. When there are multiple commits per a pull request, it is recommended to use the optional scope within the parens. This helps to keep things tied together within the context of all history. Last, please include the issue ID in at least one of the comments.</p>
       <pre class="pre">
-  fix(a11y): update acronym to read out full word, e.g. SEA reads Seattle
+  fix(a11y): update acronym to read out full word, e.g. SEA reads Seattle #75
   docs(a11y): address API changes in readme and automated docs
   test(a11y): add new test for screen reader feature</pre>
     </div>
