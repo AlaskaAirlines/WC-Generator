@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [3.0.1](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.0.0...v3.0.1) (2021-05-17)
+
+
+### Bug Fixes
+
+* update npm package reference ([d2c5496](https://github.com/AlaskaAirlines/WC-Generator/commit/d2c5496e57b7bfd550d997f86f183f2c52d50c66))
+
 # [3.0.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.11.0...v3.0.0) (2021-05-17)
 
 
