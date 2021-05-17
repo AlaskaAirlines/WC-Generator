@@ -1,5 +1,13 @@
 # Semantic Release Automated Changelog
 
+## [3.0.2](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.0.1...v3.0.2) (2021-05-17)
+
+
+### Bug Fixes
+
+* **focus-visible support:** adjust support for nested focus-visible [#69](https://github.com/AlaskaAirlines/WC-Generator/issues/69) ([7e555c4](https://github.com/AlaskaAirlines/WC-Generator/commit/7e555c4e4d5b91ced340d7cf59386e35659f0820))
+* **gitignore:** update incorrect ignore settings ([42b9544](https://github.com/AlaskaAirlines/WC-Generator/commit/42b95443eb211c8d4f4e4c9259d8410338827ffa))
+
 ## [3.0.1](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.0.0...v3.0.1) (2021-05-17)
 
 
