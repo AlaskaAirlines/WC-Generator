@@ -1,5 +1,32 @@
 # Semantic Release Automated Changelog
 
+# [3.0.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.11.0...v3.0.0) (2021-05-17)
+
+
+### Bug Fixes
+
+* **husky:** update husky script to reference correct linters script ([a469915](https://github.com/AlaskaAirlines/WC-Generator/commit/a469915b0382a102190e061b418a9dbbdd6f357e))
+
+
+### Features
+
+* **dart-sass:** update to dart-sass from node-sass [#111](https://github.com/AlaskaAirlines/WC-Generator/issues/111) ([f6aa3fe](https://github.com/AlaskaAirlines/WC-Generator/commit/f6aa3fe8e5c04129d246dd758166b3736e50db65))
+* **generator init api:** update generator to use a single name input [#93](https://github.com/AlaskaAirlines/WC-Generator/issues/93) ([d90e5d4](https://github.com/AlaskaAirlines/WC-Generator/commit/d90e5d490c74a07b5fe5de2f5eae6f43256defa4))
+* **v3.0:** add remote eslint support [#62](https://github.com/AlaskaAirlines/WC-Generator/issues/62) ([d5df429](https://github.com/AlaskaAirlines/WC-Generator/commit/d5df429686563bb1999b4b3d9e6ce65dbce87faf))
+* **v3.0:** update default npm namespace to [@aurodesignsystem](https://github.com/aurodesignsystem) ([fc6f24e](https://github.com/AlaskaAirlines/WC-Generator/commit/fc6f24e58e3a6715c0dda44df0a44532d9addd46))
+* **v3.0:** update stylelintrc for extended support [#83](https://github.com/AlaskaAirlines/WC-Generator/issues/83) ([c63c572](https://github.com/AlaskaAirlines/WC-Generator/commit/c63c57243442f7107c30ae1b8bf4e95af72a2e6c))
+* **v3.0:** update to support fixed attr by default [#108](https://github.com/AlaskaAirlines/WC-Generator/issues/108) ([69e06c6](https://github.com/AlaskaAirlines/WC-Generator/commit/69e06c661137c01817069c6bb3c7bc22eedcefe9))
+
+
+### BREAKING CHANGES
+
+* **generator init api:** This update changes the generator
+execution command. Removes supoprt for namespace argument
+and instead uses single namespace-name argument.
+* **v3.0:** This update will require that direct dependencies using the namespace
+will need to be updated prior to release. This update will redirect all new packages to
+be published in the new @aurodesignsystem namespace.
+
 # [2.11.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v2.10.12...v2.11.0) (2021-03-23)
 
 
