@@ -336,7 +336,7 @@ const generateFromTemplate = async () => {
     log(chalk.red(`                                         p:::::::p                                     `));
     log(chalk.red(`                                         p:::::::p                                     `));
     log(chalk.red(`                                         ppppppppp                                     \n\n`));
-    log(chalk.red(`\nSorry, we have to stop you here.\nIt's been detected you have v${pjson.version} installed,\nand the latest version is v${latestPublishedGenVersion}. Please run the following:\n\nnpm i @aurodesignsystem/wc-generator@${latestPublishedGenVersion} -g\n\nfor the latest version.\n`))
+    log(chalk.red(`\nSorry, we have to stop you here.\nIt's been detected you have v${pjson.version} installed,\nand the latest version is v${latestPublishedGenVersion}. Please run the following:\n\nnpm i @alaskaairux/wc-generator@${latestPublishedGenVersion} -g\n\nfor the latest version.\n`))
   }
 
   else {
