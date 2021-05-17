@@ -26,7 +26,7 @@ The role of this new selector is to allow for developers to build interfaces tha
 
 ## Focus visible browser support
 
-With [increased browser support](https://caniuse.com/?search=focus-visible) the `:focus-visible` rarely requires polyfill support. Use of this selector is consistent with any CSS pseudo-class.
+With [increased browser support](https://caniuse.com/?search=focus-visible) the `:focus-visible` selector rarely requires polyfill support. Use of this selector is consistent with any CSS pseudo-class.
 
 ```css
 :focus-visible {
