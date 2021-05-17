@@ -12,7 +12,7 @@ Auro's Design System web component generator is a project tool intended to assis
 It is recommended that the package be installed globally as to ensure quick and easy access to initializing new projects.
 
 ```shell
-$ npm i @@alaskaairux/wc-generator -g
+$ npm i @alaskaairux/wc-generator -g
 ```
 
 The Auro custom element generator is configured to ensure that you have the latest version of the generator and all it's dependencies prior to starting a new build project.
