@@ -77,7 +77,7 @@ This function takes up to three arguments in this order:
 1. Path to the newly created directory `{ String }`
 1. `--no-demo` flag `{ Boolean }`
 
-For example. Migrating from a legacy repo, `auro-flight`, assuming that both repos are in the same root directory, and the new repo is named `auro-flight`, the command would be the following:
+For example. Migrating from a legacy repo, `flight`, assuming that both repos are in the same root directory, and the new repo is named `auro-flight`, the command would be the following:
 
 ```
 $ auroMigrate flight auro-flight

@@ -27,7 +27,7 @@ wc-generate --name [wc-name]
 
 ### Minimum Node version
 
-The WC-Generator requires a minimum install of Node.js `11.0.0`. Recommended install version of `14.0.0`.
+The WC-Generator requires a minimum install of Node.js `12.0.0`. Recommended install version of `14.0.0`.
 
 Be sure to check out our [getting started](https://auro.alaskaair.com/getting-started/developers/generator/getting-started) page for helpful tips when starting a new project.
 
@@ -37,18 +37,18 @@ For the most up to date information on UI development browser support, see [Auro
 
 ## Custom namespace support
 
-When generating a new WC using the Auro WC-Generator, you are not restricted to using the Auro namespace for your new element. The following example will crate the project, `@aurodesignsystem/han-solo`
+When generating a new WC using the Auro WC-Generator, you are not restricted to using the Auro namespace for your new element. The following example will crate the project, `@aurodesignsystem/auro-ticker`
 
 ```shell
-$ wc-generate --name Han-Solo
+$ wc-generate --name Auro-Ticker
 ```
 
 ## Custom npm namespace support
 
-By default, the WC-Generator will output a project that the custom element is for the `@aurodesignsystem` npm namespace. The following example illustrates how you can customize this to `@aurolabs/han-solo"` for example.
+By default, the WC-Generator will output a project that the custom element is for the `@aurodesignsystem` npm namespace. The following example illustrates how you can customize this to `@aurolabs/auro-ticker"` for example.
 
 ```shell
-$ wc-generate --name Han-Solo --npm @aurolabs
+$ wc-generate --name Auro-Ticker --npm @aurolabs
 ```
 
 ## WC-Generator development API
@@ -59,6 +59,18 @@ $ wc-generate --name Han-Solo --npm @aurolabs
 | `build:complete` | Will build a new custom element with complete install process at `../auro-test`
 | `sweep` | Will delete auro-test directory
 | `test` | Runs `build:test`
+
+## Help and version management
+
+For help with the WC-Generator API and to see what version you have installed, run `$ wc-generate --help`.
+
+With each new repo created, the version of the generator will be added to the bottom of the `./README.md` file. As versions of the WC-Generator progress this will help authors to understand where the feature gap is.
+
+```html
+<small>Built from WC-Generator v[genVersion]</small>
+```
+
+To migrate a repo from one version of the generator to another, please reference [Auro migrate shell script](https://auro.alaskaair.com/getting-started/developers/generator/upgrade).
 
 ## Pre-bundled components
 
