@@ -6,9 +6,9 @@ Please take a moment to review this document in order to make the contribution p
 
 Feature requests stem from a business need. It is important to understand whether your idea fits with the scope and aims of the project of if this serves to address a personal/local scenario. It is up to you to make a strong case about the merits of this feature. Please provide as much detail and context as possible.
 
-## Reporting Bugs
+## Submitting issues
 
-A bug is defined by: "A demonstrable problem that is caused by a file in the repository." Good bug reports are extremely helpful - thank you!
+A bug is defined by: _"A demonstrable problem that is caused by a file in the repository."_ Good bug reports are extremely helpful - thank you!
 
 To submit an issue, please go to [Auro's project status board](https://auro.alaskaair.com/component-status) and click on the ISSUES badge associated to project you wish to submit an issue for.
 
@@ -32,18 +32,16 @@ No one other than repository managers have direct access to any repository. For 
 
 All new work that is to be considered for merging with the `main` branch must start from a new feature branch of work. This feature branch should be in response to either a [reported bug](https://github.com/orgs/AlaskaAirlines/projects/1?card_filter_query=label%3A%22type%3A+bug%22) or a [new business requirement](https://github.com/orgs/AlaskaAirlines/projects/1?card_filter_query=label%3A%22type%3A+feature%22).
 
-Unsolicited pull requests will take longer to respond to. We ask for your patience. To help expedite any pull request, we ask that you submit an issue first. This will help the team understand the problem you are trying to solve before submitting the solution.
+Unsolicited pull requests **will take longer** to respond to. We ask for your patience. To help expedite any pull request, we ask that you **submit an issue first**. This will help the team understand the problem you are trying to solve before submitting the solution.
 
 For more information about the pull request submission process, please see the [Pull Requests](https://auro.alaskaair.com/contributing/issues-prs-labels) section of the Auro contributing guidelines
 
 ### Feature branch naming
 
-The name of the feature branch should be descriptive as to the nature of the work and please include any references to the story or bug work item ID. Examples are:
+The name of the feature branch should be descriptive as to the nature of the work, reference the author, and please include any references to the story or bug work item ID. For example, if John Doe created a branch for issue #80 about cleaning up the npm API.
 
-```
-feature--clean-up-npm-api-#80
-
-bug--button-not-focusable-IE11-#77
+```shell
+jdoe/cleanUpNpmApi/#80
 ```
 
 ### Rebase on main
@@ -66,9 +64,11 @@ If you are working off a forked branch, please see [Maintaining your fork's upst
 
 This project utilizes [Conventional Commits](https://www.conventionalcommits.org/) to auto-generate release versions, based on the [Angular Commit Message Guidelines](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines).
 
-**NOTE:** Before working in your project, be sure to run `$ npm i` to ensure that all packages are installed. Submitting pull requests that do not conform to this standard will assume that development dependencies were not installed and no tests were validated prior to submission. **This will result in immediate disqualification of the pull request**.
+**NOTE:** Before working in your project, be sure to run `$ npm i` to ensure that all packages are installed.
 
-```
+Submitting pull requests that do not conform to the Conventional Commits standard, the team will assume that development dependencies were not installed and no tests were validated prior to submission. **This may result in immediate disqualification of the pull request**.
+
+```html
 <type>[optional scope]: <description>
 ```
 
@@ -79,7 +79,7 @@ This project utilizes [Conventional Commits](https://www.conventionalcommits.org
 For a MAJOR release, you MUST follow this template. The use `BREAKING CHANGE:` in conjunction with any other commit type is required in order to push a major release.
 
 ```
-perf(pencil): remove graphiteWidth option
+perf(pencil): remove graphiteWidth option #80
 
 BREAKING CHANGE: The graphiteWidth option has been removed.
 The default graphite width of 10mm is always used for performance reasons.
@@ -87,12 +87,12 @@ The default graphite width of 10mm is always used for performance reasons.
 
 #### MINOR
 ```
-feat(pencil): add 'graphiteWidth' option
+feat(pencil): add 'graphiteWidth' option #80
 ```
 
 #### PATCH
 ```
-fix(pencil): stop graphite breaking when too much pressure applied
+fix(pencil): stop graphite breaking when too much pressure applied #80
 ```
 
 #### Other commit types
@@ -134,15 +134,15 @@ For example:
 Example messages when using Conventional Commits:
 
 ```
-$ build: update the build step to include postCSS
+$ build(postCss): update the build step to include postCSS #67
 
-$ docs: address issue #14, typo in install instructions
+$ docs(install): address typo in install instructions #14
 
-$ perf: restructure API to comply with new feature spec
+$ perf(api): restructure API to comply with new feature spec #12
 
-$ feat: add ability to consume large data as an array versus string
+$ feat(data api): add ability to consume large data as an array versus string #71
 
-$ fix: address issue #57 in regards to color output
+$ fix(color api): address color output issue #105
 ```
 
 ## Pull request service level agreement
