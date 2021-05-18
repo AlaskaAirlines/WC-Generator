@@ -90,7 +90,6 @@ const parseArgs = () => {
     npm,
     test,
     dir,
-    version,
     verbose: args['--verbose'],
   };
 };
