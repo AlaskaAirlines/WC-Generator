@@ -96,6 +96,12 @@
   "nodemonConfig": {
     "ignore": ["*-css.js", "*.css"]
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm-run-all preCommit test linters bundler postinstall",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
   "release": {
     "branches": [
       "main"
@@ -159,6 +165,7 @@
     "dist:js": "copyfiles -u 1 -V './src/**/*.js' ./dist",
     "esLint": "./node_modules/.bin/eslint src/[namespace]-*.js",
     "linters": "npm-run-all scssLint esLint",
+    "preCommit":"sh scripts/pre-commit.sh",
     "postCss:component": "node ./scripts/postCss.js",
     "postinstall": "node packageScripts/postinstall.js",
     "sass:render": "sass-render src/*.css -t ./scripts/staticStyles-template.js",

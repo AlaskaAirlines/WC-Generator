@@ -439,7 +439,7 @@ Creating Web Components People Love.
       process.stdout.write(`\nCommitting generated resources`);
       loadingLoop(() => assetsAreCommitted);
       try {
-        await exec('git add . && git commit -m "chore: add auto generated assets"', { cwd: params.dir });
+        await exec('git add . && git commit -m "chore: add auto generated assets" --no-verify', { cwd: params.dir });
         log(chalk.green('\nGenerated assets are committed!\n'));
       } catch ({ message }) {
         log(chalk.red(message));
