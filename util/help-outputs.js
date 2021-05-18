@@ -16,7 +16,7 @@ const generate = `
     be sure to see ${chalk.blue('https://bit.ly/3cqTsp5')}
 
     ${chalk.gray('Installed version:')}
-    ${pjson.version}
+    v${pjson.version}
 
     ${chalk.gray('Upgrade to latest version:')}
     $ npm i @alaskaairux/wc-generator@latest -g
