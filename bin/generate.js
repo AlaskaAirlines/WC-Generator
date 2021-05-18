@@ -42,12 +42,14 @@ const parseArgs = () => {
     '--name': String,
     '--npm': String,
     '--dir': String,
+    '--version': String,
     '--verbose': Boolean,
     // Aliases
     '-h': '--help',
     '-t': '--test',
     '-n': '--name',
     '-P': '--npm',
+    '-v': '--version',
     '-d': '--dir',
   });
 
@@ -57,6 +59,8 @@ const parseArgs = () => {
   }
 
   if (args['--version']) {
+    const pjson = require('../package.json');
+    log(`v${pjson.version}`);
     process.exit(0);
   }
 
@@ -81,6 +85,7 @@ const parseArgs = () => {
 
   npm = args['--npm'] || '@aurodesignsystem';
   const test = args['--test'];
+  const version = args['--version'];
   const name = args['--name'].split('-')[1];
   const namespace = args['--name'].split('-')[0];
   const dir = path.resolve(
@@ -93,6 +98,7 @@ const parseArgs = () => {
     npm,
     test,
     dir,
+    version,
     verbose: args['--verbose'],
   };
 };
