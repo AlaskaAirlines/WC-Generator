@@ -45,10 +45,10 @@ $ wc-generate --name Auro-Ticker
 
 ## Custom npm namespace support
 
-By default, the WC-Generator will output a project that the custom element is for the `@aurodesignsystem` npm namespace. The following example illustrates how you can customize this to `@aurolabs/auro-ticker"` for example.
+By default, the WC-Generator will output a project that the custom element is for the `@aurodesignsystem` npm namespace. The following example illustrates how you can customize this to `@mynamespace/auro-ticker` for example.
 
 ```shell
-$ wc-generate --name Auro-Ticker --npm @aurolabs
+$ wc-generate --name Auro-Ticker --npm @mynamespace
 ```
 
 ## WC-Generator development API
