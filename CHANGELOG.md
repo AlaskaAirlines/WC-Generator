@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+# [3.1.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.0.2...v3.1.0) (2021-05-18)
+
+
+### Features
+
+* **version help:** add support for showing installed version with --help ([e8722ae](https://github.com/AlaskaAirlines/WC-Generator/commit/e8722ae2fffce4ab141874b83b71c1632aa5739c))
+
 ## [3.0.2](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.0.1...v3.0.2) (2021-05-17)
 
 
