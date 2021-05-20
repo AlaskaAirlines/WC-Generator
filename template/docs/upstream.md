@@ -42,7 +42,7 @@ upstream        https://github.com/AlaskaAirlines/[namespace]-[name].git (push)
 
 #### Sync upstream
 
-To sync your `main` brach with the upstream `main` branch, there are two ways you can do this. The preferred method is to fetch and rebase. Please do not merge down.
+To sync your `main` branch with the upstream `main` branch, there are two ways you can do this. The preferred method is to fetch and rebase. Please do not merge down.
 
 ```bash
 $ git checkout main
