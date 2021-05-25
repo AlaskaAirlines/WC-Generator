@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [3.1.3](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.1.2...v3.1.3) (2021-05-25)
+
+
+### Bug Fixes
+
+* **namespace:** update and publish to new namespace ([a52bcb0](https://github.com/AlaskaAirlines/WC-Generator/commit/a52bcb0afc007d331bd1088763b7df4ec8e810ec))
+
 ## [3.1.2](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.1.1...v3.1.2) (2021-05-24)
 
 
