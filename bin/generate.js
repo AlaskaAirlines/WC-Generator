@@ -306,7 +306,7 @@ const generateFromTemplate = async () => {
 
   // this test needs to be updated post first release of new '@aurodesignsystem/wc-generator'
   const legacyPublishedVersion = await latestVersion('@alaskaairux/wc-generator');
-  const latestPublishedVersion = await latestVersion('@alaskaairux/wc-generator');
+  const latestPublishedVersion = await latestVersion('@aurodesignsystem/wc-generator');
   log(chalk.green(`\nCurrently published WC-Generator: v${latestPublishedVersion} | Installed WC-Generator: v${pjson.version}\n`))
 
   const params = parseArgs();
@@ -334,7 +334,7 @@ const generateFromTemplate = async () => {
     log(chalk.red(`                                         p:::::::p                                     `));
     log(chalk.red(`                                         p:::::::p                                     `));
     log(chalk.red(`                                         ppppppppp                                     \n\n`));
-    log(chalk.red(`\nSorry, we have to stop you here.\nIt's been detected you have v${pjson.version} installed,\nand the latest version is v${latestPublishedVersion}. Please run the following:\n\nnpm i @alaskaairux/wc-generator@${latestPublishedVersion} -g\n\nfor the latest version.\n`))
+    log(chalk.red(`\nSorry, we have to stop you here.\nIt's been detected you have v${pjson.version} installed,\nand the latest version is v${latestPublishedVersion}. Please run the following:\n\nnpm i @aurodesignsystem/wc-generator@${latestPublishedVersion} -g\n\nfor the latest version.\n`))
   }
 
   else {
