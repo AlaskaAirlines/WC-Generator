@@ -1,5 +1,17 @@
 # Semantic Release Automated Changelog
 
+# [3.2.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.1.4...v3.2.0) (2021-05-25)
+
+
+### Bug Fixes
+
+* **husky:** update package.json fixed husky 6 ([89a0864](https://github.com/AlaskaAirlines/WC-Generator/commit/89a0864eee3ca395574d8cd051ffbe136e53f487))
+
+
+### Features
+
+* **husky:** update husky and related workflow ([5d78271](https://github.com/AlaskaAirlines/WC-Generator/commit/5d7827162fbbd51b81fbb091da270117830b5c02))
+
 ## [3.1.4](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.1.3...v3.1.4) (2021-05-25)
 
 
