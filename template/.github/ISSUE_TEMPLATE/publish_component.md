@@ -2,7 +2,7 @@
 name: Publish Component
 about: Create a ticket to drive compliance before publishing a a new componet to Auro Design System
 title: 'auro-[name]; publish to Auro Design System'
-labels: 'Status: Proposal, not-reviewed'
+labels: 'Status: Review Needed, not-reviewed'
 ---
 
 # Publish Component
@@ -47,4 +47,4 @@ All of the below outlined steps must be completed.
 ### Review
 - [ ] Review demo with the designer as well as the Auro team
 - [ ] Review demo with Auro Team
-- [ ] All work to be reviewed by Auro team
+- [ ] All work is reviewed by Auro team
