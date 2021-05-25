@@ -367,6 +367,7 @@ Creating Web Components People Love.
     let areDependenciesInstalled = false;
     let isGitRepo = false;
     let isMainBranch = false;
+    let isHuskyInstalled = false;
     let isHuskyConfigured = false;
     let isBuilt = false;
     let assetsAreCommitted = false;
@@ -392,17 +393,17 @@ Creating Web Components People Love.
       }
       isMainBranch = true;
 
-      process.stdout.write(`\nConfiguring Husky scripts`);
-      loadingLoop(() => isHuskyConfigured);
+      process.stdout.write(`\nInstalling Husky scripts`);
+      loadingLoop(() => isHuskyInstalled);
       try {
         await exec('npx husky-init', { cwd: params.dir });
         await exec('chmod ug+x .husky/*', { cwd: params.dir });
         await exec('chmod ug+x .git/hooks/*', { cwd: params.dir });
-        log(chalk.green('\nHusky successfully configured!'));
+        log(chalk.green('\nHusky successfully installed!'));
       } catch ({ message }) {
         log(chalk.red(message));
       }
-      isHuskyConfigured = true;
+      isHuskyInstalled = true;
 
       process.stdout.write(`\nInstalling dependencies`);
       loadingLoop(() => areDependenciesInstalled);
@@ -423,6 +424,17 @@ Creating Web Components People Love.
         log(chalk.red(message));
       }
       isBuilt = true;
+
+      process.stdout.write(`\nConfiguring Husky scripts`);
+      loadingLoop(() => isHuskyConfigured);
+      try {
+        await exec('cat .husky/pre-commit.temp > .husky/pre-commit', { cwd: params.dir });
+        await exec('rm .husky/pre-commit.temp', { cwd: params.dir });
+        log(chalk.green('\nHusky successfully configured!'));
+      } catch ({ message }) {
+        log(chalk.red(message));
+      }
+      isHuskyConfigured = true;
 
       process.stdout.write(`\nCommitting generated resources`);
       loadingLoop(() => assetsAreCommitted);
