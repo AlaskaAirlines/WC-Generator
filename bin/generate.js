@@ -305,12 +305,13 @@ const generateFromTemplate = async () => {
   const latestVersion = require('latest-version');
 
   // this test needs to be updated post first release of new '@aurodesignsystem/wc-generator'
-  const latestPublishedGenVersion = await latestVersion('@alaskaairux/wc-generator');
-  log(chalk.green(`\nCurrently published WC-Generator: v${latestPublishedGenVersion} | Installed WC-Generator: v${pjson.version}\n`))
+  const legacyPublishedVersion = await latestVersion('@alaskaairux/wc-generator');
+  const latestPublishedVersion = await latestVersion('@alaskaairux/wc-generator');
+  log(chalk.green(`\nCurrently published WC-Generator: v${latestPublishedVersion} | Installed WC-Generator: v${pjson.version}\n`))
 
   const params = parseArgs();
 
-  if(latestPublishedGenVersion > pjson.version) {
+  if(legacyPublishedVersion > pjson.version || latestPublishedVersion > pjson.version) {
     log(chalk.red(`\n\nNNNNNNNN        NNNNNNNN                                                          !!! `));
     log(chalk.red(`N:::::::N       N::::::N                                                         !!:!! `));
     log(chalk.red(`N::::::::N      N::::::N                                                         !:::! `));
@@ -333,7 +334,7 @@ const generateFromTemplate = async () => {
     log(chalk.red(`                                         p:::::::p                                     `));
     log(chalk.red(`                                         p:::::::p                                     `));
     log(chalk.red(`                                         ppppppppp                                     \n\n`));
-    log(chalk.red(`\nSorry, we have to stop you here.\nIt's been detected you have v${pjson.version} installed,\nand the latest version is v${latestPublishedGenVersion}. Please run the following:\n\nnpm i @alaskaairux/wc-generator@${latestPublishedGenVersion} -g\n\nfor the latest version.\n`))
+    log(chalk.red(`\nSorry, we have to stop you here.\nIt's been detected you have v${pjson.version} installed,\nand the latest version is v${latestPublishedVersion}. Please run the following:\n\nnpm i @alaskaairux/wc-generator@${latestPublishedVersion} -g\n\nfor the latest version.\n`))
   }
 
   else {
