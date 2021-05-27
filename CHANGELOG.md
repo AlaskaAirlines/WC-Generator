@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [3.3.1](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.3.0...v3.3.1) (2021-05-27)
+
+
+### Bug Fixes
+
+* **template:** add publish ticket type ([f57b0cb](https://github.com/AlaskaAirlines/WC-Generator/commit/f57b0cb7e13cf59a91ec09b93b35a1daaafb8f8e))
+
 # [3.3.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.2.1...v3.3.0) (2021-05-27)
 
 
