@@ -1,5 +1,17 @@
 # Semantic Release Automated Changelog
 
+# [3.3.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.2.1...v3.3.0) (2021-05-27)
+
+
+### Bug Fixes
+
+* **docs:** remove legacy docs/index file ([25119aa](https://github.com/AlaskaAirlines/WC-Generator/commit/25119aa17126fd9f528761f5c9623c67e5bf36f8))
+
+
+### Features
+
+* **def of done:** add pre-commit shell script for DoD questions ([1b657b6](https://github.com/AlaskaAirlines/WC-Generator/commit/1b657b6186f7e7421f6f4e6177da2e4976dc2a64))
+
 ## [3.2.1](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.2.0...v3.2.1) (2021-05-27)
 
 
