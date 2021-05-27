@@ -37,14 +37,19 @@ All of the below outlined steps must be completed.
   - [ ] Firefox
   - [ ] Edge (79 +)
   - [ ] Safari
-- [Accessibility](http://auro.alaskaair.com/a11y-statement)
+- [Accessibility](http://auro.alaskaair.com/a11y-statement) - One or more of the following
   - [ ] Axe / Google Lighthouse (baseline standard)
   - [ ] Screenreader (determine usability of experience via screenreader)
   - [ ] Keyboard use (a user must be able to navigate to key parts via a keyboard)
   - [ ] Accessibility should be verified against all browsers
 - [ ] Bundled versions tested
 
+
 ### Review
-- [ ] Review demo with the designer as well as the Auro team
+Up until the review phase ensuring compliance with the above checklist is the responsibility of the component contributor. Once Design & Planning, Development, Documentation and Testing have been completed you will need a final review phase completed, particularly the Auro Design System team. The final review will verify that all requirements above have indeed been achieved.
+
+When the component is ready for a final review with your designer and the Auro Design System team it is the responsibility of the contributor to coordinate the following reviews:
+
+- [ ] Review demo with the designer
 - [ ] Review demo with Auro Team
 - [ ] All work is reviewed by Auro team
