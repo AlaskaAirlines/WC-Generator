@@ -1,5 +1,13 @@
 # Semantic Release Automated Changelog
 
+## [3.2.1](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.2.0...v3.2.1) (2021-05-27)
+
+
+### Bug Fixes
+
+* **husky:** add missing gitignore file ([ca77086](https://github.com/AlaskaAirlines/WC-Generator/commit/ca77086516f1867397056e5d55b24592f170aa54))
+* **husky:** update install scripts ([ee18f15](https://github.com/AlaskaAirlines/WC-Generator/commit/ee18f151c172da08cbdcb93c9b0c0f445ad591ad))
+
 # [3.2.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.1.4...v3.2.0) (2021-05-25)
 
 
