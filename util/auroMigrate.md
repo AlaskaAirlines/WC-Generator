@@ -25,7 +25,7 @@ echo -e "\n\n# Auro repo migration tool\nsource ~/.auroMigrate.sh" >> ~/.bashrc
 **Dependency**: This process has a dependency on the [WC-Generator](http://auro.alaskaair.com/generator). Installed or not, running this command will at least ensure that you have the latest version of the generator.
 
 ```
-$ npm i @alaskaairux/wc-generator@latest -g
+$ npm i @aurodesignsystem/wc-generator@latest -g
 ```
 
 Having gone through the install steps, it's **important** to either **open a new terminal window** or **re-source the one you are using**. Depending on your configuration, BASH may or may not be aware of the new commands from the WC-Generator or the migration script.
