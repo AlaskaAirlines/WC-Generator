@@ -5,14 +5,14 @@ Auro's Design System web component generator is a project tool intended to assis
 ## Install
 
 [![Build Status](https://img.shields.io/github/workflow/status/AlaskaAirlines/WC-Generator/Test%20and%20publish?branch=master&style=for-the-badge)](https://github.com/AlaskaAirlines/WC-Generator/actions?query=workflow%3A%22test+and+publish%22)
-[![See it on NPM!](https://img.shields.io/npm/v/@alaskaairux/wc-generator.svg?style=for-the-badge&color=orange)](https://www.npmjs.com/package/@alaskaairux/wc-generator)
-[![License](https://img.shields.io/npm/l/@alaskaairux/wc-generator.svg?color=blue&style=for-the-badge)](https://www.apache.org/licenses/LICENSE-2.0)
+[![See it on NPM!](https://img.shields.io/npm/v/@aurodesignsystem/wc-generator.svg?style=for-the-badge&color=orange)](https://www.npmjs.com/package/@aurodesignsystem/wc-generator)
+[![License](https://img.shields.io/npm/l/@aurodesignsystem/wc-generator.svg?color=blue&style=for-the-badge)](https://www.apache.org/licenses/LICENSE-2.0)
 [![issues](https://img.shields.io/github/issues-raw/AlaskaAirlines/WC-Generator?style=for-the-badge)](https://github.com/AlaskaAirlines/WC-Generator/issues)
 
 It is recommended that the package be installed globally as to ensure quick and easy access to initializing new projects.
 
 ```shell
-$ npm i @alaskaairux/wc-generator -g
+$ npm i @aurodesignsystem/wc-generator -g
 ```
 
 The Auro custom element generator is configured to ensure that you have the latest version of the generator and all it's dependencies prior to starting a new build project.
@@ -29,7 +29,7 @@ wc-generate --name [wc-name]
 
 The WC-Generator requires a minimum install of Node.js `12.0.0`. Recommended install version of `14.0.0`.
 
-Be sure to check out our [getting started](https://auro.alaskaair.com/getting-started/developers/generator/getting-started) page for helpful tips when starting a new project.
+Be sure to check out our [getting started](https://auro.alaskaair.com/aurolabs/minors) page for helpful tips when starting a new project.
 
 ## UI development and browser support
 
