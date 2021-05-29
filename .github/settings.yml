@@ -60,6 +60,8 @@ branches:
       enforce_admins: false
       # Required. Restrict who can push to this branch. Team and user restrictions are only available for organization-owned repositories. Set to null to disable.
       restrictions: null
+      # Prevent merge commits from being pushed to matching branches
+      required_linear_history: true
 
 # Labels: define labels for Issues and Pull Requests
 labels:
