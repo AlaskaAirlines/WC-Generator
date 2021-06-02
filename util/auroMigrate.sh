@@ -66,6 +66,8 @@ function auroMigrate {
 
   # Initalize Husky
   command npx husky-init
+  command chmod ug+x .husky/*
+  command chmod ug+x .git/hooks/*
   command cat .husky/pre-commit.temp > .husky/pre-commit
   command rm .husky/pre-commit.temp
   echo -e "Husky successfully configured! \n"
