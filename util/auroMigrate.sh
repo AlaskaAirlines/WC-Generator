@@ -2,7 +2,7 @@
 ## Generate a new baseline install of an auro component
 # Argument expected: name of new repo
 function generateRepo {
-  command wc-generate --test --name "$1"
+  command wc-generate --test --name "$1" --npm "$2"
 }
 
 ## Migrade files from legacy repo to new build
@@ -64,8 +64,16 @@ function auroMigrate {
     sleep 2
   fi
 
+  # Initalize Husky
+  command npx husky-init
+  command cat .husky/pre-commit.temp > .husky/pre-commit
+  command rm .husky/pre-commit.temp
+  echo -e "Husky successfully configured! \n"
+  sleep 2
+
   # create and switch to new repoUpgrade branch
   command git checkout -b repoUpgrade
+  echo -e "New ${GREEN}'repoUpgrade'${NC} branch created \n"
   sleep 3
 
   # add updates
@@ -78,6 +86,6 @@ function auroMigrate {
 
   # close out message
   echo -e "\n\nCommitted all changes to ${YELLOW}repoUpgrde${NC} Git branch\n"
-  echo -e "For any subsequent changes to the ${YELLOW}repoUpgrde${NC}, please\nbe sure to amend to previous commit.\n"
+  echo -e "For any subsequent changes to the ${YELLOW}repoUpgrde${NC}, please\nbe sure to amend to the previous commit.\n"
   echo -e "Use ${YELLOW}$ git commit --amend --no-edit${NC} after staging the updates.\n\n"
 }
