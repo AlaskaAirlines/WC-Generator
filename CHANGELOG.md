@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [3.3.4](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.3.3...v3.3.4) (2021-06-02)
+
+
+### Bug Fixes
+
+* **husky migration:** update scripts to address husky init ([5505716](https://github.com/AlaskaAirlines/WC-Generator/commit/550571677f8cf86d894b49f353032ed0876d8964))
+
 ## [3.3.3](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.3.2...v3.3.3) (2021-06-02)
 
 
