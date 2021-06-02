@@ -19,7 +19,7 @@ const generate = `
     v${pjson.version}
 
     ${chalk.gray('Upgrade to latest version:')}
-    $ npm i @alaskaairux/wc-generator@latest -g
+    $ npm i @aurodesignsystem/wc-generator@latest -g
 
     ${chalk.gray('Options:')}
 

@@ -10,6 +10,8 @@ To install the script, run the following command:
 curl https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/master/util/auroMigrate.sh -o ~/.auroMigrate.sh
 ```
 
+Even if you have installed this before, it's good to reinstall to ensure you have the latest version.
+
 The next step is to add a reference to this file in either your `~/.bash_profile` or `~/.bashrc` file.
 
 ```
@@ -46,8 +48,10 @@ First step to performing the migration is to create a new repository from the Au
 
 If you are creating a new element repo in the same directory as the legacy repo, it is recommended that you **rename the legacy repo** BEFORE you runt he generator as not to cause a collision.
 
+Use the optional namespace argument if you do not want `@aurodesignsystem`. Use this option with `@aurolabs` if you are migrating an auroLabs repo.
+
 ```
-$ generateRepo [element-name]
+$ generateRepo [element-name] [optional npm namespace]
 ```
 
 ## What to expect
