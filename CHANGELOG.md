@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [3.3.5](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.3.4...v3.3.5) (2021-06-03)
+
+
+### Bug Fixes
+
+* **gitignore:** add ignored files for demo ([d0874ec](https://github.com/AlaskaAirlines/WC-Generator/commit/d0874ec8b3e0c3195623ef2e5a8b436d930f1b06))
+
 ## [3.3.4](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.3.3...v3.3.4) (2021-06-02)
 
 
