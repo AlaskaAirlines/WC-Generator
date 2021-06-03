@@ -3,7 +3,8 @@ node_modules/
 .cache/
 
 ## Demo support files
-demo/
+demo/*.css
+demo/*.css.map
 
 ## CSS built from Sass process
 src/*.css
@@ -18,6 +19,3 @@ build/
 
 ## Karma code coverage reports
 coverage/
-
-## Include demo.md file
-!demo/demo.md
