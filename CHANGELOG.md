@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [3.3.6](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.3.5...v3.3.6) (2021-06-03)
+
+
+### Bug Fixes
+
+* **pre-commit:** replace question with statement ([393d8c2](https://github.com/AlaskaAirlines/WC-Generator/commit/393d8c266e8a90e627fff88ce22f7b37893eb50a))
+
 ## [3.3.5](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.3.4...v3.3.5) (2021-06-03)
 
 
