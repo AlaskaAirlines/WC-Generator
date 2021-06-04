@@ -123,11 +123,6 @@
       "@semantic-release/github"
     ]
   },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
-  },
   "publishConfig": {
     "access": "public"
   },
