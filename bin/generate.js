@@ -137,7 +137,7 @@ const copyFile = async (sourcePath, targetPath, params, replacements, fileRename
 // function will replace the settings.yml if the project is auroLabs
 const labsOverride__Settings = async (targetPath) => {
   if (labs) {
-    fs.copyFile('./labsTemplate/github/settings.yml', `${targetPath}/.github/settings.yml`, (err) => {
+    fs.copyFile(`${targetPath}/.github/settings__labs.yml`, `${targetPath}/.github/settings.yml`, (err) => {
       if (err) {
         console.log("Error Found:", err);
         process.exit(0);
@@ -146,11 +146,17 @@ const labsOverride__Settings = async (targetPath) => {
 
     log(`${chalk.green('auroLabs settings applied to new repo.')}: ${targetPath}`);
   }
+
+  try {
+    fs.unlinkSync(`${targetPath}/.github/settings__labs.yml`)
+  } catch(err) {
+    console.error(err)
+  }
 }
 
 const labsOverride__Readme = async (targetPath) => {
   if (labs) {
-    fs.copyFile('./labsTemplate/README.md', `${targetPath}/README.md`, (err) => {
+    fs.copyFile(`${targetPath}/README__labs.md`, `${targetPath}/README.md`, (err) => {
       if (err) {
         console.log("Error Found:", err);
         process.exit(0);
@@ -158,6 +164,12 @@ const labsOverride__Readme = async (targetPath) => {
     });
 
     log(`${chalk.green('auroLabs README applied to new repo.')}: ${targetPath}`);
+  }
+
+  try {
+    fs.unlinkSync(`${targetPath}/README__labs.md`)
+  } catch(err) {
+    console.error(err)
   }
 }
 

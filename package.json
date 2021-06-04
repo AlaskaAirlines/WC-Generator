@@ -6,7 +6,6 @@
   "files": [
     "bin",
     "template",
-    "labsTemplate",
     "util"
   ],
   "bin": {
