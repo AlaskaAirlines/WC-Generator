@@ -30,11 +30,13 @@ class [Namespace][Name] extends LitElement {
   //   super();
   // }
 
-  // function to define props used within the scope of this component
+  // This function is to define props used within the scope of this component
+  // Be sure to review  https://lit-element.polymer-project.org/guide/properties#reflected-attributes
+  // to understand how to use reflected attributes with your property settings.
   static get properties() {
     return {
       // ...super.properties,
-      cssClass:   { type: String }
+      cssClass:   { type: String } // this property is DEMO ONLY! Please delete.
     };
   }
 
