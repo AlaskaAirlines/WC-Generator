@@ -111,6 +111,7 @@ const formatTemplateFileContents = (replacements, content) => {
 };
 
 const copyFile = async (sourcePath, targetPath, params, replacements, fileRenames = {}) => {
+
   const stats = await fsPromises.stat(sourcePath);
   if (stats.isDirectory()) {
     await makeFolder(targetPath);
@@ -132,6 +133,33 @@ const copyFile = async (sourcePath, targetPath, params, replacements, fileRename
     }
   }
 };
+
+// function will replace the settings.yml if the project is auroLabs
+const labsOverride__Settings = async (targetPath) => {
+  if (labs) {
+    fs.copyFile('./labsTemplate/.github/settings.yml', `${targetPath}/.github/settings.yml`, (err) => {
+      if (err) {
+        console.log("Error Found:", err);
+        process.exit(0);
+      }
+    });
+
+    log(`${chalk.green('auroLabs settings applied to new repo.')}: ${targetPath}`);
+  }
+}
+
+const labsOverride__Readme = async (targetPath) => {
+  if (labs) {
+    fs.copyFile('./labsTemplate/README.md', `${targetPath}/README.md`, (err) => {
+      if (err) {
+        console.log("Error Found:", err);
+        process.exit(0);
+      }
+    });
+
+    log(`${chalk.green('auroLabs README applied to new repo.')}: ${targetPath}`);
+  }
+}
 
 const getVersionData = async () => {
   const { devDependencies, dependencies, peerDependencies } = require('../template/package.json');
@@ -362,6 +390,8 @@ Creating Web Components People Love.
       '.npmignore.temp': '.npmignore',
       '.gitignore.temp': '.gitignore'
     });
+    await labsOverride__Settings(params.dir);
+    await labsOverride__Readme(params.dir);
     log(chalk.green('\nCopied all files!'));
 
     let areDependenciesInstalled = false;
