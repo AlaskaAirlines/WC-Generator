@@ -1,5 +1,17 @@
 # Semantic Release Automated Changelog
 
+# [3.4.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.3.6...v3.4.0) (2021-06-04)
+
+
+### Bug Fixes
+
+* **commitlint:** update commitLint config [#149](https://github.com/AlaskaAirlines/WC-Generator/issues/149) ([fe7e5d6](https://github.com/AlaskaAirlines/WC-Generator/commit/fe7e5d6d912b86a72802b7af56c4481704771982))
+
+
+### Features
+
+* **labs:** update install to apply alt settings ([1277792](https://github.com/AlaskaAirlines/WC-Generator/commit/12777921ff00543d30c1cf930fb3a2be387045ea))
+
 ## [3.3.6](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.3.5...v3.3.6) (2021-06-03)
 
 
