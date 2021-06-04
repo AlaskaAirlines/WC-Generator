@@ -97,7 +97,12 @@ $ npm run serve
 Open [localhost:8000](http://localhost:8000/)
 
 ### Testing
+
 Automated tests are required for every Auro component. See `.\test\[namespace]-[name].test.js` for the tests for this component. Run `npm test` to run the tests and check code coverage. Tests must pass and meet a certain coverage threshold to commit. See [the testing documentation](https://auro.alaskaair.com/support/tests) for more details.
+
+### Bundled assets
+
+Bundled assets are only generated in the remote and not merged back to this repo. To review and/or test a bundled asset locally, run `$ npm run bundler` to generate assets.
 
 ### Demo deployment
 
