@@ -137,7 +137,7 @@ const copyFile = async (sourcePath, targetPath, params, replacements, fileRename
 // function will replace the settings.yml if the project is auroLabs
 const labsOverride__Settings = async (targetPath) => {
   if (labs) {
-    fs.copyFile('./labsTemplate/.github/settings.yml', `${targetPath}/.github/settings.yml`, (err) => {
+    fs.copyFile('./labsTemplate/github/settings.yml', `${targetPath}/.github/settings.yml`, (err) => {
       if (err) {
         console.log("Error Found:", err);
         process.exit(0);

@@ -36,7 +36,9 @@ class [Namespace][Name] extends LitElement {
   static get properties() {
     return {
       // ...super.properties,
-      cssClass:   { type: String } // this property is DEMO ONLY! Please delete.
+
+      // this property is DEMO ONLY! Please delete.
+      cssClass:   { type: String }
     };
   }
 
