@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [3.4.2](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.4.1...v3.4.2) (2021-06-04)
+
+
+### Bug Fixes
+
+* **labs:** update location of alt template ([e276593](https://github.com/AlaskaAirlines/WC-Generator/commit/e276593280b1f16237b29a915ca126cab0fb7877))
+
 ## [3.4.1](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.4.0...v3.4.1) (2021-06-04)
 
 
