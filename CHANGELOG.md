@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [3.4.1](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.4.0...v3.4.1) (2021-06-04)
+
+
+### Bug Fixes
+
+* **labs:** update package.json to include labs template dir ([1eb1148](https://github.com/AlaskaAirlines/WC-Generator/commit/1eb1148b8e0c06b97aaedaca89f9cd30a8cff6d9))
+
 # [3.4.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.3.6...v3.4.0) (2021-06-04)
 
 
