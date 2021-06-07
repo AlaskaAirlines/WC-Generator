@@ -44,7 +44,13 @@ $ source ~/.bashrc
 
 First step to performing the migration is to create a new repository from the Auro WC-Generator. The following command will generate a new repo, ignoring the npm install and build steps.
 
-**Do NOT** use `auro` for the element name. Only enter the name of the custom element you are building a repo for, e.g. `card` or `toggle`. The generator assumes the `auro` namespace. See the [WC-Generator API](/getting-started/developers/generator/generator/api) for more information on how to alter the namespace if needed.
+When generating a new custom element using the Auro WC-Generator, you are not restricted to using the Auro namespace for your new element. The following example will crate the project, `@aurodesignsystem/auro-ticker`
+
+```shell
+$ wc-generate --name Auro-Ticker
+```
+
+See the [WC-Generator API](/getting-started/developers/generator/generator/api) for more information.
 
 If you are creating a new element repo in the same directory as the legacy repo, it is recommended that you **rename the legacy repo** BEFORE you runt he generator as not to cause a collision.
 

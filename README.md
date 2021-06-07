@@ -37,7 +37,7 @@ For the most up to date information on UI development browser support, see [Auro
 
 ## Custom namespace support
 
-When generating a new WC using the Auro WC-Generator, you are not restricted to using the Auro namespace for your new element. The following example will crate the project, `@aurodesignsystem/auro-ticker`
+When generating a new custom element using the Auro WC-Generator, you are not restricted to using the Auro namespace for your new element. The following example will crate the project, `@aurodesignsystem/auro-ticker`
 
 ```shell
 $ wc-generate --name Auro-Ticker
