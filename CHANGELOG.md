@@ -1,5 +1,13 @@
 # Semantic Release Automated Changelog
 
+# [3.5.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.4.3...v3.5.0) (2021-06-08)
+
+
+### Features
+
+* **api:** remove api build from watcher [#147](https://github.com/AlaskaAirlines/WC-Generator/issues/147) ([db2e68b](https://github.com/AlaskaAirlines/WC-Generator/commit/db2e68b507e5c8d876ac1af4065f8d08e37f5914))
+* **bundled assets:** remove pre-commit build [#147](https://github.com/AlaskaAirlines/WC-Generator/issues/147) ([7c481c6](https://github.com/AlaskaAirlines/WC-Generator/commit/7c481c63038352dc834d8d8d5eed2145fe93cec5))
+
 ## [3.4.3](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.4.2...v3.4.3) (2021-06-04)
 
 
