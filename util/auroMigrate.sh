@@ -82,9 +82,20 @@ function auroMigrate {
   command git add --all
   sleep 1
 
-  # commit new updates, bypass husky (npm not installed yet)
-  command git commit --no-verify -m "refactor: migrate repo to latest generator build"
-  sleep 1
+  # check for --breaking-change
+  if [[ $4 = "--breaking-change" ]]; then
+    # commit new updates, bypass husky (npm not installed yet)
+    command git commit --no-verify -m "refactor(generator migration): migrate repo to latest generator build
+
+BREAKING CHANGE: This refactor contains breaking changes due to migration"
+    sleep 1
+  else
+    # commit new updates, bypass husky (npm not installed yet)
+    command git commit --no-verify -m "refactor(generator migration): migrate repo to latest generator build"
+    sleep 1
+  fi
+
+
 
   # close out message
   echo -e "\n\nCommitted all changes to ${YELLOW}repoUpgrde${NC} Git branch\n"
