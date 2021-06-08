@@ -42,17 +42,9 @@ $ source ~/.bashrc
 
 ## Generate a new repo
 
-First step to performing the migration is to create a new repository from the Auro WC-Generator. The following command will generate a new repo, ignoring the npm install and build steps.
+First step to performing the migration is to create a new repository from the Auro WC-Generator. The following command will generate a new repo, ignoring the npm install and build steps. See the [WC-Generator API](/getting-started/developers/generator/generator/api) for more information.
 
-When generating a new custom element using the Auro WC-Generator, you are not restricted to using the Auro namespace for your new element. The following example will crate the project, `@aurodesignsystem/auro-ticker`
-
-```shell
-$ wc-generate --name Auro-Ticker
-```
-
-See the [WC-Generator API](/getting-started/developers/generator/generator/api) for more information.
-
-If you are creating a new element repo in the same directory as the legacy repo, it is recommended that you **rename the legacy repo** BEFORE you runt he generator as not to cause a collision.
+If you are creating a new element repo in the same directory as the legacy repo, it is recommended that you **rename the legacy repo** BEFORE you run the generator as not to cause a collision.
 
 Use the optional namespace argument if you do not want `@aurodesignsystem`. Use this option with `@aurolabs` if you are migrating an auroLabs repo.
 
