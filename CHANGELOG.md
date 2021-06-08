@@ -1,5 +1,13 @@
 # Semantic Release Automated Changelog
 
+## [3.5.1](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.5.0...v3.5.1) (2021-06-08)
+
+
+### Bug Fixes
+
+* **eslint:** remove local dependency ([4751c24](https://github.com/AlaskaAirlines/WC-Generator/commit/4751c24a87c4037c8a3199e707d407736e354cfc))
+* **esLint:** remove linter command from build ([0cbb799](https://github.com/AlaskaAirlines/WC-Generator/commit/0cbb79992095c3d261937982a491276ed9663aa0))
+
 # [3.5.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.4.3...v3.5.0) (2021-06-08)
 
 
