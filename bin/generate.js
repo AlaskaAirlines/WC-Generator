@@ -38,6 +38,7 @@ const parseArgs = () => {
   const args = arg({
     // Types
     '--help': Boolean,
+    '--migrate-help': Boolean,
     '--version': Boolean,
     '--test': Boolean,
     '--name': String,
@@ -46,6 +47,7 @@ const parseArgs = () => {
     '--verbose': Boolean,
     // Aliases
     '-h': '--help',
+    '-m': '--migrate-help',
     '-v': '--version',
     '-t': '--test',
     '-n': '--name',
@@ -55,6 +57,11 @@ const parseArgs = () => {
 
   if (args['--help']) {
     log(require('../util/help-outputs').generate);
+    process.exit(0);
+  }
+
+  if (args['--migrate-help']) {
+    log(require('../util/migrate-outputs').generate);
     process.exit(0);
   }
 

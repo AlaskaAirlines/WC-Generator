@@ -19,11 +19,11 @@ const generate = `
     v${pjson.version}
 
     ${chalk.gray('Upgrade to latest version:')}
-    $ npm i @aurodesignsystem/wc-generator@latest -g
+    $ ${chalk.green('npm i @aurodesignsystem/wc-generator@latest -g')}
 
     ${chalk.gray('Options:')}
-
     -h, --help                Get help info about WC generator
+    -m, --migrate-help        Help with repo migration
     -v, --version             Return installed WC generator version
     -t, --test                Test repo generation without installing dependencies
     -n, --name [name]         Name of the web component to build, must follow format [namespace]-[name]
