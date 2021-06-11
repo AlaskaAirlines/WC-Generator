@@ -38,6 +38,7 @@ const parseArgs = () => {
   const args = arg({
     // Types
     '--help': Boolean,
+    '--version': Boolean,
     '--test': Boolean,
     '--name': String,
     '--npm': String,
@@ -45,6 +46,7 @@ const parseArgs = () => {
     '--verbose': Boolean,
     // Aliases
     '-h': '--help',
+    '-v': '--version',
     '-t': '--test',
     '-n': '--name',
     '-P': '--npm',
@@ -53,6 +55,11 @@ const parseArgs = () => {
 
   if (args['--help']) {
     log(require('../util/help-outputs').generate);
+    process.exit(0);
+  }
+
+  if (args['--version']) {
+    log(require('../util/version-outputs').generate);
     process.exit(0);
   }
 
@@ -77,7 +84,6 @@ const parseArgs = () => {
 
   npm = args['--npm'] || '@aurodesignsystem';
   const test = args['--test'];
-  const version = args['--version'];
   const name = args['--name'].split('-')[1];
   const namespace = args['--name'].split('-')[0];
   const dir = path.resolve(

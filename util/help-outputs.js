@@ -13,7 +13,7 @@ const generate = `
 
     ${chalk.gray('More help:')}
     For more help with building an Auro Web Component,
-    be sure to see ${chalk.blue('https://bit.ly/3cqTsp5')}
+    be sure to see ${chalk.blue('https://auro.alaskaair.com/generator')}
 
     ${chalk.gray('Installed version:')}
     v${pjson.version}
@@ -24,6 +24,7 @@ const generate = `
     ${chalk.gray('Options:')}
 
     -h, --help                Get help info about WC generator
+    -v, --version             Return installed WC generator version
     -t, --test                Test repo generation without installing dependencies
     -n, --name [name]         Name of the web component to build, must follow format [namespace]-[name]
     -P, --npm [npm]           Choose npm namespace
