@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [3.5.3](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.5.2...v3.5.3) (2021-06-11)
+
+
+### Bug Fixes
+
+* **help:** add migration help CLI option ([5b4bf85](https://github.com/AlaskaAirlines/WC-Generator/commit/5b4bf85628273b59e46807185fe091d62822f71f))
+
 ## [3.5.2](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.5.1...v3.5.2) (2021-06-11)
 
 
