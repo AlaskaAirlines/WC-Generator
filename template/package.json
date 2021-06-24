@@ -152,7 +152,7 @@
     "demo:update:index": "node ./scripts/prepForBuild",
     "dev": "npm run build:watch",
     "dist:js": "copyfiles -u 1 -V './src/**/*.js' ./dist",
-    "esLint": "./node_modules/.bin/eslint src/[namespace]-*.js",
+    "esLint": "./node_modules/.bin/eslint src/**/*.js",
     "linters": "npm-run-all scssLint esLint",
     "preCommit": "node scripts/pre-commit.js",
     "postCss:component": "node ./scripts/postCss.js",
