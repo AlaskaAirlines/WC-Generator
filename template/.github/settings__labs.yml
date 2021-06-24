@@ -3,7 +3,7 @@ repository:
   # See https://github.com/apps/settings for app settings
 
   # A short description of the repository that will show up on GitHub
- description: An auroLabs custom element w/an experimental API. You've been warned.
+  description: An auroLabs custom element w/an experimental API. You've been warned.
 
   # A URL with more information about the repository
   homepage: https://auro.alaskaair.com/components/auroLabs
