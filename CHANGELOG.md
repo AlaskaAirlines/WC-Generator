@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+# [3.6.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.5.3...v3.6.0) (2021-06-24)
+
+
+### Features
+
+* **eslint:** broaden eslint coverage ([8f2a2b5](https://github.com/AlaskaAirlines/WC-Generator/commit/8f2a2b53719a71a57209e2272ea7c3630cf5615f))
+
 ## [3.5.3](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.5.2...v3.5.3) (2021-06-11)
 
 
