@@ -37,13 +37,23 @@ function auroMigrate {
   echo -e "${GREEN}4.${NC} ./CHANGELOG.md copied from ${YELLOW}'$1'${NC} to ${YELLOW}'$2'${NC}"
   sleep 1
 
+  # move README
+  command cp "$1"/README.md "$2"/README.legacy
+  echo -e "${GREEN}5.${NC} ./README copied from ${YELLOW}'$1'${NC} to ${YELLOW}'$2'${NC}, renamed to ${YELLOW}'README.legacy'${NC}."
+  sleep 1
+
+  # move package.json
+  command cp "$1"/package.json "$2"/package.legacy
+  echo -e "${GREEN}6.${NC} ./package.json copied from ${YELLOW}'$1'${NC} to ${YELLOW}'$2'${NC}, renamed to ${YELLOW}'package.legacy'${NC}."
+  sleep 1
+
   # check for --no-demo
   if [[ $3 = "--no-demo" ]]; then
-    echo -e "${RED}5.${NC} ./demo directory was ${RED}NOT${NC} copied\n"
+    echo -e "${RED}7.${NC} ./demo directory was ${RED}NOT${NC} copied\n"
     sleep 3
   else
     command cp -r "$1"/demo/ "$2"/demo
-    echo -e "${GREEN}5.${NC} ./demo directory copied from ${YELLOW}'$1'${NC} to ${YELLOW}'$2'${NC}\n"
+    echo -e "${GREEN}7.${NC} ./demo directory copied from ${YELLOW}'$1'${NC} to ${YELLOW}'$2'${NC}\n"
     sleep 3
   fi
 
@@ -87,6 +97,8 @@ function auroMigrate {
   sleep 1
 
   # close out message
+  echo -e "\n\nNote: The legacy ${YELLOW}README${NC} and ${YELLOW}package.json${NC} files were maintained.\nBe sure to review these files, manually update with information\nthat needs to be retained and then remove them from the project.\n"
+  echo -e "To see diffs, consider using ${YELLOW}$ vimdiff package.legacy package.json${NC}"
   echo -e "\n\nCommitted all changes to ${YELLOW}repoUpgrde${NC} Git branch\n"
   echo -e "For any subsequent changes to the ${YELLOW}repoUpgrde${NC}, please\nbe sure to amend to the previous commit.\n"
   echo -e "Use ${YELLOW}$ git commit --amend --no-edit${NC} after staging the updates.\n\n"
