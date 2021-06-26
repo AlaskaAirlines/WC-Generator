@@ -13,7 +13,7 @@ const  generate = `
   be sure to see ${chalk.blue('https://auro.alaskaair.com/getting-started/developers/generator/upgrade')}
 
   ${chalk.gray('Install script:')}
-  $ curl https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/master/util/auroMigrate.sh -o ~/.auroMigrate.sh'
+  $ curl https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/master/util/auroMigrate.sh -o ~/.auroMigrate.sh
 
   ${chalk.gray('Add a reference:')}
   Add a reference to this file in either your ${chalk.yellow('~/.bash_profile')} or ${chalk.yellow('~/.bashrc_profile')} file:
