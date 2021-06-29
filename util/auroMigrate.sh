@@ -52,7 +52,8 @@ function auroMigrate {
     echo -e "${RED}7.${NC} ./demo directory was ${RED}NOT${NC} copied\n"
     sleep 3
   else
-    command cp -r "$1"/demo/ "$2"/demo
+    command cp "$1"/demo/demo.md "$2"/demo/demo.md
+    command cp "$1"/demo/index.html "$2"/demo/index.html
     echo -e "${GREEN}7.${NC} ./demo directory copied from ${YELLOW}'$1'${NC} to ${YELLOW}'$2'${NC}\n"
     sleep 3
   fi
