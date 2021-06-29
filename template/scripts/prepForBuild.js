@@ -9,7 +9,7 @@ let copyFiles = async function() {
     console.log(`${bundle} was copied to ./build dir`);
   });
 
-  fs.copyFile(`./demo/css/style.css`, `./build/css/style.css`, (err) => {
+  fs.copyFile(`./demo/style.css`, `./build/style.css`, (err) => {
     if (err) throw err;
     console.log(`CSS was copied to ./build dir`);
   });
