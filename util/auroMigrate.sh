@@ -49,7 +49,8 @@ function auroMigrate {
 
   # check for --no-demo
   if [[ $3 = "--no-demo" ]]; then
-    echo -e "${RED}7.${NC} ./demo directory was ${RED}NOT${NC} copied\n"
+    command cp "$1"/demo/index.html "$2"/demo/index.legacy
+    echo -e "${RED}7.${NC} the file ${RED}`$1/demo/index.html`${NC} was moved to ${RED}`$2/demo/index.legacy${NC}`\n"
     sleep 3
   else
     command cp "$1"/demo/demo.md "$2"/demo/demo.md
