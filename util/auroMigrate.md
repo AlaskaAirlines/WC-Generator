@@ -79,17 +79,27 @@ This function takes up to three arguments in this order:
 1. Path to the newly created directory `{ String }`
 1. `--no-demo` flag `{ Boolean }`
 
+### DIrectory path support
+
 For obvious reasons, you cannot have two directories named the same. The migration command accepts any directory path, e.g. if the newly created repo was in a sub-directory from where the legacy repo is, the command could be the following:
 
 ```
 $ auroMigrate auro-flight migration/auro-flight
 ```
 
-Or if the new repo was outside the current directory
+Or if the new repo was outside the current directory:
 
 ```
 $ auroMigrate auro-flight ../auro-flight
 ```
+
+If the repos are in the same directory, again using auro-flight as an example, ensure that the directory names do not clash. The command may be like the following:
+
+```
+$ auroMigrate flight auro-flight
+```
+
+### Migrating the demo
 
 If the repo you are migrating from does not have a modern markdown demo in the `./demo` directory, please add the `--no-demo` flag.
 
