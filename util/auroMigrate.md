@@ -79,7 +79,7 @@ This function takes up to three arguments in this order:
 1. Path to the newly created directory `{ String }`
 1. `--no-demo` flag `{ Boolean }`
 
-For obvious reasons, you cannot have two directories named the same. The migration command accepts any directory path, e.g. if the newly creates repo was in a sub-directory from where the legacy repo is, the command could be the following:
+For obvious reasons, you cannot have two directories named the same. The migration command accepts any directory path, e.g. if the newly created repo was in a sub-directory from where the legacy repo is, the command could be the following:
 
 ```
 $ auroMigrate auro-flight migration/auro-flight
