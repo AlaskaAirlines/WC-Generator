@@ -15,29 +15,20 @@ Alaska Airlines currently supports the following browsers for the delivery of st
 | Chrome | Current release | Windows, macOS, iOS, Android |
 | Safari | Current release | macOS, iOS |
 | Firefox | Current release | Windows, macOS, Android |
-| Edge*† | Stable release | Windows 7, Windows 8, Windows 10 |
-| Internet Explorer†† | 11 | Windows 7, Windows 8, Windows 10 |
+| Edge† | Stable release | Windows 7, Windows 8, Windows 10 |
 
-\* The new Microsoft Edge is based on Chromium and was released on January 15, 2020. It is compatible with all supported versions of Windows, and macOS. Downloading the browser will replace the legacy version of Microsoft Edge  on Windows 10 PCs.
-
-† Edge 18 is the final version to support [EdgeHTML](https://en.wikipedia.org/wiki/EdgeHTML) on Windows 10 machines only. There is no directive to individually support this version of Edge.
-
-†† Internet Explorer has been fully deprecated by Microsoft and testing in this browser requires special agreement from Product for the additional effort required to support this browser. It is planned to drop all support for Internet Explorer by Q3 2021.
+† Chromium based Microsoft Edge was released on January 15, 2020. Edge 18, the final version based on [EdgeHTML](https://en.wikipedia.org/wiki/EdgeHTML) on Windows 10 machines only, is NOT supported.
 
 #### Browser support for HTML Web Components
 
-| Feature | Chrome | Opera | Safari | Firefox | MS Edge | IE
+| Feature | Chrome | Opera | Safari | Firefox | MS Edge
 |----|----|----|----|----|----|----|----|
-| HTML Templates | Stable | Stable | Stable | Stable | Stable | Transpiling†/Polyfill* |
-| Custom Elements | Stable | Stable | Stable | Stable | Stable | Transpiling†/Polyfill* |
-| Shadow DOM | Stable | Stable | Stable | Stable | Stable | Transpiling†/Polyfill* |
-| ES Modules | Stable | Stable | Stable | Stable | Stable | Transpiling†/Polyfill* |
+| HTML Templates | Stable | Stable | Stable | Stable | Stable
+| Custom Elements | Stable | Stable | Stable | Stable | Stable
+| Shadow DOM | Stable | Stable | Stable | Stable | Stable
+| ES Modules | Stable | Stable | Stable | Stable | Stable
 
-[webcomponents.org](https://www.webcomponents.org/)
-
-† Transpiling from ES6 to ES5 is required for browser support.
-
-\* JavaScript polyfills are required in order for these browsers to render Polymer/Lit-element web components. See the [polyfill doc](https://github.com/AlaskaAirlines/auro/blob/master/src/POLYFILL.md) for more information on installment options.
+-- source: [webcomponents.org](https://www.webcomponents.org/)
 
 #### Browser support for CSS Custom Properties (variables)
 
@@ -47,7 +38,3 @@ Alaska Airlines currently supports the following browsers for the delivery of st
 | Safari | Current release | Yes |
 | Firefox | Current release | Yes |
 | Edge | Current release | Yes |
-| Internet Explorer | 11 | No* |
-
-\* Fallback CSS is required to support browser. See [Custom Properties doc](https://auro.alaskaair.com/support/custom-properties) for information about setup and configuration.
-
