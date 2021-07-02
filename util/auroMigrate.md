@@ -104,7 +104,7 @@ $ auroMigrate flight auro-flight
 If the repo you are migrating from does not have a modern markdown demo in the `./demo` directory, please add the `--no-demo` flag.
 
 ```
-$ auroMigrate auroMigrate auro-flight migration/auro-flight --no-demo
+$ auroMigrate auro-flight migration/auro-flight --no-demo
 ```
 
 ## Review and test the migration
