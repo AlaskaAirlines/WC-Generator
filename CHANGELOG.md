@@ -1,5 +1,14 @@
 # Semantic Release Automated Changelog
 
+## [3.6.3](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.6.2...v3.6.3) (2021-07-09)
+
+
+### Bug Fixes
+
+* **migrate:** update demo script [#161](https://github.com/AlaskaAirlines/WC-Generator/issues/161) ([9129a54](https://github.com/AlaskaAirlines/WC-Generator/commit/9129a540c713bb83b01ffc00f07596b7a4335849))
+* **migration:** update --no-demo scenario [#161](https://github.com/AlaskaAirlines/WC-Generator/issues/161) ([27cedd4](https://github.com/AlaskaAirlines/WC-Generator/commit/27cedd4690896edeff9b2b2ba2fda157521d6d29))
+* **prepforbuild:** update prep script for css [#160](https://github.com/AlaskaAirlines/WC-Generator/issues/160) ([e6c887d](https://github.com/AlaskaAirlines/WC-Generator/commit/e6c887db65d0f5eb6f460b963688b3c46a79aab5))
+
 ## [3.6.2](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.6.1...v3.6.2) (2021-06-26)
 
 
