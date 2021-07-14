@@ -9,7 +9,7 @@ repository:
   homepage: https://auro.alaskaair.com/components/auroLabs
 
   # A comma-separated list of topics to set on the repository
-  topics: auro-labs, design-system, custom-element
+  topics: auro-labs, design-system, custom-element, wcgen-v[genVersion]
 
   # Either `true` to enable issues for this repository, `false` to disable them.
   has_issues: true
