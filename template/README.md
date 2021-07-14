@@ -56,8 +56,8 @@ Since the legacy bundle includes many polyfills that are not needed by modern br
 <link rel="stylesheet" href="https://unpkg.com/@alaskaairux/design-tokens@latest/dist/tokens/CSSCustomProperties.css" />
 <link rel="stylesheet" href="https://unpkg.com/@alaskaairux/webcorestylesheets@latest/dist/bundled/essentials.css" />
 
-<script src="https://unpkg.com/@alaskaairux/[namespace]-[name]@latest/dist/[namespace]-[name]__bundled.js" type="module"></script>
-<script src="https://unpkg.com/@alaskaairux/[namespace]-[name]@latest/dist/[namespace]-[name]__bundled.es5.js" nomodule></script>
+<script src="https://unpkg.com/[npm]/[namespace]-[name]@latest/dist/[namespace]-[name]__bundled.js" type="module"></script>
+<script src="https://unpkg.com/[npm]/[namespace]-[name]@latest/dist/[namespace]-[name]__bundled.es5.js" nomodule></script>
 ```
 
 ## [namespace]-[name] use cases
