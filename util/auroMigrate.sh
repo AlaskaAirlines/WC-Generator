@@ -14,8 +14,8 @@ function auroMigrate {
   NC='\033[0m' # No Color
 
   command clear
-  echo -e "\nThe following steps have been addressed to migrade code from ${YELLOW}'${1//\/}'${NC} to ${YELLOW}'${2//\/}'${NC}.\n"
-  echo -e "Please be sure to review the full commit to the ${GREEN}repoUpgrde${NC} branch,\nthis migration ${YELLOW}does not${NC} account for legacy repositoy customizations\nsuch as additional dependencies or multiple CDN packaged bundles."
+  echo -e "\nThe following steps have been addressed to migrate code from ${YELLOW}'${1//\/}'${NC} to ${YELLOW}'${2//\/}'${NC}.\n"
+  echo -e "Please be sure to review the full commit to the ${GREEN}repoUpgrade${NC} branch,\nthis migration ${YELLOW}does not${NC} account for legacy repositoy customizations\nsuch as additional dependencies or multiple CDN packaged bundles."
 
   # migrate git dir
   command cp -r "${1//\/}"/.git/ "${2//\/}"/.git
