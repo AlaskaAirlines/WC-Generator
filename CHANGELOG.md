@@ -1,5 +1,17 @@
 # Semantic Release Automated Changelog
 
+# [3.7.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.6.3...v3.7.0) (2021-07-14)
+
+
+### Bug Fixes
+
+* address issue where npm namespace was hardcoded in docs ([165e71a](https://github.com/AlaskaAirlines/WC-Generator/commit/165e71a0f6a84d7cbd8a81b31de9d537ddaed2b7))
+
+
+### Features
+
+* **version:** add version tag to repo settings [#165](https://github.com/AlaskaAirlines/WC-Generator/issues/165) ([5d8d3df](https://github.com/AlaskaAirlines/WC-Generator/commit/5d8d3dfea5eda6c11e3f09db9a89704e5058f327))
+
 ## [3.6.3](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.6.2...v3.6.3) (2021-07-09)
 
 
