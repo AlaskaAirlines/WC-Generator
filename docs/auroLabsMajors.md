@@ -21,8 +21,6 @@
 
 Once a new component is released for beta use under the `@aurolabs` namespace, this will trigger a review process with the Auro team. This process will happen as soon as possible, but please be patient.
 
-The first step is to get the new component added to the [Auro Labs](https://auro.alaskaair.com/audit) priority board. This is the review process. Once all these steps are considered `ADS Compliant` then it is eligible for inclusion into the Auro Design System.
-
 ## Design sponsor
 
 A core part of the review process is to have design sponsorship for your new custom element. In order for the new element to be considered for the Auro design system, the designs need to be reviewed, prepared and documented for use across all design teams.

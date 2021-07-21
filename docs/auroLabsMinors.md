@@ -19,9 +19,9 @@
 
 # The farm team
 
-Welcome to Auro Labs! If you have come this far, you must be interested in learning how to build a new custom element in Auro Labs!
+Welcome to auroLabs! If you have come this far, you must be interested in learning how to build a new custom element in auroLabs!
 
-When building a new custom element  in Auro Labs it is highly recommended that you start with the [WC-Generator](https://auro.alaskaair.com/getting-started/developers/generator/install) as this comes packed with all of Auro's vetted best practices and baked in dependencies that will make your transition to the majors a breeze.
+When building a new custom element  in auroLabs it is highly recommended that you start with the [WC-Generator](https://auro.alaskaair.com/getting-started/developers/generator/install) as this comes packed with all of Auro's vetted best practices and baked in dependencies that will make your transition to the majors a breeze.
 
 Once the generator is [installed](https://auro.alaskaair.com/getting-started/developers/generator/install), please use the following execution template fo your new project.
 
@@ -199,7 +199,7 @@ Contained within the WC-Generator is a demo build process. Run `$ npm run demo:b
 <div style="display: flex; justify-content: space-between; margin-top: 10rem">
   <auro-hyperlink href="https://auro.alaskaair.com/aurolabs" nav>
     <auro-icon category="interface" name="arrow-left" customColor></auro-icon>
-    Previous: AuroLabs
+    Previous: auroLabs
   </auro-hyperlink>
 
   <auro-hyperlink href="https://auro.alaskaair.com/aurolabs/majors" nav>
