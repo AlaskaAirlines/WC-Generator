@@ -1,5 +1,15 @@
 # Semantic Release Automated Changelog
 
+## [3.7.2](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.7.1...v3.7.2) (2021-08-03)
+
+
+### Bug Fixes
+
+* **engine:** update baseline engine version ([0c66416](https://github.com/AlaskaAirlines/WC-Generator/commit/0c66416a6920e6be7b6c41c22e7cbad8fc9da8f2))
+* **test:** address issue with baseline and test versions ([fce277b](https://github.com/AlaskaAirlines/WC-Generator/commit/fce277b766dbeb35eaf79e034371fb8264d9b9ff))
+* **typo:** update name header for demo page [#171](https://github.com/AlaskaAirlines/WC-Generator/issues/171) ([495b29a](https://github.com/AlaskaAirlines/WC-Generator/commit/495b29a81ab2c08a801abfbd3e2712485b4acbac))
+* **version:** update README to use dot version number [#172](https://github.com/AlaskaAirlines/WC-Generator/issues/172) ([3b83532](https://github.com/AlaskaAirlines/WC-Generator/commit/3b83532908851194d185c3582b73cd208ae3e8e1))
+
 ## [3.7.1](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.7.0...v3.7.1) (2021-07-15)
 
 
