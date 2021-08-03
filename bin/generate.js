@@ -304,7 +304,8 @@ const getReplacements = async ({ name, namespace, npm }) => {
   }
 
   const nameReplacements = [
-    { regex: /\[genVersion\]/g, value: pjson.version.split('.').join("-") },
+    { regex: /\[genVersion\]/g, value: pjson.version },
+    { regex: /\[genVersionDash\]/g, value: pjson.version.split('.').join("-") },
     { regex: /\[author\]/g, value: userName },
     { regex: /\[name\]/g, value: lowerKebabCaseName },
     { regex: /\[namespace\]/g, value: lowerKebabCaseNameSpace },
