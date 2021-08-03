@@ -8,6 +8,9 @@ const  generate = `
   ${chalk.gray('Upgrade to latest version:')}
   $ ${chalk.green('npm i @aurodesignsystem/wc-generator@latest -g')}
 
+  ${chalk.gray('Uninstall previous version(only needed if there is an issue):')}
+  $ ${chalk.green('npm uninstall -g @aurodesignsystem/wc-generator')}
+
   ${chalk.gray('More help:')}
   For more help with building an Auro Web Component,
   be sure to see ${chalk.blue('https://auro.alaskaair.com/generator')}
