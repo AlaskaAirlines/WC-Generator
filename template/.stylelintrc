@@ -17,6 +17,7 @@
       ]
     } ],
     "at-rule-name-newline-after": "always-multi-line",
+    "at-rule-no-unknown": null,
     "at-rule-semicolon-space-before": "never",
     "block-closing-brace-space-after": "always-single-line",
     "block-opening-brace-newline-before": "never-single-line",
