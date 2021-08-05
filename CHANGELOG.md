@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [3.7.3](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.7.2...v3.7.3) (2021-08-05)
+
+
+### Bug Fixes
+
+* **linter:** fix no @ rule for scss ([e6f7af5](https://github.com/AlaskaAirlines/WC-Generator/commit/e6f7af5c6f80a81d0d2fe5751ffa3ed591499fbd))
+
 ## [3.7.2](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.7.1...v3.7.2) (2021-08-03)
 
 
