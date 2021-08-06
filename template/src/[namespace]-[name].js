@@ -18,7 +18,7 @@ import styleCssFixed from './style-fixed-css.js';
 
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
-* [namespace]-[name] provides users a way to ... (it would be great if you fill this out)
+ * The [namespace]-[name] element provides users a way to ... (it would be great if you fill this out).
  *
  * @attr {Boolean} fixed - Uses fixed pixel values for element shape
  * @attr {String} cssClass - Applies designated CSS class to demo element - you want to delete me!
