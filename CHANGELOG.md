@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [3.7.4](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.7.3...v3.7.4) (2021-08-06)
+
+
+### Bug Fixes
+
+* **lint:** update comment to meet lint spec [#176](https://github.com/AlaskaAirlines/WC-Generator/issues/176) ([fc975c9](https://github.com/AlaskaAirlines/WC-Generator/commit/fc975c98a817bf4e2f4e2181832c750c0323f043))
+
 ## [3.7.3](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.7.2...v3.7.3) (2021-08-05)
 
 
