@@ -202,77 +202,98 @@ const getVersionData = async () => {
 
 const question = async () => {
   const params = parseArgs();
+  const pjson = require('../package.json');
+  const latestVersion = require('latest-version');
+  const latestPublishedVersion = await latestVersion('@aurodesignsystem/wc-generator');
 
-  if (!params.test) {
-    const questions = [
-      {
-        type: 'confirm',
-        name: 'auroLabs',
-        message: 'Is this an AuroLabs project?',
-        when: function (answers) {
-          return !readDocs('auroLabs')(answers);
+  if (pjson.version === latestPublishedVersion) {
+    if (!params.test) {
+      const questions = [
+        {
+          type: 'confirm',
+          name: 'generatorVersion',
+          message: `Please confirm you have the latest version installed v${latestPublishedVersion}`,
+          when: function (answers) {
+            return !readDocs('generatorVersion')(answers);
+          },
         },
-      },
-      {
-        type: 'confirm',
-        name: 'governance',
-        message: 'Have you reviewed Auro\'s Contributing Guidelines?',
-        when: function (answers) {
-          return !readDocs('governance')(answers);
+        {
+          type: 'confirm',
+          name: 'auroLabs',
+          message: 'Is this an AuroLabs project?',
+          when: function (answers) {
+            return !readDocs('auroLabs')(answers);
+          },
         },
-      },
-      {
-        type: 'confirm',
-        name: 'status',
-        message: 'Have you reviewed the list of available components to ensure this is not a duplicate custom element?',
-        when: function (answers) {
-          return !readDocs('status')(answers);
+        {
+          type: 'confirm',
+          name: 'governance',
+          message: 'Have you reviewed Auro\'s Contributing Guidelines?',
+          when: function (answers) {
+            return !readDocs('governance')(answers);
+          },
         },
-      },
-      {
-        type: 'confirm',
-        name: 'cssConventions',
-        message: 'Have you reviewed Auro\'s CSS conventions and how to apply CSS to custom elements?',
-        when: function (answers) {
-          return !readDocs('cssConventions')(answers);
+        {
+          type: 'confirm',
+          name: 'status',
+          message: 'Have you reviewed the list of available components to ensure this is not a duplicate custom element?',
+          when: function (answers) {
+            return !readDocs('status')(answers);
+          },
         },
-      },
-    ];
+        {
+          type: 'confirm',
+          name: 'cssConventions',
+          message: 'Have you reviewed Auro\'s CSS conventions and how to apply CSS to custom elements?',
+          when: function (answers) {
+            return !readDocs('cssConventions')(answers);
+          },
+        },
+      ];
 
-    function readDocs(arg) {
-      return function (answers) {
-        return answers[arg];
-      };
+      function readDocs(arg) {
+        return function (answers) {
+          return answers[arg];
+        };
+      }
+
+      console.log(chalk.yellow(`Please review the following questions to ensure \nyou are fully aware of Auro\'s development support.\n`));
+
+      inquirer.prompt(questions).then((answers) => {
+
+        if (answers.auroLabs === true) {
+          labs = true;
+        }
+
+        if (answers.generatorVersion === false) {
+          log(chalk.red(`\nSorry, we have to stop you here.\n\nPlease run: npm i @aurodesignsystem/wc-generator@latest -g\n`))
+        }
+
+        if (answers.governance === false) {
+          console.log(`\nNot reviewed the Contributing Guidelines?\nPlease review ${chalk.underline.yellow(`https://auro.alaskaair.com/contributing`)} before submitting any new work\nto ensure that you will be in compliance with our expectations.\n`);
+        }
+
+        if (answers.status === false) {
+          console.log(`\nPlease review ${chalk.underline.yellow(`https://auro.alaskaair.com/component-status`)} before starting a new project.\n`);
+        }
+
+        if (answers.cssConventions === false) {
+          console.log(`\nNot familiar with Auro\'s CSS conventions?\nPlease review ${chalk.underline.yellow(`https://auro.alaskaair.com/webcorestylesheets/custom-element-css`)} before starting a new project.\n`);
+        }
+
+        if (answers.generatorVersion === true
+            && answers.governance === true
+            && answers.status === true
+            && answers.cssConventions === true) {
+          generateFromTemplate();
+        }
+      });
+    } else {
+      generateFromTemplate();
     }
-
-    console.log(chalk.yellow(`Please review the following questions to ensure \nyou are fully aware of Auro\'s development support.\n`));
-
-    inquirer.prompt(questions).then((answers) => {
-
-      if (answers.auroLabs === true) {
-        labs = true;
-      }
-
-      if (answers.governance === false) {
-        console.log(`\nNot reviewed the Contributing Guidelines?\nPlease review ${chalk.underline.yellow(`https://auro.alaskaair.com/contributing`)} before submitting any new work\nto ensure that you will be in compliance with our expectations.\n`);
-      }
-
-      if (answers.status === false) {
-        console.log(`\nPlease review ${chalk.underline.yellow(`https://auro.alaskaair.com/component-status`)} before starting a new project.\n`);
-      }
-
-      if (answers.cssConventions === false) {
-        console.log(`\nNot familiar with Auro\'s CSS conventions?\nPlease review ${chalk.underline.yellow(`https://auro.alaskaair.com/webcorestylesheets/custom-element-css`)} before starting a new project.\n`);
-      }
-
-      if (answers.governance === true
-          && answers.status === true
-          && answers.cssConventions === true) {
-        generateFromTemplate();
-      }
-    });
   } else {
-    generateFromTemplate();
+    log(chalk.red(`\nCurrently published WC-Generator: v${latestPublishedVersion} | Installed WC-Generator: v${pjson.version}\n`))
+    log(chalk.red(`\nSorry, we have to stop you here.\nIt's been detected you have v${pjson.version} installed,\nand the latest version is v${latestPublishedVersion}. Please run the following:\n\nnpm i @aurodesignsystem/wc-generator@${latestPublishedVersion} -g\n\nfor the latest version.\n`))
   }
 }
 
