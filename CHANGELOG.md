@@ -1,5 +1,13 @@
 # Semantic Release Automated Changelog
 
+# [3.8.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.7.4...v3.8.0) (2021-08-10)
+
+
+### Features
+
+* confirm latest version in gen questions [#175](https://github.com/AlaskaAirlines/WC-Generator/issues/175) ([7c7f5f4](https://github.com/AlaskaAirlines/WC-Generator/commit/7c7f5f4936c15216ee9590bc60e37644c6b34cde))
+* update demo css to pull from cdn [#178](https://github.com/AlaskaAirlines/WC-Generator/issues/178) ([adace28](https://github.com/AlaskaAirlines/WC-Generator/commit/adace289513be5c43236db9e459f1d12a08ff93d))
+
 ## [3.7.4](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.7.3...v3.7.4) (2021-08-06)
 
 
