@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [3.8.1](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.8.0...v3.8.1) (2021-08-13)
+
+
+### Bug Fixes
+
+* **demo css:** remove page wrapper styles from demo styles ([2d0867c](https://github.com/AlaskaAirlines/WC-Generator/commit/2d0867c7d6864908c86cc7948f4851f15615920d))
+
 # [3.8.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.7.4...v3.8.0) (2021-08-10)
 
 
