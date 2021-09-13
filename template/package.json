@@ -133,7 +133,7 @@
     "web components"
   ],
   "scripts": {
-    "build": "npm-run-all build:sass sass:render dist:js build:api bundler postinstall test",
+    "build": "npm-run-all build:sass sass:render dist:js build:api test bundler postinstall",
     "build:ci": "npm-run-all sweep build",
     "build:api": "wca analyze 'src/[namespace]-[name].js' --outFiles docs/api.md",
     "build:demo": "npm-run-all build demo:rm:build demo:new:build demo:copy:index demo:copy:demo demo:update:index",
