@@ -23,6 +23,9 @@ repository:
   # Updates the default branch for this repository.
   default_branch: main
 
+  # Either `true` to enable automatic deletion of branches on merge, or `false` to disable
+  delete_branch_on_merge: true
+
   # Either `true` to allow squash-merging pull requests, or `false` to prevent
   # squash-merging.
   allow_squash_merge: false
