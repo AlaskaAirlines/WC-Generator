@@ -92,6 +92,21 @@ branches:
 
 # Labels: define labels for Issues and Pull Requests
 labels:
+  - name: auro-generator
+    cat: default
+    color: fa23e4
+    description:
+    process: Apply to issues to identify project repo
+  - name: Release
+    cat: default
+    color: 1c872e
+    description: Defines release scope of work
+    process: Apply to any issue that is the designated parent issue for a release
+  - name: Issue
+    cat: default
+    color: 1c872e
+    description: Defines issue scope of work related to release
+    process: Apply to any issue that is associated to a release
   - name: duplicate
     color: 'cde6ff'
     description: This Issue or Pull Request already exists
