@@ -1,6 +1,6 @@
 ---
 name: Publish Component
-about: Create a ticket to drive compliance before publishing a a new componet to Auro Design System
+about: Create a ticket to drive compliance before publishing a new component to Auro Design System
 title: 'auro-[name]; publish to Auro Design System'
 labels: 'Status: Review Needed, not-reviewed'
 ---
@@ -46,15 +46,12 @@ labels: 'Status: Review Needed, not-reviewed'
       - [ ] Keyboard use (a user must be able to navigate to key parts via a keyboard)
       - [ ] Accessibility should be verified against all browsers
     - [ ] Bundled versions tested
-1. __Review__
-
+1. __Review__ <br/>
     When the component is ready for a final review it is the responsibility of the contributor to coordinate the following reviews:
-
     - [ ] Reviewed demo with the designer
     - [ ] Reviewed demo with Auro Team
     - [ ] All work is reviewed by Auro team
 1. __Publishing__
-
     - [ ] Removed all references to `auroLabs` from the repository
     - [ ] Component properly named,  e.g. `auro-[name]`
     - [ ] GitHub Repository properly named
