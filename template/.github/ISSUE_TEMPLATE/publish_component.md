@@ -23,7 +23,7 @@ labels: 'Status: Review Needed, not-reviewed'
 1. __Documentation__
     - `demo.md`
       - [ ] Component properly described
-      - [ ] All component `attributes` listed and described
+      - [ ] Custom element's full API is documented
       - [ ] Component use case(s) outlined
       - [ ] `Do Not` section outlines implementation scenarios to avoid
       - Example Section
@@ -39,11 +39,7 @@ labels: 'Status: Review Needed, not-reviewed'
 1. __Testing__
     - [ ] Component built using latest version of [WC-Generator](http://auro.alaskaair.com/getting-started/developers/generator/install)
     - [ ] All automated tests pass and coverage threshold requirements are met
-    - [Browser compatibility](http://auro.alaskaair.com/support/browsersSupport) - desktop and mobile versions
-      - [ ] Chrome
-      - [ ] Firefox
-      - [ ] Edge (79 +)
-      - [ ] Safari
+    - [ ] [Browser compatibility](http://auro.alaskaair.com/support/browsersSupport) - desktop and mobile versions
     - [Accessibility](http://auro.alaskaair.com/a11y-statement) - One or more of the following
       - [ ] Axe / Google Lighthouse (baseline standard)
       - [ ] Screenreader (determine usability of experience via screenreader)
@@ -54,17 +50,17 @@ labels: 'Status: Review Needed, not-reviewed'
 
     When the component is ready for a final review it is the responsibility of the contributor to coordinate the following reviews:
 
-    - [ ] Review demo with the designer
-    - [ ] Review demo with Auro Team
+    - [ ] Reviewed demo with the designer
+    - [ ] Reviewed demo with Auro Team
     - [ ] All work is reviewed by Auro team
 1. __Publishing__
 
     - [ ] Removed all references to `auroLabs` from the repository
-    - [ ] Component properly named (e.g. `auro-widget`)
+    - [ ] Component properly named,  e.g. `auro-[name]`
     - [ ] GitHub Repository properly named
     - Updated `readme.md`
       - [ ] Install information updated to published namespace
       - [ ] `Define dependency in project component` updated to published namespace
       - [ ] `Bundle example code` updated to published namespace
-    - [ ] Demo page included in the Auro Doc Site
+    - [ ] PR prepared to include demo page in the Auro Doc Site
 
