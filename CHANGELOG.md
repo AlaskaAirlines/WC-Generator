@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [3.9.1](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.9.0...v3.9.1) (2021-09-24)
+
+
+### Bug Fixes
+
+* **lit:** fix generator to use v2.5.1 of LitElement [#215](https://github.com/AlaskaAirlines/WC-Generator/issues/215) ([b5d2f37](https://github.com/AlaskaAirlines/WC-Generator/commit/b5d2f37fad8625b29d0bd2b02da0d5d0acd97a40))
+
 # [3.9.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.8.1...v3.9.0) (2021-09-23)
 
 
