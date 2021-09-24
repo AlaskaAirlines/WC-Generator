@@ -2,6 +2,9 @@
 
 'use strict';
 
+// Check min Node Version
+const minNodeVersion = [14, 17, 0];
+
 // Throw an error on unhandled rejections (exit non-zero)
 process.on('unhandledRejection', err => {
   throw err;
@@ -29,9 +32,7 @@ function verifySemver(minimum, current) {
   return majorValid && minorValid && patchValid;
 }
 
-// Check Node Version (min: 12.0.0)
 const currentNodeVersion = process.versions.node;
-const minNodeVersion = [12, 0, 0];
 const nodeVersionIsValid = verifySemver(
   minNodeVersion,
   currentNodeVersion.split('.')
