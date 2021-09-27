@@ -23,7 +23,7 @@ Welcome to auroLabs! If you have come this far, you must be interested in learni
 
 When building a new custom element  in auroLabs it is highly recommended that you start with the [WC-Generator](https://auro.alaskaair.com/getting-started/developers/generator/install) as this comes packed with all of Auro's vetted best practices and baked in dependencies that will make your transition to the majors a breeze.
 
-Once the generator is [installed](https://auro.alaskaair.com/getting-started/developers/generator/install), please use the following execution template fo your new project.
+Once the generator is installed, please use the following execution template fo your new project.
 
 ```
 $ wc-generate --name auro-[element name]
@@ -38,7 +38,7 @@ From installing the generator all the way to setting up a Github repo. Follow th
     <span slot="trigger" class="trigger">1. Install WC-Generator</span>
     <div class="lightText">
       <p>Install the <auro-hyperlink href="https://auro.alaskaair.com/getting-started/developers/generator/install">WC-Generator</auro-hyperlink>, if not already installed</p>
-      <pre class="pre">  $ npm i @alaskaairux/wc-generator -g</pre>
+      <pre class="pre">  $ npm i @aurodesignsystem/wc-generator -g</pre>
     </div>
   </auro-accordion>
   <auro-accordion id="newWork" chromeless noProfile>
