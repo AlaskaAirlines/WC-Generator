@@ -27,7 +27,7 @@ wc-generate --name [wc-name]
 
 ### Minimum Node version
 
-The WC-Generator requires a minimum install of Node.js `12.0.0`. Recommended install version of `14.0.0`.
+The WC-Generator requires a minimum install of Node.js `14.17.0`.
 
 Be sure to check out our [getting started](https://auro.alaskaair.com/aurolabs/minors) page for helpful tips when starting a new project.
 
