@@ -3,9 +3,9 @@
 # https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners#codeowners-syntax
 
 # The Auro team will be the default owners for everything in the repo.
-*       @AlaskaAirlines/auro-team
+*       @AlaskaAirlines/generalauroreviewers
 
 # Order is important. The last matching pattern has the most precedence.
 # If a pull request touches any files in the ./src dir, only these owners
 # will be requested to review.
-./src/*    @AlaskaAirlines/auroreviewers
+./src/*    @AlaskaAirlines/auroteamreviewers
