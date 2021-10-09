@@ -198,12 +198,12 @@ Contained within the WC-Generator is a demo build process. Run `$ npm run demo:b
 
 <div style="display: flex; justify-content: space-between; margin-top: 10rem">
   <auro-hyperlink href="https://auro.alaskaair.com/aurolabs" nav>
-    <auro-icon category="interface" name="arrow-left" customColor></auro-icon>
+    <auro-icon category="interface" name="chevron-left" customColor></auro-icon>
     Previous: auroLabs
   </auro-hyperlink>
 
   <auro-hyperlink href="https://auro.alaskaair.com/aurolabs/majors" nav>
     Next: the majors
-    <auro-icon category="interface" name="arrow-right" customColor></auro-icon>
+    <auro-icon category="interface" name="chevron-right" customColor></auro-icon>
   </auro-hyperlink>
 </div>

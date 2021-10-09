@@ -57,6 +57,6 @@ The Auro team will work closely with anyone to ensure that the new custom elemen
 <div style="display: flex; justify-content: flex-end; margin-top: 10rem">
   <auro-hyperlink href="https://auro.alaskaair.com/aurolabs/minors" nav>
     Next: the minors
-    <auro-icon category="interface" name="arrow-right" customColor></auro-icon>
+    <auro-icon category="interface" name="chevron-right" customColor></auro-icon>
   </auro-hyperlink>
 </div>

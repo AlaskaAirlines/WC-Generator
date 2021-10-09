@@ -57,7 +57,7 @@ Since you are the one who created the repo, being on the Auro team or not, you w
 
 <div style="display: flex; justify-content: flex-start; margin-top: 10rem">
   <auro-hyperlink href="https://auro.alaskaair.com/aurolabs/minors" nav>
-    <auro-icon category="interface" name="arrow-left" customColor></auro-icon>
+    <auro-icon category="interface" name="chevron-left" customColor></auro-icon>
     Previous: the minors
   </auro-hyperlink>
 </div>
