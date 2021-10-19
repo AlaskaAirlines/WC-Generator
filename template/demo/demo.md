@@ -1,58 +1,64 @@
 # [Name]
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis in tellus nec pellentesque. Integer bibendum ligula sit amet vehicula gravida. Maecenas accumsan, ligula vitae molestie iaculis, tellus mi laoreet ex [install instructions](https://auro.alaskaair.com/components/auro/button/install), ac malesuada velit dolor vel mi. Cras et rutrum urna. Sed mattis mi eu tortor ullamcorper, egestas bibendum mauris cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus viverra eros eget neque commodo vulputate. In tempus eu velit at dictum.
+<!-- AURO-GENERATED-CONTENT:START (TOC:collapse=true) -->
+<details>
+<summary>Table of Contents</summary>
 
-Nulla at augue facilisis `odio lobortis` molestie vitae a nulla.
+- [&#91;Name&#93;](#name)
+  - [Description & Use Cases](#description--use-cases)
+  - [Default &#91;namespace&#93;-[name] example](#default-namespace-name-example)
+    - [Add additional sections for each variation of the API](#add-additional-sections-for-each-variation-of-the-api)
 
-## [namespace]-[name] use cases
+</details>
+<!-- AURO-GENERATED-CONTENT:END -->
+<br/>
 
-The `[namespace]-[name]` element should be used in situations where users may:
+## Description & Use Cases
 
-* egestas bibendum mauris cursus
-* quis euismod felis mollis
-* consectetur ipsum risus sed tortor
+<!-- AURO-GENERATED-CONTENT:START (FILE:src=./../docs/description.md) -->
+<!-- The below content is automatically added from ./../docs/description.md -->
+`<[namespace]-[name]>` is an [HTML custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) for the purpose of ...
 
-> Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam fermentum libero ipsum, ac tempor sapien blandit in. Nam tincidunt non felis molestie varius.
+The `<[namespace]-[name]>` element should be used in situations where users may:
 
-|convallis|tristique|nisl dignissim|eleifend|
-|---|---|---|---|
-|√|√|||
-|||√|√|
+* ...
+* ...
+* ...
+<!-- AURO-GENERATED-CONTENT:END -->
 
 <div class="exampleWrapper">
-  <[namespace]-[name] cssClass="testClass">Hello World!</[namespace]-[name]>
-  <[namespace]-[name] cssClass="testClass" fixed>Hello World!</[namespace]-[name]>
+
+## Default [namespace]-[name] example
+<!-- AURO-GENERATED-CONTENT:START (FILE:src=./examples/default.html) -->
+<!-- The below content is automatically added from ./examples/default.html -->
+<[namespace]-[name]>Hello World</[namespace]-[name]>
+<!-- AURO-GENERATED-CONTENT:END -->
 </div>
 
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
-
-  ```html
-  <[namespace]-[name] cssClass="testClass">Hello World!</[namespace]-[name]>
-  <[namespace]-[name] cssClass="testClass" fixed>Hello World!</[namespace]-[name]>
-  ```
-
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./examples/default.html) -->
+<!-- The below code snippet is automatically added from ./examples/default.html -->
+```html
+<[namespace]-[name]>Hello World</[namespace]-[name]>
+```
+<!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
-## Then there is more
+### Add additional sections for each variation of the API
 
-Aenean at blandit lorem. Fusce imperdiet mi nec gravida maximus. Quisque nisl libero, condimentum in nisi a, imperdiet lacinia arcu.
+<!-- AURO-GENERATED-CONTENT:START (FILE:src=./examples/default.html) -->
+<!-- The below content is automatically added from ./examples/default.html -->
+<[namespace]-[name]>Hello World</[namespace]-[name]>
+<!-- AURO-GENERATED-CONTENT:END -->
+</div>
 
-```javascript
-toggleDialog = (elName) => {
-  let dialog = document.querySelector(elName);
-  const html = document.querySelector('html');
-
-  html.style.overflow = 'hidden';
-  dialog.removeAttribute("open");
-  dialog.setAttribute("open", true);
-}
-
-toggleDialogClose = (elName) => {
-  let dialog = document.querySelector(elName);
-  const html = document.querySelector('html');
-
-  html.style.overflow = '';
-  dialog.removeAttribute("open");
-}
+<auro-accordion lowProfile justifyRight>
+  <span slot="trigger">See code</span>
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./examples/default.html) -->
+<!-- The below code snippet is automatically added from ./examples/default.html -->
+```html
+<[namespace]-[name]>Hello World</[namespace]-[name]>
 ```
+<!-- AURO-GENERATED-CONTENT:END -->
+</auro-accordion>

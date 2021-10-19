@@ -133,11 +133,12 @@
     "web components"
   ],
   "scripts": {
-    "build": "npm-run-all build:sass sass:render dist:js build:api test bundler postinstall",
+    "build": "npm-run-all build:sass sass:render dist:js test build:api build:markdownDocs bundler postinstall",
     "build:ci": "npm-run-all sweep build",
     "build:api": "wca analyze 'src/[namespace]-[name].js' --outFiles docs/api.md",
     "build:demo": "npm-run-all build demo:rm:build demo:new:build demo:copy:index demo:copy:demo demo:update:index",
     "build:dev:assets": "npm-run-all build:sass:demo build:sass:component postCss:component sass:render",
+    "build:markdownDocs": "node util/generateDocs.js",
     "build:sass": "npm-run-all build:sass:demo build:sass:component postCss:component sass:render",
     "build:sass:demo": "sass demo:demo",
     "build:sass:component": "sass src:src",

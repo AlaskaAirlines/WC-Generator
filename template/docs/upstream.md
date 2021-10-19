@@ -1,6 +1,6 @@
 # Maintaining your fork's upstream relationship
 
-So you forked this repo. That's awesome. But don't forget you keep your `main` branch in sync with the upstream `main` branch to ensure that your pull requests will always be able to be merged.
+So you forked this repo. That's awesome. But don't forget to keep your `main` branch in sync with the upstream `main` branch to ensure that your pull requests will always be able to be merged.
 
 ## How to sync with upstream?
 
