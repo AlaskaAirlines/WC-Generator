@@ -38,7 +38,7 @@ code .
 This will open VSCode in the folder you're currently in. Add the following line to the bottom of the `.bashrc` file. This will instruct our test runner where to find Chrome.
 
 ```
-CHROME_PATH=/usr/bin/google-chrome
+export CHROME_PATH=/usr/bin/google-chrome
 ```
 
 ## Clone a repo
