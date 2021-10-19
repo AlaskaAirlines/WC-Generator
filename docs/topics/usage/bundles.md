@@ -1,0 +1,1 @@
+The WC-Generator contains automated functionality for each build to generate pre-bundled versions of the new component so that users can consume without needing to bundle the JavaScript assets themselves. Both a modern and legacy bundle are produced.

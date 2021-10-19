@@ -1,0 +1,1 @@
+> **NOTICE**: Auro's WC Generator does not currently support Node 16 due to dependencies with unsupported features. The Auro team is currently working on [a plan to address this issue](https://github.com/AlaskaAirlines/WC-Generator/issues/226).
