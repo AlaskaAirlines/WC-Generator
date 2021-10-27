@@ -1,0 +1,10 @@
+# Ignore artifacts:
+bin
+coverage
+node_modules
+vendor
+.github
+**/CHANGELOG.md
+
+docs
+template
