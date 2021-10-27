@@ -67,6 +67,7 @@
     "postcss-rem-to-pixel": "",
     "postcss-remove-rules": "",
     "postcss-selector-replace": "",
+    "prettier": "",
     "prismjs": "",
     "rollup": "",
     "rollup-plugin-minify-html-literals": "",

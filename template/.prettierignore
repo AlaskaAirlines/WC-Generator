@@ -2,8 +2,6 @@
 .github
 .husky
 **/CHANGELOG.md
-bin
+api.md
 coverage
 node_modules
-vendor
-api.md
