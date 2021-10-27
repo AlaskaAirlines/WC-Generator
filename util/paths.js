@@ -8,7 +8,7 @@ const selfPaths = {
   packageJson: 'package.json',
 };
 
-const resolveSelfDirectory = relativePath =>
+const resolveSelfDirectory = (relativePath) =>
   path.resolve(selfRoot, relativePath);
 const resolvedSelfPaths = {};
 Object.entries(selfPaths).forEach(([key, value]) => {

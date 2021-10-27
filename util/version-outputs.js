@@ -1,7 +1,7 @@
 const chalk = require('chalk');
 const pjson = require('../package.json');
 
-const  generate = `
+const generate = `
   ${chalk.gray('Installed version:')}
   v${pjson.version}
 

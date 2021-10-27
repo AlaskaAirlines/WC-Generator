@@ -6,7 +6,7 @@
 const minNodeVersion = [14, 17, 0];
 
 // Throw an error on unhandled rejections (exit non-zero)
-process.on('unhandledRejection', err => {
+process.on('unhandledRejection', (err) => {
   throw err;
 });
 
@@ -41,11 +41,11 @@ const chalk = require('chalk');
 const log = require('./log');
 
 if (!nodeVersionIsValid) {
-  log (chalk.red(`Outdated Node version detected: ${currentNodeVersion}.`));
-  log (chalk.white(`Upgrade Node to at least ${minNodeVersion.join('.')}\n`));
+  log(chalk.red(`Outdated Node version detected: ${currentNodeVersion}.`));
+  log(chalk.white(`Upgrade Node to at least ${minNodeVersion.join('.')}\n`));
 
   process.exit(1);
 } else {
-  log (chalk.green(`Node version detected: ${currentNodeVersion}.`));
-  log (chalk.green(`Minimum version required: ${minNodeVersion.join('.')}\n`));
+  log(chalk.green(`Node version detected: ${currentNodeVersion}.`));
+  log(chalk.green(`Minimum version required: ${minNodeVersion.join('.')}\n`));
 }

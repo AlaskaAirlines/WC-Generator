@@ -59,9 +59,10 @@ When running the migration, the tool will address the following steps:
 1. Migrate the ./.git, ./src, ./test, and ./demo directories from the legacy repo to the new repo
 1. The ./CHANGELOG.md will be copied over as well
 1. The tool will change directories into the newly created repo and...
-  * if the legacy repo used a `master` branch, this will be renamed to `main`
-  * a new `upgradeRepo` branch will be created for all the changes
-  * the changes will be committed to the new `upgradeRepo` branch
+
+- if the legacy repo used a `master` branch, this will be renamed to `main`
+- a new `upgradeRepo` branch will be created for all the changes
+- the changes will be committed to the new `upgradeRepo` branch
 
 Once this is complete there will be an instruction about amending the previous commit if there are any subsequent changes from the migration.
 
