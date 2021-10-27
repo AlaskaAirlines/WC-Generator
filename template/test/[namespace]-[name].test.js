@@ -20,7 +20,7 @@ describe('[namespace]-[name]', () => {
   });
 
   it('[namespace]-[name] custom element is defined', async () => {
-    const el = await !!customElements.get("[namespace]-[name]");
+    const el = await !!customElements.get('[namespace]-[name]');
 
     await expect(el).to.be.true;
   });

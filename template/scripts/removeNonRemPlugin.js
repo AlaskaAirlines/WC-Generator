@@ -6,19 +6,19 @@ module.exports = postcss.plugin('remove-non-rem', function (opts) {
   opts = opts || {};
 
   return function (css) {
-    css.walkDecls(decl => {
+    css.walkDecls((decl) => {
       if (!decl.value.includes('rem') || customPropertyRegExp.test(decl.prop)) {
         decl.remove();
       }
     });
 
-    css.walkRules(rule => {
+    css.walkRules((rule) => {
       if (rule.nodes.length == 0) {
         rule.remove();
       }
     });
 
-    css.walkAtRules(rule => {
+    css.walkAtRules((rule) => {
       if (rule.nodes.length == 0) {
         rule.remove();
       }

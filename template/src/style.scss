@@ -18,14 +18,13 @@
 //   ...
 // }
 
-
 // Selector is for initial setup only
 // delete when building new custom element
 .testClass {
   display: inline-block;
   padding: var(--auro-text-body-size-default);
   border: 1px solid var(--auro-color-border-error-on-light);
-  color:  var(--auro-color-border-error-on-light);
+  color: var(--auro-color-border-error-on-light);
 }
 
 // Selector for native :focus-visible support

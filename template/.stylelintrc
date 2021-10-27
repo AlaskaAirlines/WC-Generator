@@ -1,21 +1,22 @@
 {
-  "extends": ["stylelint-config-recommended", "stylelint-config-idiomatic-order"],
-  "plugins": [
-    "stylelint-scss"
+  "extends": [
+    "stylelint-config-recommended",
+    "stylelint-config-idiomatic-order"
   ],
+  "plugins": ["stylelint-scss"],
   "rules": {
     "alpha-value-notation": "number",
-    "at-rule-empty-line-before": [ "always", {
-      "except": [
-        "after-same-name",
-        "blockless-after-same-name-blockless",
-        "first-nested",
-      ],
-      "ignore": [
-        "after-comment",
-        "blockless-after-blockless"
-      ]
-    } ],
+    "at-rule-empty-line-before": [
+      "always",
+      {
+        "except": [
+          "after-same-name",
+          "blockless-after-same-name-blockless",
+          "first-nested"
+        ],
+        "ignore": ["after-comment", "blockless-after-blockless"]
+      }
+    ],
     "at-rule-name-newline-after": "always-multi-line",
     "at-rule-no-unknown": null,
     "at-rule-semicolon-space-before": "never",
@@ -62,23 +63,14 @@
     "scss/dollar-variable-empty-line-before": [
       "always",
       {
-        "except": [
-          "first-nested",
-          "after-dollar-variable"
-        ],
-        "ignore": [
-          "after-comment",
-          "inside-single-line-block"
-        ]
+        "except": ["first-nested", "after-dollar-variable"],
+        "ignore": ["after-comment", "inside-single-line-block"]
       }
     ],
     "scss/dollar-variable-first-in-block": [
       true,
       {
-        "ignore": [
-          "comments",
-          "imports"
-        ]
+        "ignore": ["comments", "imports"]
       }
     ],
     "scss/dollar-variable-no-missing-interpolation": true,
@@ -108,9 +100,7 @@
     "selector-type-no-unknown": [
       true,
       {
-        "ignore": [
-          "custom-elements"
-        ]
+        "ignore": ["custom-elements"]
       }
     ],
     "shorthand-property-no-redundant-values": true,
