@@ -3,14 +3,17 @@
 [![License](https://img.shields.io/npm/l/[npm]/[namespace]-[name]?color=blue&style=for-the-badge)](https://www.apache.org/licenses/LICENSE-2.0)
 
 1. Install the NPM package
+
    ```shell
    $ npm i [npm]/[namespace]-[name]
    ```
+
    _Installing as a direct, dev or peer dependency is up to the user. If you are unsure as to what type of dependency you should use, consider reading this [stack overflow](https://stackoverflow.com/questions/18875674/whats-the-difference-between-dependencies-devdependencies-and-peerdependencies) answer._
 
 1. Define the dependency within each component that is using `<[namespace]-[name]>`.
+
    ```javascript
-   import "[npm]/[namespace]-[name]";
+   import '[npm]/[namespace]-[name]';
    ```
 
 1. Reference `[namespace]-[name]` in HTML.

@@ -12,7 +12,7 @@ The Auro WC-Generator is chock full of the best practices the Auro team has buil
 
 WC-Generator provides a complete build pipeline for combining all your development resources into a single package for distribution.
 
-* Process Sass to a CSS file that can be injected into the scope of the custom element
-* Compile all CSS, JavaScript, and dependency resources into a single bundle
-* Run all automated linters and tests
-* Github workflow and issue templates all customized for your new project
+- Process Sass to a CSS file that can be injected into the scope of the custom element
+- Compile all CSS, JavaScript, and dependency resources into a single bundle
+- Run all automated linters and tests
+- Github workflow and issue templates all customized for your new project

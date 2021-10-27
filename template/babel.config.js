@@ -9,16 +9,16 @@ const sharedPlugins = [
   [
     '@babel/plugin-transform-runtime',
     {
-      useESModules: true
-    }
-  ]
+      useESModules: true,
+    },
+  ],
 ];
 
 module.exports = {
   exclude: [
     'node_modules/@babel/**',
     'node_modules/core-js/**',
-    'node_modules/@webcomponents/webcomponentsjs/**'
+    'node_modules/@webcomponents/webcomponentsjs/**',
   ],
   env: {
     modern: {
@@ -30,11 +30,11 @@ module.exports = {
           {
             targets: modernBrowserslist.join(', '),
             useBuiltIns: 'usage',
-            corejs: 3
-          }
-        ]
+            corejs: 3,
+          },
+        ],
       ],
-      plugins: sharedPlugins
+      plugins: sharedPlugins,
     },
     legacy: {
       presets: [
@@ -43,11 +43,11 @@ module.exports = {
           {
             targets: defaultBrowserslist.join(', '),
             useBuiltIns: 'usage',
-            corejs: 3
-          }
-        ]
+            corejs: 3,
+          },
+        ],
       ],
-      plugins: sharedPlugins
-    }
-  }
+      plugins: sharedPlugins,
+    },
+  },
 };

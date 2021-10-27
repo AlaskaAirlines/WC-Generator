@@ -35,7 +35,6 @@ The Success Criterion for AAA has a few challenges for product teams. Not only a
 
 Any reproduction of a standardized UI web component locally in a project would deem the project non-compliant.
 
-
 ### Breaking the triangle
 
 Given the independent nature of the Auro Design System, there are opportunities to break the triangle and use only some of the resources in a given project.

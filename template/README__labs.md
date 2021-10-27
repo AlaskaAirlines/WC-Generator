@@ -33,7 +33,7 @@ Any update to the Auro Design Tokens will be immediately reflected with browsers
 Defining the component dependency within each component that is using the `<[namespace]-[name]>` component.
 
 ```javascript
-import "[npm]/[namespace]-[name]";
+import '[npm]/[namespace]-[name]';
 ```
 
 **Reference component in HTML**
@@ -53,11 +53,19 @@ Since the legacy bundle includes many polyfills that are not needed by modern br
 **NOTE:** Be sure to replace `@latest` in the URL with the version of the asset you want. @latest is NOT aware of any MAJOR releases, use at your own risk.
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/@alaskaairux/design-tokens@latest/dist/tokens/CSSCustomProperties.css" />
-<link rel="stylesheet" href="https://unpkg.com/@alaskaairux/webcorestylesheets@latest/dist/bundled/essentials.css" />
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/@alaskaairux/design-tokens@latest/dist/tokens/CSSCustomProperties.css" />
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/@alaskaairux/webcorestylesheets@latest/dist/bundled/essentials.css" />
 
-<script src="https://unpkg.com/[npm]/[namespace]-[name]@latest/dist/[namespace]-[name]__bundled.js" type="module"></script>
-<script src="https://unpkg.com/[npm]/[namespace]-[name]@latest/dist/[namespace]-[name]__bundled.es5.js" nomodule></script>
+<script
+  src="https://unpkg.com/[npm]/[namespace]-[name]@latest/dist/[namespace]-[name]__bundled.js"
+  type="module"></script>
+<script
+  src="https://unpkg.com/[npm]/[namespace]-[name]@latest/dist/[namespace]-[name]__bundled.es5.js"
+  nomodule></script>
 ```
 
 ## API Code Examples

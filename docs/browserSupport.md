@@ -10,31 +10,31 @@ Alaska Airlines currently supports the following browsers for the delivery of st
 
 <small>Browsers that engineers are required to dev and test against:</small>
 
-| Browser | Version | Operating System |
-|------|------|------|
-| Chrome | Current release | Windows, macOS, iOS, Android |
-| Safari | Current release | macOS, iOS |
-| Firefox | Current release | Windows, macOS, Android |
-| Edge† | Stable release | Windows 7, Windows 8, Windows 10 |
+| Browser | Version         | Operating System                 |
+| ------- | --------------- | -------------------------------- |
+| Chrome  | Current release | Windows, macOS, iOS, Android     |
+| Safari  | Current release | macOS, iOS                       |
+| Firefox | Current release | Windows, macOS, Android          |
+| Edge†   | Stable release  | Windows 7, Windows 8, Windows 10 |
 
 † Chromium based Microsoft Edge was released on January 15, 2020. Edge 18, the final version based on [EdgeHTML](https://en.wikipedia.org/wiki/EdgeHTML) on Windows 10 machines only, is NOT supported.
 
 #### Browser support for HTML Web Components
 
-| Feature | Chrome | Opera | Safari | Firefox | MS Edge
-|----|----|----|----|----|----|----|----|
-| HTML Templates | Stable | Stable | Stable | Stable | Stable
-| Custom Elements | Stable | Stable | Stable | Stable | Stable
-| Shadow DOM | Stable | Stable | Stable | Stable | Stable
-| ES Modules | Stable | Stable | Stable | Stable | Stable
+| Feature         | Chrome | Opera  | Safari | Firefox | MS Edge |
+| --------------- | ------ | ------ | ------ | ------- | ------- |
+| HTML Templates  | Stable | Stable | Stable | Stable  | Stable  |
+| Custom Elements | Stable | Stable | Stable | Stable  | Stable  |
+| Shadow DOM      | Stable | Stable | Stable | Stable  | Stable  |
+| ES Modules      | Stable | Stable | Stable | Stable  | Stable  |
 
 -- source: [webcomponents.org](https://www.webcomponents.org/)
 
 #### Browser support for CSS Custom Properties (variables)
 
-| Browser | Version | Custom Selectors |
-|------|------|------|
-| Chrome | Current release | Yes |
-| Safari | Current release | Yes |
-| Firefox | Current release | Yes |
-| Edge | Current release | Yes |
+| Browser | Version         | Custom Selectors |
+| ------- | --------------- | ---------------- |
+| Chrome  | Current release | Yes              |
+| Safari  | Current release | Yes              |
+| Firefox | Current release | Yes              |
+| Edge    | Current release | Yes              |

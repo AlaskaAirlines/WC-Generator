@@ -5,7 +5,9 @@ One of the core pillars for supporting accessibility (a11y) within a modern web 
 For a11y reasons, according to the [MDN docs](https://developer.mozilla.org/en-US/docs/Web/CSS/:focus#Accessibility_Concerns), it is advised to NEVER remove the browsers default settings without replacing it with a sufficient substitute.
 
 ```css
-:focus { outline: none; }
+:focus {
+  outline: none;
+}
 ```
 
 > Never just remove the focus outline (visible focus indicator) without replacing it with a focus outline that will pass [WCAG 2.1 SC 1.4.11 Non-Text Contrast](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html)

@@ -93,7 +93,10 @@
     "last 2 Safari major versions"
   ],
   "nodemonConfig": {
-    "ignore": ["*-css.js", "*.css"]
+    "ignore": [
+      "*-css.js",
+      "*.css"
+    ]
   },
   "release": {
     "branches": [

@@ -1,4 +1,5 @@
 # Idiomatic CSS
+
 Maintenance of large libraries with multiple contributors is difficult to say the least. Along side many of the other [Auro style guide principals](http://auro.alaskaair.com/getting-started/developers/webcorestylesheets) the Auro design system also recommends the [idiomatic CSS](http://auro.alaskaair.com/webcorestylesheets/idiomatic-css) style of writing. Inspired by [idiomatic.js](https://github.com/rwaldron/idiomatic.js), the purpose of this recommendation is to ensure consistency and enable readability of code.
 
 In a nutshell, idiomatic CSS is an expectation of the order of declarations within a selector. Starting with positioning, then display & box model with remaining things rounding things out.

@@ -31,13 +31,13 @@ We suggest starting with your team's designers. If they are unable to support th
 
 The next stage to be completed is a thorough code review of the new element. To be better prepared for this part of the process, it is recommended to review the following documents for background, library support and best practices.
 
-* [LitElement docs](https://lit-element.polymer-project.org/guide/templates)
-* [Auro's contributing Guidelines](https://auro.alaskaair.com/contributing)
-* [esLint rules](https://eslint.org/docs/2.0.0/rules/)
-* [Web Component Automated Testing](https://auro.alaskaair.com/support/tests)
-* [Auro's CSS conventions](https://auro.alaskaair.com/webcorestylesheets/conventions)
-* [CSS styles and custom elements](https://auro.alaskaair.com/webcorestylesheets/custom-element-css)
-* [CSS Lint rules](https://auro.alaskaair.com/webcorestylesheets/linter)
+- [LitElement docs](https://lit-element.polymer-project.org/guide/templates)
+- [Auro's contributing Guidelines](https://auro.alaskaair.com/contributing)
+- [esLint rules](https://eslint.org/docs/2.0.0/rules/)
+- [Web Component Automated Testing](https://auro.alaskaair.com/support/tests)
+- [Auro's CSS conventions](https://auro.alaskaair.com/webcorestylesheets/conventions)
+- [CSS styles and custom elements](https://auro.alaskaair.com/webcorestylesheets/custom-element-css)
+- [CSS Lint rules](https://auro.alaskaair.com/webcorestylesheets/linter)
 
 ## Documentation
 

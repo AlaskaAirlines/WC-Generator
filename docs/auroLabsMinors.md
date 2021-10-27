@@ -21,7 +21,7 @@
 
 Welcome to auroLabs! If you have come this far, you must be interested in learning how to build a new custom element in auroLabs!
 
-When building a new custom element  in auroLabs it is highly recommended that you start with the [WC-Generator](https://auro.alaskaair.com/getting-started/developers/generator/install) as this comes packed with all of Auro's vetted best practices and baked in dependencies that will make your transition to the majors a breeze.
+When building a new custom element in auroLabs it is highly recommended that you start with the [WC-Generator](https://auro.alaskaair.com/getting-started/developers/generator/install) as this comes packed with all of Auro's vetted best practices and baked in dependencies that will make your transition to the majors a breeze.
 
 Once the generator is installed, please use the following execution template fo your new project.
 

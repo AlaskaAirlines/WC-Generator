@@ -11,7 +11,9 @@ A principal of progressive enhancement is, regardless of the code pushed to the 
 In web development, we can easily send code to the browser that the browser will do its best to render, but if it does not know what to do with the code, it simply moves on. For example, if the following code was present in a HTML document and sent to the browser, the browser would simply render the string within.
 
 ```html
-<sticky-note>This is a reminder: pick up bread and milk from the store</sticky-note>
+<sticky-note
+  >This is a reminder: pick up bread and milk from the store</sticky-note
+>
 ```
 
 As you can see in the image below, the browser has no understanding of an HTML element called `sticky-note`, but it still renders it without blocking or error.

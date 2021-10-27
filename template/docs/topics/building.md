@@ -1,4 +1,5 @@
 You can trigger a build by running `$ npm run build` which executes the following actions:
+
 1. Compile all style code
 1. Copies all `./src/` JS files to the `./dist` directory
 1. Generates `docs/api.md`.

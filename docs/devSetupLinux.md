@@ -1,6 +1,6 @@
 # Linux
 
-For Linux developers, the setup is similar to macOS. While these are very different OSs, macOS has history with Unix and share many commonalities with Linux. 
+For Linux developers, the setup is similar to macOS. While these are very different OSs, macOS has history with Unix and share many commonalities with Linux.
 
 While you can [install homebrew](https://docs.brew.sh/Homebrew-on-Linux) on Linux, it doesn't serve the same purpose as it does with macOS. Of course Xcode is not needed. It is recommended to install [Node Version Manager](https://github.com/nvm-sh/nvm#installing-and-updating).
 
@@ -37,4 +37,3 @@ $ git config --global user.name "Your Name"
 ## Wrapping up
 
 That's it! You should be all set to develop Auro on Linux. If you run into any setup issues, the Auro team may be able to help.
-

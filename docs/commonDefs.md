@@ -31,44 +31,42 @@ Or even, based on it's meta data, tokens can export a complete object that can b
 
 ```js
 module.exports = {
-  "color": {
-    "brand": {
-      "midnight": {
-        "100": {
-          "value": "#c1daf0",
-          "comment": "\n  // Please consider descriptive token prior to using brand token",
-          "public": true,
-          "neutral": true,
-          "usage": "Transactional colors to move guests through task-based interactions.",
-          "wcag": "n/a",
-          "deprecated": false,
-          "original": {
-            "value": "c1daf0",
-            "comment": "{comments.color.brand.value.comment}",
-            "public": true,
-            "neutral": true,
-            "usage": "Transactional colors to move guests through task-based interactions.",
-            "wcag": "n/a",
-            "deprecated": false
+  color: {
+    brand: {
+      midnight: {
+        100: {
+          value: '#c1daf0',
+          comment:
+            '\n  // Please consider descriptive token prior to using brand token',
+          public: true,
+          neutral: true,
+          usage:
+            'Transactional colors to move guests through task-based interactions.',
+          wcag: 'n/a',
+          deprecated: false,
+          original: {
+            value: 'c1daf0',
+            comment: '{comments.color.brand.value.comment}',
+            public: true,
+            neutral: true,
+            usage:
+              'Transactional colors to move guests through task-based interactions.',
+            wcag: 'n/a',
+            deprecated: false,
           },
-          "name": "auro-color-brand-midnight-100",
-          "attributes": {
-            "category": "color",
-            "type": "brand",
-            "item": "midnight",
-            "subitem": "100"
+          name: 'auro-color-brand-midnight-100',
+          attributes: {
+            category: 'color',
+            type: 'brand',
+            item: 'midnight',
+            subitem: '100',
           },
-          "path": [
-            "color",
-            "brand",
-            "midnight",
-            "100"
-          ]
-        }
-      }
-    }
-  }
-}
+          path: ['color', 'brand', 'midnight', '100'],
+        },
+      },
+    },
+  },
+};
 ```
 
 ## HTML custom element

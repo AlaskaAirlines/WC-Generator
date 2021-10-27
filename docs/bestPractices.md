@@ -32,6 +32,7 @@ Updating these [properties to reflect](https://github.com/AlaskaAirlines/auro-lo
 In some custom elements (e.g. auro-accordion-group) we need to keep track of the children in that element's slot. When doing so, make sure you react to [slot changes](https://developer.mozilla.org/en-US/docs/Web/API/HTMLSlotElement/slotchange_event) instead of only initializing once. This allows children to be dynamically added after the first time the element renders. Additionally, not doing this has [caused issues](https://github.com/AlaskaAirlines/auro-accordion/issues/18) in frameworks like Svelte that insert the parent into the DOM before the children.
 
 ### Additional reference
+
 - Reference auro-accordion [pull request](https://github.com/AlaskaAirlines/auro-accordion/pull/21)
 - Accessing slotted children [lit docs](https://lit-element.polymer-project.org/guide/templates#accessing-slotted-children)
 
@@ -60,7 +61,7 @@ In this example, the author removed the complexity of the procedural code for a 
 ### References
 
 - Polymer lit [lifecycle updated](https://lit-element.polymer-project.org/guide/lifecycle#updated)
-- lit 2.0 [lifecycle updated]((https://lit.dev/docs/components/lifecycle/#updated))
+- lit 2.0 [lifecycle updated](https://lit.dev/docs/components/lifecycle/#updated)
 
 ### Another example
 
@@ -94,4 +95,4 @@ The best strategy is the overly communicated strategy. The more you can project 
 
 ## Additional resources
 
-- Google's  [Custom Element Best Practices](https://developers.google.com/web/fundamentals/web-components/best-practices)
+- Google's [Custom Element Best Practices](https://developers.google.com/web/fundamentals/web-components/best-practices)

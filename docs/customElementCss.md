@@ -12,7 +12,6 @@ So what does that mean? One definition is, _" the succinct expression or depicti
 
 The true benefit with encapsulation of CSS and custom elements is that you do not need to be concerned about global styles having side effects on your element when used in any context of any website. While naming conventions and using parent selectors have become a staple of web development over the years, these techniques are not necessary for UI stability in custom elements. However, they do come in handy for maintaining the sanity of your CSS. To that end, Auro has a series of [CSS development conventions](https://auro.alaskaair.com/webcorestylesheets/conventions) that we highly recommend.
 
-
 ## :host selector
 
 With encapsulation comes the `:host` CSS pseudo-class. This special selector in the CSS world is... _" the most powerful selector in the universe... "_ You could draw a parallel between `:host` and `{this}` in JavaScript.
@@ -148,7 +147,6 @@ The result of this HTML would be this:
 <auro-icon label category="in-flight" name="wifi"><span class="isOrange">Wi-Fi</span></auro-icon>
 
 There are emerging technologies such as [::slotted](https://developer.mozilla.org/en-US/docs/Web/CSS/::slotted) that may or may not help this situation, but this is something that every custom element developer and user need to be aware of.
-
 
 ## :slotted
 

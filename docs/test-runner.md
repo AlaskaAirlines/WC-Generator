@@ -10,16 +10,16 @@ The tests are run in a real browser. By default, the test runner will use your c
 
 ```js
 export default {
-  files: "test/**/*.test.js",
+  files: 'test/**/*.test.js',
   nodeResolve: true,
   coverageConfig: {
     threshold: {
       statements: 80,
       branches: 80,
       functions: 80,
-      lines: 80
-    }
-  }
+      lines: 80,
+    },
+  },
 };
 ```
 
@@ -37,7 +37,6 @@ The `package.json` for generated web components have the following test commands
 ```
 
 `npm test` will start WTR, run a single execution of the package's tests, and generate a coverage report.
-
 
 ```sh
 $ npm test

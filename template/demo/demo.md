@@ -17,21 +17,25 @@
 
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../docs/description.md) -->
 <!-- The below content is automatically added from ./../docs/description.md -->
+
 `<[namespace]-[name]>` is an [HTML custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) for the purpose of ...
 
 The `<[namespace]-[name]>` element should be used in situations where users may:
 
-* ...
-* ...
-* ...
+- ...
+- ...
+- ...
 <!-- AURO-GENERATED-CONTENT:END -->
 
 <div class="exampleWrapper">
 
 ## Default [namespace]-[name] example
+
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=./examples/default.html) -->
 <!-- The below content is automatically added from ./examples/default.html -->
+
 <[namespace]-[name]>Hello World</[namespace]-[name]>
+
 <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 
@@ -49,7 +53,9 @@ The `<[namespace]-[name]>` element should be used in situations where users may:
 
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=./examples/default.html) -->
 <!-- The below content is automatically added from ./examples/default.html -->
+
 <[namespace]-[name]>Hello World</[namespace]-[name]>
+
 <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 
