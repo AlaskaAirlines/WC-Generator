@@ -17,14 +17,14 @@ cssFiles.map((name) =>
           remove: function (comment) {
             return comment[0] == '@';
           },
-        })
+        }),
       )
       .use(
         removeRules({
           rulesToRemove: {
             ':root': '*',
           },
-        })
+        }),
       )
       .process(css, { from: `src/${name}.css`, to: `src/${name}.css` })
       .then((result) => {
@@ -33,7 +33,7 @@ cssFiles.map((name) =>
           fs.writeFile(`src/${name}.map`, result.map, () => true);
         }
       });
-  })
+  }),
 );
 
 /*
@@ -57,7 +57,7 @@ cssFixedFiles.map((name) =>
             remove: function (comment) {
               return comment[0] == '@';
             },
-          })
+          }),
         )
         .process(css, { from: `src/${name}.css`, to: `src/${name}.css` })
         .then((result) => {
@@ -67,5 +67,5 @@ cssFixedFiles.map((name) =>
           }
         });
     });
-  })
+  }),
 );

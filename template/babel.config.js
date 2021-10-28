@@ -1,7 +1,7 @@
 const { browserslist: defaultBrowserslist } = require('./package.json');
 
 const modernBrowserslist = defaultBrowserslist.filter(
-  (browser) => browser !== 'ie 11'
+  (browser) => browser !== 'ie 11',
 );
 
 const sharedPlugins = [

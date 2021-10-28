@@ -11,7 +11,7 @@ const generate = `
   ${chalk.gray('More help:')}
   For more help with migrating an Auro Web Component,
   be sure to see ${chalk.blue(
-    'https://auro.alaskaair.com/getting-started/developers/generator/upgrade'
+    'https://auro.alaskaair.com/getting-started/developers/generator/upgrade',
   )}
 
   ${chalk.gray('Install script:')}
@@ -19,7 +19,7 @@ const generate = `
 
   ${chalk.gray('Add a reference:')}
   Add a reference to this file in either your ${chalk.yellow(
-    '~/.bash_profile'
+    '~/.bash_profile',
   )} or ${chalk.yellow('~/.bashrc_profile')} file:
 
   $ echo -e "\\n\\n# Auro repo migration tool\\nsource ~/.auroMigrate.sh" >> ~/.bash_profile

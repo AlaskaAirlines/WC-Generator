@@ -17,5 +17,5 @@ console.log(
       to ensure that you are compliant.`) +
     chalk.hex('#ffd200')(`
 ╰─────────────────────────────── ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─╯
-`)
+`),
 );

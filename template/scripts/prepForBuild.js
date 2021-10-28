@@ -25,7 +25,7 @@ fs.readFile(indexFile, 'utf8', function (err, data) {
 
   const element = data.replace(
     `../src/[namespace]-[name].js`,
-    `[namespace]-[name]__bundled.js`
+    `[namespace]-[name]__bundled.js`,
   );
 
   fs.writeFile(indexFile, element, 'utf8', function (err) {

@@ -35,7 +35,7 @@ function verifySemver(minimum, current) {
 const currentNodeVersion = process.versions.node;
 const nodeVersionIsValid = verifySemver(
   minNodeVersion,
-  currentNodeVersion.split('.')
+  currentNodeVersion.split('.'),
 );
 const chalk = require('chalk');
 const log = require('./log');
