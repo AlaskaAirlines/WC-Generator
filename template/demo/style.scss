@@ -25,7 +25,7 @@ $paragraph: true;
 $layout-properties: margin;
 $layout-extensions: Right;
 $layout-modifiers: (
-  'md': $auro-size-md
+  'md': $auro-size-md,
 );
 @import './../node_modules/@alaskaairux/webcorestylesheets/dist/utilityMixins/layoutPropertiesGenerator';
 
@@ -47,7 +47,13 @@ main {
   $stripe: #f3f3f3;
   $background: var(--auro-color-base-white);
 
-  background: repeating-linear-gradient( 45deg, $stripe, $stripe 10px, $background 10px, $background 20px);
+  background: repeating-linear-gradient(
+    45deg,
+    $stripe,
+    $stripe 10px,
+    $background 10px,
+    $background 20px
+  );
   overflow: auto;
 }
 
@@ -55,12 +61,19 @@ main {
   $stripe: var(--auro-color-background-darkest);
   $background: var(--auro-color-background-darker);
 
-  background: repeating-linear-gradient( 45deg, $stripe, $stripe 10px, $background 10px, $background 20px);
+  background: repeating-linear-gradient(
+    45deg,
+    $stripe,
+    $stripe 10px,
+    $background 10px,
+    $background 20px
+  );
 }
 
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-:not(pre) > code[class*='language-'], pre[class*='language-'] {
+:not(pre) > code[class*='language-'],
+pre[class*='language-'] {
   background: #f8f8f8;
 }
 
@@ -72,7 +85,8 @@ auro-accordion {
   }
 }
 
-code[class*='language-'], pre[class*='language-'] {
+code[class*='language-'],
+pre[class*='language-'] {
   font-family: monospace;
 }
 
@@ -146,13 +160,13 @@ strong {
   @extend .heading--300;
 }
 
-pre  {
+pre {
   overflow: auto;
   background-color: var(--auro-color-base-gray-100);
   margin-bottom: var(--auro-size-xxl);
 
   code {
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -177,7 +191,7 @@ table {
   }
 
   img {
-   max-width: unset;
+    max-width: unset;
   }
 
   @include auro_breakpoint--sm {
@@ -191,6 +205,7 @@ thead {
   border-collapse: collapse;
 }
 
-th, td {
+th,
+td {
   padding: var(--auro-size-md);
 }

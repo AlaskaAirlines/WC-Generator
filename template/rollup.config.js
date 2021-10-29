@@ -11,7 +11,7 @@ const production = !process.env.ROLLUP_WATCH;
 const getSharedPlugins = (isLegacy) => [
   resolve({
     // in case of multiple lit-element versions (e.g. importing another auro component)
-    dedupe: ['lit-element', 'lit-html']
+    dedupe: ['lit-element', 'lit-html'],
   }),
   commonjs(),
   // skipPreflightCheck flag needed or else build fails
@@ -19,10 +19,10 @@ const getSharedPlugins = (isLegacy) => [
   babel({
     babelHelpers: 'bundled',
     envName: isLegacy ? 'legacy' : 'modern',
-    skipPreflightCheck: true
+    skipPreflightCheck: true,
   }),
   minifyHTML(),
-  terser()
+  terser(),
 ];
 
 const modernConfig = {
@@ -31,7 +31,7 @@ const modernConfig = {
   },
   output: {
     format: 'esm',
-    dir: 'dist/'
+    dir: 'dist/',
   },
   plugins: [
     // remove shady DOM polyfill for modern browsers
@@ -41,25 +41,25 @@ const modernConfig = {
         {
           find: 'lit-html/lib/shady-render.js',
           replacement: 'node_modules/lit-html/lit-html.js'
-        }
-      ]
+        },
+      ],
     }),
     ...getSharedPlugins(false),
     !production &&
       serve({
         open: true,
         openPage: '/docs/'
-      })
-  ]
+      }),
+  ],
 };
 
 const [namespace][Name]Config = {
   input: 'src/es5.js',
   output: {
     format: 'iife',
-    file: 'dist/[namespace]-[name]__bundled.es5.js'
+    file: 'dist/[namespace]-[name]__bundled.es5.js',
   },
-  plugins: getSharedPlugins(true)
+  plugins: getSharedPlugins(true),
 };
 
 export default [modernConfig, [namespace][Name]Config];
