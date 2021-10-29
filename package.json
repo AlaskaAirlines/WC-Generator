@@ -48,7 +48,9 @@
     "build:complete": "node bin/generate.js -n auro-solo -d ../auro-test",
     "sweep": "rm -rf auro-test",
     "test": "npm run build:test",
-    "docs": "node util/generateDocs.js"
+    "docs": "node util/generateDocs.js",
+    "prettier:check": "npx prettier --check .",
+    "prettier:write": "npx prettier --write ."
   },
   "publishConfig": {
     "access": "public"
