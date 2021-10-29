@@ -1,0 +1,9 @@
+# Ignore artifacts:
+.github
+.husky
+**/CHANGELOG.md
+bin
+coverage
+node_modules
+vendor
+api.md
