@@ -18,6 +18,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "lit-element": "^2.5.1",
+    "lit-html": "^1.0.0",
     "chalk": ""
   },
   "peerDependencies": {
