@@ -123,107 +123,38 @@ labels:
     cat: default
     color: fa23e4
     description:
-    process: Apply to issues to identify project repo
-  - name: Release
-    cat: default
-    color: 1c872e
-    description: Defines release scope of work
-    process: Apply to any issue that is the designated parent issue for a release
-  - name: Issue
-    cat: default
-    color: 1c872e
-    description: Defines issue scope of work related to release
-    process: Apply to any issue that is associated to a release
-  - name: duplicate
-    color: 'cde6ff'
-    description: This Issue or Pull Request already exists
+    process: Key filter for this repo
   - name: not-reviewed
     color: '000000'
     description: This issue has not yet been reviewed by the Auro team
-  - name: good first issue
-    color: '6bb7fb'
-    description: Good for newcomers
-    aliases:
-    - beginner-friendly
-    - beginner
-    - good-starter-issue
-    - good for beginner
-    - Good for beginners
-    - starter-issue
-    - starter
-  - name: AuroLabs
-    color: '000000'
-    description: Extra attention is needed, this user requires assistance to complete
-      the work
-  - name: help wanted
-    color: '2492eb'
-    description: Extra attention is needed, this user requires assistance to complete
-      the work
-  - name: 'Project: Version Zero'
-    color: '222222'
-    description: Issues related to the epic Project Zero
-  - name: 'Project: Auro User Definition'
-    color: '222222'
-    description: Issues related to the epic User Research
-  - name: 'Project: Doc Site Strategy'
-    color: '222222'
-    description: Issues related to the epic Doc Site Strategy
   - name: released
     color: 'A9A9A9'
     description: Completed work has been released
-  - name: 'Status: Backlogged'
-    color: 'e2ffcd'
-    description: Backlogged item is a proposed question or solution, the user is requesting
-      feedback
-    aliases:
-    - idea
-    - Idea
-    - proposal
-    - Proposal
-    - discussion
-  - name: 'Status: Prioritized for work'
-    color: 'd0fba6'
-    description: Proposal has been prioritized for development (issues only)
+  - name: 'Status: help wanted'
+    color: '2492eb'
+    description: Team is asking for assistance to complete the work
   - name: 'Status: Work In Progress'
     description: Issue or Pull Request work is in Progress
     color: 'c0e585'
-  - name: 'Status: Review Needed'
-    color: '91be62'
-    description: Work is completed, user is requesting feedback
-  - name: 'Status: Complete'
-    color: '5e8741'
-    description: Owner has completed work and considers it ready to be merged
   - name: 'Status: Blocked'
     color: 'df0b37'
-    description: Progress on the issue is Blocked, immediate attention is required
+    description: Progress on the issue is blocked, immediate attention is required
     aliases:
     - blocked
-  - name: 'Status: Discovery'
-    color: 'c1daf0'
-    description: New work that is still in a discovery phase
-  - name: 'Status: PR Welcome'
-    color: '569ed7'
-    description: Assigned to issues, requesting general public support
-    aliases:
-    - Patch Welcome
-    - 'Status: Ready for PR'
   - name: 'Status: Abandoned'
     color: '156fad'
-    description: The issue or Pull Request is wontfix
+    description: The issue or Pull Request is wont-fix
     aliases:
     - wontfix
     - invalid
+  - name: 'Type: Spike'
+    color: 'ab33d6'
+    description: Team requires further research or investigation
   - name: 'Type: Bug'
     color: 'df0b37'
     description: Bug or Bug fixes
     aliases:
     - bug
-  - name: 'Type: Breaking Change'
-    color: 'b88624'
-    description: Includes breaking changes, will require MAJOR version release
-    aliases:
-    - breaking
-    - breaking-change
   - name: 'Type: Feature'
     color: 'e5ad07'
     description: New Feature
@@ -231,22 +162,12 @@ labels:
     - enhancement
   - name: 'Type: Design'
     color: 'e5ad07'
-    description: New Design
+    description: New or related Design work
     aliases:
     - enhancement
-  - name: 'Type: Content/data'
-    color: 'ffd200'
-    description: Adding or editing new content or data to the repo
-    aliases:
-    - enhancement
-  - name: 'Type: Refactoring'
-    color: 'ffdb67'
-    description: A code change that neither fixes a bug nor adds a feature
-    aliases:
-    - refactor
   - name: 'Type: Testing'
     color: 'fff0cd'
-    description: Adding missing tests or correcting existing tests
+    description: Test maintenance and support
     aliases:
     - test
     - testing
@@ -256,27 +177,3 @@ labels:
     aliases:
     - documents
     - document
-  - name: 'Type: Maintenance'
-    color: 'b83302'
-    description: Repository Maintenance
-    aliases:
-    - greenkeeper
-    - maintenance
-  - name: 'Type: CI'
-    color: 'b83302'
-    description: Changes to CI configuration files and scripts
-    aliases:
-    - ci
-  - name: 'Type: Question'
-    color: 'b83302'
-    description: Further information is requested
-    aliases:
-    - question
-  - name: 'Type: Dependencies'
-    color: 'b83302'
-    description: Pull requests that update a dependency file
-    aliases:
-    - dependencies
-  - name: 'Type: High Risk'
-    color: 'b83302'
-    description: Work is high risk, pay close attention to updates and tests
