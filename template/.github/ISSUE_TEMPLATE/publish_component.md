@@ -1,8 +1,8 @@
 ---
 name: Publish Component
 about: Create a ticket to drive compliance before publishing a new component to Auro Design System
-title: 'auro-[name]; publish to Auro Design System'
-labels: 'Status: Review Needed, not-reviewed'
+title: 'Publish to Auro Design System'
+labels: '[namespace]-[name], not-reviewed'
 ---
 
 # Publish Component
