@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [3.9.5](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.9.4...v3.9.5) (2021-11-02)
+
+
+### Bug Fixes
+
+* **deps:** update template package to use lit-html 1.0 [#243](https://github.com/AlaskaAirlines/WC-Generator/issues/243) ([9eac9e2](https://github.com/AlaskaAirlines/WC-Generator/commit/9eac9e22f770007e5db74a4f0dce06a05609c859))
+
 ## [3.9.4](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.9.3...v3.9.4) (2021-10-27)
 
 
