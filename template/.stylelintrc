@@ -100,7 +100,7 @@
     "selector-max-combinators": 1,
     "selector-max-compound-selectors": 2,
     "selector-max-id": 1,
-    "selector-max-pseudo-class": 1,
+    "selector-max-pseudo-class": 2,
     "selector-max-type": 1,
     "selector-max-universal": 1,
     "selector-no-qualifying-type": true,
