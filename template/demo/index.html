@@ -35,7 +35,7 @@
       fetch('/demo/demo.md')
         .then((response) => response.text())
         .then((text) => {
-          const rawHtml = marked(text);
+          const rawHtml = marked.parse(text);
           document.querySelector('main').innerHTML = rawHtml;
           Prism.highlightAll();
         });
