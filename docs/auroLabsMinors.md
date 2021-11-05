@@ -71,9 +71,9 @@ From installing the generator all the way to setting up a Github repo. Follow th
     </div>
   </auro-accordion>
   <auro-accordion id="newWork" chromeless noProfile>
-    <span slot="trigger" class="trigger">6. Create an internal Github repo</span>
+    <span slot="trigger" class="trigger">6. Create an internal Sandbox repo</span>
     <div class="lightText">
-      <p>For Alaska employees only. Create a new <code>internal</code> repository with <auro-hyperlink target="_blank" href="https://github.com/AlaskaAirlines">github.com/AlaskaAirlines</auro-hyperlink>. Once completed, push your <code>main</code> branch to the remote repository.</p>
+      <p>For Alaska employees only. Create a new <code>internal</code> repository with <auro-hyperlink target="_blank" href="https://github.com/Alaska-Ecommerce-Sandbox">github.com/Alaska-Ecommerce-Sandbox</auro-hyperlink> Github org. Once completed, push your <code>main</code> branch to the remote repository.</p>
       <p>Please be sure to name the repo with <strong>auro</strong> to properly follow our open source repository guidelines. E.g. auro-[your component name].
       <p><strong>Randos will be deleted!</strong></p>
       <p>For not Alaska employees, if you want to create a personal repo in your own Github account, that's cool too. </p>
