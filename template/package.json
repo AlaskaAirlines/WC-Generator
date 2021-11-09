@@ -59,6 +59,7 @@
     "focus-visible": "",
     "husky": "^6.0.0",
     "lodash": "",
+    "markdown-magic": "",
     "marked": "",
     "nodemon": "",
     "npm-run-all": "",
@@ -134,11 +135,12 @@
     "web components"
   ],
   "scripts": {
-    "build": "npm-run-all build:sass sass:render dist:js build:api test bundler postinstall",
+    "build": "npm-run-all build:sass sass:render dist:js build:api test build:markdownDocs bundler postinstall",
     "build:ci": "npm-run-all sweep build",
     "build:api": "wca analyze 'src/[namespace]-[name].js' --outFiles docs/api.md",
     "build:demo": "npm-run-all build demo:rm:build demo:new:build demo:copy:index demo:copy:demo demo:update:index",
     "build:dev:assets": "npm-run-all build:sass:demo build:sass:component postCss:component sass:render",
+    "build:markdownDocs": "node scripts/generateDocs.js",
     "build:sass": "npm-run-all build:sass:demo build:sass:component postCss:component sass:render",
     "build:sass:demo": "sass --no-source-map demo:demo",
     "build:sass:component": "sass --no-source-map src:src",
