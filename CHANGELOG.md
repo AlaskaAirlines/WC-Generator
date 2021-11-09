@@ -1,5 +1,21 @@
 # Semantic Release Automated Changelog
 
+# [3.10.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.9.5...v3.10.0) (2021-11-09)
+
+
+### Bug Fixes
+
+* **marked:** update marked api call [#250](https://github.com/AlaskaAirlines/WC-Generator/issues/250) ([5d3d76a](https://github.com/AlaskaAirlines/WC-Generator/commit/5d3d76acff2a7a793091f882f8c5947026ee8866))
+* **stylelint:** update selector max pseudo class to be less restrictive [#246](https://github.com/AlaskaAirlines/WC-Generator/issues/246) ([19d54aa](https://github.com/AlaskaAirlines/WC-Generator/commit/19d54aa8ad542518560411ab9a41c869d111bc3c))
+
+
+### Features
+
+* **docs:** auto generate md docs with mardown-magic ([79e77eb](https://github.com/AlaskaAirlines/WC-Generator/commit/79e77ebab062ea239f3c4781bba72e7e30259000))
+* **git:** use custom namespace in settings.yml ([93df625](https://github.com/AlaskaAirlines/WC-Generator/commit/93df6250d090eb1e169748f3c364596e9499951e))
+* **labels:** update pre-defined labels for new repo [#184](https://github.com/AlaskaAirlines/WC-Generator/issues/184) ([39dfa8e](https://github.com/AlaskaAirlines/WC-Generator/commit/39dfa8eaec9779adbdfe901f99ccf22c90ef8542))
+* **postcss:** add alert message if -fixed files != .css files [#255](https://github.com/AlaskaAirlines/WC-Generator/issues/255) ([3f74db0](https://github.com/AlaskaAirlines/WC-Generator/commit/3f74db0b8687da40480d94878bf8aa96ab68d2b8))
+
 ## [3.9.5](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.9.4...v3.9.5) (2021-11-02)
 
 
