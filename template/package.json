@@ -117,6 +117,8 @@
         {
           "assets": [
             "./CHANGELOG.md",
+            "./README.md",
+            "./README__labs.md",
             "package.json",
             "./docs/api.md"
           ]
