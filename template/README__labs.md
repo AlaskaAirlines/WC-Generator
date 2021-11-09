@@ -38,9 +38,8 @@ import "[npm]/[namespace]-[name]";
 
 **Reference component in HTML**
 
-```html
-<[namespace]-[name]>Hello World</[namespace]-[name]>
-```
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./apiExamples/basic.html) -->
+<!-- AURO-GENERATED-CONTENT:END -->
 
 ## Install bundled assets from CDN
 
@@ -64,9 +63,8 @@ Since the legacy bundle includes many polyfills that are not needed by modern br
 
 Default [namespace]-[name]
 
-```html
-<[namespace]-[name]>Hello World</[namespace]-[name]>
-```
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./apiExamples/basic.html) -->
+<!-- AURO-GENERATED-CONTENT:END -->
 
 ## Development
 
