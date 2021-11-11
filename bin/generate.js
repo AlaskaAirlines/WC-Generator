@@ -306,6 +306,8 @@ const getReplacements = async ({ name, namespace, npm }) => {
   const userName = require('git-user-name');
   // generate new year for copyright stamp
   const newYear = new Date().getFullYear();
+  // Retrieve Node version defined in package.json
+  const minNodeVersion = pjson.engines.node.replace(/[^0-9,.]+/g,'');
 
   if (labs) {
     npm = `@aurolabs`
@@ -322,7 +324,8 @@ const getReplacements = async ({ name, namespace, npm }) => {
     { regex: /\[npm\]/g, value: npm },
     { regex: /\[year\]/g, value: newYear },
     { regex: /\[designTokens\]/g, value: versionData['@aurodesignsystem/design-tokens'] },
-    { regex: /\[wcss\]/g, value: versionData['@aurodesignsystem/webcorestylesheets'] }
+    { regex: /\[wcss\]/g, value: versionData['@aurodesignsystem/webcorestylesheets'] },
+    { regex: /\[nodeVersion\]/g, value: minNodeVersion }
   ];
 
   return nameReplacements.concat(pkgReplacements);
