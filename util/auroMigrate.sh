@@ -2,7 +2,7 @@
 ## Generate a new baseline install of an auro component
 # Argument expected: name of new repo
 function generateRepo {
-  command wc-generate --test --name "$1" --npm "${2//\/}"
+  command npx @aurodesignsystem/wc-generator --test --name "$1" --npm "${2//\/}"
 }
 
 ## Migrade files from legacy repo to new build
