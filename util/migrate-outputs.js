@@ -5,9 +5,6 @@ const  generate = `
   ${chalk.gray('Installed version:')}
   v${pjson.version}
 
-  ${chalk.gray('Upgrade to latest version:')}
-  $ npm i @aurodesignsystem/wc-generator@latest -g
-
   ${chalk.gray('More help:')}
   For more help with migrating an Auro Web Component,
   be sure to see ${chalk.blue('https://auro.alaskaair.com/getting-started/developers/generator/upgrade')}
