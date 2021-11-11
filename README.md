@@ -14,20 +14,14 @@ Auro's Design System web component generator is a project tool intended to assis
 [![License](https://img.shields.io/npm/l/@aurodesignsystem/wc-generator.svg?color=blue&style=for-the-badge)](https://www.apache.org/licenses/LICENSE-2.0)
 [![issues](https://img.shields.io/github/issues-raw/AlaskaAirlines/WC-Generator?style=for-the-badge)](https://github.com/AlaskaAirlines/WC-Generator/issues)
 
-It is recommended that the package be installed globally as to ensure quick and easy access to initializing new projects.
-
-```shell
-$ npm i @aurodesignsystem/wc-generator -g
-```
-
-The Auro custom element generator is configured to ensure that you have the latest version of the generator and all it's dependencies prior to starting a new build project.
+It is recommended that the package be executed via a `npx` command.
 
 ## Execute
 
 WC-Generator example use:
 
 ```
-wc-generate --name [wc-name]
+$ npx @aurodesignsystem/wc-generator --name [wc-name]
 ```
 
 ### Minimum Node version
@@ -45,7 +39,7 @@ For the most up to date information on UI development browser support, see [Auro
 When generating a new custom element using the Auro WC-Generator, you are not restricted to using the Auro namespace for your new element. The following example will crate the project, `@aurodesignsystem/auro-ticker`
 
 ```shell
-$ wc-generate --name Auro-Ticker
+$ npx @aurodesignsystem/wc-generator --name Auro-Ticker
 ```
 
 ## Custom npm namespace support
@@ -53,7 +47,7 @@ $ wc-generate --name Auro-Ticker
 By default, the WC-Generator will output a project that the custom element is for the `@aurodesignsystem` npm namespace. The following example illustrates how you can customize this to `@mynamespace/auro-ticker` for example.
 
 ```shell
-$ wc-generate --name Auro-Ticker --npm @mynamespace
+$ npx @aurodesignsystem/wc-generator --name Auro-Ticker --npm @mynamespace
 ```
 
 ## WC-Generator development API
@@ -67,7 +61,7 @@ $ wc-generate --name Auro-Ticker --npm @mynamespace
 
 ## Help and version management
 
-For help with the WC-Generator API and to see what version you have installed, run `$ wc-generate --help`.
+For help with the WC-Generator API and to see what version you have installed, run `$ npx @aurodesignsystem/wc-generator --help`.
 
 With each new repo created, the version of the generator will be added to the bottom of the `./README.md` file. As versions of the WC-Generator progress this will help authors to understand where the feature gap is.
 

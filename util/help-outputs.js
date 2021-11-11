@@ -3,10 +3,10 @@ const pjson = require('../package.json');
 
 const generate = `
     ${chalk.gray('Usage:')}
-    ${chalk.bold('wc-generator [options]')}
+    ${chalk.bold('npx @aurodesignsystem/wc-generator [options]')}
 
     ${chalk.gray('Example:')}
-    ${chalk.bold('wc-generator --name auro-dialog')}
+    ${chalk.bold('npx @aurodesignsystem/wc-generator --name auro-dialog')}
 
     ${chalk.gray('Description:')}
     Generate a new Auro Web Component from template.
@@ -18,7 +18,7 @@ const generate = `
     ${chalk.gray('Installed version:')}
     v${pjson.version}
 
-    ${chalk.gray('Upgrade to latest version:')}
+    ${chalk.gray('Install locally if needed (not recommended):')}
     $ ${chalk.green('npm i @aurodesignsystem/wc-generator@latest -g')}
 
     ${chalk.gray('Options:')}

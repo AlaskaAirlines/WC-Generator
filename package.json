@@ -9,7 +9,7 @@
     "util"
   ],
   "bin": {
-    "wc-generate": "./bin/generate.js"
+    "wc-generator": "./bin/generate.js"
   },
   "repository": {
     "type": "git",

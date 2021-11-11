@@ -26,7 +26,7 @@ When building a new custom element  in auroLabs it is highly recommended that yo
 Once the generator is installed, please use the following execution template fo your new project.
 
 ```
-$ wc-generate --name auro-[element name]
+$ npx @aurodesignsystem/wc-generator --name auro-[element name]
 ```
 
 ## Getting started
@@ -45,7 +45,7 @@ From installing the generator all the way to setting up a Github repo. Follow th
     <span slot="trigger" class="trigger">2. Create your new custom element repository locally</span>
     <div class="lightText">
       <p>Once the generator is installed, run the generator command to create a new custom element repository.</p>
-      <pre class="pre">  $ wc-generate --name auro-[element name]</pre>
+      <pre class="pre">  $ npx @aurodesignsystem/wc-generator --name auro-[element name]</pre>
     </div>
   </auro-accordion>
   <auro-accordion id="newWork" chromeless noProfile>
