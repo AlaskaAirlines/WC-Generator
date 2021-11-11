@@ -211,14 +211,6 @@ const question = async () => {
       const questions = [
         {
           type: 'confirm',
-          name: 'generatorVersion',
-          message: `Please confirm you have the latest version installed v${latestPublishedVersion}`,
-          when: function (answers) {
-            return !readDocs('generatorVersion')(answers);
-          },
-        },
-        {
-          type: 'confirm',
           name: 'auroLabs',
           message: 'Is this an AuroLabs project?',
           when: function (answers) {
@@ -265,10 +257,6 @@ const question = async () => {
           labs = true;
         }
 
-        if (answers.generatorVersion === false) {
-          log(chalk.red(`\nSorry, we have to stop you here.\n\nPlease run: npm i @aurodesignsystem/wc-generator@latest -g\n`))
-        }
-
         if (answers.governance === false) {
           console.log(`\nNot reviewed the Contributing Guidelines?\nPlease review ${chalk.underline.yellow(`https://auro.alaskaair.com/contributing`)} before submitting any new work\nto ensure that you will be in compliance with our expectations.\n`);
         }
@@ -281,8 +269,7 @@ const question = async () => {
           console.log(`\nNot familiar with Auro\'s CSS conventions?\nPlease review ${chalk.underline.yellow(`https://auro.alaskaair.com/webcorestylesheets/custom-element-css`)} before starting a new project.\n`);
         }
 
-        if (answers.generatorVersion === true
-            && answers.governance === true
+        if (answers.governance === true
             && answers.status === true
             && answers.cssConventions === true) {
           generateFromTemplate();
