@@ -2,8 +2,9 @@
 
 'use strict';
 
-// Check min Node Version
-const minNodeVersion = [14, 17, 0];
+// Retrieve Node version defined in package.json
+const pjson = require('../package.json');
+const minNodeVersion = pjson.engines.node.replace(/[^0-9,.]+/g,'').split('.');
 
 // Throw an error on unhandled rejections (exit non-zero)
 process.on('unhandledRejection', err => {
