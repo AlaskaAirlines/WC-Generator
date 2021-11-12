@@ -8,11 +8,6 @@ let copyFiles = async function() {
     if (err) throw err;
     console.log(`${bundle} was copied to ./build dir`);
   });
-
-  fs.copyFile(`./demo/style.css`, `./build/style.css`, (err) => {
-    if (err) throw err;
-    console.log(`CSS was copied to ./build dir`);
-  });
 }
 
 // Edit string in new index.html file
