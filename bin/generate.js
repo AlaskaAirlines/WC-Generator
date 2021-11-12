@@ -308,6 +308,7 @@ const getReplacements = async ({ name, namespace, npm }) => {
   const newYear = new Date().getFullYear();
   // Retrieve Node version defined in package.json
   const minNodeVersion = pjson.engines.node.replace(/[^0-9,.]+/g,'');
+  const abstractNodeVersion = minNodeVersion.split('.')[0] + '.x';
 
   if (labs) {
     npm = `@aurolabs`
@@ -325,7 +326,8 @@ const getReplacements = async ({ name, namespace, npm }) => {
     { regex: /\[year\]/g, value: newYear },
     { regex: /\[designTokens\]/g, value: versionData['@aurodesignsystem/design-tokens'] },
     { regex: /\[wcss\]/g, value: versionData['@aurodesignsystem/webcorestylesheets'] },
-    { regex: /\[nodeVersion\]/g, value: minNodeVersion }
+    { regex: /\[nodeVersion\]/g, value: minNodeVersion },
+    { regex: /\[abstractNodeVersion\]/g, value: abstractNodeVersion }
   ];
 
   return nameReplacements.concat(pkgReplacements);
