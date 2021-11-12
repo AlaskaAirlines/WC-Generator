@@ -59,6 +59,7 @@
     "copyfiles": "",
     "core-js": "",
     "eslint": "",
+    "eslint-plugin-jsdoc": "",
     "focus-visible": "",
     "husky": "^6.0.0",
     "lodash": "",
