@@ -14,8 +14,6 @@ Auro's Design System web component generator is a project tool intended to assis
 [![License](https://img.shields.io/npm/l/@aurodesignsystem/wc-generator.svg?color=blue&style=for-the-badge)](https://www.apache.org/licenses/LICENSE-2.0)
 [![issues](https://img.shields.io/github/issues-raw/AlaskaAirlines/WC-Generator?style=for-the-badge)](https://github.com/AlaskaAirlines/WC-Generator/issues)
 
-It is recommended that the package be executed via a `npx` command.
-
 ## Execute
 
 WC-Generator example use:
@@ -26,7 +24,7 @@ $ npx @aurodesignsystem/wc-generator --name [wc-name]
 
 ### Minimum Node version
 
-The WC-Generator requires a minimum install of Node.js `14.17.0`.
+The WC-Generator requires a minimum install of Node.js `16.13.0`.
 
 Be sure to check out our [getting started](https://auro.alaskaair.com/aurolabs/minors) page for helpful tips when starting a new project.
 
