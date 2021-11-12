@@ -83,6 +83,7 @@
     "stylelint": "",
     "stylelint-config-idiomatic-order": "",
     "stylelint-config-standard": "",
+    "stylelint-config-standard-scss": "",
     "stylelint-order": "",
     "stylelint-scss": "",
     "wc-sass-render": "",
