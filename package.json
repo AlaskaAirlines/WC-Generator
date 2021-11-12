@@ -18,7 +18,7 @@
   "author": "AlaskaAirlines",
   "license": "Apache-2.0",
   "engines": {
-    "node": ">=14.17.6"
+    "node": ">=16.13.0"
   },
   "bugs": {
     "url": "https://github.com/AlaskaAirlines/WC-Generator/issues"
