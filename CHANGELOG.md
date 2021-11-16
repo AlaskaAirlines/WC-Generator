@@ -1,5 +1,23 @@
 # Semantic Release Automated Changelog
 
+# [3.11.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.10.0...v3.11.0) (2021-11-16)
+
+
+### Bug Fixes
+
+* **demo:** remove offending code [#268](https://github.com/AlaskaAirlines/WC-Generator/issues/268) ([e8b88bc](https://github.com/AlaskaAirlines/WC-Generator/commit/e8b88bc334bd102e86b870b4662764d282223762))
+* **markdownmagic:** remove aurolabs version of readme from the commit back function ([1a636b7](https://github.com/AlaskaAirlines/WC-Generator/commit/1a636b7a410251ed47494e7edee5bd611e3bab7c))
+* reinstall jsdoc linter support ([f9db59c](https://github.com/AlaskaAirlines/WC-Generator/commit/f9db59c51c701dff21235971fca93b316c5deb00))
+* **stylelint:** add stylelint-config-standard-scss as a dependency [#267](https://github.com/AlaskaAirlines/WC-Generator/issues/267) ([2d45252](https://github.com/AlaskaAirlines/WC-Generator/commit/2d452524868b2a21770f9f82a61d9b66d53b2ed0))
+
+
+### Features
+
+* **dev server:** update to support single shell for dev server [#225](https://github.com/AlaskaAirlines/WC-Generator/issues/225) ([eb73188](https://github.com/AlaskaAirlines/WC-Generator/commit/eb73188bd6f42085b8f62794131196fafbc79e9b))
+* **node version:** automate management of node version [#262](https://github.com/AlaskaAirlines/WC-Generator/issues/262) ([7325b14](https://github.com/AlaskaAirlines/WC-Generator/commit/7325b143db10cf677840c31880a2fb8d9a2c33f1))
+* **node version:** automate management of node version [#262](https://github.com/AlaskaAirlines/WC-Generator/issues/262) ([ff6d2d9](https://github.com/AlaskaAirlines/WC-Generator/commit/ff6d2d9f9e9561cc383a6f8bef9656001d9b79a1))
+* **npx:** update all docs to use npx command [#222](https://github.com/AlaskaAirlines/WC-Generator/issues/222) ([657cc1e](https://github.com/AlaskaAirlines/WC-Generator/commit/657cc1e9e5ff3a7cb02ec47a64f0d19f2d604abf))
+
 # [3.10.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.9.5...v3.10.0) (2021-11-09)
 
 
