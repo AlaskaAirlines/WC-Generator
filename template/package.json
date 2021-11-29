@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "lit-element": "^2.5.1",
-    "lit-html": "^1.0.0",
+    "lit-html": "^1.4.1",
     "chalk": "^4.1.2"
   },
   "peerDependencies": {
