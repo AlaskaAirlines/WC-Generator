@@ -93,6 +93,8 @@
     "scss/selector-nest-combinators": "always",
     "scss/selector-no-redundant-nesting-selector": true,
     "selector-attribute-quotes": "always",
+    "selector-class-pattern": "^[a-z][a-zA-Z0-9]+$",
+    "selector-id-pattern": "^[a-z][a-zA-Z0-9]+$",
     "selector-list-comma-newline-before": "never-multi-line",
     "selector-list-comma-space-after": "always-single-line",
     "selector-max-attribute": 1,
