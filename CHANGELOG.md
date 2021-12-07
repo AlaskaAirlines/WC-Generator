@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [3.11.2](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.11.1...v3.11.2) (2021-12-07)
+
+
+### Bug Fixes
+
+* **styles:** improve selector lint rules ([ab75d2a](https://github.com/AlaskaAirlines/WC-Generator/commit/ab75d2a21d55258dba40a599b02483e357e4219e))
+
 ## [3.11.1](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.11.0...v3.11.1) (2021-11-29)
 
 
