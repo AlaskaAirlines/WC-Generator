@@ -169,7 +169,7 @@ const labsOverride__Settings = async (targetPath) => {
 
 const labsOverride__Readme = async (targetPath) => {
   if (labs) {
-    fs.copyFile(`${targetPath}/README__labs.md`, `${targetPath}/README.md`, (err) => {
+    fs.copyFile(`${targetPath}/docTemplates/README__labs.md`, `${targetPath}/docTemplates/README.md`, (err) => {
       if (err) {
         console.log("Error Found:", err);
         process.exit(0);
@@ -180,7 +180,7 @@ const labsOverride__Readme = async (targetPath) => {
   }
 
   try {
-    fs.unlinkSync(`${targetPath}/README__labs.md`)
+    fs.unlinkSync(`${targetPath}/docTemplates/README__labs.md`)
   } catch(err) {
     console.error(err)
   }
