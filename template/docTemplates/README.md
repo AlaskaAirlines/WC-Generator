@@ -1,5 +1,8 @@
 # [Name]
 
+<!-- AUROLABS-GENERATED-CONTENT:START (FILE:src=./../docTemplates/partials/labsDisclaimer.md) -->
+<!-- AUROLABS-GENERATED-CONTENT:END -->
+
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../docs/partials/description.md) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
