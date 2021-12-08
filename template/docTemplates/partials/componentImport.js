@@ -1,0 +1,1 @@
+import "[npm]/[namespace]-[name]";
