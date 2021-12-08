@@ -1,6 +1,7 @@
+const fs = require('fs');
 const path = require('path')
 const chalk = require('chalk');
-const markdownMagic = require('markdown-magic')
+const markdownMagic = require('markdown-magic');
 
 // Compile ./README.md
 
@@ -31,3 +32,28 @@ const configDemo = {
 const markdownPathDemo = path.join(__dirname, '../docs/partials/demo.md')
 
 markdownMagic(markdownPathDemo, configDemo, callbackDemo)
+
+
+// If auroLabs project include auroLabs documentation
+
+fs.readFile('package.json', 'utf8', function(err, data) {
+  try {
+    data = JSON.parse(data);
+
+    if (data.name.includes('@aurolabs/')) {
+      const callbackAurolabs = function(updatedContent, outputConfig) {
+        console.log(chalk.green('Readme updated to reference AuroLabs content.'));
+      }
+
+      const configAurolabs = {
+        matchWord: 'AUROLABS-GENERATED-CONTENT'
+      }
+
+      const markdownPathAurolabs = path.join(__dirname, '../docTemplates/README.md')
+
+      markdownMagic(markdownPathAurolabs, configAurolabs, callbackAurolabs)
+    }
+  } catch (e) {
+    console.log(chalk.red('ERROR: Unable to reliably compile documentation.', err));
+  }
+})
