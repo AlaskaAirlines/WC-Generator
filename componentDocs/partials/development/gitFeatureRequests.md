@@ -1,0 +1,1 @@
+Feature requests stem from a business need. It is important to understand whether your idea fits with the scope and aims of the project of if this serves to address a personal/local scenario. It is up to you to make a strong case about the merits of this feature. Please provide as much detail and context as possible.

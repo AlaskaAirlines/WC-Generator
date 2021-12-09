@@ -1,0 +1,1 @@
+Please take a moment to review this document in order to make the contribution process easy and effective for everyone involved. Also be sure to review the [Issues, pull requests and labels](https://auro.alaskaair.com/contributing/issues-prs-labels) process document.

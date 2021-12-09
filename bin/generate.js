@@ -167,6 +167,25 @@ const labsOverride__Settings = async (targetPath) => {
   }
 }
 
+const labsOverride__Readme = async (targetPath) => {
+  if (labs) {
+    fs.copyFile(`${targetPath}/README__labs.md`, `${targetPath}/README.md`, (err) => {
+      if (err) {
+        console.log("Error Found:", err);
+        process.exit(0);
+      }
+    });
+
+    log(`${chalk.green('auroLabs README applied to new repo.')}: ${targetPath}`);
+  }
+
+  try {
+    fs.unlinkSync(`${targetPath}/README__labs.md`)
+  } catch(err) {
+    console.error(err)
+  }
+}
+
 const getVersionData = async () => {
   const { devDependencies, dependencies, peerDependencies } = require('../template/package.json');
 
@@ -411,6 +430,7 @@ Creating Web Components People Love.
       '.gitignore.temp': '.gitignore'
     });
     await labsOverride__Settings(params.dir);
+    await labsOverride__Readme(params.dir);
     log(chalk.green('\nCopied all files!'));
 
     let areDependenciesInstalled = false;
