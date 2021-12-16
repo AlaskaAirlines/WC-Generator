@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+# [3.12.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.11.2...v3.12.0) (2021-12-16)
+
+
+### Features
+
+* **docs:** labs content managed by markdown-magic ([d25cee1](https://github.com/AlaskaAirlines/WC-Generator/commit/d25cee1ccd15f48e85cd7db089d6fe8ccd31a810))
+
 ## [3.11.2](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.11.1...v3.11.2) (2021-12-07)
 
 
