@@ -37,12 +37,6 @@ function auroMigrate {
   echo -e "${GREEN}4.${NC} ${YELLOW}./CHANGELOG.md${NC} copied from ${YELLOW}'${1//\/}'${NC} to ${YELLOW}'${2//\/}'${NC}"
   sleep 1
 
-  # move README
-  command mkdir "${2//\/}"/_legacy
-  command cp "${1//\/}"/README.md "${2//\/}"/_legacy/README.md
-  echo -e "${GREEN}5.${NC} ${YELLOW}./README${NC} copied from ${YELLOW}'${1//\/}'${NC} to ${YELLOW}'${2//\/}./_legacy/README.md'${NC}."
-  sleep 1
-
   # move package.json
   command cp "${1//\/}"/package.json "${2//\/}"/_legacy/package.json
   echo -e "${GREEN}6.${NC} ${YELLOW}./package.json${NC} copied from ${YELLOW}'${1//\/}'${NC} to ${YELLOW}'${2//\/}./_legacy/package.json${NC}'."
@@ -56,7 +50,7 @@ function auroMigrate {
     echo -e "${GREEN}7.${NC} ${YELLOW}./demo/index.html${NC} copied from ${YELLOW}'${1//\/}'${NC} to ${YELLOW}'${2//\/}/demo/_legacy/index.html${NC}'.\n"
     sleep 3
   else
-    command cp "${1//\/}"/demo/demo.md "${2//\/}"/demo/demo.md
+    command cp "${1//\/}"/docs/partials/demo.md "${2//\/}"/docs/partials/demo.md
     command cp "${1//\/}"/demo/index.html "${2//\/}"/demo/index.html
     echo -e "${GREEN}7.${NC} ${YELLOW}./demo${NC} directory copied from ${YELLOW}'${1//\/}'${NC} to ${YELLOW}'${2//\/}'${NC}\n"
     sleep 3
@@ -102,7 +96,7 @@ function auroMigrate {
   sleep 1
 
   # close out message
-  echo -e "\n\nNote: The legacy ${YELLOW}README${NC} and ${YELLOW}package.json${NC} files were maintained.\nBe sure to review these files, manually update with information\nthat needs to be retained and then remove them from the project.\n"
+  echo -e "\n\nNote: The legacy ${YELLOW}demo.md${NC} and ${YELLOW}package.json${NC} files were maintained.\nBe sure to review these files, manually update with information\nthat needs to be retained and then remove them from the project.\n"
   echo -e "To see diffs, consider using ${YELLOW}$ vimdiff _legacy/package.json package.json${NC}"
   echo -e "\n\nCommitted all changes to ${YELLOW}repoUpgrde${NC} Git branch\n"
   echo -e "For any subsequent changes to the ${YELLOW}repoUpgrde${NC}, please\nbe sure to amend to the previous commit.\n"
