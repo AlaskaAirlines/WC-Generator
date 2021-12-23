@@ -31,7 +31,7 @@
 <!-- AURO-GENERATED-CONTENT:START (REMOTE:url=https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/master/componentDocs/partials/usage/componentImportDescription.md) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
-<!-- AURO-GENERATED-CONTENT:START (REMOTE:url=https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/master/componentDocs/partials/usage/componentImport.js) -->
+<!-- AURO-GENERATED-CONTENT:START (REMOTE:url=https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/master/componentDocs/partials/usage/componentImport.md) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 **Reference component in HTML**
@@ -45,7 +45,7 @@
 
 ### Bundle example code
 
-<!-- AURO-GENERATED-CONTENT:START (REMOTE:url=https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/master/componentDocs/partials/usage/bundleUse.html) -->
+<!-- AURO-GENERATED-CONTENT:START (REMOTE:url=https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/master/componentDocs/partials/usage/bundleUse.md) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 ## [namespace]-[name] use cases
