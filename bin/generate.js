@@ -327,15 +327,28 @@ const copyAllFiles = async (
     log(
       `${chalk.bold('Creating')}: ${targetPath}/${fileRenames[fileName] || fileName}`
     );
-    fileCopyPromises.push(
-      copyFile(
-        `${sourcePath}/${fileName}`,
-        `${targetPath}/${fileRenames[fileName] || fileName}`,
-        params,
-        replacements,
-        fileRenames
-      )
-    );
+
+    if (fileName === 'generateDocs.js') {
+      fileCopyPromises.push(
+        copyFile(
+          `${sourcePath}/${fileName}`,
+          `${targetPath}/${fileRenames[fileName] || fileName}`,
+          params,
+          [],
+          fileRenames
+        )
+      );
+    } else {
+      fileCopyPromises.push(
+        copyFile(
+          `${sourcePath}/${fileName}`,
+          `${targetPath}/${fileRenames[fileName] || fileName}`,
+          params,
+          replacements,
+          fileRenames
+        )
+      );
+    }
   });
   await Promise.all(fileCopyPromises);
 };
