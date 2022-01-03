@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+# [3.14.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.13.0...v3.14.0) (2022-01-03)
+
+
+### Features
+
+* **docs:** generate docs handles dynamic npm, namespace and name ([6f43204](https://github.com/AlaskaAirlines/WC-Generator/commit/6f432045b6027123feb891219f316cfe87e974be))
+
 # [3.13.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.12.0...v3.13.0) (2021-12-22)
 
 
