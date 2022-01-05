@@ -1,6 +1,6 @@
 {
   "name": "@aurodesignsystem/wc-generator",
-  "version": "3.14.0",
+  "version": "3.15.0",
   "description": "Boilerplate generator for Auro Web Components",
   "main": "index.js",
   "files": [

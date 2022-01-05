@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+# [3.15.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.14.0...v3.15.0) (2022-01-05)
+
+
+### Features
+
+* **docs:** split demo examples between demo.md and new apiExamples.md ([7813c61](https://github.com/AlaskaAirlines/WC-Generator/commit/7813c61e2aa5a5beb68216f52d7d9338172160a0))
+
 # [3.14.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.13.0...v3.14.0) (2022-01-03)
 
 
