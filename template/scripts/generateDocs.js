@@ -42,24 +42,55 @@ const readmeFilePath = dirDocTemplates + '/README.md';
 
 function formatTemplateFileContents(content, destination) {
   let nameExtractionData = nameExtraction();
-
   let result = content;
+
+  /**
+   * Replace placeholder strings
+   */
   result = result.replace(/\[npm]/g, nameExtractionData.npm);
   result = result.replace(/\[name]/g, nameExtractionData.name);
   result = result.replace(/\[Name]/g, nameExtractionData.nameCap);
   result = result.replace(/\[namespace]/g, nameExtractionData.namespace);
   result = result.replace(/\[Namespace]/g, nameExtractionData.namespaceCap);
 
-  // Strip all markdown-magic comments
+  /**
+   * Strip all markdown-magic comments
+   */
   result = result.replace(/<!-- AURO(.*?)-GENERATED-CONTENT(.*?)-->/g, '');
-  result = result.replace(/<!-- The below content is automatically added from(.*?)-->/g, '');
-  result = result.replace(/<!-- The below code snippet is automatically added from(.*?)-->/g, '');
-  // Strip extra new lines left behind when removing markdown-magic comments
-  result = result.replace(/\s\s(\r\n|\r|\n)/g, '\r\n');
-  result = result.replace(/(\r\n|\r|\n){3,}/g, '\r\n\r\n');
+  result = result.replace(/<!-- The below (.*?) is automatically added from(.*?)-->/g, '');
 
+  /**
+   * Cleanup line breaks
+   */
+  result = result.replace(/(\r\n|\r|\n)[\s]+(\r\n|\r|\n)/g, '\r\n\r\n'); // Replace lines containing only whitespace with a carriage return.
+  result = result.replace(/>(\r\n|\r|\n){2,}/g, '>\r\n'); // Remove empty lines directly after a closing html tag.
+  result = result.replace(/>(\r\n|\r|\n)```/g, '>\r\n\r\n```'); // Ensure an empty line before code samples.
+  result = result.replace(/>(\r\n|\r|\n){2,}```(\r\n|\r|\n)/g, '>\r\n```\r\n'); // Ensure no empty lines before close of code sample.
+  result = result.replace(/([^(\r\n|\r|\n)])(\r\n|\r|\n)+#/g, "$1\r\n\r\n#"); // Ensure empty line before header sections.
+
+  /**
+   * Write the result to the destination file
+   */
   fs.writeFileSync(destination, result, { encoding: 'utf8'});
 };
+
+function formatApiTableContents(content, destination) {
+  const nameExtractionData = nameExtraction();
+  const wcName = nameExtractionData.namespace + '-' + nameExtractionData.name;
+
+  let result = content;
+
+  result = result
+    .replace(/\r\n|\r|\n####\s`([a-zA-Z]*)`/g, `\r\n#### <a name="$1"></a>\`$1\`<a href="#${wcName}" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>`)
+    .replace(/\r\n|\r|\n\|\s`([a-zA-Z]*)`/g, '\r\n| [$1](#$1)')
+    .replace(/\| \[\]\(#\)/g, "");
+
+  fs.writeFileSync(destination, result, { encoding: 'utf8'});
+
+  fs.readFile('./demo/apiExamples.md', 'utf8', function(err, data) {
+    formatTemplateFileContents(data, './demo/apiExamples.md');
+  });
+}
 
 /**
  * If auroLabs project, include auroLabs documentation in `./README.md`
@@ -69,7 +100,6 @@ function processLabsReadmeContent() {
   let nameExtractionData = nameExtraction();
 
   if (nameExtractionData.npm === '@aurolabs') {
-    console.warn('is labs');
     const callbackAurolabs = function(updatedContent, outputConfig) {
       console.log(chalk.green('Readme updated to reference AuroLabs content.'));
     };
@@ -89,7 +119,7 @@ function processLabsReadmeContent() {
  */
 
 function processReadme() {
-  const callbackReadme = function(updatedContent, outputConfig) {
+  const callback = function(updatedContent, outputConfig) {
     processLabsReadmeContent()
 
     if (fs.existsSync('./README.md')) {
@@ -101,14 +131,14 @@ function processReadme() {
     }
   };
 
-  const configReadme = {
+  const config = {
     matchWord: 'AURO-GENERATED-CONTENT',
     outputDir: './'
   };
 
-  const markdownPathReadme = path.join(__dirname, '../docTemplates/README.md');
+  const markdownPath = path.join(__dirname, '../docTemplates/README.md');
 
-  markdownMagic(markdownPathReadme, configReadme, callbackReadme);
+  markdownMagic(markdownPath, config, callback);
 
   processLabsReadmeContent();
 }
@@ -118,7 +148,7 @@ function processReadme() {
  */
 
 function processDemo() {
-  const callbackDemo = function(updatedContent, outputConfig) {
+  const callback = function(updatedContent, outputConfig) {
     if (fs.existsSync('./demo/demo.md')) {
       fs.readFile('./demo/demo.md', 'utf8', function(err, data) {
         formatTemplateFileContents(data, './demo/demo.md');
@@ -133,9 +163,34 @@ function processDemo() {
     outputDir: './demo'
   };
 
-  const markdownPathDemo = path.join(__dirname, '../docs/partials/demo.md');
+  const markdownPath = path.join(__dirname, '../docs/partials/demo.md');
 
-  markdownMagic(markdownPathDemo, configDemo, callbackDemo);
+  markdownMagic(markdownPath, configDemo, callback);
+}
+
+/**
+ * Compiles `./docTemplates/apiExamples.md` -> `./demo/apiExamples.md`
+ */
+
+function processApiExamples() {
+  const callback = function(updatedContent, outputConfig) {
+    if (fs.existsSync('./demo/apiExamples.md')) {
+      fs.readFile('./demo/apiExamples.md', 'utf8', function(err, data) {
+        formatApiTableContents(data, './demo/apiExamples.md');
+      });
+    } else {
+      console.log(chalk.red('ERROR: ./demo/apiExamples.md file is missing'));
+    }
+  };
+
+  const config = {
+    matchWord: 'AURO-GENERATED-CONTENT',
+    outputDir: './demo'
+  };
+
+  const markdownPath = path.join(__dirname, '../docs/partials/apiExamples.md');
+
+  markdownMagic(markdownPath, config, callback);
 }
 
 /**
@@ -172,4 +227,5 @@ function copyReadmeLocally() {
  * Run all the actual document generation
  */
 copyReadmeLocally();
+processApiExamples();
 processDemo();
