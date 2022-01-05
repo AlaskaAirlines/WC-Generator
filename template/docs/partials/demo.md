@@ -3,17 +3,7 @@
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=./description.md) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
-## [namespace]-[name] use cases
-
-<!-- AURO-GENERATED-CONTENT:START (FILE:src=./useCases.md) -->
-<!-- AURO-GENERATED-CONTENT:END -->
-
-> Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam fermentum libero ipsum, ac tempor sapien blandit in. Nam tincidunt non felis molestie varius.
-
-|convallis|tristique|nisl dignissim|eleifend|
-|---|---|---|---|
-|√|√|||
-|||√|√|
+## Example(s)
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
@@ -28,7 +18,19 @@
 
 </auro-accordion>
 
-## Then there is more
+## [namespace]-[name] use cases
+
+<!-- AURO-GENERATED-CONTENT:START (FILE:src=./useCases.md) -->
+<!-- AURO-GENERATED-CONTENT:END -->
+
+## Additional Information
+
+> Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam fermentum libero ipsum, ac tempor sapien blandit in. Nam tincidunt non felis molestie varius.
+
+|convallis|tristique|nisl dignissim|eleifend|
+|---|---|---|---|
+|√|√|||
+|||√|√|
 
 Aenean at blandit lorem. Fusce imperdiet mi nec gravida maximus. Quisque nisl libero, condimentum in nisi a, imperdiet lacinia arcu.
 
