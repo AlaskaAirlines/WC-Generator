@@ -1,3 +1,22 @@
+<!--
+The README.md file is a compiled document. No edits should be made directly to this file.
+
+README.md is created by running `npm run build:markdownDocs`.
+
+This file is generated based on a template fetched from
+`https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/master/componentDocs/README.md`
+and copied to `./componentDocs/README.md` each time the the docs are compiled.
+
+The following sections are editable by making changes to the following files:
+
+| SECTION                | DESCRIPTION                                       | FILE LOCATION                       |
+|------------------------|---------------------------------------------------|-------------------------------------|
+| Description            | Description of the component                      | `./docs/partials/description.md`    |
+| Use Cases              | Examples for when to use this component           | `./docs/partials/useCases.md`       |
+| Additional Information | For use to add any component specific information | `./docs/partials/readmeAddlInfo.md` |
+| Component Example Code | HTML sample code of the components use            | `./apiExamples/basic.html`          |
+-->
+
 # [Name]
 
 <!-- AUROLABS-GENERATED-CONTENT:START (REMOTE:url=https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/master/componentDocs/partials/labsDisclaimer.md) -->
