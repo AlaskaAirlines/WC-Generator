@@ -1,6 +1,6 @@
 # Linux
 
-For Linux developers, the setup is similar to macOS. While these are very different OSs, macOS has history with Unix and share many commonalities with Linux. 
+For Linux developers, the setup is similar to macOS. While these are very different OSs, macOS has history with Unix and share many commonalities with Linux.
 
 While you can [install homebrew](https://docs.brew.sh/Homebrew-on-Linux) on Linux, it doesn't serve the same purpose as it does with macOS. Of course Xcode is not needed. It is recommended to install [Node Version Manager](https://github.com/nvm-sh/nvm#installing-and-updating).
 
@@ -11,17 +11,11 @@ The following command will clone the `auro-button` repo and open it in VS Code (
 ```sh
 $ git clone https://github.com/AlaskaAirlines/auro-button.git
 $ cd auro-button
+$ npm i
 $ code .
 ```
 
-From a terminal run the following commands to install dependencies and build the component.
-
-```sh
-$ npm i
-$ npm run dev
-```
-
-In a separate terminal/shell, run `npm run serve` to serve the component's demo page.
+To run your local environment, be sure to reference the **Start development environment** section of the repo's README doc.
 
 Finally, run the component tests with `npm run test` and make sure everything passes.
 

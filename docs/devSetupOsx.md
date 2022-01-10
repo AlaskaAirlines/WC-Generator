@@ -23,17 +23,11 @@ The following command will clone the `auro-button` repo and open it in VS Code (
 ```sh
 $ git clone https://github.com/AlaskaAirlines/auro-button.git
 $ cd auro-button
+$ npm i
 $ code .
 ```
 
-From a terminal run the following commands to install dependencies and build the component.
-
-```sh
-$ npm i
-$ npm run dev
-```
-
-In a separate terminal/shell, run `npm run serve` to serve the component's demo page.
+To run your local environment, be sure to reference the **Start development environment** section of the repo's README doc.
 
 Finally, run the component tests with `npm run test` and make sure everything passes.
 

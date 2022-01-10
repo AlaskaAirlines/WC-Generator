@@ -54,14 +54,9 @@ cd auro-button
 code .
 ```
 
-With VS Code, open the integrated terminal with `` CTRL+SHIFT+` ``. Run the following commands to install dependencies and build the component.
+With VS Code, open the integrated terminal with `` CTRL+SHIFT+` ``. Run `npm i` to install dependencies and build the component.
 
-```sh
-npm i
-npm run dev
-```
-
-In a separate terminal/shell, run `npm run serve` to serve the component's demo page. `CTRL+click` on the displayed URL to open the demo page in your web browser. You should see the `auro-button` demo page.
+To run your local environment, be sure to reference the **Start development environment** section of the repo's README doc.
 
 Finally, run the component tests with `npm run test` and make sure everything passes.
 
