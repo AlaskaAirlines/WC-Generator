@@ -32,6 +32,11 @@ function auroMigrate {
   echo -e "${GREEN}3.${NC} ${YELLOW}./test${NC} directory copied from ${YELLOW}'${1//\/}'${NC} to ${YELLOW}'${2//\/}'${NC}"
   sleep 1
 
+  # migrate apiExamples
+  command cp -r "${1//\/}"/apiExamples/ "${2//\/}"/apiExamples
+  echo -e "${GREEN}3.${NC} ${YELLOW}./apiExamples${NC} directory copied from ${YELLOW}'${1//\/}'${NC} to ${YELLOW}'${2//\/}'${NC}"
+  sleep 1
+
   # migrate changelog file
   command cp  "${1//\/}"/CHANGELOG.md "${2//\/}"/CHANGELOG.md
   echo -e "${GREEN}4.${NC} ${YELLOW}./CHANGELOG.md${NC} copied from ${YELLOW}'${1//\/}'${NC} to ${YELLOW}'${2//\/}'${NC}"
