@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [3.15.1](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.15.0...v3.15.1) (2022-01-13)
+
+
+### Bug Fixes
+
+* **git:** correct node version in github release workflow ([e1ea1ce](https://github.com/AlaskaAirlines/WC-Generator/commit/e1ea1ced9b4e5ba0c68064ee3ed72ca81a87a640))
+
 # [3.15.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.14.0...v3.15.0) (2022-01-05)
 
 
