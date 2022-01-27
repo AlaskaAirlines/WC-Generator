@@ -94,7 +94,7 @@ The best strategy is the overly communicated strategy. The more you can project 
 
 ## Direct or peer dependency elements 
 
-Much of the confusion lies within how `CustomElementRegistry.define()` works. When defining a custom element to the browser, load order matters. Using the `customElements.get` method, at the point of registration to see if the element has already been registered. If not, register it.
+Much of the confusion lies within how `customElements.define` works. When defining a custom element in the browser, load order matters. You can use the `customElements.get` method at the point of registration to see if the element has already been registered. If not, register it.
 
 ```js
 // define the name of the custom component
@@ -103,27 +103,27 @@ if (!customElements.get("auro-[name]")) {
 }
 ```
 
-At this time, the `customElements.get()` method only returns constructor of the element and there currently is no way to natively determine what version of the element had been registered or what versions have requested to be registered. 
+Currently, the `customElements.get()` method only returns the constructor of the element, and there is no way to natively determine what version of the element was registered. 
 
-Regardless, what is true is that no matter how many times the same custom element requests to be registered, the request that runs first wins because of the `customElements.get()` method. NOTE: not running the `customElements.get()` method will create an error where the element is already defined and the custom element requests to define again. 
+Regardless, no matter how many times this code is run, the first call will win. Subsequent calls will not invoke `customElements.define` because `customElements.get` will return a constructor. NOTE: not checking if an element was already defined can cause errors, since calling `customElements.define` a second time for the same element will throw an error.
 
 ### Peer dependencies 
 
-One way to address this is to maintain all custom elements at the same level, e.g. peer dependencies. By not making a custom element a direct dependency of another custom element, you give your users the ability to manage these dependencies themselves. While this make make installing a larger element with many decencies a little more cumbersome, in the long run managing custom elements in your app become easier. 
+One way to address this is to maintain all custom elements at the same level, e.g. peer dependencies. By not making a custom element a direct dependency of another custom element, you allow users to manage these dependencies themselves. While this may make installing a larger element with many dependencies more cumbersome, it makes managing your app's custom elements easier in the long run.
 
-Another advantage of using peer dependencies is a reduction of release maintenance. For example, let's say that `<elm-wrapper>` has a direct dependency on `<elm-button>` and `<elm-button>` had a version release. In order for `<elm-wrapper>` to be up to date is to update its dependencies and re-release. Now for many projects, this works and it makes sense. But with web components, it doesn't, for a number of reasons. 
+Another advantage of using peer dependencies is a reduction of release maintenance. For example, let's say that `<elm-wrapper>` has a direct dependency on `<elm-button>` and `<elm-button>` had a version release. In order for `<elm-wrapper>` to be up to date it needs to update its dependencies and re-release. Now for many projects, this works and it makes sense. But with web components, it doesn't, for a number of reasons. 
 
 ### Load order matters 
 
-As previously explained, load order of element definitions matters. What is interesting to note is that even if you have a nested direct dependency of an element inside another element, if that element, at a different version is defined first, the nested direct dependency is ignored. So a concept of version encapsulation within a package doesn't exist. 
+As previously explained, load order of element definitions matters. Even if you have a nested direct dependency of an element inside another element, if another version of that element is defined first, all instances of that element will use that definition. There is no concept of version encapsulation within a package like with other frameworks.
 
-Given the example above with `<elm-wrapper>` and `<elm-button>`, if you are loading `<elm-wrapper>` and `<elm-button>` individually, if  `<elm-button>` were to load first, its version will dominate it's definition regardless of the version defined inside `<elm-wrapper>`. 
+Given the example above, if you load `<elm-wrapper>` and `<elm-button>` individually, the version of  `<elm-button>` that loads first will be used everywhere on the page regardless of the version defined inside `<elm-wrapper>`. 
 
-Given the complexity of this issue at scale of a large web app, you can quickly see how this can get very confusing. 
+Given the complexity of this issue at scale of a large web app, you can see how this can quickly get very confusing. 
 
 ### Recommendation 
 
-With these scenarios defined, it is Auro's official recommendation as a best practice for developing custom elements to never define a nested element as a direct dependency. Whenever possible, define a nested element as a peer dependency. See [auro-input](https://auro.alaskaair.com/components/auro/input/install) as an example. 
+Given these scenarios, it is Auro's official recommendation to never define a nested element as a direct dependency. Whenever possible, define a nested element as a peer dependency. See [auro-input](https://auro.alaskaair.com/components/auro/input/install) as an example. 
 
 ## Additional resources
 
