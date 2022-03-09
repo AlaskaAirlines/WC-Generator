@@ -2,7 +2,7 @@
 name: Feature request
 about: Suggest an idea for this project
 title: 'Generator: [feature summary]'
-labels: 'Type: Feature, not-reviewed'
+labels: 'Type: Feature, not-reviewed, auro-generator'
 assignees: blackfalcon
 
 ---
