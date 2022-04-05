@@ -3,8 +3,6 @@
 <link rel="stylesheet" href="https://unpkg.com/@alaskaairux/design-tokens@latest/dist/tokens/CSSCustomProperties.css" />
 <link rel="stylesheet" href="https://unpkg.com/@alaskaairux/webcorestylesheets@latest/dist/bundled/essentials.css" />
 
-**NOTICE**: Auro's WC Generator does not currently support Node 16 due to dependencies with unsupported features. The Auro team is currently working on [a plan to address this issue](https://github.com/AlaskaAirlines/WC-Generator/issues/226).
-
 Auro's Design System web component generator is a project tool intended to assist developers with an easy to configure and execute HTML custom element development environment.
 
 ## Install
