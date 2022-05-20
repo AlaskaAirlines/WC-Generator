@@ -28,10 +28,10 @@ body:
     attributes:
       label: To reproduce
       description: Please include steps for how to reproduce the issue
-      placeholder: '1. Go to '...'
+      placeholder: "1. Go to '...'
 1. Click on '....'
 1. Scroll down to '....'
-1. See error'
+1. See error"
     validations:
       required: true
   - type: dropdown
