@@ -1,9 +1,7 @@
-name: Form
-description: File a bug report
-title: "[Bug]: "
-labels: ["bug", "triage"]
-assignees:
-  - octocat
+name: DO NOT USE
+description: Example use of a form issue template
+title: "[issue summary]"
+labels: ['Type: Bug', 'not-reviewed', 'auro-generator']
 body:
   - type: markdown
     attributes:
@@ -20,20 +18,20 @@ body:
   - type: textarea
     id: what-happened
     attributes:
-      label: What happened?
-      description: Also tell us, what did you expect to happen?
-      placeholder: Tell us what you see!
-      value: "A bug happened!"
+      label: Describe the bug
+      description: A clear and concise description of what the bug is.
+      placeholder: Please describe what you expected and what actually happened.
     validations:
       required: true
-  - type: dropdown
-    id: version
+  - type: textarea
+    id: repro
     attributes:
-      label: Version
-      description: What version of our software are you running?
-      options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
+      label: To reproduce
+      description: Please include steps for how to reproduce the issue
+      placeholder: '1. Go to '...'
+1. Click on '....'
+1. Scroll down to '....'
+1. See error'
     validations:
       required: true
   - type: dropdown
@@ -56,7 +54,7 @@ body:
     id: terms
     attributes:
       label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/AlaskaAirlines/WC-Generator/blob/master/.github/CODE_OF_CONDUCT.md)
       options:
         - label: I agree to follow this project's Code of Conduct
           required: true
