@@ -1,5 +1,14 @@
 # Semantic Release Automated Changelog
 
+# [3.17.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.16.0...v3.17.0) (2022-08-29)
+
+
+### Features
+
+* **security:** add codeql workflow config [#318](https://github.com/AlaskaAirlines/WC-Generator/issues/318) ([4bf5a7c](https://github.com/AlaskaAirlines/WC-Generator/commit/4bf5a7cfb909e6fe6c93fb0138e1b000375678c2))
+* **security:** add npm package vulnerabilities badge [#321](https://github.com/AlaskaAirlines/WC-Generator/issues/321) ([e1f9247](https://github.com/AlaskaAirlines/WC-Generator/commit/e1f9247b93bb40d8981bcd4972d7184a8230c75d))
+* **security:** add policy [#318](https://github.com/AlaskaAirlines/WC-Generator/issues/318) ([b8554be](https://github.com/AlaskaAirlines/WC-Generator/commit/b8554be73ebed2ffcc914823c6e1a00e2f2c1e79))
+
 # [3.16.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.15.1...v3.16.0) (2022-01-14)
 
 
