@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [3.17.1](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.17.0...v3.17.1) (2022-08-30)
+
+
+### Bug Fixes
+
+* **codeql:** update config to use master branch ([7a817eb](https://github.com/AlaskaAirlines/WC-Generator/commit/7a817eb12889a486dedcd4739a46313a085c739c))
+
 # [3.17.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.16.0...v3.17.0) (2022-08-29)
 
 
