@@ -1,0 +1,23 @@
+name: Pull Request Lint
+
+on:
+  pull_request:
+    types: ['opened', 'edited', 'reopened', 'synchronize']
+
+jobs:
+  title:
+    name: ticket check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check for ticket
+        uses: neofinancial/ticket-check-action@v1
+        with:
+          token: ${{ secrets.ACCESS_TOKEN }}
+          ticketLink: 'https://github.com/AlaskaAirlines/WC-Generator/issues/%ticketNumber%'
+          # ticketPrefix: '#'
+          # titleRegex: '#(?<ticketNumber>\d+$)'
+          # branchRegex: '(?<ticketNumber>\d+$)'
+          bodyRegex: '#(?<ticketNumber>\d+)'
+          bodyURLRegex: 'http(s?):\/\/(github.com)(\/AlaskaAirlines)(\/WC-Generator)(\/issues)\/(?<ticketNumber>\d+)'
+          exemptUsers: dependabot,snyk-bot
