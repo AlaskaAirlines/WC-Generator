@@ -5,8 +5,43 @@ import commonjs from '@rollup/plugin-commonjs';
 import minifyHTML from 'rollup-plugin-minify-html-literals';
 import resolve from '@rollup/plugin-node-resolve';
 import serve from 'rollup-plugin-serve';
+import fs from 'fs';
+import path from 'path';
+import chalk from 'chalk';
 
+const srcFiles = [];
 const production = !process.env.ROLLUP_WATCH;
+
+// The following evaluates the existence of
+// auro components in the ./src dir against
+// the input config.
+const directoryPath = path.join(__dirname, 'src');
+
+fs.readdir(directoryPath, function (err, files) {
+  if (err) {
+    return console.log('Unable to scan directory: ' + err);
+  }
+
+  files.forEach(function (file) {
+    if(file.includes("auro")) {
+      let fileName = file.replace('.js', '')
+      srcFiles.push(`${fileName}__bundled`);
+    }
+  });
+
+  if(JSON.stringify(Object.keys(modernConfig.input)) != JSON.stringify(srcFiles)) {
+    console.log(chalk.hex('#f26135')(`
+              **** WARNING ****
+
+Auro component source files and rollup config
+      are out of sync, please update.
+
+     Not all bundled assets were created.
+
+              **** WARNING ****`)
+    )
+  }
+});
 
 const getSharedPlugins = (isLegacy) => [
   resolve({
