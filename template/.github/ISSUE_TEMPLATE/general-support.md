@@ -3,7 +3,6 @@ name: General support
 about: Suggestions that are not related to bugs or new features
 title: 'As a [user] I need help with [issue]'
 labels: '[namespace]-[name], not-reviewed'
-assignees: blackfalcon
 ---
 
 # General Support Request
@@ -27,9 +26,8 @@ assignees: blackfalcon
 
 ## Your Environment
 
-<!-- Include as many relevant details about the environment you experienced the bug in -->
+<!-- Include as many relevant details about your environment -->
 
-* Version used:
 * Browser Name and version:
 * Operating System and version (desktop or mobile):
 * Link to your project:

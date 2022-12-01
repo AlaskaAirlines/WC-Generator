@@ -3,7 +3,6 @@ name: Feature request
 about: Suggest an idea for this project
 title: '[feature summary]'
 labels: '[namespace]-[name], Type: Feature, not-reviewed'
-assignees: blackfalcon
 ---
 
 ## Is your feature request related to a problem? Please describe.
@@ -21,3 +20,10 @@ assignees: blackfalcon
 ## Additional context
 
 <!-- Add any other context or screenshots about the feature request here. -->
+
+## Verify the version of [npm]/[namespace]-[name] you have installed
+
+**The current version is:**
+[![See it on NPM!](https://img.shields.io/npm/v/[npm]/[namespace]-[name]?style=for-the-badge&color=orange)](https://www.npmjs.com/package/[npm]/[namespace]-[name])
+
+My project has [npm]/[namespace]-[name] v<!-- insert npm version number here --> installed
