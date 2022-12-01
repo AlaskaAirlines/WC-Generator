@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [3.17.2](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.17.1...v3.17.2) (2022-12-01)
+
+
+### Performance Improvements
+
+* **issues:** update content for better responses ([b7df652](https://github.com/AlaskaAirlines/WC-Generator/commit/b7df652587f5b22d8dd4c55f50c1d217da6a7b61))
+
 ## [3.17.1](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.17.0...v3.17.1) (2022-08-30)
 
 
