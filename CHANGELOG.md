@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [3.17.3](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.17.2...v3.17.3) (2023-01-03)
+
+
+### Bug Fixes
+
+* **readme:** update partial to updated shields.io spec ([6d80d12](https://github.com/AlaskaAirlines/WC-Generator/commit/6d80d127d263333c8cdaeec7777b77eab7f8ecf1))
+
 ## [3.17.2](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.17.1...v3.17.2) (2022-12-01)
 
 
