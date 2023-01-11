@@ -96,9 +96,3 @@ Components may have a dependency on primitives, but they may also have dependenc
 ## Pattern
 
 Patterns are commonly-used interfaces where the makeup is entirely of primitives, and possibly other components. Due to their complexity the pattern is "suggested use" to allow the engineer to address individual use cases directly, versus having to work with an overly complex API. On the other hand, a pattern may be simply an easily repeatable UI of any part of the ecosystem with some minor HTML and CSS whereas the creation and maintenance of a custom element is unnecessary.
-
-## CMS module
-
-_CMS modules_ are some of the few design/development patterns with very specific use cases and implementation models. Much like components, modules are a collection of data and design elements, but are coupled with the functionality specific to that of a CMS or other platform.
-
-A module may be 100% specific to a content use case in a CMS, or it may be a wrapper for another Auro component or experience.
