@@ -12,7 +12,6 @@ import { LitElement, html } from "lit-element";
 // import AuroElement from '@alaskaairux/webcorestylesheets/dist/auroElement/auroElement';
 
 // Import touch detection lib
-import "focus-visible/dist/focus-visible.min.js";
 import styleCss from "./style-css.js";
 import styleCssFixed from './style-fixed-css.js';
 
