@@ -31,8 +31,8 @@ body:
       label: Reproducing the error
       description: Are you able to reproduce this issue on the [Auro docsite](https://auro.alaskaair.com/)?
       options:
-        - Yes I can
-        - No I can't
+        - This issue is reproducible on the Auro docsite
+        - This issue cannot be reproduced on the Auro docsite
   - type: textarea
     id: expected
     attributes:
