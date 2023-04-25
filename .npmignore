@@ -1,20 +1,2 @@
 # standard ignore
-*config*
-*conf*
-
-.github/
 .gitignore
-.eslintrc
-.stylelintrc
-
-coverage/
-docs/
-scripts/
-test/
-demo/**/*.css
-demo/**/*.scss
-demo/**/*.html
-
-# ignore src styles
-src/**/*.scss
-src/**/*.css
