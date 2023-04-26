@@ -19,9 +19,8 @@
     "node": ">=[nodeVersion]"
   },
   "dependencies": {
-    "lit-element": "^2.5.1",
-    "lit-html": "^1.4.1",
-    "chalk": "^4.1.2"
+    "chalk": "^4.1.2",
+    "lit": "^2.7.2"
   },
   "peerDependencies": {
     "@alaskaairux/design-tokens": "",
@@ -127,7 +126,7 @@
     "web components"
   ],
   "scripts": {
-    "build": "npm-run-all build:sass sass:render dist:js build:api test build:markdownDocs bundler postinstall types",
+    "build": "npm-run-all build:sass sass:render cssLint dist:js bundler postinstall build:api types",
     "build:ci": "npm-run-all sweep build",
     "build:api": "wca analyze 'src/[namespace]-[name].js' --outFiles docs/api.md",
     "build:demo": "npm-run-all build demo:rm:build demo:new:build demo:copy:index demo:copy:demo demo:update:index",

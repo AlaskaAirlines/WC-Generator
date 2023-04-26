@@ -40,7 +40,11 @@
           Prism.highlightAll();
         });
     </script>
-    <script type="module" src="../src/[namespace]-[name].js"></script>
+    <script type="module">
+      import { registerComponent } from "../index.js"
+      registerComponent('custom-[name]');
+    </script>
+
 
     <!-- If additional elements are needed for the demo, add them here. -->
     <script src="https://unpkg.com/@alaskaairux/auro-accordion@latest/dist/auro-accordion__bundled.js" type="module"></script>
