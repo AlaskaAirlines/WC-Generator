@@ -1,3 +1,9 @@
+<!--
+The demo.md file is a compiled document. No edits should be made directly to this file.
+README.md is created by running `npm run build:docs`.
+This file is generated based on a template fetched from `./docs/partials/demo.md`
+-->
+
 # [Name]
 
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=./description.md) -->
@@ -52,6 +58,8 @@ toggleDialogClose = (elName) => {
 <!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>
+
+Having a closing statement about your example helps to really complete the thought with your reader.
 
 ## Recommended Use and Version Control
 
