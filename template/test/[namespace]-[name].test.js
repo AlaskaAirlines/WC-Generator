@@ -1,5 +1,5 @@
 import { fixture, html, expect } from '@open-wc/testing';
-import '../src/[namespace]-[name].js';
+import '../src/[namespace]-[name]';
 
 describe('[namespace]-[name]', () => {
   it('sets the CSS class on [namespace]-[name] > div element', async () => {

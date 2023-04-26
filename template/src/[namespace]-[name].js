@@ -24,7 +24,7 @@ import styleCssFixed from './style-fixed-css.js';
  */
 
 // build the component class
-class [Namespace][Name] extends LitElement {
+export class [Namespace][Name] extends LitElement {
   // constructor() {
   //   super();
   // }
@@ -63,7 +63,7 @@ class [Namespace][Name] extends LitElement {
   }
 }
 
-// define the name of the custom component
+// default internal definition
 if (!customElements.get("[namespace]-[name]")) {
   customElements.define("[namespace]-[name]", [Namespace][Name]);
 }
