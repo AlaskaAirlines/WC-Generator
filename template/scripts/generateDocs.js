@@ -1,5 +1,4 @@
 const path = require('path');
-const chalk = require('chalk');
 const markdownMagic = require('markdown-magic');
 const fs = require('fs');
 const https = require('https');
@@ -15,7 +14,7 @@ const readmeFilePath = dirDocTemplates + '/README.md';
  function nameExtraction() {
   const packageJson = fs.readFileSync('package.json', 'utf8', function(err, data) {
     if (err) {
-      console.log(chalk.red('ERROR: Unable to read package.json file', err));
+      console.log('ERROR: Unable to read package.json file', err);
     }
   })
 
@@ -101,7 +100,7 @@ function processLabsReadmeContent() {
 
   if (nameExtractionData.npm === '@aurolabs') {
     const callbackAurolabs = function(updatedContent, outputConfig) {
-      console.log(chalk.green('Readme updated to reference AuroLabs content.'));
+      console.log('Readme updated to reference AuroLabs content.');
     };
 
     const configAurolabs = {
@@ -127,7 +126,7 @@ function processReadme() {
         formatTemplateFileContents(data, './README.md');
       });
     } else {
-      console.log(chalk.red('ERROR: ./README.md file is missing'));
+      console.log('ERROR: ./README.md file is missing');
     }
   };
 
@@ -154,7 +153,7 @@ function processDemo() {
         formatTemplateFileContents(data, './demo/demo.md');
       });
     } else {
-      console.log(chalk.red('ERROR: ./demo/demo.md file is missing'));
+      console.log('ERROR: ./demo/demo.md file is missing');
     }
   };
 
@@ -179,7 +178,7 @@ function processApiExamples() {
         formatApiTableContents(data, './demo/apiExamples.md');
       });
     } else {
-      console.log(chalk.red('ERROR: ./demo/apiExamples.md file is missing'));
+      console.log('ERROR: ./demo/apiExamples.md file is missing');
     }
   };
 
@@ -206,7 +205,7 @@ function copyReadmeLocally() {
   if (!fs.existsSync(readmeFilePath)) {
     fs.writeFile(readmeFilePath, '', function(err) {
       if(err) {
-        console.log(chalk.red('ERROR: Unable to create README.md file.', err));
+        console.log('ERROR: Unable to create README.md file.', err);
       }
     });
   }
@@ -219,7 +218,7 @@ function copyReadmeLocally() {
     });
 
   }).on('error', (err) => {
-    console.log(chalk.red('ERROR: Unable to fetch README.md file from server.', err));
+    console.log('ERROR: Unable to fetch README.md file from server.', err);
   });
 }
 

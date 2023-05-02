@@ -4,16 +4,15 @@
 // ---------------------------------------------------------------------
 
 // If using litElement base class
-import { LitElement, html } from "lit-element";
+import { LitElement, html } from "lit";
 
 // If using auroElement base class
 // See instructions for importing auroElement base class https://git.io/JULq4
-// import { html, css } from "lit-element";
-// import AuroElement from '@alaskaairux/webcorestylesheets/dist/auroElement/auroElement';
+// import { LitElement, html } from "lit";
+// import AuroElement from '@aurodesignsystem/webcorestylesheets/dist/auroElement/auroElement';
 
 // Import touch detection lib
 import styleCss from "./style-css.js";
-import styleCssFixed from './style-fixed-css.js';
 
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
@@ -30,7 +29,7 @@ export class [Namespace][Name] extends LitElement {
   // }
 
   // This function is to define props used within the scope of this component
-  // Be sure to review  https://lit-element.polymer-project.org/guide/properties#reflected-attributes
+  // Be sure to review  https://lit.dev/docs/components/properties/
   // to understand how to use reflected attributes with your property settings.
   static get properties() {
     return {
@@ -42,10 +41,7 @@ export class [Namespace][Name] extends LitElement {
   }
 
   static get styles() {
-    return [
-      styleCss,
-      styleCssFixed
-    ];
+    return [styleCss];
   }
 
   // When using auroElement, use the following attribute and function when hiding content from screen readers.
