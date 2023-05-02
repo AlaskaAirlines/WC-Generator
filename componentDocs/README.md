@@ -19,9 +19,6 @@ The following sections are editable by making changes to the following files:
 
 # [Name]
 
-<!-- AUROLABS-GENERATED-CONTENT:START (REMOTE:url=https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/master/componentDocs/partials/labsDisclaimer.md) -->
-<!-- AUROLABS-GENERATED-CONTENT:END -->
-
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../docs/partials/description.md) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 

@@ -25,7 +25,6 @@ const paths = require('../util/paths');
 const log = require('../util/log');
 const inquirer = require('inquirer');
 let npm = '';
-let labs = false;
 
 const lowerKebabCase = str => str.toLowerCase().replace(' ', '-');
 const upperCamelCase = str =>
@@ -147,26 +146,6 @@ const copyFile = async (sourcePath, targetPath, params, replacements, fileRename
   }
 };
 
-// function will replace the settings.yml if the project is auroLabs
-const labsOverride__Settings = async (targetPath) => {
-  if (labs) {
-    fs.copyFile(`${targetPath}/.github/settings__labs.yml`, `${targetPath}/.github/settings.yml`, (err) => {
-      if (err) {
-        console.log("Error Found:", err);
-        process.exit(0);
-      }
-    });
-
-    log(`${chalk.green('auroLabs settings applied to new repo.')}: ${targetPath}`);
-  }
-
-  try {
-    fs.unlinkSync(`${targetPath}/.github/settings__labs.yml`)
-  } catch(err) {
-    console.error(err)
-  }
-}
-
 const getVersionData = async () => {
   const { devDependencies, dependencies, peerDependencies } = require('../template/package.json');
 
@@ -190,14 +169,6 @@ const question = async () => {
   if (pjson.version === latestPublishedVersion) {
     if (!params.test) {
       const questions = [
-        {
-          type: 'confirm',
-          name: 'auroLabs',
-          message: 'Is this an AuroLabs project?',
-          when: function (answers) {
-            return !readDocs('auroLabs')(answers);
-          },
-        },
         {
           type: 'confirm',
           name: 'governance',
@@ -234,10 +205,6 @@ const question = async () => {
 
       inquirer.prompt(questions).then((answers) => {
 
-        if (answers.auroLabs === true) {
-          labs = true;
-        }
-
         if (answers.governance === false) {
           console.log(`\nNot reviewed the Contributing Guidelines?\nPlease review ${chalk.underline.yellow(`https://auro.alaskaair.com/contributing`)} before submitting any new work\nto ensure that you will be in compliance with our expectations.\n`);
         }
@@ -247,7 +214,7 @@ const question = async () => {
         }
 
         if (answers.cssConventions === false) {
-          console.log(`\nNot familiar with Auro\'s CSS conventions?\nPlease review ${chalk.underline.yellow(`https://auro.alaskaair.com/webcorestylesheets/custom-element-css`)} before starting a new project.\n`);
+          console.log(`\nNot familiar with Auro\'s CSS conventions?\nPlease review ${chalk.underline.yellow(`https://auro.alaskaair.com/css/conventions`)} before starting a new project.\n`);
         }
 
         if (answers.governance === true
@@ -290,10 +257,6 @@ const getReplacements = async ({ name, namespace, npm }) => {
   // Retrieve Node version defined in package.json
   const minNodeVersion = pjson.engines.node.replace(/[^0-9,.]+/g,'');
   const abstractNodeVersion = minNodeVersion.split('.')[0] + '.x';
-
-  if (labs) {
-    npm = `@aurolabs`
-  }
 
   const nameReplacements = [
     { regex: /\[genVersion\]/g, value: pjson.version },
@@ -423,7 +386,6 @@ Creating Web Components People Love.
       '.npmignore.temp': '.npmignore',
       '.gitignore.temp': '.gitignore'
     });
-    await labsOverride__Settings(params.dir);
     log(chalk.green('\nCopied all files!'));
 
     let areDependenciesInstalled = false;
@@ -511,10 +473,6 @@ Creating Web Components People Love.
       log(chalk.green(`Well done! The new HTML Custom Element auro-${params.name} has been created!\n\nDir: ${params.dir}\nBuilt using WC-Generator: v${pjson.version}\n`));
 
       log(chalk.yellow(`\nMore questions about Auro? Be sure to check out\n${chalk.underline.yellow(`https://auro.alaskaair.com/auro-support`)}\nfor more information and answers to frequently asked questions.\n`));
-
-      if (labs) {
-        log(chalk.yellow(`\nYou are building an element for AuroLabs! Awesome!\n\nBe sure to check out all the information we have to go\nfrom the minors to the majors with your new custom element!\n${chalk.underline.yellow(`https://auro.alaskaair.com/aurolabs`)}\n\n`));
-      }
     }
   }
 };

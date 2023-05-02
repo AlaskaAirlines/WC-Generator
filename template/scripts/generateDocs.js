@@ -92,34 +92,11 @@ function formatApiTableContents(content, destination) {
 }
 
 /**
- * If auroLabs project, include auroLabs documentation in `./README.md`
- */
-
-function processLabsReadmeContent() {
-  let nameExtractionData = nameExtraction();
-
-  if (nameExtractionData.npm === '@aurolabs') {
-    const callbackAurolabs = function(updatedContent, outputConfig) {
-      console.log('Readme updated to reference AuroLabs content.');
-    };
-
-    const configAurolabs = {
-      matchWord: 'AUROLABS-GENERATED-CONTENT'
-    };
-
-    const markdownPathAurolabs = path.join(__dirname, '../README.md');
-
-    markdownMagic(markdownPathAurolabs, configAurolabs, callbackAurolabs);
-  }
-}
-
-/**
  * Compiles `./docTemplates/README.md` -> `./README.md`
  */
 
 function processReadme() {
   const callback = function(updatedContent, outputConfig) {
-    processLabsReadmeContent()
 
     if (fs.existsSync('./README.md')) {
       fs.readFile('./README.md', 'utf8', function(err, data) {
@@ -138,8 +115,6 @@ function processReadme() {
   const markdownPath = path.join(__dirname, '../docTemplates/README.md');
 
   markdownMagic(markdownPath, config, callback);
-
-  processLabsReadmeContent();
 }
 
 /**
