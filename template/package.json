@@ -24,11 +24,11 @@
   },
   "peerDependencies": {
     "@alaskaairux/design-tokens": "",
-    "@alaskaairux/webcorestylesheets": ""
+    "@aurodesignsystem/webcorestylesheets": ""
   },
   "devDependencies": {
     "@alaskaairux/design-tokens": "",
-    "@alaskaairux/webcorestylesheets": "",
+    "@aurodesignsystem/webcorestylesheets": "",
     "@aurodesignsystem/eslint-config": "",
     "@commitlint/cli": "",
     "@commitlint/config-conventional": "",
@@ -61,7 +61,6 @@
     "rollup": "",
     "rollup-plugin-serve": "",
     "semantic-release": "",
-    "sass": "",
     "stylelint": "",
     "stylelint-config-idiomatic-order": "",
     "stylelint-config-standard": "",

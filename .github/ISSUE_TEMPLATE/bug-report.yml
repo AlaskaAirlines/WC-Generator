@@ -23,8 +23,12 @@ body:
     id: details
     attributes:
       label: Please describe the bug
-      description: List out the steps to reproduce the behavior
-      placeholder: 1. Go to '...' 2. Click on '....' 3. Scroll down to '....' 4. See error
+      description: List out the steps to reproduce the behavior and include screenshots
+      placeholder: |
+        1. Go to '...'
+        2. Click on '....'
+        3. Scroll down to '....'
+        4. See error
   - type: dropdown
     id: repro
     attributes:
@@ -54,3 +58,9 @@ body:
     attributes:
       label: Additional context
       description: Add any other context about the problem here.
+  - type: textarea
+    id: exit-criteria
+    attributes:
+      label: Exit criteria
+      description: Define your issue's exit criteria
+      placeholder: "This issue can be closed once the error has been corrected. Any additional scope e.g. updates or refactors, should be discussed PRIOR to adding scope to this issue."

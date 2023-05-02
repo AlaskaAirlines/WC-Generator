@@ -78,6 +78,9 @@ labels:
   - name: duplicate
     color: '156fad'
     description: This Issue or Pull Request already exists
+  - name: not-reviewed
+    color: '222222'
+    description: Issue has not been reviewed by Auro team members
   - name: good first issue
     color: '6bb7fb'
     description: Good for newcomers
