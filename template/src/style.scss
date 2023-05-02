@@ -7,11 +7,11 @@
 @import './../node_modules/@alaskaairux/design-tokens/dist/tokens/SCSSVariables';
 @import './../node_modules/@alaskaairux/design-tokens/dist/tokens/SassCustomProperties';
 
-@import './../node_modules/@alaskaairux/webcorestylesheets/dist/breakpoints';
-@import './../node_modules/@alaskaairux/webcorestylesheets/dist/core';
+@import './../node_modules/@aurodesignsystem/webcorestylesheets/dist/breakpoints';
+@import './../node_modules/@aurodesignsystem/webcorestylesheets/dist/core';
 
 // Support for auroElement styles
-// @import './node_modules/@alaskaairux/webcorestylesheets/dist/auroElement/auroElement';
+// @import './node_modules/@aurodesignsystem/webcorestylesheets/dist/auroElement/auroElement';
 
 // container styles - defines the look of the outer custom component
 // :host {
@@ -32,13 +32,4 @@
 :focus-visible {
   background-color: var(--auro-color-border-error-on-light);
   color: var(--auro-color-base-white);
-}
-
-// Selector for focus-visible polyfill
-:host(.focus-visible) {
-  // requires reference to custom element selector in this example
-  .testClass {
-    background-color: var(--auro-color-border-error-on-light);
-    color: var(--auro-color-base-white);
-  }
 }
