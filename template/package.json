@@ -141,7 +141,7 @@
     "bundler": "rollup -c",
     "bundler:test": "rollup -c -w",
     "scssLint": "stylelint \"./src/**/*.scss\"",
-    "dev": "concurrently --kill-others 'npm run build:watch' 'npm run serve'",
+    "dev": "concurrently --kill-others \"npm run build:watch\" \"npm run serve\"",
     "dist:js": "copyfiles -u 1 -V './src/**/*.js' ./dist",
     "esLint": "./node_modules/.bin/eslint src/**/*.js",
     "linters": "npm-run-all scssLint esLint",
