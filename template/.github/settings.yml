@@ -71,7 +71,6 @@ branches:
 # Labels: define labels for Issues and Pull Requests
 labels:
   - name: [namespace]-[name]
-    cat: default
     color: 'fa23e4'
     description:
     process: Key filter for this repo
@@ -96,9 +95,6 @@ labels:
     color: '6bb7fb'
     description: Extra attention is needed, this user requires assistance to complete
       the work
-  - name: not-reviewed
-    color: '000000'
-    description: This issue has not yet been reviewed by the Auro team
   - name: released
     color: 'A9A9A9'
     description: Completed work has been released
@@ -116,15 +112,12 @@ labels:
     description: Progress on the issue is Blocked, immediate attention is required
     aliases:
     - blocked
-  - name: 'Status: Abandoned'
+  - name: 'Abandoned'
     color: '156fad'
     description: The author of this issue or Pull Request is not responding
     aliases:
     - wontfix
     - invalid
-  - name: 'Type: Spike'
-    color: 'ab33d6'
-    description: Team requires further research or investigation
   - name: 'Type: Bug'
     color: df0b37
     description: Bug or Bug fixes
