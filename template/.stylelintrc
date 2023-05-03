@@ -16,32 +16,23 @@
         "blockless-after-blockless"
       ]
     } ],
-    "at-rule-name-newline-after": "always-multi-line",
     "at-rule-no-unknown": null,
-    "at-rule-semicolon-space-before": "never",
-    "block-closing-brace-space-after": "always-single-line",
-    "block-opening-brace-newline-before": "never-single-line",
     "color-function-notation": "modern",
     "color-named": "never",
     "declaration-block-no-duplicate-custom-properties": true,
     "declaration-block-no-duplicate-properties": true,
     "declaration-block-no-redundant-longhand-properties": true,
-    "declaration-block-semicolon-newline-before": "never-multi-line",
     "declaration-no-important": true,
     "font-family-name-quotes": "always-where-recommended",
     "font-weight-notation": "numeric",
     "function-url-no-scheme-relative": true,
     "function-url-quotes": "always",
     "hue-degree-notation": "angle",
-    "linebreaks": "unix",
     "max-nesting-depth": 2,
-    "media-query-list-comma-newline-before": "never-multi-line",
     "named-grid-areas-no-invalid": true,
-    "no-empty-first-line": true,
     "no-empty-source": null,
     "no-unknown-animations": true,
     "no-invalid-position-at-import-rule": null,
-    "number-leading-zero": "never",
     "scss/at-else-closing-brace-newline-after": "always-last-in-chain",
     "scss/at-else-closing-brace-space-after": "always-intermediate",
     "scss/at-else-empty-line-before": "never",
@@ -95,8 +86,6 @@
     "selector-attribute-quotes": "always",
     "selector-class-pattern": "^[a-z][a-zA-Z0-9]+$",
     "selector-id-pattern": "^[a-z][a-zA-Z0-9]+$",
-    "selector-list-comma-newline-before": "never-multi-line",
-    "selector-list-comma-space-after": "always-single-line",
     "selector-max-attribute": 1,
     "selector-max-class": 1,
     "selector-max-combinators": 1,
@@ -115,8 +104,6 @@
         ]
       }
     ],
-    "shorthand-property-no-redundant-values": true,
-    "string-quotes": "single",
-    "value-list-comma-newline-before": "never-multi-line"
+    "shorthand-property-no-redundant-values": true
   }
 }
