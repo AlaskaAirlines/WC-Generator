@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [4.0.1](https://github.com/AlaskaAirlines/WC-Generator/compare/v4.0.0...v4.0.1) (2023-05-09)
+
+
+### Bug Fixes
+
+* remove package-lock from ./temoplate ([ec5f747](https://github.com/AlaskaAirlines/WC-Generator/commit/ec5f7475ca75985aaf79da7e1c865f91b6e9f8fd))
+
 # [4.0.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.17.4...v4.0.0) (2023-05-09)
 
 
