@@ -1,5 +1,55 @@
 # Semantic Release Automated Changelog
 
+# [4.0.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.17.4...v4.0.0) (2023-05-09)
+
+
+### Bug Fixes
+
+* automatically generate TypeScript description files ([dea833e](https://github.com/AlaskaAirlines/WC-Generator/commit/dea833e0c415c239d100536ff9625777972d0d72))
+* generator: update CDN reference [#382](https://github.com/AlaskaAirlines/WC-Generator/issues/382) ([cb65617](https://github.com/AlaskaAirlines/WC-Generator/commit/cb65617fc9d6a8ece95d5c11669f85ccb2efaddc))
+* **reference:** update to use [@aurodesignsystem](https://github.com/aurodesignsystem) [#345](https://github.com/AlaskaAirlines/WC-Generator/issues/345) ([1a628fa](https://github.com/AlaskaAirlines/WC-Generator/commit/1a628faeb8a597bf6d67eeb37b8a7ab44e1807da))
+* **sec:** remove inefficient regular expression [#357](https://github.com/AlaskaAirlines/WC-Generator/issues/357) ([c726423](https://github.com/AlaskaAirlines/WC-Generator/commit/c7264231fe377ee6b35c98b53e6a7484159b814c))
+* update docs on issue template ([acd5531](https://github.com/AlaskaAirlines/WC-Generator/commit/acd55312969bf2ac11f2fa4a27c9bd25ac5720d8))
+
+
+### Features
+
+* address general issues to get build working ([a4eba9a](https://github.com/AlaskaAirlines/WC-Generator/commit/a4eba9a81cd064c26f38ade4fb7d99f4816f3489))
+* **typescript:** add typescript support ([a2d48e0](https://github.com/AlaskaAirlines/WC-Generator/commit/a2d48e0f95777f2f9d448f67deef2867eed8aaf1))
+
+
+### Performance Improvements
+
+* **ignore:** update configs [#385](https://github.com/AlaskaAirlines/WC-Generator/issues/385) ([ea52043](https://github.com/AlaskaAirlines/WC-Generator/commit/ea52043a823ad1cf502b0643226a46135f0be8e2))
+* **labs:** remove auroLabs functionality [#339](https://github.com/AlaskaAirlines/WC-Generator/issues/339) ([f32d69f](https://github.com/AlaskaAirlines/WC-Generator/commit/f32d69ff8afbd68dfd893a1d9f54403ecdce858d))
+* remove deprecated stylelint rules [#381](https://github.com/AlaskaAirlines/WC-Generator/issues/381) ([568016e](https://github.com/AlaskaAirlines/WC-Generator/commit/568016e7c5b6a411861ecfc8e7aa7e14aca32888))
+* remove IE support [#181](https://github.com/AlaskaAirlines/WC-Generator/issues/181) ([c8543b3](https://github.com/AlaskaAirlines/WC-Generator/commit/c8543b329127b67b9fb76ebb8fdef80fd7d94bbe))
+* remove polyfill focus visible ([6b68814](https://github.com/AlaskaAirlines/WC-Generator/commit/6b6881462b73110dda21dd4e1cd52d3e34709820))
+* **review:** add all suggested updates ([268e86a](https://github.com/AlaskaAirlines/WC-Generator/commit/268e86a3b0945b185dcd1dac9be737af2b9bd994))
+* **settings:** update labels [#377](https://github.com/AlaskaAirlines/WC-Generator/issues/377) ([c2cccf7](https://github.com/AlaskaAirlines/WC-Generator/commit/c2cccf773454aed122ab43013402c675e183ca45))
+* **watch:** add apiExamples to generate docs [#320](https://github.com/AlaskaAirlines/WC-Generator/issues/320) ([32c005f](https://github.com/AlaskaAirlines/WC-Generator/commit/32c005fec29351d50b8cd1d7ca7a19e446e2d454))
+* **windows:** update dev script [#274](https://github.com/AlaskaAirlines/WC-Generator/issues/274) ([5efb6f8](https://github.com/AlaskaAirlines/WC-Generator/commit/5efb6f8a36967ef14d43497c75b6d332f75912b6))
+
+
+### Reverts
+
+* .npmignore and update .npmignore.temp ([85a135f](https://github.com/AlaskaAirlines/WC-Generator/commit/85a135f1b9181c819199b4d8cd40e271744d7b2a))
+* return removed regex [#357](https://github.com/AlaskaAirlines/WC-Generator/issues/357) ([08e2957](https://github.com/AlaskaAirlines/WC-Generator/commit/08e29576a3e9197ec98a035c231e788f6cb2cb3c))
+
+
+### BREAKING CHANGES
+
+* **labs:** This commit will remove all functionality related
+to the use of AuroLabs as a concept.
+
+Changes to be committed:
+modified:   bin/generate.js
+modified:   componentDocs/README.md
+modified:   componentDocs/README_v4.md
+deleted:    componentDocs/partials/labsDisclaimer.md
+deleted:    template/.github/settings__labs.yml
+modified:   template/scripts/generateDocs.js
+
 ## [3.17.4](https://github.com/AlaskaAirlines/WC-Generator/compare/v3.17.3...v3.17.4) (2023-01-24)
 
 
