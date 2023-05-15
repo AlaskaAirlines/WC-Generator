@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [4.0.2](https://github.com/AlaskaAirlines/WC-Generator/compare/v4.0.1...v4.0.2) (2023-05-15)
+
+
+### Performance Improvements
+
+* **deps:** remove unnecessary dependency ([27a29de](https://github.com/AlaskaAirlines/WC-Generator/commit/27a29de2a81a695379783ec4188763166010908f))
+
 ## [4.0.1](https://github.com/AlaskaAirlines/WC-Generator/compare/v4.0.0...v4.0.1) (2023-05-09)
 
 
