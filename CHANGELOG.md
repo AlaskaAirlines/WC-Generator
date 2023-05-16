@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [4.0.3](https://github.com/AlaskaAirlines/WC-Generator/compare/v4.0.2...v4.0.3) (2023-05-16)
+
+
+### Performance Improvements
+
+* **docs:** remove comments removal script ([ed65ebe](https://github.com/AlaskaAirlines/WC-Generator/commit/ed65ebec00916d3e79cb4fc8942f9514537b2667))
+
 ## [4.0.2](https://github.com/AlaskaAirlines/WC-Generator/compare/v4.0.1...v4.0.2) (2023-05-15)
 
 
