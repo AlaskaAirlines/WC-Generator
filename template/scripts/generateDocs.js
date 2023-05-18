@@ -53,12 +53,6 @@ function formatTemplateFileContents(content, destination) {
   result = result.replace(/\[Namespace]/g, nameExtractionData.namespaceCap);
 
   /**
-   * Strip all markdown-magic comments
-   */
-  result = result.replace(/<!-- AURO(.*?)-GENERATED-CONTENT(.*?)-->/g, '');
-  result = result.replace(/<!-- The below (.*?) is automatically added from(.*?)-->/g, '');
-
-  /**
    * Cleanup line breaks
    */
   result = result.replace(/(\r\n|\r|\n)[\s]+(\r\n|\r|\n)/g, '\r\n\r\n'); // Replace lines containing only whitespace with a carriage return.
