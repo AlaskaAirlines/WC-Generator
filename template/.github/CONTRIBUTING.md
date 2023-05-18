@@ -2,7 +2,7 @@
 
 Please take a moment to review this document in order to make the contribution process easy and effective for everyone involved. Also be sure to review the [Issues, pull requests and labels](https://auro.alaskaair.com/contributing/issues-prs-labels) process document.
 
-If you are an Alaska Airlines Employee, please see our [Innersourcing Flow Guide on Sharepoint](https://alaskaair.sharepoint.com/sites/ECOMt/Guilds/auro-users-and-contributors).
+If you are an Alaska Airlines Employee, Contractor, or Vendor, please see our [Innersourcing Flow Guide on Sharepoint](https://alaskaair.sharepoint.com/sites/ECOMt/Guilds/auro-users-and-contributors).
 
 ## Feature Requests
 
