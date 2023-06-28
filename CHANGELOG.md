@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [4.0.6](https://github.com/AlaskaAirlines/WC-Generator/compare/v4.0.5...v4.0.6) (2023-06-28)
+
+
+### Performance Improvements
+
+* add auto assign workflow action [#399](https://github.com/AlaskaAirlines/WC-Generator/issues/399) ([2fd1afc](https://github.com/AlaskaAirlines/WC-Generator/commit/2fd1afc8023d7bfb3ef81f97bfd0d7e87e80f0d6))
+
 ## [4.0.5](https://github.com/AlaskaAirlines/WC-Generator/compare/v4.0.4...v4.0.5) (2023-06-27)
 
 
