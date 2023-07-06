@@ -55,11 +55,22 @@ function formatTemplateFileContents(content, destination) {
   /**
    * Cleanup line breaks
    */
-  result = result.replace(/(\r\n|\r|\n)[\s]+(\r\n|\r|\n)/g, '\r\n\r\n'); // Replace lines containing only whitespace with a carriage return.
-  result = result.replace(/>(\r\n|\r|\n){2,}/g, '>\r\n'); // Remove empty lines directly after a closing html tag.
-  result = result.replace(/>(\r\n|\r|\n)```/g, '>\r\n\r\n```'); // Ensure an empty line before code samples.
-  result = result.replace(/>(\r\n|\r|\n){2,}```(\r\n|\r|\n)/g, '>\r\n```\r\n'); // Ensure no empty lines before close of code sample.
-  result = result.replace(/([^(\r\n|\r|\n)])(\r\n|\r|\n)+#/g, "$1\r\n\r\n#"); // Ensure empty line before header sections.
+  result = result.replace(/(\r|\n|\r\n)/g, '\r\n'); // Standardize line endings
+  result = result.replace(/(\r\n)[\s]+(\r\n)/g, '\r\n\r\n'); // Replace lines containing only whitespace with a carriage return.
+  result = result.replace(/>(\r\n){2,}/g, '>\r\n'); // Remove empty lines directly after a closing html tag.
+  result = result.replace(/>(\r\n)```/g, '>\r\n\r\n```'); // Ensure an empty line before code samples.
+  result = result.replace(/>(\r\n){2,}```(\r\n)/g, '>\r\n```\r\n'); // Ensure no empty lines before close of code sample.
+  result = result.replace(/([^\r\n])(\r\n)(#+)/g, "$1$2\r\n$3"); // Ensure empty line before header sections.
+
+  /**
+   * Make api.md specific changes
+   */
+  const wcName = nameExtractionData.namespace + '-' + nameExtractionData.name;
+
+  result = result
+    .replace(/\r\n####\s`([a-zA-Z]*)`/g, `\r\n#### <a name="$1"></a>\`$1\`<a href="#${wcName}" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>`); // Add Back To Top
+  result = result.replace(/(\r\n)\| `([a-zA-Z]*)`/g, '\r\n| [$2](#$2)'); // Wrap API attributes as Markdown Links
+  result = result.replace(/\| \[\]\(#\)/g, ""); // TODO: What is this???
 
   /**
    * Write the result to the destination file
@@ -68,20 +79,15 @@ function formatTemplateFileContents(content, destination) {
 };
 
 function formatApiTableContents(content, destination) {
-  const nameExtractionData = nameExtraction();
-  const wcName = nameExtractionData.namespace + '-' + nameExtractionData.name;
-
   let result = content;
-
-  result = result
-    .replace(/\r\n|\r|\n####\s`([a-zA-Z]*)`/g, `\r\n#### <a name="$1"></a>\`$1\`<a href="#${wcName}" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>`)
-    .replace(/\r\n|\r|\n\|\s`([a-zA-Z]*)`/g, '\r\n| [$1](#$1)')
-    .replace(/\| \[\]\(#\)/g, "");
 
   fs.writeFileSync(destination, result, { encoding: 'utf8'});
 
-  fs.readFile('./demo/apiExamples.md', 'utf8', function(err, data) {
-    formatTemplateFileContents(data, './demo/apiExamples.md');
+  fs.readFile('./demo/api.md', 'utf8', function(err, data) {
+    formatTemplateFileContents(data, './demo/api.md');
+
+
+
   });
 }
 
