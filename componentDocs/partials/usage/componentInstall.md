@@ -1,7 +1,6 @@
 [![Build Status](https://img.shields.io/github/actions/workflow/status/AlaskaAirlines/[namespace]-[name]/testPublish.yml?style=for-the-badge)](https://github.com/AlaskaAirlines/[namespace]-[name]/actions/workflows/testPublish.yml)
 [![See it on NPM!](https://img.shields.io/npm/v/[npm]/[namespace]-[name]?style=for-the-badge&color=orange)](https://www.npmjs.com/package/[npm]/[namespace]-[name])
 [![License](https://img.shields.io/npm/l/[npm]/[namespace]-[name]?color=blue&style=for-the-badge)](https://www.apache.org/licenses/LICENSE-2.0)
-[![Snyk Vulnerabilities for npm package](https://img.shields.io/snyk/vulnerabilities/npm/[npm]/[namespace]-[name]?style=for-the-badge)](https://snyk.io/test/npm/[npm]/[namespace]-[name]?tab=issues)
 
 ```shell
 $ npm i [npm]/[namespace]-[name]
