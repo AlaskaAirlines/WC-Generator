@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [4.0.8](https://github.com/AlaskaAirlines/WC-Generator/compare/v4.0.7...v4.0.8) (2023-07-18)
+
+
+### Performance Improvements
+
+* **template:** remove reference to snyk on README partial ([487b303](https://github.com/AlaskaAirlines/WC-Generator/commit/487b303052134c7c62ee1f59eeee1c01606b69a3))
+
 ## [4.0.7](https://github.com/AlaskaAirlines/WC-Generator/compare/v4.0.6...v4.0.7) (2023-07-06)
 
 
