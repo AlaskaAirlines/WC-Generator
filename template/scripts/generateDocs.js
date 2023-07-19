@@ -47,8 +47,8 @@ function formatTemplateFileContents(content, destination) {
    * Replace placeholder strings
    */
   result = result.replace(/\[npm]/g, nameExtractionData.npm);
-  result = result.replace(/\[name]/g, nameExtractionData.name);
-  result = result.replace(/\[Name]/g, nameExtractionData.nameCap);
+  result = result.replace(/\[name](?!\()/g, nameExtractionData.name);
+  result = result.replace(/\[Name](?!\()/g, nameExtractionData.nameCap);
   result = result.replace(/\[namespace]/g, nameExtractionData.namespace);
   result = result.replace(/\[Namespace]/g, nameExtractionData.namespaceCap);
 
