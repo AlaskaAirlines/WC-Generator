@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [4.0.9](https://github.com/AlaskaAirlines/WC-Generator/compare/v4.0.8...v4.0.9) (2023-07-20)
+
+
+### Bug Fixes
+
+* **generateDocs:** correctly handle name attribute in docs [#413](https://github.com/AlaskaAirlines/WC-Generator/issues/413) ([d34e6bd](https://github.com/AlaskaAirlines/WC-Generator/commit/d34e6bd3dc4b2c622041207fbb85810d8c5480cf))
+
 ## [4.0.8](https://github.com/AlaskaAirlines/WC-Generator/compare/v4.0.7...v4.0.8) (2023-07-18)
 
 
