@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+# [4.1.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v4.0.9...v4.1.0) (2023-07-25)
+
+
+### Features
+
+* update demos with neccessary attribute for surge [#415](https://github.com/AlaskaAirlines/WC-Generator/issues/415) ([831b12b](https://github.com/AlaskaAirlines/WC-Generator/commit/831b12bece61121d24007603a5a9232402c66fe0))
+
 ## [4.0.9](https://github.com/AlaskaAirlines/WC-Generator/compare/v4.0.8...v4.0.9) (2023-07-20)
 
 
