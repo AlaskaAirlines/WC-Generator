@@ -103,8 +103,3 @@ The following sections are editable by making changes to the following files:
 
 <!-- AURO-GENERATED-CONTENT:START (REMOTE:url=https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/master/componentDocs/partials/development/bundles.md) -->
 <!-- AURO-GENERATED-CONTENT:END -->
-
-### Demo deployment
-
-<!-- AURO-GENERATED-CONTENT:START (REMOTE:url=https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/master/componentDocs/partials/development/deploymentDemo.md) -->
-<!-- AURO-GENERATED-CONTENT:END -->
