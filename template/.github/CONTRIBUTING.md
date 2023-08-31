@@ -6,7 +6,7 @@ If you are an Alaska Airlines Employee, Contractor, or Vendor, please see our [I
 
 ## Feature Requests
 
-Feature requests stem from a business need. It is important to understand whether your idea fits with the scope and aims of the project of if this serves to address a personal/local scenario. It is up to you to make a strong case about the merits of this feature. Please provide as much detail and context as possible.
+Feature requests stem from a business need. It is important to understand whether your idea fits within the scope and aims of this project or if this serves to address a personal/local scenario. It is up to you to make a strong case about the merits of this feature. Please provide as much detail and context as possible.
 
 ## Submitting issues
 
@@ -33,13 +33,13 @@ Please **DO NOT** start any work on a potential pull request until you have cons
 
 ## Submitting pull requests
 
-No one other than repository managers have direct access to any repository. For non-team members, pull requests must originate from a [forked repo](https://auro.alaskaair.com/contributing/upstream) in your own Github account.
+No one other than repository maintainers have direct access to any repository. For non-team members, pull requests must originate from a [forked repo](https://auro.alaskaair.com/contributing/upstream) in your own Github account.
 
 All new work that is to be considered for merging with the `main` branch must start from a new feature branch of work. This feature branch should be in response to either a [reported bug](https://auro.alaskaair.com/bugs) or a [requested features](https://auro.alaskaair.com/help-wanted).
 
 Unsolicited pull requests **will take longer** to respond to. We ask for your patience. To help expedite any pull request, we ask that you **submit an issue first**. This will help the team understand the problem you are trying to solve before submitting the solution.
 
-To assist with the pull request review, it is also recommended that you **DO NOT** do any work until you have consulted with member of the Auro team. This process will be facilitated via the issue and its related comments. Once an issue is submitted, please allow up to 48 hours to receive a response from the Auro team post issue submission.
+To assist with the pull request review, it is also recommended that you **DO NOT** do any work until you have consulted with maintainer related to the Auro project. This process will be facilitated via the issue and its related comments. Once an issue is submitted, please allow up to 48 hours to receive a response from the Auro team post issue submission.
 
 ### Feature branch naming
 
@@ -51,7 +51,7 @@ jdoe/cleanUpNpmApi/#80
 
 ## DO NOT git pull on a feature branch
 
-We ask that we keep our repo's history linear. This helps maintain a easy to understand version history and is crucial to our semantic versioning strategy. If you find yourself unable to push to the remote, please **DO NOT* use the `$ git pull` command. If this is discovered during a review, the pull request will be rejected. Please see the following instructions on rebasing below.
+We ask that we keep our repo's history linear. This helps maintain a easy to understand version history and is crucial to our semantic versioning strategy. If you find yourself unable to push to the remote, please **DO NOT** use the `$ git pull` command. If this is discovered during a review, **the pull request will be rejected**. Please see the following instructions on rebasing below.
 
 ### Rebase on main
 
@@ -152,6 +152,23 @@ $ perf(api): restructure API to comply with new feature spec #12
 $ feat(data api): add ability to consume large data as an array versus string #71
 
 $ fix(color api): address color output issue #105
+```
+
+Please add all details to the commit description in the body of the commit message. There is no character limit and no need to be imperative. Listing out the files that were changed in the commit is always helpful. Consider the following example.
+
+```
+docs(issues): update issue templates and settings yml #337
+
+This issue updates the bug report template to clarify
+some of the content when the form is completed.
+
+Changes to be committed:
+modified: .github/ISSUE_TEMPLATE/settings.yml
+newfile: .github/ISSUE_TEMPLATE/bug_report.yml
+newfile: .github/ISSUE_TEMPLATE/feature_request.yml
+newfile: .github/ISSUE_TEMPLATE/general-support.yml
+deleted: .github/ISSUE_TEMPLATE/bug_report.md
+deleted: .github/ISSUE_TEMPLATE/feature_request.md
 ```
 
 ## Pull request service level agreement
