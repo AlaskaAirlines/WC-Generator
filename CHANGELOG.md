@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+# [4.2.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v4.1.0...v4.2.0) (2023-09-08)
+
+
+### Features
+
+* **docs:** add SECURITY.md doc to repo template ([65be60d](https://github.com/AlaskaAirlines/WC-Generator/commit/65be60d0f0eaf0aaa78cf535cb4788c4de756958))
+
 # [4.1.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v4.0.9...v4.1.0) (2023-07-25)
 
 
