@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [4.2.1](https://github.com/AlaskaAirlines/WC-Generator/compare/v4.2.0...v4.2.1) (2023-10-04)
+
+
+### Bug Fixes
+
+* **build:** correct paths for latest WCSS and design token versions [#424](https://github.com/AlaskaAirlines/WC-Generator/issues/424) ([fd0970c](https://github.com/AlaskaAirlines/WC-Generator/commit/fd0970cd148bc03f4dc7a378b63ca59ed5ebe5d7))
+
 # [4.2.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v4.1.0...v4.2.0) (2023-09-08)
 
 
