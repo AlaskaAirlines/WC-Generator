@@ -23,11 +23,11 @@
     "lit": ""
   },
   "peerDependencies": {
-    "@alaskaairux/design-tokens": "",
+    "@aurodesignsystem/design-tokens": "",
     "@aurodesignsystem/webcorestylesheets": ""
   },
   "devDependencies": {
-    "@alaskaairux/design-tokens": "",
+    "@aurodesignsystem/design-tokens": "",
     "@aurodesignsystem/webcorestylesheets": "",
     "@aurodesignsystem/eslint-config": "",
     "@commitlint/cli": "",
