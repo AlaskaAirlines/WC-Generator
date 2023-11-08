@@ -15,7 +15,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [ [abstractNodeVersion] ]
+        node-version: [ [abstractNodeVersion], [abstractNodeVersionNext] ]
 
     steps:
       - uses: actions/checkout@v3
@@ -37,7 +37,7 @@ jobs:
           persist-credentials: false
       - uses: actions/setup-node@v3
         with:
-          node-version: [abstractNodeVersion]
+          node-version: [abstractNodeVersionNext]
       - run: npm ci
       - run: npm run build
       - uses: cycjimmy/semantic-release-action@v3
