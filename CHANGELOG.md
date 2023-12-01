@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [4.3.1](https://github.com/AlaskaAirlines/WC-Generator/compare/v4.3.0...v4.3.1) (2023-12-01)
+
+
+### Bug Fixes
+
+* revert commit 27a29de causing typescript issues ([ae921f4](https://github.com/AlaskaAirlines/WC-Generator/commit/ae921f43136f1823402fafae7df8680c0a492782))
+
 # [4.3.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v4.2.1...v4.3.0) (2023-11-16)
 
 
