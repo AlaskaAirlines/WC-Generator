@@ -33,6 +33,7 @@
     "@commitlint/cli": "",
     "@commitlint/config-conventional": "",
     "@open-wc/testing": "",
+    "@open-wc/testing-karma": "",
     "@rollup/plugin-node-resolve": "",
     "@semantic-release/changelog": "",
     "@semantic-release/git": "",
