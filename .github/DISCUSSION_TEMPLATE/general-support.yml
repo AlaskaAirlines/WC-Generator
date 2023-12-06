@@ -1,9 +1,8 @@
 name: General support
-description: Suggestions that are not related to bugs or new features
-title: 'wc-generator: [issue]'
+description: Need help with something that is not a bug or new feature request?
+title: 'General support'
 labels:
   - 'Type: Question'
-  - 'Type: Feature'
   - not-reviewed
   - wc-generator
 body:

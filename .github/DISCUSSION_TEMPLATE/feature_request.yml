@@ -1,6 +1,6 @@
-name: Feature request
-description: Suggest an idea for this project
-title: 'wc-generator: [feature summary]'
+name: Generator feature request
+description: To start all new feature discussions for the Auro WC Generator
+title: 'Generator feature request'
 labels:
   - 'Type: Feature'
   - not-reviewed
