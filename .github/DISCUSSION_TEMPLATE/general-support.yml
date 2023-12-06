@@ -1,10 +1,5 @@
-name: General support
-description: Need help with something that is not a bug or new feature request?
-title: 'General support'
-labels:
-  - 'Type: Question'
-  - not-reviewed
-  - wc-generator
+description: 'Need help with something that is not a bug or new feature request?'
+title: ['General support']
 body:
   - type: textarea
     id: request

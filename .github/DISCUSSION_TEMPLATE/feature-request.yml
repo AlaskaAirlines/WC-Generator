@@ -1,10 +1,6 @@
-name: Generator feature request
-description: To start all new feature discussions for the Auro WC Generator
-title: 'Generator feature request'
-labels:
-  - 'Type: Feature'
-  - not-reviewed
-  - wc-generator
+
+description: 'To start all new feature discussions for the Auro WC Generator'
+title: ['Generator feature request']
 body:
   - type: textarea
     id: request
