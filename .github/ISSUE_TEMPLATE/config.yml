@@ -1,1 +1,12 @@
 blank_issues_enabled: false
+
+contact_links:
+  - name: Generator feature request
+    url: https://github.com/AlaskaAirlines/WC-Generator/discussions/new?category=generator-feature-request
+    about: To start all new feature discussions for the Auro WC Generator
+  - name: General support
+    url: https://github.com/AlaskaAirlines/WC-Generator/discussions/categories/please-help
+    about: Need help with something that is not a bug or new feature request?
+  - name: General feedback
+    url: https://github.com/AlaskaAirlines/WC-Generator/discussions/categories/general-auro-feedback
+    about: Have something to share with the Auro team?
