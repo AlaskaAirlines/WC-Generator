@@ -1,8 +1,5 @@
 # WC-Generator
 
-<link rel="stylesheet" href="https://unpkg.com/@alaskaairux/design-tokens@latest/dist/tokens/CSSCustomProperties.css" />
-<link rel="stylesheet" href="https://unpkg.com/@alaskaairux/webcorestylesheets@latest/dist/bundled/essentials.css" />
-
 Auro's Design System web component generator is a project tool intended to assist developers with an easy to configure and execute HTML custom element development environment.
 
 ## Install
@@ -22,7 +19,7 @@ $ npx @aurodesignsystem/wc-generator --name [wc-name]
 
 ### Minimum Node version
 
-The WC-Generator requires a minimum install of Node.js `16.13.0`.
+The WC-Generator requires a minimum install of Node.js `18.15.0`.
 
 Be sure to check out our [getting started](https://auro.alaskaair.com/aurolabs/minors) page for helpful tips when starting a new project.
 
@@ -64,12 +61,6 @@ With each new repo created, the version of the generator will be added to the bo
 ```html
 <small>Built from WC-Generator v[genVersion]</small>
 ```
-
-To migrate a repo from one version of the generator to another, please reference [Auro migrate shell script](https://auro.alaskaair.com/getting-started/developers/generator/upgrade).
-
-## Pre-bundled components
-
-The WC-Generator contains automated functionality for each build to generate pre-bundled versions of the new component so that users can consume without needing to bundle the JavaScript assets themselves. Both a modern and legacy bundle are produced.
 
 ## Developing locally
 To test changes to the generator, run `npm test` to generate an `auro-test` component.
