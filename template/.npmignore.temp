@@ -19,7 +19,6 @@ demo/**/*.css
 demo/**/*.scss
 demo/**/*.html
 
-dist/es5.js
 dist/auro-*.js
 !dist/auro-*__bundled.js
 dist/style-css.js

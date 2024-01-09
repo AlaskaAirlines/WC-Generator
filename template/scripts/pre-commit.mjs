@@ -1,8 +1,6 @@
 'use strict';
 
 import chalk from 'chalk';
-import { createRequire } from 'node:module';
-const require = createRequire(import.meta.url);
 console.log(chalk.hex('#ffd200')(`
 
 ╭ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ──────────────────────────────╮`) + chalk.hex('#f26135')(`

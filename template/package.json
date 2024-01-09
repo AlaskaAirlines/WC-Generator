@@ -13,6 +13,7 @@
     "type": "git",
     "url": "https://github.com/AlaskaAirlines/[namespace]-[name]"
   },
+  "type": "module",
   "main": "index.js",
   "license": "Apache-2.0",
   "engines": {
@@ -27,13 +28,13 @@
     "@aurodesignsystem/webcorestylesheets": ""
   },
   "devDependencies": {
+    "@aurodesignsystem/auro-library": "",
     "@aurodesignsystem/design-tokens": "",
     "@aurodesignsystem/webcorestylesheets": "",
     "@aurodesignsystem/eslint-config": "",
     "@commitlint/cli": "",
     "@commitlint/config-conventional": "",
     "@open-wc/testing": "",
-    "@open-wc/testing-karma": "",
     "@rollup/plugin-node-resolve": "",
     "@semantic-release/changelog": "",
     "@semantic-release/git": "",
@@ -133,7 +134,7 @@
     "build:ci": "npm-run-all sweep build",
     "build:api": "wca analyze 'src/[namespace]-[name].js' --outFiles docs/api.md",
     "build:dev:assets": "npm-run-all build:sass:component postCss:component sass:render build:docs",
-    "build:docs": "node scripts/generateDocs.js",
+    "build:docs": "node scripts/generateDocs.mjs",
     "build:sass": "npm-run-all build:sass:component postCss:component sass:render",
     "build:sass:component": "sass --no-source-map src:src",
     "build:watch": "nodemon -e scss,js,html --watch src --watch apiExamples/**/* --exec npm run build:dev:assets",
@@ -145,7 +146,7 @@
     "esLint": "./node_modules/.bin/eslint src/**/*.js",
     "linters": "npm-run-all scssLint esLint",
     "preCommit": "node scripts/pre-commit.mjs",
-    "postCss:component": "node ./scripts/postCss.js",
+    "postCss:component": "node scripts/postCss.mjs",
     "postinstall": "node packageScripts/postinstall.mjs",
     "sass:render": "sass-render src/*.css -t ./scripts/staticStyles-template.js",
     "serve": "web-dev-server --open demo/ --node-resolve --watch",
