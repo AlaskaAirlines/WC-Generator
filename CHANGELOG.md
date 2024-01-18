@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [4.3.2](https://github.com/AlaskaAirlines/WC-Generator/compare/v4.3.1...v4.3.2) (2024-01-18)
+
+
+### Bug Fixes
+
+* **docs:** remove invalid HTML for API doc template [#454](https://github.com/AlaskaAirlines/WC-Generator/issues/454) ([02f0428](https://github.com/AlaskaAirlines/WC-Generator/commit/02f0428d7c44469db85ee2bd66c46bfa212f4ec7))
+
 ## [4.3.1](https://github.com/AlaskaAirlines/WC-Generator/compare/v4.3.0...v4.3.1) (2023-12-01)
 
 
