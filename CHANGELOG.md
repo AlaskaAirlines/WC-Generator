@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+# [4.4.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v4.3.2...v4.4.0) (2024-01-19)
+
+
+### Features
+
+* complete SSR element support [#458](https://github.com/AlaskaAirlines/WC-Generator/issues/458) ([184e738](https://github.com/AlaskaAirlines/WC-Generator/commit/184e73847f7dbd88e60235c4dc655201d94a15f1))
+
 ## [4.3.2](https://github.com/AlaskaAirlines/WC-Generator/compare/v4.3.1...v4.3.2) (2024-01-18)
 
 
