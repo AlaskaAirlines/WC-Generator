@@ -1,5 +1,13 @@
 # Semantic Release Automated Changelog
 
+## [4.4.1](https://github.com/AlaskaAirlines/WC-Generator/compare/v4.4.0...v4.4.1) (2024-01-23)
+
+
+### Performance Improvements
+
+* update template resources ([2356e02](https://github.com/AlaskaAirlines/WC-Generator/commit/2356e026020b4ce12beb83d18608dfd97e9f1a0c))
+* update to support dir looping ([dd7328c](https://github.com/AlaskaAirlines/WC-Generator/commit/dd7328ccb9ff10e1965c4ca542041794cd12c41f))
+
 # [4.4.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v4.3.2...v4.4.0) (2024-01-19)
 
 
