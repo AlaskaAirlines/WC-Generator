@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [4.4.3](https://github.com/AlaskaAirlines/WC-Generator/compare/v4.4.2...v4.4.3) (2024-01-25)
+
+
+### Performance Improvements
+
+* update pull request templates ([d8c5780](https://github.com/AlaskaAirlines/WC-Generator/commit/d8c578023c21c3b8933a65841fc4ab6869b7ca5f))
+
 ## [4.4.2](https://github.com/AlaskaAirlines/WC-Generator/compare/v4.4.1...v4.4.2) (2024-01-24)
 
 
