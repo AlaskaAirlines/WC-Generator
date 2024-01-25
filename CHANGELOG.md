@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [4.4.4](https://github.com/AlaskaAirlines/WC-Generator/compare/v4.4.3...v4.4.4) (2024-01-25)
+
+
+### Performance Improvements
+
+* update lit-element ref in CSS-JS template ([e354a2d](https://github.com/AlaskaAirlines/WC-Generator/commit/e354a2d25aa856912ec2b0b1d8886440b09cce66))
+
 ## [4.4.3](https://github.com/AlaskaAirlines/WC-Generator/compare/v4.4.2...v4.4.3) (2024-01-25)
 
 
