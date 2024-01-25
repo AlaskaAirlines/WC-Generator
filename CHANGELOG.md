@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [4.4.5](https://github.com/AlaskaAirlines/WC-Generator/compare/v4.4.4...v4.4.5) (2024-01-25)
+
+
+### Performance Improvements
+
+* add automated project assignment script ([93353de](https://github.com/AlaskaAirlines/WC-Generator/commit/93353def353784754bbf56a6449824f016f96250))
+
 ## [4.4.4](https://github.com/AlaskaAirlines/WC-Generator/compare/v4.4.3...v4.4.4) (2024-01-25)
 
 
