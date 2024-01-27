@@ -68,21 +68,21 @@ There are two important parts of every Auro component. The <a href="https://deve
 To protect from versioning conflicts with other instances of the component being loaded, it is recommended to use our `registerComponent(name)` method and pass in a unique name.
 
 ```js
-import './node_modules/@alaskaairux/[namespace]-[name]';
+import './node_modules/@aurodesignsystem/[namespace]-[name]';
 registerComponent('custom-[name]');
 ```
 
 This will create a new custom element that you can use in your HTML that will function identically to the `[namespace]-[name]` element.
 
 <div class="exampleWrapper">
-  <custom-header display="display">Salutations World!</custom-header>
+  <custom-[name] display="display">Salutations World!</custom-[name]>
 </div>
 
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
   ```html
-  <custom-header display="display">Salutations World!</custom-header>
+  <custom-[name] display="display">Salutations World!</custom-[name]>
   ```
 
 </auro-accordion>
