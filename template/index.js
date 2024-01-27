@@ -1,4 +1,4 @@
-import { [Namespace][Name] } from './src/[namespace]-[name]';
+import { [Namespace][Name] } from './src/[namespace]-[name].js';
 
 /**
  * Register Custom Element.
