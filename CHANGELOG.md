@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [4.4.7](https://github.com/AlaskaAirlines/WC-Generator/compare/v4.4.6...v4.4.7) (2024-01-27)
+
+
+### Performance Improvements
+
+* update template for accordion alignRight attr ([6fecf68](https://github.com/AlaskaAirlines/WC-Generator/commit/6fecf6814dea91b676c528e815f5d712cb69a4fb))
+
 ## [4.4.6](https://github.com/AlaskaAirlines/WC-Generator/compare/v4.4.5...v4.4.6) (2024-01-27)
 
 
