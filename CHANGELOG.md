@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [4.4.8](https://github.com/AlaskaAirlines/WC-Generator/compare/v4.4.7...v4.4.8) (2024-01-27)
+
+
+### Performance Improvements
+
+* update to support import name extension ([4aae027](https://github.com/AlaskaAirlines/WC-Generator/commit/4aae027271feddab2bdc7678e760e39312091998))
+
 ## [4.4.7](https://github.com/AlaskaAirlines/WC-Generator/compare/v4.4.6...v4.4.7) (2024-01-27)
 
 
