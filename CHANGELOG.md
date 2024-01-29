@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [4.4.9](https://github.com/AlaskaAirlines/WC-Generator/compare/v4.4.8...v4.4.9) (2024-01-29)
+
+
+### Performance Improvements
+
+* remove last refs to alaskaairux ([a40903d](https://github.com/AlaskaAirlines/WC-Generator/commit/a40903d9f9c147c4ec893be8c514ebad4e483969))
+
 ## [4.4.8](https://github.com/AlaskaAirlines/WC-Generator/compare/v4.4.7...v4.4.8) (2024-01-27)
 
 
