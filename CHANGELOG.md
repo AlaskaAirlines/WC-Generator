@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [4.4.10](https://github.com/AlaskaAirlines/WC-Generator/compare/v4.4.9...v4.4.10) (2024-02-02)
+
+
+### Bug Fixes
+
+* update inefficient RegEx [#357](https://github.com/AlaskaAirlines/WC-Generator/issues/357) ([8e24c16](https://github.com/AlaskaAirlines/WC-Generator/commit/8e24c16461ca71349c8986da2a2f33b88426e015))
+
 ## [4.4.9](https://github.com/AlaskaAirlines/WC-Generator/compare/v4.4.8...v4.4.9) (2024-01-29)
 
 
