@@ -64,7 +64,7 @@ The following sections are editable by making changes to the following files:
 
 ### Bundle example code
 
-<!-- AURO-GENERATED-CONTENT:START (REMOTE:url=https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/master/componentDocs/partials/usage/bundleUse.md) -->
+<!-- AURO-GENERATED-CONTENT:START (REMOTE:url=https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/master/componentDocs/partials/usage/bundleUseModBrowsers.md) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 ## [namespace]-[name] use cases
