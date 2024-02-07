@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+# [4.5.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v4.4.10...v4.5.0) (2024-02-07)
+
+
+### Features
+
+* add teams config to template settings ([ba1b644](https://github.com/AlaskaAirlines/WC-Generator/commit/ba1b6443403a560a9a72e065e2de99ddb59c0c8d))
+
 ## [4.4.10](https://github.com/AlaskaAirlines/WC-Generator/compare/v4.4.9...v4.4.10) (2024-02-02)
 
 
