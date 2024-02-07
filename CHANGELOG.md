@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [4.5.4](https://github.com/AlaskaAirlines/WC-Generator/compare/v4.5.3...v4.5.4) (2024-02-07)
+
+
+### Bug Fixes
+
+* update jsdelivr URL reference ([df9e52d](https://github.com/AlaskaAirlines/WC-Generator/commit/df9e52dbbc7dffd62e91a0b42c284ee8102e638a))
+
 ## [4.5.3](https://github.com/AlaskaAirlines/WC-Generator/compare/v4.5.2...v4.5.3) (2024-02-07)
 
 
