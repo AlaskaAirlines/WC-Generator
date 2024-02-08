@@ -113,7 +113,9 @@
             "./package.json",
             "./CHANGELOG.md",
             "./README.md",
-            "./docs/api.md"
+            "./docs/api.md",
+            "./demo/demo.md",
+            "./demo/apiExamples.md"
           ]
         }
       ],
@@ -153,6 +155,7 @@
     "sweep": "rm -rf ./demo/css ./dist | rm ./src/*.css ./src/*-css.js",
     "test": "wtr --coverage",
     "test:watch": "wtr --watch",
-    "types": "tsc"
+    "types": "tsc",
+    "postversion": "npm-run-all build:api build:docs"
   }
 }
