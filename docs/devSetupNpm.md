@@ -30,7 +30,7 @@ The Auro team works hard to ensure that once a component is updated, any compone
 
 ### Override npm
 
-Timing is everything and there may be times where a nested dependency is not updated with the current release and there is a desire to have that be predictable. A way to solve this is to usethe ["overrides"](https://docs.npmjs.com/cli/v10/configuring-npm/package-json#overrides) feature of npm. Please see the examples listed in this link as the feature is very flexible.
+Timing is everything and there may be times where a nested dependency is not updated with the current release and there is a desire to have that be predictable. A way to solve this is to use the ["overrides"](https://docs.npmjs.com/cli/v10/configuring-npm/package-json#overrides) feature of npm. Please see the examples listed in this link as the feature is very flexible.
 
 ```js
 {
