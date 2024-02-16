@@ -21,7 +21,7 @@ labels: '[namespace]-[name], not-reviewed'
     - [ ] All style code follows [Auro's Style Guide](http://auro.alaskaair.com/webcorestylesheets/guidelines)
     - [ ] Automated tests created
 1. __Documentation__
-    - `demo.md`
+    - `index.md`
       - [ ] Component properly described
       - [ ] Custom element's full API is documented
       - [ ] Component use case(s) outlined

@@ -55,7 +55,7 @@ function auroMigrate {
     echo -e "${GREEN}7.${NC} ${YELLOW}./demo/index.html${NC} copied from ${YELLOW}'${1//\/}'${NC} to ${YELLOW}'${2//\/}/demo/_legacy/index.html${NC}'.\n"
     sleep 3
   else
-    command cp "${1//\/}"/docs/partials/demo.md "${2//\/}"/docs/partials/demo.md
+    command cp "${1//\/}"/docs/partials/index.md "${2//\/}"/docs/partials/index.md
     command cp "${1//\/}"/demo/index.html "${2//\/}"/demo/index.html
     echo -e "${GREEN}7.${NC} ${YELLOW}./demo${NC} directory copied from ${YELLOW}'${1//\/}'${NC} to ${YELLOW}'${2//\/}'${NC}\n"
     sleep 3
@@ -101,7 +101,7 @@ function auroMigrate {
   sleep 1
 
   # close out message
-  echo -e "\n\nNote: The legacy ${YELLOW}demo.md${NC} and ${YELLOW}package.json${NC} files were maintained.\nBe sure to review these files, manually update with information\nthat needs to be retained and then remove them from the project.\n"
+  echo -e "\n\nNote: The legacy ${YELLOW}index.md${NC} and ${YELLOW}package.json${NC} files were maintained.\nBe sure to review these files, manually update with information\nthat needs to be retained and then remove them from the project.\n"
   echo -e "To see diffs, consider using ${YELLOW}$ vimdiff _legacy/package.json package.json${NC}"
   echo -e "\n\nCommitted all changes to ${YELLOW}repoUpgrde${NC} Git branch\n"
   echo -e "For any subsequent changes to the ${YELLOW}repoUpgrde${NC}, please\nbe sure to amend to the previous commit.\n"

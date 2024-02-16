@@ -3,7 +3,7 @@
   See LICENSE in the project root for license information.
 
   HTML in this document is standardized and NOT to be edited.
-  All demo code should be added/edited in ./demo/apiExamples.md
+  All demo code should be added/edited in ./demo/api.md
 
   With the exception of adding custom elements if needed for the demo.
 
@@ -32,7 +32,7 @@
     <script type="module">
       import 'https://cdn.jsdelivr.net/npm/marked@latest/marked.min.js';
       import 'https://cdn.jsdelivr.net/npm/prismjs@latest/prism.js';
-      fetch('/demo/apiExamples.md')
+      fetch('/demo/api.md')
         .then((response) => response.text())
         .then((text) => {
           const rawHtml = marked.parse(text);
