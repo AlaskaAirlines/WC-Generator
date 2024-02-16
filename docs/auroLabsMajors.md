@@ -41,7 +41,7 @@ The next stage to be completed is a thorough code review of the new element. To 
 
 ## Documentation
 
-The strength of Auro, and any design system, is its docs. To help streamline this process, the custom element demo located at `./demo/demo.md`, is the same document that will be used in the Auro doc site when the new element is released.
+The strength of Auro, and any design system, is its docs. To help streamline this process, the custom element demo located at `./demo/index.md`, is the same document that will be used in the Auro doc site when the new element is released.
 
 Because of this, it is important that the demo page is fully reviewed by Alaska UX writers and the Auro team.
 

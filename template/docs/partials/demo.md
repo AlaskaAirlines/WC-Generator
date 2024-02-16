@@ -1,7 +1,7 @@
 <!--
-The demo.md file is a compiled document. No edits should be made directly to this file.
+The index.md file is a compiled document. No edits should be made directly to this file.
 README.md is created by running `npm run build:docs`.
-This file is generated based on a template fetched from `./docs/partials/demo.md`
+This file is generated based on a template fetched from `./docs/partials/index.md`
 -->
 
 # [Name]
@@ -24,25 +24,6 @@ This file is generated based on a template fetched from `./docs/partials/demo.md
 |||√|√|
 
 Aenean at blandit lorem. Fusce imperdiet mi nec gravida maximus. Quisque nisl libero, condimentum in nisi a, imperdiet lacinia arcu.
-
-```javascript
-toggleDialog = (elName) => {
-  let dialog = document.querySelector(elName);
-  const html = document.querySelector('html');
-
-  html.style.overflow = 'hidden';
-  dialog.removeAttribute("open");
-  dialog.setAttribute("open", true);
-}
-
-toggleDialogClose = (elName) => {
-  let dialog = document.querySelector(elName);
-  const html = document.querySelector('html');
-
-  html.style.overflow = '';
-  dialog.removeAttribute("open");
-}
-```
 
 ## Example(s)
 
