@@ -2,39 +2,46 @@
 
 Please take a moment to review this document in order to make the contribution process easy and effective for everyone involved. Also be sure to review the [Issues, pull requests and labels](https://auro.alaskaair.com/contributing/issues-prs-labels) process document.
 
+If you are an Alaska Airlines Employee, Contractor, or Vendor, please see our [Innersourcing Flow Guide on Sharepoint](https://alaskaair.sharepoint.com/sites/ECOMt/Guilds/auro-users-and-contributors).
+
 ## Feature Requests
 
-Feature requests stem from a business need. It is important to understand whether your idea fits with the scope and aims of the project of if this serves to address a personal/local scenario. It is up to you to make a strong case about the merits of this feature. Please provide as much detail and context as possible.
+Feature requests stem from a business need. It is important to understand whether your idea fits within the scope and aims of this project or if this serves to address a personal/local scenario. It is up to you to make a strong case about the merits of this feature. Please provide as much detail and context as possible.
 
 ## Submitting issues
 
 A bug is defined by: _"A demonstrable problem that is caused by a file in the repository."_ Good bug reports are extremely helpful - thank you!
 
-To submit an issue, please go to [Auro's project status board](https://auro.alaskaair.com/component-status) and click on the ISSUES badge associated to project you wish to submit an issue for.
+To submit an issue, please go to [Auro's project status board](https://auro.alaskaair.com/component-status) and click on the ISSUES link to the left of the associated project you wish to submit an issue for, or click on the GITHUB ISSUES icon at the top of every element's page in the Auro doc site.
 
 Guidelines for bug reports:
 
-1. Check if the issue has already been reported. Go to Auro's [project board](https://github.com/orgs/AlaskaAirlines/projects/1) and click on labels like `type: bug` or `type: feature` to filter through the many issues between all of Auro's projects.
-  * For bugs - [https://github.com/orgs/AlaskaAirlines/projects/1?card_filter_query=label%3A%22type%3A+bug%22](https://github.com/orgs/AlaskaAirlines/projects/1?card_filter_query=label%3A%22type%3A+bug%22)
-  * For features - [https://github.com/orgs/AlaskaAirlines/projects/1?card_filter_query=label%3A%22type%3A+feature%22](https://github.com/orgs/AlaskaAirlines/projects/1?card_filter_query=label%3A%22type%3A+feature%22)
+1. BEFORE submitting an issue, make sure that you are **using the latest version** of the component you are working with and/or see if you can reproduce the error in the Auro doc site.
+1. Check if the issue has already been reported. Go to any Auro repo's issue page and use Github's search features to see if a similar issue has been submitted.
 1. Check if the issue has been fixed — try to reproduce it using the latest main or feature branch in the repository
 1. Isolate the problem — ideally create a reduced test case and a live example
+
+Please allow up to 48 hours to receive a response from the Auro team post issue submission.
 
 A good bug report shouldn't leave others needing to follow up for more information. Please try to be as detailed as possible in your report. What is your environment? What steps will reproduce the issue? What browser(s) and OS experience the problem? What would you expect to be the outcome? All these details will help people to fix any potential bugs.
 
 Poor bug reports will be closed as the team is unable to reproduce the issue.
 
-For more information about the issue submission process, please see the [Issues: work status label maintenance](https://auro.alaskaair.com/contributing/issues-prs-labels) section of the Auro contributing guidelines
+PLEASE be responsive to questions asked via the issue's comments. All attempts to communicate to the author of the issue will be made. If the author is unresponsive, the issue will be labeled as `abandoned` and will be closed upon next review.
+
+Please remember, submitting an issue is not a work request. The issue itself is a report of the situation, not a solutions statement.
+
+Please **DO NOT** start any work on a potential pull request until you have consulted with a member of the Auro team per your issue. This brief consultation, facilitated via the issue and its related comments, will help ensure the success of your pull request submission.
 
 ## Submitting pull requests
 
-No one other than repository managers have direct access to any repository. For non-team members, pull requests must originate from a [forked repo](https://auro.alaskaair.com/contributing/upstream) in your own Github account.
+No one other than repository maintainers and trusted committers have `write` access to any repository. For others a pull request must originate from a [forked repo](https://auro.alaskaair.com/contributing/upstream) in your own Github account. If you are interested in `write` access to Auro, please submit a request to the team's leadership.
 
-All new work that is to be considered for merging with the `main` branch must start from a new feature branch of work. This feature branch should be in response to either a [reported bug](https://github.com/orgs/AlaskaAirlines/projects/1?card_filter_query=label%3A%22type%3A+bug%22) or a [new business requirement](https://github.com/orgs/AlaskaAirlines/projects/1?card_filter_query=label%3A%22type%3A+feature%22).
+All new work that is to be considered for merging with the `main` branch must start from a new feature branch of work. This feature branch should be in response to either a [reported bug](https://auro.alaskaair.com/bugs) or a [requested features](https://auro.alaskaair.com/help-wanted).
 
 Unsolicited pull requests **will take longer** to respond to. We ask for your patience. To help expedite any pull request, we ask that you **submit an issue first**. This will help the team understand the problem you are trying to solve before submitting the solution.
 
-For more information about the pull request submission process, please see the [Pull Requests](https://auro.alaskaair.com/contributing/issues-prs-labels) section of the Auro contributing guidelines
+To assist with the pull request review, it is also recommended that you **DO NOT** do any work until you have consulted with maintainer related to the Auro project. This process will be facilitated via the issue and its related comments. Once an issue is submitted, please allow up to 48 hours to receive a response from the Auro team post issue submission.
 
 ### Feature branch naming
 
@@ -43,6 +50,10 @@ The name of the feature branch should be descriptive as to the nature of the wor
 ```shell
 jdoe/cleanUpNpmApi/#80
 ```
+
+## DO NOT git pull on a feature branch
+
+We ask that we keep our repo's history linear. This helps maintain a easy to understand version history and is crucial to our semantic versioning strategy. If you find yourself unable to push to the remote, please **DO NOT** use the `$ git pull` command. If this is discovered during a review, **the pull request will be rejected**. Please see the following instructions on rebasing below.
 
 ### Rebase on main
 
@@ -104,13 +115,13 @@ fix(pencil): stop graphite breaking when too much pressure applied #80
 | docs | Documentation only changes |
 | feat | A new feature (this correlates with `MINOR` in semantic versioning) |
 | fix | A bug fix (this correlates with `PATCH` in semantic versioning) |
-| perf | A code change that improves performance |
+| perf | A code change that improves performance (this correlates with `PATCH` in semantic versioning) |
 | BREAKING CHANGE | A code change that is not backwards compatible (correlating with `MAJOR` in semantic versioning) |
 | refactor | A code change that neither fixes a bug nor adds a feature |
 | style | Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc) |
 | test | Adding missing tests or correcting existing tests  |
 
-It is considered best practice to group multiple commits into a release. For a versioned update, be sure that your series of commits include either `feat` or `fix`. For a `MAJOR` release, any commit can be accompanied by a `BREAKING CHANGE` comment.
+It is considered best practice to group multiple commits into a release. For a versioned update, be sure that your series of commits include either `feat`, `fix` or `perf`. For a `MAJOR` release, any commit can be accompanied by a `BREAKING CHANGE` comment as illustrated above.
 
 ## Git commit messages
 
@@ -143,6 +154,23 @@ $ perf(api): restructure API to comply with new feature spec #12
 $ feat(data api): add ability to consume large data as an array versus string #71
 
 $ fix(color api): address color output issue #105
+```
+
+Please add all details to the commit description in the body of the commit message. There is no character limit and no need to be imperative. Listing out the files that were changed in the commit is always helpful. Consider the following example.
+
+```
+docs(issues): update issue templates and settings yml #337
+
+This issue updates the bug report template to clarify
+some of the content when the form is completed.
+
+Changes to be committed:
+modified: .github/ISSUE_TEMPLATE/settings.yml
+newfile: .github/ISSUE_TEMPLATE/bug_report.yml
+newfile: .github/ISSUE_TEMPLATE/feature_request.yml
+newfile: .github/ISSUE_TEMPLATE/general-support.yml
+deleted: .github/ISSUE_TEMPLATE/bug_report.md
+deleted: .github/ISSUE_TEMPLATE/feature_request.md
 ```
 
 ## Pull request service level agreement
