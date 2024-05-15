@@ -25,6 +25,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
       - run: npm run build
+      - run: npm run build:test
 
   release:
     # Only release on push to main
@@ -39,7 +40,7 @@ jobs:
         with:
           node-version: [abstractNodeVersionNext]
       - run: npm ci
-      - run: npm run build
+      - run: npm run build:release
       - uses: cycjimmy/semantic-release-action@v4
         env:
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}

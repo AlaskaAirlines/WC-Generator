@@ -132,8 +132,10 @@
     "web components"
   ],
   "scripts": {
-    "build": "npm-run-all build:sass sass:render scssLint dist:js bundler postinstall build:api types build:docs",
-    "build:ci": "npm-run-all sweep build",
+    "build": "npm-run-all build:sass sass:render",
+    "build:test": "npm-run-all test linters",
+    "build:release": "npm-run-all build build:test build:api build:docs build:demoScripts bundler types postinstall",
+    "build:ci": "npm-run-all sweep build:release",
     "build:api": "wca analyze 'src/[namespace]-[name].js' --outFiles docs/api.md",
     "build:dev:assets": "npm-run-all build:sass:component postCss:component sass:render build:docs",
     "build:docs": "node scripts/generateDocs.mjs",
