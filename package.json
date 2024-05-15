@@ -32,7 +32,7 @@
     "latest-version": "^5.1.0"
   },
   "devDependencies": {
-    "@aurodesignsystem/auro-library": "^2.2.6",
+    "@aurodesignsystem/auro-library": "^2.6.0",
     "@commitlint/cli": "^18.2.0",
     "@commitlint/config-conventional": "^18.1.0",
     "@semantic-release/changelog": "^6.0.1",
