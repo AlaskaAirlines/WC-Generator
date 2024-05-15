@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [4.5.9](https://github.com/AlaskaAirlines/WC-Generator/compare/v4.5.8...v4.5.9) (2024-05-15)
+
+
+### Performance Improvements
+
+* remove unsed script ref ([f888bf4](https://github.com/AlaskaAirlines/WC-Generator/commit/f888bf4553ddc6a1110432f1ad01f8ddbcef14e4))
+
 ## [4.5.8](https://github.com/AlaskaAirlines/WC-Generator/compare/v4.5.7...v4.5.8) (2024-05-15)
 
 
