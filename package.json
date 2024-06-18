@@ -1,4 +1,4 @@
-{
+x{
   "name": "@aurodesignsystem/wc-generator",
   "version": "4.5.9",
   "description": "Boilerplate generator for Auro Web Components",
@@ -73,7 +73,7 @@
   "release": {
     "branches": [
       {
-        "name": "main"
+        "name": "master"
       },
       {
         "name": "beta",
