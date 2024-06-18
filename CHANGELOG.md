@@ -1,5 +1,17 @@
 # Semantic Release Automated Changelog
 
+# [4.6.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v4.5.9...v4.6.0) (2024-06-18)
+
+
+### Bug Fixes
+
+* update branch configuration ([08b3212](https://github.com/AlaskaAirlines/WC-Generator/commit/08b321221cfb5a45268e57b81ffdaa701a16a2e8))
+
+
+### Features
+
+* add support for BETA releases ([18513d2](https://github.com/AlaskaAirlines/WC-Generator/commit/18513d2b7e1886ea3385e435bfdb8bc61d48943a))
+
 ## [4.5.9](https://github.com/AlaskaAirlines/WC-Generator/compare/v4.5.8...v4.5.9) (2024-05-15)
 
 
