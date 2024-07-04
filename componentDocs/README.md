@@ -40,11 +40,6 @@ The following sections are editable by making changes to the following files:
 <!-- AURO-GENERATED-CONTENT:START (REMOTE:url=https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/master/componentDocs/partials/development/designTokens.md) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
-### CSS Custom Property fallbacks
-
-<!-- AURO-GENERATED-CONTENT:START (REMOTE:url=https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/master/componentDocs/partials/usage/cssFallbacks.md) -->
-<!-- AURO-GENERATED-CONTENT:END -->
-
 ### Define dependency in project component
 
 <!-- AURO-GENERATED-CONTENT:START (REMOTE:url=https://raw.githubusercontent.com/AlaskaAirlines/WC-Generator/master/componentDocs/partials/usage/componentImportDescription.md) -->
