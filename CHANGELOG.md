@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [4.6.1](https://github.com/AlaskaAirlines/WC-Generator/compare/v4.6.0...v4.6.1) (2024-10-09)
+
+
+### Bug Fixes
+
+* moves auro library to dependencies in package.json [#575](https://github.com/AlaskaAirlines/WC-Generator/issues/575) ([efa89f7](https://github.com/AlaskaAirlines/WC-Generator/commit/efa89f7f65eefc397b6e2388df99ea96719db570))
+
 # [4.6.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v4.5.9...v4.6.0) (2024-06-18)
 
 
