@@ -20,6 +20,7 @@
     "node": "^[abstractNodeVersion] || ^[abstractNodeVersionNext] "
   },
   "dependencies": {
+    "@aurodesignsystem/auro-library": "",
     "chalk": "",
     "lit": ""
   },
@@ -28,7 +29,6 @@
     "@aurodesignsystem/webcorestylesheets": ""
   },
   "devDependencies": {
-    "@aurodesignsystem/auro-library": "",
     "@aurodesignsystem/design-tokens": "",
     "@aurodesignsystem/webcorestylesheets": "",
     "@aurodesignsystem/eslint-config": "",
