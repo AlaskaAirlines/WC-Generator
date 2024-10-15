@@ -8,11 +8,11 @@ demo/*.css
 demo/*.css.map
 
 ## CSS built from Sass process
-src/*.css
-src/*.css.map
+src/**/*.css
+src/**/*.css.map
 
 ## *-css built from sass-render process
-*-css.js
+**/*-css.js
 
 ## dist files
 dist/
