@@ -160,7 +160,7 @@
     "postinstall": "node packageScripts/postinstall.mjs",
     "sass:render": "sass-render src/*.css -t ./scripts/staticStyles-template.js",
     "serve": "web-dev-server --open demo/ --node-resolve --watch",
-    "sweep": "rm -rf ./demo/css ./dist | rm ./src/*.css ./src/*-css.js",
+    "sweep": "find ./demo ./dist ./src ./components -type f \\( -name \"*.css\" -o -name \"*-css.js\" \\) -delete",
     "test": "wtr --coverage",
     "test:watch": "wtr --watch",
     "types": "tsc",
