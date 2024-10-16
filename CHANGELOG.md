@@ -1,5 +1,15 @@
 # Semantic Release Automated Changelog
 
+# [4.7.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v4.6.2...v4.7.0) (2024-10-16)
+
+
+### Features
+
+* check components folder recursively in gitignore ([7335a7f](https://github.com/AlaskaAirlines/WC-Generator/commit/7335a7fbfbcf2006b24b411d63cfe833652337e9))
+* check folders recursively in gitignore ([d04363b](https://github.com/AlaskaAirlines/WC-Generator/commit/d04363bd94d566b3ab00539cb85a74609f8a9f6e))
+* update sass:render task to be recursive, add components dir ([5726ea2](https://github.com/AlaskaAirlines/WC-Generator/commit/5726ea25ee7cbe35ea43e40bfc493bafe89e1fd9))
+* update sweep task to be recursive, add components dir ([e42340b](https://github.com/AlaskaAirlines/WC-Generator/commit/e42340b3be7f7638ab5e1a1281609a20c2be7600))
+
 ## [4.6.2](https://github.com/AlaskaAirlines/WC-Generator/compare/v4.6.1...v4.6.2) (2024-10-10)
 
 
