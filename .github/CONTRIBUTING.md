@@ -89,7 +89,7 @@ Each commit message consists of a **header**, a **body** and a **footer**. The h
 <footer>
 ```
 
-**Any line of the commit message cannot be longer 100 characters!** This allows the message to be easier to read on GitHub as well as in various git tools. The **header** MUST use an **imperative mood**. The **body**, freeform text is allowed. Please see the **Git commit messages** section below.
+**Any line of the commit message cannot be longer 100 characters!** This allows the message to be easier to read on GitHub as well as in various git tools. The **header** MUST use an **imperative mood**. The **body**, freeform text is allowed. Please see the **Git commit messages** section below. 
 
 The header is mandatory and the scope of the header is optional. Please see this [example commit](https://github.com/AlaskaAirlines/WC-Generator/commit/8e24c16461ca71349c8986da2a2f33b88426e015) from the WC-Generator repo.
 
@@ -103,7 +103,7 @@ Submitting pull requests that do not conform to the Conventional Commits standar
 
 For a **MAJOR** release, you **MUST** follow this template. The use `BREAKING CHANGE:` in conjunction with any other commit type is required in order to push a major release.
 
-A `BREAKING CHANGE` body message can be appended to any prefix that is descriptive of the change.
+A `BREAKING CHANGE` body message can be appended to any prefix that is descriptive of the change. 
 
 ```
 refactor(pencil): remove graphiteWidth option #80
