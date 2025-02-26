@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [4.7.1](https://github.com/AlaskaAirlines/WC-Generator/compare/v4.7.0...v4.7.1) (2025-02-26)
+
+
+### Performance Improvements
+
+* update css custom properties path with auro-classic theme ([d9d2d46](https://github.com/AlaskaAirlines/WC-Generator/commit/d9d2d46d09d9e092645d28bfd6bb9b0f01e9cca9))
+
 # [4.7.0](https://github.com/AlaskaAirlines/WC-Generator/compare/v4.6.2...v4.7.0) (2024-10-16)
 
 
