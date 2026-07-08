@@ -1,5 +1,11 @@
 # WC-Generator
 
+> ## ⚠️ Deprecated — do not use for new components
+>
+> **WC-Generator is no longer the supported way to scaffold Auro web components and is not actively maintained.** Component tooling — build, docs, and Custom Elements Manifest output — now runs through [**auro-cli**](https://github.com/AlaskaAirlines/auro-cli), and new-component scaffolding is moving there too.
+>
+> **Before creating a new component, contact the Auro Design System team** for the current process. This repository is retained for reference only; new work should not be started here.
+
 Auro's Design System web component generator is a project tool intended to assist developers with an easy to configure and execute HTML custom element development environment.
 
 ## Install
